@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <title>Create with Purpose | AI Video Production Portfolio for E-Commerce & Brands</title>
+  <meta name="description" content="Commercial AI video production portfolio by Jerome Cabinta. Delivering high-converting 4K cinematic video ads in 48 hours for DTC, Amazon, TikTok, and Meta global brands.">
+  <meta name="keywords" content="AI Video Commercials, E-Commerce Video Ads, Brand Video Production, Runway Gen-3, Sora, Kling AI, TikTok Ads, Meta Ads, Amazon Video Ads, Jerome Cabinta Portfolio">
+  
+  <!-- Mobile PWA & iOS / Android Meta -->
+  <meta name="theme-color" content="#07080d" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Create with Purpose">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Create with Purpose | E-Commerce & Brand AI Video Production">
+  <meta property="og:description" content="High-converting 4K product commercial ads created in 48 hours using next-gen generative AI video pipelines.">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Ambient Animated Background Canvas -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="cursor-glow"></div>
+
+  <div class="app-wrapper">
+
+    <!-- ==========================================================================
+         Navigation Header
+         ========================================================================== -->
+    <nav class="main-nav" id="main-nav">
+      <div class="container nav-container">
+        <a href="#hero" class="nav-brand">
+          <div class="brand-symbol">
+            <i data-lucide="sparkles"></i>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">CREATE WITH PURPOSE</span>
+            <span class="brand-subtitle">AI VIDEO PRODUCTION</span>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#showcase" class="nav-link">Commercial Showcase</a></li>
+          <li><a href="#samples" class="nav-link">Sample Deliverables</a></li>
+          <li><a href="#comparison" class="nav-link">CAD vs. 4K Video</a></li>
+          <li><a href="#roi" class="nav-link">Traditional vs. AI</a></li>
+          <li><a href="#capabilities" class="nav-link">Capabilities</a></li>
+          <li><a href="#pricing" class="nav-link">Ad Packages</a></li>
+          <li><a href="#booking" class="nav-link">Campaign Estimator</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <!-- Audio Synthesizer Toggle Button -->
+          <button class="audio-toggle-btn" id="audio-toggle" title="Toggle Commercial SFX Drone">
+            <div class="audio-bars">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <span class="audio-status-text">AMBIENT AUDIO</span>
+          </button>
+
+          <a href="#booking" class="btn-primary">
+            <i data-lucide="zap"></i>
+            <span>Get Brand Sample</span>
+          </a>
+
+          <button class="mobile-menu-toggle" id="mobile-menu-open" aria-label="Open navigation menu">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ==========================================================================
+         Mobile Navigation Drawer (iOS & Android)
+         ========================================================================== -->
+    <div class="mobile-drawer-overlay" id="mobile-drawer">
+      <div class="mobile-drawer-content">
+        <div class="mobile-drawer-header">
+          <div class="nav-brand">
+            <div class="brand-symbol">
+              <i data-lucide="sparkles"></i>
+            </div>
+            <div class="brand-text">
+              <span class="brand-title">CREATE WITH PURPOSE</span>
+              <span class="brand-subtitle">AI VIDEO PRODUCTION</span>
+            </div>
+          </div>
+          <button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close navigation menu">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        
+        <ul class="mobile-nav-links">
+          <li><a href="#showcase" class="mobile-nav-link"><i data-lucide="video"></i> Commercial Showcase</a></li>
+          <li><a href="#samples" class="mobile-nav-link"><i data-lucide="package-check"></i> Sample Deliverables</a></li>
+          <li><a href="#comparison" class="mobile-nav-link"><i data-lucide="git-commit"></i> CAD vs. 4K Video</a></li>
+          <li><a href="#roi" class="mobile-nav-link"><i data-lucide="trending-up"></i> Traditional vs. AI</a></li>
+          <li><a href="#capabilities" class="mobile-nav-link"><i data-lucide="sparkles"></i> Capabilities & FX</a></li>
+          <li><a href="#pricing" class="mobile-nav-link"><i data-lucide="box"></i> Ad Packages</a></li>
+          <li><a href="#booking" class="mobile-nav-link"><i data-lucide="calculator"></i> Campaign Estimator</a></li>
+        </ul>
+
+        <div class="mobile-drawer-footer">
+          <button class="audio-toggle-btn mobile-audio-btn" id="mobile-audio-toggle">
+            <div class="audio-bars">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <span class="audio-status-text">AMBIENT AUDIO</span>
+          </button>
+
+          <a href="#booking" class="btn-primary mobile-cta-btn" id="mobile-cta-btn">
+            <i data-lucide="zap"></i>
+            <span>Get Free Brand Sample</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <header class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Left Content -->
+          <div class="hero-content">
+            <div class="hero-badge-pill">
+              <span class="badge-dot"></span>
+              <span>COMMERCIAL AI VIDEO STUDIO • 48-HOUR TURNAROUND • +340% ROAS</span>
+            </div>
+
+            <h1 class="hero-title">
+              <span class="gradient-text-cyan">AI VIDEO ADS</span><br>
+              <span class="gradient-text-emerald">FOR E-COMMERCE</span><br>
+              <span class="gradient-text-purple">& GLOBAL BRANDS.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Transform static product photos and 3D CAD blueprints into high-converting 4K cinematic commercial ads in 48 hours. Accelerating millions in DTC revenue across TikTok, Meta, Amazon, YouTube, and digital broadcast.
+            </p>
+
+            <div class="hero-cta-group">
+              <button class="btn-primary" id="hero-showreel-cta">
+                <i data-lucide="play-circle"></i>
+                <span>▶ Play 2026 Commercial Reel</span>
+              </button>
+
+              <a href="#samples" class="btn-secondary">
+                <i data-lucide="package-check"></i>
+                <span>View Sample Deliverables</span>
+              </a>
+
+              <a href="#booking" class="btn-ghost-outline">
+                <i data-lucide="calculator"></i>
+                <span>Estimate Campaign Fee</span>
+              </a>
+            </div>
+
+            <!-- Multi-Format Aspect Ratio Switcher -->
+            <div style="margin-bottom: 2rem;">
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; display: block; margin-bottom: 0.4rem;">
+                Preview Multichannel Ad Formats:
+              </span>
+              <div class="ratio-switcher">
+                <button class="ratio-btn active" data-ratio="16-9"><i data-lucide="tv" style="width: 12px; height: 12px;"></i> 16:9 Landscape (YouTube / TV)</button>
+                <button class="ratio-btn" data-ratio="9-16"><i data-lucide="smartphone" style="width: 12px; height: 12px;"></i> 9:16 Vertical (TikTok / Reels)</button>
+                <button class="ratio-btn" data-ratio="1-1"><i data-lucide="square" style="width: 12px; height: 12px;"></i> 1:1 Square (Shopify / Meta)</button>
+              </div>
+            </div>
+
+            <!-- Hero Stats HUD -->
+            <div class="hero-stats-row">
+              <div class="stat-item">
+                <div class="stat-num">$45M<span>+</span></div>
+                <div class="stat-label">Brand Revenue Driven</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num">+340<span>%</span></div>
+                <div class="stat-label">Average ROAS Lift</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num">48<span>h</span></div>
+                <div class="stat-label">Turnaround Time</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num">500<span>+</span></div>
+                <div class="stat-label">Commercials Shipped</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Right Visual Card with Active Playing Video -->
+          <div class="hero-visual-card">
+            <div class="hero-img-wrap">
+              <video src="assets/ecom_tech_gadget.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/ecom_tech_gadget.jpg" class="hero-video-media"></video>
+              <div class="hero-scan-line"></div>
+              
+              <div class="hero-hud-overlay">
+                <span class="hud-tag live-video"><span class="badge-dot" style="background: #f43f5e; box-shadow: 0 0 8px #f43f5e;"></span> LIVE 4K COMMERCIAL</span>
+                <span class="hud-tag roas"><i data-lucide="trending-up"></i> +420% ROAS LIFT</span>
+              </div>
+
+              <div class="hero-play-trigger" id="hero-play-trigger" title="Launch 4K Commercial Theater">
+                <div class="play-circle">
+                  <i data-lucide="play"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-card-footer">
+              <div>
+                <h3 class="hero-clip-title">Acoustiq Titanium Pro Earbuds</h3>
+                <span class="hero-clip-meta">Acoustiq Audio • 4.9% CTR on Meta Ads • 48h Delivery</span>
+              </div>
+              <button class="btn-card-action primary" data-action="view-case-study" data-project-id="project-earbuds">
+                <i data-lucide="file-text"></i>
+                <span>View Case Study</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- ==========================================================================
+         Curated E-Commerce & Brand Video Showcase Matrix
+         ========================================================================== -->
+    <section class="section" id="showcase">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <i data-lucide="shopping-bag"></i>
+            <span>Commercial Ad Creatives</span>
+          </div>
+          <h2 class="section-title">E-Commerce & Brand Showcase</h2>
+          <p class="section-desc">
+            Explore high-performing generative commercial video ads created for consumer tech, clean beauty, beverage, athletic footwear, and luxury retail brands.
+          </p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="filter-tabs-wrapper">
+          <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">All Commercials (6)</button>
+            <button class="filter-btn" data-filter="tech">Consumer Tech & Audio</button>
+            <button class="filter-btn" data-filter="beauty">Skincare & Beauty Fluids</button>
+            <button class="filter-btn" data-filter="beverage">Beverage & Fluid FX</button>
+            <button class="filter-btn" data-filter="fashion">Footwear & Apparel</button>
+            <button class="filter-btn" data-filter="luxury">Luxury Automotive</button>
+          </div>
+        </div>
+
+        <!-- Video Card Grid with Active Video Playback -->
+        <div class="video-grid">
+          
+          <!-- Card 1: Consumer Tech -->
+          <article class="video-card" data-category="tech">
+            <div class="video-thumbnail-box">
+              <video src="assets/ecom_tech_gadget.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/ecom_tech_gadget.jpg" class="card-video-media"></video>
+              <span class="card-model-badge cyan">Consumer Tech</span>
+              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +420% ROAS</span>
+              <span class="card-duration-badge">0:30</span>
+              <div class="card-play-overlay" data-action="play-video" data-project-id="project-earbuds">
+                <div class="mini-play-btn"><i data-lucide="play"></i></div>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Acoustiq Audio • Global Audio Brand</div>
+              <h3 class="card-title">Acoustiq Pro: Sonic Isolation</h3>
+              <p class="card-synopsis">Sleek matte titanium wireless earbuds levitating amidst acoustic ripple rings and water splash micro-physics.</p>
+              
+              <div class="card-meta-tags">
+                <span class="meta-tag">4.9% CTR</span>
+                <span class="meta-tag">360° CAD Orbit</span>
+                <span class="meta-tag">Meta & TikTok</span>
+                <span class="meta-tag">48h Delivery</span>
+              </div>
+
+              <div class="card-footer-actions">
+                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-earbuds">
+                  <i data-lucide="play"></i> Watch 4K Video
+                </button>
+                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-earbuds">
+                  <i data-lucide="file-text"></i> Case Study
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Skincare & Beauty -->
+          <article class="video-card" data-category="beauty">
+            <div class="video-thumbnail-box">
+              <video src="assets/ecom_beauty_serum.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/ecom_beauty_serum.jpg" class="card-video-media"></video>
+              <span class="card-model-badge amber">Clean Beauty</span>
+              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +380% ROAS</span>
+              <span class="card-duration-badge">0:25</span>
+              <div class="card-play-overlay" data-action="play-video" data-project-id="project-serum">
+                <div class="mini-play-btn"><i data-lucide="play"></i></div>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Aura Skincare • Luxury Clean Beauty</div>
+              <h3 class="card-title">Aura Skincare: 24K Botanical Dew</h3>
+              <p class="card-synopsis">Sensory cosmetic macro commercial capturing golden botanical argan oil and pink rosewater splashing around frosted glass.</p>
+              
+              <div class="card-meta-tags">
+                <span class="meta-tag">5.2% CTR</span>
+                <span class="meta-tag">Fluid Physics</span>
+                <span class="meta-tag">Shopify Hero</span>
+                <span class="meta-tag">48h Delivery</span>
+              </div>
+
+              <div class="card-footer-actions">
+                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-serum">
+                  <i data-lucide="play"></i> Watch 4K Video
+                </button>
+                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-serum">
+                  <i data-lucide="file-text"></i> Case Study
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Beverage & Food -->
+          <article class="video-card" data-category="beverage">
+            <div class="video-thumbnail-box">
+              <video src="assets/ecom_beverage_splash.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/ecom_beverage_splash.jpg" class="card-video-media"></video>
+              <span class="card-model-badge cyan">Beverage & Energy</span>
+              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +340% ROAS</span>
+              <span class="card-duration-badge">0:20</span>
+              <div class="card-play-overlay" data-action="play-video" data-project-id="project-energy">
+                <div class="mini-play-btn"><i data-lucide="play"></i></div>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Voltaic Beverages • Performance Energy</div>
+              <h3 class="card-title">Voltaic Energy: Citrus Vortex Blast</h3>
+              <p class="card-synopsis">High-impact beverage commercial featuring an aluminum can bursting through crystal ice cubes and glowing citrus vortex liquid.</p>
+              
+              <div class="card-meta-tags">
+                <span class="meta-tag">6.1% CTR</span>
+                <span class="meta-tag">Ice Explosion FX</span>
+                <span class="meta-tag">Amazon Video Ad</span>
+                <span class="meta-tag">48h Delivery</span>
+              </div>
+
+              <div class="card-footer-actions">
+                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-energy">
+                  <i data-lucide="play"></i> Watch 4K Video
+                </button>
+                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-energy">
+                  <i data-lucide="file-text"></i> Case Study
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Footwear & Athletics -->
+          <article class="video-card" data-category="fashion">
+            <div class="video-thumbnail-box">
+              <video src="assets/ecom_sneaker_motion.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/ecom_sneaker_motion.jpg" class="card-video-media"></video>
+              <span class="card-model-badge emerald">Athletic Footwear</span>
+              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +460% ROAS</span>
+              <span class="card-duration-badge">0:35</span>
+              <div class="card-play-overlay" data-action="play-video" data-project-id="project-sneaker">
+                <div class="mini-play-btn"><i data-lucide="play"></i></div>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Speedform Athletics • Performance Footwear</div>
+              <h3 class="card-title">Speedform ZoomX: Zero-G Carbon</h3>
+              <p class="card-synopsis">Dynamic performance running shoe ad deconstructing in studio air with interwoven cyan carbon fiber threads and propulsion physics.</p>
+              
+              <div class="card-meta-tags">
+                <span class="meta-tag">5.8% CTR</span>
+                <span class="meta-tag">CAD Deconstruction</span>
+                <span class="meta-tag">TikTok Spark Ad</span>
+                <span class="meta-tag">72h Delivery</span>
+              </div>
+
+              <div class="card-footer-actions">
+                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-sneaker">
+                  <i data-lucide="play"></i> Watch 4K Video
+                </button>
+                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-sneaker">
+                  <i data-lucide="file-text"></i> Case Study
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Luxury Automotive -->
+          <article class="video-card" data-category="luxury">
+            <div class="video-thumbnail-box">
+              <video src="assets/luxury_commercial.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/luxury_commercial.jpg" class="card-video-media"></video>
+              <span class="card-model-badge amber">Luxury EV</span>
+              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +290% ROAS</span>
+              <span class="card-duration-badge">0:45</span>
+              <div class="card-play-overlay" data-action="play-video" data-project-id="project-hypercar">
+                <div class="mini-play-btn"><i data-lucide="play"></i></div>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Apex Automotive • Luxury Electric Vehicles</div>
+              <h3 class="card-title">Apex Spectre EV: Phantom Horizon</h3>
+              <p class="card-synopsis">High-end luxury brand commercial capturing an electric hypercar cutting through Nordic coastal mist with reflection physics.</p>
+              
+              <div class="card-meta-tags">
+                <span class="meta-tag">4.1% CTR</span>
+                <span class="meta-tag">Virtual Chase Cam</span>
+                <span class="meta-tag">YouTube Pre-Roll</span>
+                <span class="meta-tag">4-Day Delivery</span>
+              </div>
+
+              <div class="card-footer-actions">
+                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-hypercar">
+                  <i data-lucide="play"></i> Watch 4K Video
+                </button>
+                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-hypercar">
+                  <i data-lucide="file-text"></i> Case Study
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Haute Couture & Apparel -->
+          <article class="video-card" data-category="fashion">
+            <div class="video-thumbnail-box">
+              <video src="assets/fashion_couture.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/fashion_couture.jpg" class="card-video-media"></video>
+              <span class="card-model-badge cyan">Haute Couture</span>
+              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +310% ROAS</span>
+              <span class="card-duration-badge">0:30</span>
+              <div class="card-play-overlay" data-action="play-video" data-project-id="project-couture">
+                <div class="mini-play-btn"><i data-lucide="play"></i></div>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Maison Lumina Paris • Haute Couture</div>
+              <h3 class="card-title">Maison Lumina: Molten Metal</h3>
+              <p class="card-synopsis">Avant-garde digital fashion commercial showcasing a sculpted molten chrome gown morphing dynamically into silk smoke ribbons.</p>
+              
+              <div class="card-meta-tags">
+                <span class="meta-tag">4.7% CTR</span>
+                <span class="meta-tag">Cloth Simulation</span>
+                <span class="meta-tag">Instagram Reels</span>
+                <span class="meta-tag">48h Delivery</span>
+              </div>
+
+              <div class="card-footer-actions">
+                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-couture">
+                  <i data-lucide="play"></i> Watch 4K Video
+                </button>
+                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-couture">
+                  <i data-lucide="file-text"></i> Case Study
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Client Deliverables & Sample Output Suite
+         ========================================================================== -->
+    <section class="section sample-output-section" id="samples">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <i data-lucide="package-check"></i>
+            <span>Commercial Deliverables Suite</span>
+          </div>
+          <h2 class="section-title">Sample Client Output & Delivery Pack</h2>
+          <p class="section-desc">
+            Experience the complete, omnichannel commercial package our studio delivers within 48 hours. Inspect 4K masters, vertical hook variations, PDP loops, and studio assets.
+          </p>
+        </div>
+
+        <!-- Sample Output Interactive Card -->
+        <div class="sample-output-card">
+          
+          <!-- Top Controls: SKU Selector & Deliverable Format Tabs -->
+          <div class="sample-output-top-bar">
+            <!-- Product SKU Chips -->
+            <div class="sample-sku-selector">
+              <span class="sample-bar-label"><i data-lucide="tag"></i> Select Brand SKU:</span>
+              <div class="sample-sku-chips">
+                <button class="sku-chip active" data-sku="tech">Acoustiq Earbuds (Tech)</button>
+                <button class="sku-chip" data-sku="beauty">Aura Serum (Beauty)</button>
+                <button class="sku-chip" data-sku="beverage">Voltaic Energy (Beverage)</button>
+                <button class="sku-chip" data-sku="fashion">Speedform Carbon (Athletics)</button>
+              </div>
+            </div>
+
+            <!-- Deliverable Format Switcher -->
+            <div class="sample-format-tabs">
+              <button class="sample-tab-btn active" data-format="16-9">
+                <i data-lucide="tv"></i>
+                <span>4K Master (16:9)</span>
+              </button>
+              <button class="sample-tab-btn" data-format="9-16">
+                <i data-lucide="smartphone"></i>
+                <span>Viral Hook (9:16)</span>
+              </button>
+              <button class="sample-tab-btn" data-format="1-1">
+                <i data-lucide="square"></i>
+                <span>PDP Loop (1:1)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Main Interactive Viewport & Deliverables Breakdown -->
+          <div class="sample-grid">
+            
+            <!-- Left: Active Deliverable Media Viewport -->
+            <div class="sample-player-container">
+              <div class="sample-video-box" id="sample-video-box">
+                <video id="sample-video-player" src="assets/ecom_tech_gadget.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/ecom_tech_gadget.jpg" class="sample-video-element"></video>
+                <div class="sample-video-hud">
+                  <span class="hud-tag live-video"><span class="badge-dot" style="background: #10b981; box-shadow: 0 0 8px #10b981;"></span> <span id="sample-hud-format">4K MASTER PRORES 422</span></span>
+                  <span class="hud-tag" id="sample-hud-fps"><i data-lucide="film"></i> 60 FPS UHD</span>
+                </div>
+                
+                <div class="sample-video-action-overlay" id="sample-play-modal-trigger" title="Launch in 4K Cinema Theater">
+                  <div class="mini-play-btn"><i data-lucide="maximize-2"></i></div>
+                </div>
+              </div>
+
+              <!-- Quick File Download Action Bar -->
+              <div class="sample-delivery-actions">
+                <button class="btn-primary sample-download-btn" id="sample-download-pkg-btn">
+                  <i data-lucide="download-cloud"></i>
+                  <span>Download Sample Package (.ZIP)</span>
+                </button>
+                <button class="btn-secondary" id="sample-preview-modal-btn">
+                  <i data-lucide="play-circle"></i>
+                  <span>Theater Preview</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right: Studio Specs & Shipped File Manifest -->
+            <div class="sample-details-panel">
+              
+              <div class="sample-manifest-header">
+                <div>
+                  <span class="sample-client-pill" id="sample-client-name">Acoustiq Audio</span>
+                  <h3 class="sample-project-title" id="sample-project-name">Acoustiq Titanium Pro Earbuds</h3>
+                </div>
+                <div class="sample-badge-ready">
+                  <i data-lucide="check-circle-2"></i>
+                  <span>DELIVERY READY</span>
+                </div>
+              </div>
+
+              <!-- Technical Specifications Grid -->
+              <div class="sample-specs-grid">
+                <div class="spec-card">
+                  <div class="spec-label">Master Resolution</div>
+                  <div class="spec-value" id="sample-spec-res">3840 x 2160 (4K 60FPS)</div>
+                </div>
+                <div class="spec-card">
+                  <div class="spec-label">Color Pipeline</div>
+                  <div class="spec-value" id="sample-spec-color">Rec.709 / ACEScc 10-bit</div>
+                </div>
+                <div class="spec-card">
+                  <div class="spec-label">Master Audio</div>
+                  <div class="spec-value" id="sample-spec-audio">48kHz 24-bit Foley + Stems</div>
+                </div>
+                <div class="spec-card">
+                  <div class="spec-label">Turnaround Schedule</div>
+                  <div class="spec-value" id="sample-spec-turnaround">48 Hours Shipped</div>
+                </div>
+              </div>
+
+              <!-- Shipped Files List -->
+              <div class="sample-files-container">
+                <span class="sample-files-heading"><i data-lucide="folder-archive"></i> Included Campaign Deliverables:</span>
+                <ul class="sample-files-list" id="sample-files-list">
+                  <!-- Dynamically populated via JavaScript -->
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Product CAD Blueprint vs. 4K AI Commercial Video Split Slider
+         ========================================================================== -->
+    <section class="section comparison-section" id="comparison">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <i data-lucide="git-commit"></i>
+            <span>From Raw CAD to Superbowl Ad</span>
+          </div>
+          <h2 class="section-title">Static Packshot / CAD vs. 4K AI Video</h2>
+          <p class="section-desc">
+            Drag the interactive slider below to see how standard e-commerce CAD models and flat studio packshots are transformed into high-octane 4K commercial videos.
+          </p>
+        </div>
+
+        <div class="comparison-card">
+          <!-- Interactive Image Split Viewport with Playing Video -->
+          <div class="comparison-viewport" id="comparison-viewport">
+            <video src="assets/ecom_tech_gadget.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" class="comp-media"></video>
+            <span class="comp-label after">4K AI Video Commercial</span>
+
+            <!-- Clipped Overlay with Storyboard Sketch -->
+            <div class="comp-overlay" id="comp-overlay">
+              <img src="assets/storyboard_sketch.jpg" alt="Raw CAD Blueprint & Storyboard" class="comp-media">
+              <span class="comp-label before">Raw CAD Blueprint / Packshot</span>
+            </div>
+
+            <!-- Draggable Center Handle -->
+            <div class="comp-slider-handle" id="comp-handle">
+              <i data-lucide="move-horizontal"></i>
+            </div>
+          </div>
+
+          <!-- Technical Breakdown Details -->
+          <div class="comparison-details">
+            <div class="comp-info">
+              <h4>Product: Acoustiq Titanium Wireless Earbuds</h4>
+              <p>
+                From a single 3D OBJ file and 2 packshots, our AI pipeline synthesized a multi-angle commercial with dynamic acoustic water shockwaves, custom lighting caustics, and studio reflections in under 48 hours.
+              </p>
+            </div>
+            
+            <div class="comp-stats-grid">
+              <div class="comp-stat-box">
+                <div class="comp-stat-label">Production Speed</div>
+                <div class="comp-stat-val">48 Hours vs. 6 Weeks</div>
+              </div>
+              <div class="comp-stat-box">
+                <div class="comp-stat-label">Ad Spend ROI Lift</div>
+                <div class="comp-stat-val">+420% ROAS</div>
+              </div>
+              <div class="comp-stat-box">
+                <div class="comp-stat-label">Output Resolution</div>
+                <div class="comp-stat-val">3840 x 2160 (4K 60FPS)</div>
+              </div>
+              <div class="comp-stat-box">
+                <div class="comp-stat-label">Cost Savings</div>
+                <div class="comp-stat-val">88% Lower than Film Crew</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Traditional Production vs. AI Video Engine Comparison Table
+         ========================================================================== -->
+    <section class="section" id="roi">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <i data-lucide="trending-up"></i>
+            <span>Performance & Unit Economics</span>
+          </div>
+          <h2 class="section-title">Traditional Agency vs. AI Video Studio</h2>
+          <p class="section-desc">
+            Why modern eight-figure DTC brands and growth marketers are switching from $50k physical video shoots to our 48-hour generative video ad pipeline.
+          </p>
+        </div>
+
+        <div class="roi-table-card">
+          <div class="roi-table-scroll-hint">
+            <i data-lucide="move-horizontal"></i>
+            <span>Swipe horizontally to compare full features</span>
+          </div>
+          <div class="roi-table-responsive-wrap">
+            <table class="roi-table">
+              <thead>
+                <tr>
+                  <th>Feature & Deliverable</th>
+                  <th>Traditional Production Agency</th>
+                  <th style="color: var(--accent-cyan);">Create with Purpose (AI Studio)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Production Cost per Campaign</strong></td>
+                  <td><span class="roi-badge-loser">$35,000 – $75,000</span></td>
+                  <td><span class="roi-badge-winner"><i data-lucide="check"></i> $1,800 – $5,500</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Delivery Turnaround Time</strong></td>
+                  <td><span class="roi-badge-loser">6 to 8 Weeks</span></td>
+                  <td><span class="roi-badge-winner"><i data-lucide="check"></i> 48 to 72 Hours</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Creative A/B Hook Variations</strong></td>
+                  <td><span class="roi-badge-loser">1 to 2 Cutdowns</span></td>
+                  <td><span class="roi-badge-winner"><i data-lucide="check"></i> 10 to 20 Viral Hook Variations</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Physical Sample Shipping & Crew</strong></td>
+                  <td><span class="roi-badge-loser">Actors, Studio Rental, Logistics</span></td>
+                  <td><span class="roi-badge-winner"><i data-lucide="check"></i> 100% Digital CAD & Image Conditioning</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Multi-Format Cuts (9:16, 16:9, 1:1)</strong></td>
+                  <td><span class="roi-badge-loser">Expensive Re-Framing Fees</span></td>
+                  <td><span class="roi-badge-winner"><i data-lucide="check"></i> Included for TikTok, Meta & Amazon</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Creative Fatigue Scalability</strong></td>
+                  <td><span class="roi-badge-loser">Ads burn out in 3 weeks</span></td>
+                  <td><span class="roi-badge-winner"><i data-lucide="check"></i> Infinite Weekly Refresh Packs</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Creative Capabilities & Production Suite (Portfolio Feature Showcase)
+         ========================================================================== -->
+    <section class="section" id="capabilities">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <i data-lucide="sparkles"></i>
+            <span>Commercial Production Suite</span>
+          </div>
+          <h2 class="section-title">Creative Capabilities & FX</h2>
+          <p class="section-desc">
+            Hollywood-grade visual effects and AI generative workflows engineered specifically for high-conversion e-commerce and global brand storytelling.
+          </p>
+        </div>
+
+        <div class="capabilities-grid">
+          
+          <!-- Cap 1: Fluid Dynamics -->
+          <div class="capability-card">
+            <div class="cap-icon">
+              <i data-lucide="droplet"></i>
+            </div>
+            <h3 class="cap-title">Dynamic Fluid & Viscosity FX</h3>
+            <p class="cap-desc">
+              Hyper-realistic liquid splashes, beverage vortex carbonation, cosmetic serum dew drops, and optical caustics for sensory product marketing.
+            </p>
+            <div class="cap-tags">
+              <span class="meta-tag">Slow-Motion</span>
+              <span class="meta-tag">Refraction</span>
+              <span class="meta-tag">Cosmetics</span>
+            </div>
+          </div>
+
+          <!-- Cap 2: 3D CAD Deconstruction -->
+          <div class="capability-card">
+            <div class="cap-icon">
+              <i data-lucide="layers"></i>
+            </div>
+            <h3 class="cap-title">3D CAD & Blueprint Explosion</h3>
+            <p class="cap-desc">
+              Zero-G exploded part animations revealing internal chips, titanium frames, acoustic chambers, and carbon fiber architecture without physical tear-downs.
+            </p>
+            <div class="cap-tags">
+              <span class="meta-tag">CAD Conditioning</span>
+              <span class="meta-tag">Levitation</span>
+              <span class="meta-tag">Consumer Tech</span>
+            </div>
+          </div>
+
+          <!-- Cap 3: High-Speed Tracking -->
+          <div class="capability-card">
+            <div class="cap-icon">
+              <i data-lucide="camera"></i>
+            </div>
+            <h3 class="cap-title">Virtual Robotic Camera Moves</h3>
+            <p class="cap-desc">
+              Dynamic high-speed tracking shots, 360° product orbits, FPV drone swoops, and cinematic push-ins with natural optical motion blur.
+            </p>
+            <div class="cap-tags">
+              <span class="meta-tag">Arri Alexa Look</span>
+              <span class="meta-tag">Chase Cam</span>
+              <span class="meta-tag">Automotive</span>
+            </div>
+          </div>
+
+          <!-- Cap 4: Digital Couture & Cloth Sim -->
+          <div class="capability-card">
+            <div class="cap-icon">
+              <i data-lucide="sparkles"></i>
+            </div>
+            <h3 class="cap-title">Digital Couture & Cloth Physics</h3>
+            <p class="cap-desc">
+              Avant-garde morphing materials, molten chrome fabrics, billowing silks, and volumetric runway lighting for luxury fashion and apparel campaigns.
+            </p>
+            <div class="cap-tags">
+              <span class="meta-tag">Vogue Grade</span>
+              <span class="meta-tag">Morphing</span>
+              <span class="meta-tag">Apparel</span>
+            </div>
+          </div>
+
+          <!-- Cap 5: Micro-Macro Lighting -->
+          <div class="capability-card">
+            <div class="cap-icon">
+              <i data-lucide="sun"></i>
+            </div>
+            <h3 class="cap-title">Macro Lighting & Color Grading</h3>
+            <p class="cap-desc">
+              ACES color-managed pipelines, studio specular highlights, moody rim lighting, and crystal-clear macro texture fidelity.
+            </p>
+            <div class="cap-tags">
+              <span class="meta-tag">ACES Pipeline</span>
+              <span class="meta-tag">4K 60FPS</span>
+              <span class="meta-tag">HDR Ready</span>
+            </div>
+          </div>
+
+          <!-- Cap 6: Omnichannel Multi-Format -->
+          <div class="capability-card">
+            <div class="cap-icon">
+              <i data-lucide="smartphone"></i>
+            </div>
+            <h3 class="cap-title">Omnichannel Multi-Format Scale</h3>
+            <p class="cap-desc">
+              Native vertical 9:16 cuts for TikTok and Meta Reels, 16:9 4K masters for YouTube & Connected TV, and 1:1 square loops for Shopify and Amazon A+.
+            </p>
+            <div class="cap-tags">
+              <span class="meta-tag">TikTok Spark</span>
+              <span class="meta-tag">Amazon Video</span>
+              <span class="meta-tag">Shopify Loop</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         E-Commerce Campaign Packages
+         ========================================================================== -->
+    <section class="section" id="pricing">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <i data-lucide="box"></i>
+            <span>Transparent Creative Pricing</span>
+          </div>
+          <h2 class="section-title">E-Commerce Video Ad Packages</h2>
+          <p class="section-desc">
+            Select a tailored creative package designed to lower your customer acquisition cost (CPA) and unlock scalable ad spend.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          
+          <!-- Tier 1: Starter Pack -->
+          <div class="pricing-card">
+            <div class="pricing-tier-name">Starter Ad Creative Pack</div>
+            <div class="pricing-tier-desc">Ideal for launching a new SKU or testing AI video ads against existing creatives.</div>
+            <div class="pricing-price">$1,800 <span>/ one-time</span></div>
+
+            <ul class="pricing-features">
+              <li><i data-lucide="check"></i> <strong>5 High-Converting Video Ads</strong> (15-30s)</li>
+              <li><i data-lucide="check"></i> 9:16 Vertical (TikTok/Reels) + 1:1 Square</li>
+              <li><i data-lucide="check"></i> 4K 60FPS Neural Upscaling</li>
+              <li><i data-lucide="check"></i> Commercial Sound FX & Voiceover</li>
+              <li><i data-lucide="check"></i> 3 Business Day Turnaround</li>
+            </ul>
+
+            <a href="#booking" class="btn-secondary" style="width: 100%; text-align: center;">Book Starter Pack</a>
+          </div>
+
+          <!-- Tier 2: Growth Scaling (Featured) -->
+          <div class="pricing-card featured">
+            <div class="pricing-popular-tag">Most Popular for DTC Brands</div>
+            <div class="pricing-tier-name">Scale & Growth Bundle</div>
+            <div class="pricing-tier-desc">Comprehensive creative battery with multiple hook variations to combat ad fatigue.</div>
+            <div class="pricing-price">$3,600 <span>/ campaign</span></div>
+
+            <ul class="pricing-features">
+              <li><i data-lucide="check"></i> <strong>15 High-Converting Video Ads</strong></li>
+              <li><i data-lucide="check"></i> <strong>5 Unique Hook Cuts</strong> (First 3-Second Hooks)</li>
+              <li><i data-lucide="check"></i> Multi-Format: 9:16, 16:9, and 1:1</li>
+              <li><i data-lucide="check"></i> Custom CAD / LoRA Consistency Model</li>
+              <li><i data-lucide="check"></i> Hollywood ACES Color Grading</li>
+              <li><i data-lucide="check"></i> 5 Business Day Turnaround</li>
+            </ul>
+
+            <a href="#booking" class="btn-primary" style="width: 100%; text-align: center;">Book Growth Bundle</a>
+          </div>
+
+          <!-- Tier 3: Omnichannel Launch -->
+          <div class="pricing-card">
+            <div class="pricing-tier-name">Omnichannel Brand Launch</div>
+            <div class="pricing-tier-desc">Full 360° commercial suite for global product launches, TV broadcasts, and mega-funnels.</div>
+            <div class="pricing-price">$6,800 <span>/ launch</span></div>
+
+            <ul class="pricing-features">
+              <li><i data-lucide="check"></i> <strong>30+ Omnichannel Video Ads</strong></li>
+              <li><i data-lucide="check"></i> 4K Broadcast Master (TV / YouTube 16:9)</li>
+              <li><i data-lucide="check"></i> 10 3D Product Exploded View Animations</li>
+              <li><i data-lucide="check"></i> Unlimited Hook & CTA A/B Variants</li>
+              <li><i data-lucide="check"></i> Dedicated Creative Director Strategy</li>
+              <li><i data-lucide="check"></i> Expedited 8-Day Delivery</li>
+            </ul>
+
+            <a href="#booking" class="btn-secondary" style="width: 100%; text-align: center;">Book Omnichannel Suite</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Interactive Project Estimator & Booking Section
+         ========================================================================== -->
+    <section class="section" id="booking">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <i data-lucide="calculator"></i>
+            <span>Instant Quote & ROI Estimator</span>
+          </div>
+          <h2 class="section-title">Configure Your Brand Campaign</h2>
+          <p class="section-desc">
+            Customize your deliverables to see an estimated investment and delivery timeframe, then submit your product link or CAD files for a free customized ad sample.
+          </p>
+        </div>
+
+        <div class="booking-card">
+          <div class="booking-grid">
+            
+            <!-- Interactive Estimator Form -->
+            <form id="booking-form">
+              
+              <div class="form-group">
+                <label class="form-label" for="est-scope">Campaign Creative Scope</label>
+                <select class="form-select" id="est-scope">
+                  <option value="starter-pack">Starter Pack (5 High-Converting Video Ads)</option>
+                  <option value="growth-scale" selected>Scale & Growth Bundle (15 Video Ads + 5 Hook Cuts)</option>
+                  <option value="omnichannel-launch">Omnichannel Brand Launch (30+ Multi-Format Video Ads)</option>
+                  <option value="monthly-retainer">Monthly Retainer (20 New Video Ads Every Month)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="est-model">Generative Consistency & Conditioning</label>
+                <select class="form-select" id="est-model">
+                  <option value="standard" selected>Standard Model Conditioning (Runway Gen-3 + 4K Topaz)</option>
+                  <option value="custom-lora">Custom CAD / 3D Product LoRA Training (+ $1,000)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="est-audio">Sound Design & Voice</label>
+                <select class="form-select" id="est-audio">
+                  <option value="none">Visual Video Only (Client provides Audio)</option>
+                  <option value="spatial-sfx" selected>Full Cinematic Foley, AI Voiceover & Commercial License (+ $600)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="est-turnaround">Production Schedule</label>
+                <select class="form-select" id="est-turnaround">
+                  <option value="standard" selected>Standard Schedule</option>
+                  <option value="rush">Express 48-Hour Rush Delivery (+35%)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="booking-name">Brand Name & Contact Person</label>
+                <input type="text" class="form-input" id="booking-name" placeholder="e.g. Elena Vance, Aura Skincare" required autocomplete="name">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="booking-email">Work Email</label>
+                <input type="email" class="form-input" id="booking-email" placeholder="elena@auraskincare.com" required autocomplete="email" inputmode="email">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="booking-message">Product Link / Shopify Store & Goals</label>
+                <textarea class="form-textarea" id="booking-message" rows="3" placeholder="Share your website URL, product specs, target ad channels (TikTok, Meta, Amazon)..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary" id="booking-submit-btn" style="width: 100%;">
+                <i data-lucide="send"></i>
+                <span>Request Free Custom Brand Sample</span>
+              </button>
+            </form>
+
+            <!-- Live Calculated Summary Box -->
+            <div class="estimate-summary-box">
+              <div>
+                <h3 class="est-header">Campaign Estimate & Projected ROI</h3>
+                
+                <div class="est-row">
+                  <span>Projected ROAS Lift</span>
+                  <span style="color: var(--accent-emerald); font-weight: 700;">+340% to +450%</span>
+                </div>
+                <div class="est-row">
+                  <span>4K 60FPS Master Video Renders</span>
+                  <span>Included (ProRes 422)</span>
+                </div>
+                <div class="est-row">
+                  <span>Full Commercial Advertising Rights</span>
+                  <span>Perpetual Worldwide</span>
+                </div>
+                <div class="est-row">
+                  <span>Estimated Delivery Time</span>
+                  <span id="est-time-val" style="color: var(--accent-emerald); font-weight: 700;">5 Business Days</span>
+                </div>
+
+                <div class="est-total-box">
+                  <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Estimated Project Fee</span>
+                  <div class="est-price-display" id="est-price-val">$4,200</div>
+                </div>
+              </div>
+
+              <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; margin-top: 1.5rem;">
+                <i data-lucide="shield-check" style="color: var(--accent-cyan); vertical-align: middle; width: 16px; height: 16px;"></i>
+                Includes 2 rounds of creative revisions, multi-format video exports (9:16, 16:9, 1:1), and high-resolution master deliverables.
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Footer
+         ========================================================================== -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-grid">
+          
+          <div class="footer-col">
+            <div class="brand-title" style="margin-bottom: 0.8rem;">CREATE WITH PURPOSE</div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.2rem;">
+              The high-performance commercial AI video production portfolio of Jerome Cabinta. Helping e-commerce and commercial brands scale ad creative velocity and maximize ROAS.
+            </p>
+            <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan);">
+              commercials@createwithpurpose.ai
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h5>E-Commerce Verticals</h5>
+            <ul class="footer-links">
+              <li><a href="#showcase">Consumer Tech & Audio</a></li>
+              <li><a href="#showcase">Skincare & Beauty Fluids</a></li>
+              <li><a href="#showcase">Beverage & Food FX</a></li>
+              <li><a href="#showcase">Athletic & Footwear</a></li>
+              <li><a href="#showcase">Haute Couture & Apparel</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Production Capabilities</h5>
+            <ul class="footer-links">
+              <li><a href="#samples">Sample Output & Deliverables</a></li>
+              <li><a href="#capabilities">Fluid Dynamics & Viscosity</a></li>
+              <li><a href="#capabilities">3D CAD Deconstruction</a></li>
+              <li><a href="#capabilities">Virtual Robotic Camera Moves</a></li>
+              <li><a href="#capabilities">Digital Couture & Cloth FX</a></li>
+              <li><a href="#capabilities">ACES Macro Color Grading</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Connect & Collaborate</h5>
+            <ul class="footer-links">
+              <li><a href="https://youtube.com" target="_blank" rel="noopener">YouTube Ad Showcase</a></li>
+              <li><a href="https://x.com" target="_blank" rel="noopener">X / Twitter (@JeromeAI)</a></li>
+              <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram (@CreateWithPurpose)</a></li>
+              <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn / Jerome Cabinta</a></li>
+              <li><a href="https://github.com" target="_blank" rel="noopener">Creative Agency Repos</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+          <div>© 2026 Create with Purpose • Jerome Cabinta. All rights reserved.</div>
+          <div style="font-family: var(--font-mono); font-size: 0.75rem;">HIGH-CONVERTING E-COMMERCE AI VIDEO PRODUCTION</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ==========================================================================
+         4K Commercial Video Theater Modal
+         ========================================================================== -->
+    <div class="modal-overlay" id="video-modal">
+      <div class="modal-theater">
+        
+        <div class="modal-header">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <span class="badge-dot"></span>
+            <span style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent-cyan); font-weight: 700;">4K COMMERCIAL VIDEO THEATER</span>
+          </div>
+          <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+
+        <!-- Real HTML5 Video Player Viewport -->
+        <div class="theater-viewport">
+          <video id="theater-video" class="theater-video-element" playsinline webkit-playsinline preload="metadata" poster="assets/ecom_tech_gadget.jpg" src="assets/ecom_tech_gadget.webm"></video>
+          
+          <!-- Animated Controls Overlay -->
+          <div class="theater-controls-bar">
+            <div class="timeline-scrubber" id="theater-scrubber">
+              <div class="timeline-progress" id="theater-progress-bar"></div>
+            </div>
+
+            <div class="controls-row">
+              <div class="ctrl-left">
+                <button class="theater-btn" id="theater-play-toggle" aria-label="Play or pause video">
+                  <i data-lucide="play" id="theater-play-icon" style="display: none;"></i>
+                  <i data-lucide="pause" id="theater-pause-icon"></i>
+                </button>
+                <div class="timecode-display" id="theater-timecode">00:00 / 00:30</div>
+              </div>
+
+              <div class="ctrl-right">
+                <span class="hud-tag" id="theater-motion" style="font-size: 0.7rem;">360° Orbit</span>
+                <span class="hud-tag" id="theater-model" style="font-size: 0.7rem;">4K Master</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Meta Information Panel -->
+        <div class="theater-info-panel">
+          <div>
+            <div class="card-client-tag" id="theater-client">Acoustiq Audio • Global Audio Brand</div>
+            <h3 class="theater-meta-title" id="theater-title">Acoustiq Titanium Pro Earbuds</h3>
+            <p id="theater-strategy" style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">
+              Direct-to-consumer launch commercial engineered for high top-of-funnel retention. Utilized 3D CAD conditioning and acoustic wave fluid physics to demonstrate IPX7 water resistance.
+            </p>
+          </div>
+
+          <div>
+            <div class="case-study-badge-grid">
+              <div class="case-study-badge">
+                <div class="case-study-label">Performance Metric</div>
+                <div class="case-study-val" id="theater-roas">+420% ROAS</div>
+              </div>
+              <div class="case-study-badge">
+                <div class="case-study-label">Turnaround Schedule</div>
+                <div class="case-study-val" id="theater-turnaround">48 Hours</div>
+              </div>
+            </div>
+
+            <div style="margin-top: 1rem;">
+              <div class="case-study-label">Deliverables Shipped</div>
+              <div id="theater-deliverables" style="font-size: 0.85rem; color: var(--text-primary); margin-top: 0.3rem;">4K Master (16:9), TikTok/Reels (9:16), Amazon (1:1)</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         Client Case Study Modal (Clean, Non-Technical)
+         ========================================================================== -->
+    <div class="modal-overlay" id="casestudy-modal">
+      <div class="modal-theater" style="max-width: 800px;">
+        
+        <div class="modal-header">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <i data-lucide="award" style="color: var(--accent-cyan);"></i>
+            <span style="font-family: var(--font-mono); font-size: 0.88rem; color: #ffffff; font-weight: 700;">CLIENT CAMPAIGN CASE STUDY</span>
+          </div>
+          <button class="modal-close-btn" id="casestudy-close-btn" aria-label="Close case study">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+
+        <div style="padding: 2rem; overflow-y: auto; max-height: 75vh; -webkit-overflow-scrolling: touch;">
+          <div class="card-client-tag" id="cs-client" style="font-size: 0.85rem; margin-bottom: 0.5rem;">Acoustiq Audio • Global Audio Brand</div>
+          <h3 id="cs-title" style="font-family: var(--font-display); font-size: 1.6rem; margin-bottom: 1.5rem;">Acoustiq Titanium Pro</h3>
+          
+          <div class="case-study-badge-grid" style="margin-bottom: 1.5rem;">
+            <div class="case-study-badge">
+              <div class="case-study-label">Performance Metric</div>
+              <div class="case-study-val" id="cs-roas">+420% ROAS (Meta & TikTok)</div>
+            </div>
+            <div class="case-study-badge">
+              <div class="case-study-label">Turnaround Schedule</div>
+              <div class="case-study-val" id="cs-turnaround">48 Hours</div>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <span class="form-label" style="display: block; margin-bottom: 0.4rem; color: var(--accent-cyan);">Campaign Strategy & Director Vision</span>
+            <p id="cs-strategy" style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">Direct-to-consumer launch commercial engineered for high top-of-funnel retention. Utilized 3D CAD conditioning and acoustic wave fluid physics to demonstrate IPX7 water resistance and active noise cancellation.</p>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <span class="form-label" style="display: block; margin-bottom: 0.4rem; color: var(--accent-emerald);">Commercial Deliverables Shipped</span>
+            <p id="cs-deliverables" style="color: var(--text-highlight); font-weight: 500; font-size: 0.95rem;">4K Master (16:9), TikTok/Reels (9:16), Amazon A+ Video (1:1)</p>
+          </div>
+
+          <div style="margin-bottom: 2rem;">
+            <span class="form-label" style="display: block; margin-bottom: 0.4rem; color: var(--accent-purple);">Business Impact & Sales Lift</span>
+            <p id="cs-results" style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">Drove over $1.2M in pre-orders within the first 14 days of launch with an average ROAS of 4.2x across paid social channels.</p>
+          </div>
+
+          <button class="btn-primary" id="cs-book-cta" style="width: 100%;">
+            <i data-lucide="zap"></i>
+            <span>Request Similar Campaign for Your Brand</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+  <!-- Main Script -->
+  <script src="app.js"></script>
+</body>
+</html>

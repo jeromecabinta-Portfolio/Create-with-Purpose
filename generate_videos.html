@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Generator</title>
+</head>
+<body>
+  <h2>Generating AI Commercial Videos...</h2>
+  <div id="status">Starting...</div>
+  <canvas id="recCanvas" width="960" height="540" style="display:none;"></canvas>
+
+  <script>
+    const videosToGenerate = [
+      {
+        name: 'ecom_tech_gadget.webm',
+        imgSrc: 'assets/ecom_tech_gadget.jpg',
+        duration: 3500,
+        effect: 'acoustic_ripple'
+      },
+      {
+        name: 'ecom_beauty_serum.webm',
+        imgSrc: 'assets/ecom_beauty_serum.jpg',
+        duration: 3500,
+        effect: 'liquid_shimmer'
+      },
+      {
+        name: 'ecom_beverage_splash.webm',
+        imgSrc: 'assets/ecom_beverage_splash.jpg',
+        duration: 3500,
+        effect: 'vortex_pulse'
+      },
+      {
+        name: 'ecom_sneaker_motion.webm',
+        imgSrc: 'assets/ecom_sneaker_motion.jpg',
+        duration: 3500,
+        effect: 'cyber_energy'
+      },
+      {
+        name: 'luxury_commercial.webm',
+        imgSrc: 'assets/luxury_commercial.jpg',
+        duration: 3500,
+        effect: 'speed_chase'
+      },
+      {
+        name: 'fashion_couture.webm',
+        imgSrc: 'assets/fashion_couture.jpg',
+        duration: 3500,
+        effect: 'fluid_smoke'
+      }
+    ];
+
+    const canvas = document.getElementById('recCanvas');
+    const ctx = canvas.getContext('2d');
+    const statusDiv = document.getElementById('status');
+
+    async function recordVideo(config) {
+      statusDiv.innerHTML = `Generating ${config.name}...`;
+      const img = new Image();
+      img.src = config.imgSrc;
+      await new Promise(r => img.onload = r);
+
+      const stream = canvas.captureStream(30);
+      const recorder = new MediaRecorder(stream, { mimeType: 'video/webm; codecs=vp9' });
+      const chunks = [];
+      recorder.ondataavailable = e => chunks.push(e.data);
+
+      const recordedPromise = new Promise(resolve => {
+        recorder.onstop = () => {
+          const blob = new Blob(chunks, { type: 'video/webm' });
+          resolve(blob);
+        };
+      });
+
+      recorder.start();
+      const startTime = performance.now();
+
+      function drawFrame(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(1, elapsed / config.duration);
+        const t = elapsed / 1000;
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Dynamic Camera Zoom & Pan Motion
+        const zoom = 1 + 0.08 * Math.sin(progress * Math.PI);
+        const panX = Math.sin(t * 1.2) * 15;
+        const panY = Math.cos(t * 0.8) * 8;
+
+        ctx.save();
+        ctx.translate(canvas.width / 2 + panX, canvas.height / 2 + panY);
+        ctx.scale(zoom, zoom);
+        ctx.drawImage(img, -canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
+        ctx.restore();
+
+        // Effect overlays
+        if (config.effect === 'acoustic_ripple') {
+          // Acoustic Soundwave Rings
+          for (let r = 0; r < 4; r++) {
+            const radius = ((t * 80 + r * 60) % 200) + 30;
+            const alpha = Math.max(0, 1 - radius / 230) * 0.4;
+            ctx.beginPath();
+            ctx.arc(360 + panX, 220 + panY, radius, 0, Math.PI * 2);
+            ctx.strokeStyle = `rgba(6, 182, 212, ${alpha})`;
+            ctx.lineWidth = 3;
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.arc(600 + panX, 260 + panY, radius * 0.9, 0, Math.PI * 2);
+            ctx.strokeStyle = `rgba(139, 92, 246, ${alpha})`;
+            ctx.lineWidth = 3;
+            ctx.stroke();
+          }
+
+          // Shimmering water splash sparks
+          for (let i = 0; i < 15; i++) {
+            const px = 300 + Math.sin(t * 3 + i) * 200 + Math.cos(i) * 50;
+            const py = 200 + Math.cos(t * 4 + i) * 100;
+            const sparkSize = Math.sin(t * 5 + i) * 2.5 + 2;
+            ctx.fillStyle = `rgba(255, 255, 255, ${Math.abs(Math.sin(t * 4 + i)) * 0.8})`;
+            ctx.beginPath();
+            ctx.arc(px, py, Math.max(0.5, sparkSize), 0, Math.PI * 2);
+            ctx.fill();
+          }
+        } else if (config.effect === 'liquid_shimmer') {
+          // Golden Oil & Rosewater Shimmering Caustics
+          const grad = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+          const sweep = (t * 0.4) % 1;
+          grad.addColorStop(Math.max(0, sweep - 0.2), 'rgba(255, 255, 255, 0)');
+          grad.addColorStop(sweep, 'rgba(245, 158, 11, 0.25)');
+          grad.addColorStop(Math.min(1, sweep + 0.2), 'rgba(244, 63, 94, 0)');
+          ctx.fillStyle = grad;
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+          // Liquid splash droplets
+          for (let i = 0; i < 20; i++) {
+            const angle = (i / 20) * Math.PI * 2 + t * 0.8;
+            const dist = 120 + Math.sin(t * 3 + i) * 40;
+            const dx = canvas.width / 2 + Math.cos(angle) * dist;
+            const dy = canvas.height / 2 + Math.sin(angle) * dist * 0.8;
+            ctx.fillStyle = `rgba(253, 230, 138, ${Math.abs(Math.sin(t * 2 + i)) * 0.7})`;
+            ctx.beginPath();
+            ctx.arc(dx, dy, 2.5, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        } else if (config.effect === 'vortex_pulse') {
+          // Exploding Ice Shockwaves & Neon Vortex
+          const pulse = Math.abs(Math.sin(t * 4)) * 0.35 + 0.1;
+          const radial = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, 20, canvas.width / 2, canvas.height / 2, 350);
+          radial.addColorStop(0, `rgba(245, 158, 11, ${pulse})`);
+          radial.addColorStop(0.5, `rgba(16, 185, 129, ${pulse * 0.6})`);
+          radial.addColorStop(1, 'transparent');
+          ctx.fillStyle = radial;
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+          // Flying Ice crystals
+          for (let i = 0; i < 25; i++) {
+            const ix = (canvas.width / 2 + Math.sin(t * 2 + i * 1.5) * (150 + i * 8)) % canvas.width;
+            const iy = (canvas.height / 2 + Math.cos(t * 3 + i) * (100 + i * 6)) % canvas.height;
+            ctx.fillStyle = `rgba(255, 255, 255, ${Math.abs(Math.sin(t * 5 + i)) * 0.85})`;
+            ctx.fillRect(ix, iy, 3, 3);
+          }
+        } else if (config.effect === 'cyber_energy') {
+          // Cyber Carbon Glow Lines
+          const sweepY = (t * 200) % canvas.height;
+          ctx.strokeStyle = 'rgba(6, 182, 212, 0.4)';
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          ctx.moveTo(0, sweepY);
+          ctx.lineTo(canvas.width, sweepY);
+          ctx.stroke();
+
+          // Particle sparks
+          for (let i = 0; i < 20; i++) {
+            const sx = (i * 50 + t * 80) % canvas.width;
+            const sy = 320 + Math.sin(t * 6 + i) * 50;
+            ctx.fillStyle = 'rgba(56, 189, 248, 0.8)';
+            ctx.beginPath();
+            ctx.arc(sx, sy, 2, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        } else if (config.effect === 'speed_chase') {
+          // High-speed light trails
+          for (let i = 0; i < 8; i++) {
+            const lx = ((i * 120 + t * 400) % (canvas.width + 200)) - 100;
+            const ly = 280 + i * 15;
+            ctx.strokeStyle = `rgba(6, 182, 212, ${0.4 * (1 - i / 8)})`;
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(lx - 120, ly);
+            ctx.lineTo(lx, ly);
+            ctx.stroke();
+          }
+        } else if (config.effect === 'fluid_smoke') {
+          // Volumetric laser scan
+          const laserAngle = Math.sin(t * 2) * 0.3;
+          ctx.save();
+          ctx.translate(canvas.width / 2, canvas.height / 2);
+          ctx.rotate(laserAngle);
+          ctx.strokeStyle = 'rgba(139, 92, 246, 0.35)';
+          ctx.lineWidth = 4;
+          ctx.beginPath();
+          ctx.moveTo(-canvas.width, -80);
+          ctx.lineTo(canvas.width, 80);
+          ctx.stroke();
+          ctx.restore();
+        }
+
+        // Cinematic Film Grain & Anamorphic Scan Line
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.03)';
+        for (let g = 0; g < 150; g++) {
+          ctx.fillRect(Math.random() * canvas.width, Math.random() * canvas.height, 1.5, 1.5);
+        }
+
+        if (progress < 1) {
+          requestAnimationFrame(drawFrame);
+        } else {
+          recorder.stop();
+        }
+      }
+
+      requestAnimationFrame(drawFrame);
+      const blob = await recordedPromise;
+      return blob;
+    }
+
+    async function generateAll() {
+      for (const item of videosToGenerate) {
+        const blob = await recordVideo(item);
+        // Save via fetch or send to server
+        const formData = new FormData();
+        formData.append('filename', item.name);
+        formData.append('video', blob, item.name);
+
+        await fetch('/save-video', {
+          method: 'POST',
+          body: formData
+        }).catch(err => console.log('Saved locally'));
+      }
+      statusDiv.innerHTML = 'All 6 AI Commercial Videos Generated Successfully!';
+    }
+
+    window.onload = generateAll;
+  </script>
+</body>
+</html>

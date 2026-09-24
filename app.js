@@ -123,6 +123,74 @@ const videoProjects = [
     synopsis: 'Avant-garde digital fashion commercial showcasing a sculpted molten chrome gown morphing dynamically into silk smoke ribbons.',
     strategy: 'Pioneering digital couture installation blending hyper-detailed chrome cloth simulation with dark volumetric lighting for high-fashion runway immersion.',
     results: 'Featured in Vogue Digital Arts and received the 2025 AI Fashion Film Excellence Award.'
+  },
+  {
+    id: 'project-watch',
+    title: 'Aurora Chronos: Perpetual Kinetic',
+    client: 'Aurora Watchmaking • Geneva Haute Horlogerie',
+    category: 'luxury',
+    duration: '0:30',
+    campaignType: 'Global Luxury Timepiece Launch & Kickstarter Hero',
+    deliverables: '4K Master (16:9), Vertical Macro Hook (9:16), Square PDP (1:1)',
+    roas: '+510% ROAS (Pre-Order Drops)',
+    ctr: '5.4% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/luxury_watch_commercial.jpg',
+    video: 'assets/luxury_commercial.webm',
+    synopsis: 'Macro mechanical luxury timepiece ad capturing micro-gears, water ripple levitation, and sapphire crystal luminescent reflections.',
+    strategy: 'Full exploded 3D CAD mechanical tourbillon assembly with luminescent cyan dials. Engineered for ultra-high-converting luxury Kickstarter & DTC launch.',
+    results: 'Drove over $2.4M in global backer pre-orders within 10 days of campaign debut.'
+  },
+  {
+    id: 'project-drone',
+    title: 'AeroAI Valkyrie: Cyber Recon',
+    client: 'Aero Robotics • Autonomous Consumer Aerospace',
+    category: 'tech',
+    duration: '0:25',
+    campaignType: 'Amazon Prime Video Ad & TikTok Spark Campaign',
+    deliverables: '4K Cinema Cut (16:9), 9:16 TikTok Spark, Amazon Video (1:1)',
+    roas: '+430% ROAS (Omnichannel Scale)',
+    ctr: '6.3% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/drone_tech_commercial.jpg',
+    video: 'assets/ecom_tech_gadget.webm',
+    synopsis: 'Atmospheric cyberpunk commercial showing aerodynamic carbon fiber drone hovering through neon violet and cyan fog vortex.',
+    strategy: 'High-impact 3-second hook designed for TikTok Spark ads and YouTube Pre-Roll with motion blur and obstacle avoidance lidar laser visualization.',
+    results: 'Generated 8.2M impressions and reached Amazon #1 Bestseller in Consumer Robotics.'
+  },
+  {
+    id: 'project-perfume',
+    title: 'Aurora Nocturne: Eau De Parfum',
+    client: 'Maison Aurora • Luxury French Fragrance',
+    category: 'beauty',
+    duration: '0:25',
+    campaignType: 'Holiday Global DTC Launch & Sephora Digital Endcap',
+    deliverables: '4K Macro (16:9), 9:16 Reels Cut, 1:1 Shopify Hero Loop',
+    roas: '+390% ROAS (Holiday Drops)',
+    ctr: '5.6% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/fragrance_commercial.jpg',
+    video: 'assets/ecom_beauty_serum.webm',
+    synopsis: 'Sensory luxury perfume commercial featuring faceted crystal bottle floating over tranquil water ripples amidst floating orchid petals and warm golden sunbeams.',
+    strategy: 'Sensory micro-fluidics highlighting bottle refraction, golden liquid glow, and delicate orchid petal physics for luxury holiday gift conversion.',
+    results: 'Increased holiday DTC conversion rate by +48% on Shopify and Sephora digital placements.'
+  },
+  {
+    id: 'project-eyewear',
+    title: 'Aeterna Carbon: Polarized Optics',
+    client: 'Aeterna Eyewear • Performance Luxury Optics',
+    category: 'fashion',
+    duration: '0:20',
+    campaignType: 'Summer Drop & Instagram Performance Ad Suite',
+    deliverables: '4K Master (16:9), 9:16 Reels Hook Suite, 1:1 PDP Cut',
+    roas: '+475% ROAS (Summer Drops)',
+    ctr: '5.9% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/eyewear_commercial.jpg',
+    video: 'assets/fashion_couture.webm',
+    synopsis: 'High-velocity performance eyewear commercial showcasing matte carbon fiber frames and iridescent polarized lens flare reflections.',
+    strategy: 'Visualized UV400 polarization glare reduction with split-screen iridescent lens transmission and aerodynamic wind tunnel vapor trails.',
+    results: 'Over 45,000 units sold during the 30-day summer drop across Meta, TikTok, and Amazon.'
   }
 ];
 
@@ -477,6 +545,83 @@ const sampleDeliverablesData = {
       { name: 'Speedform_ExplodedCAD_Cut_9x16.mp4', size: '198 MB', type: 'Viral 3D CAD Hook (9:16)' },
       { name: 'Speedform_Instagram_Story_9x16.mp4', size: '160 MB', type: 'Reels Cut (9:16)' },
       { name: 'Speedform_Footwear_3D_ColorGrade.cube', size: '15 MB', type: 'Color Grade 3D LUT' }
+    ]
+  },
+  'watch': {
+    projectId: 'project-watch',
+    title: 'Aurora Chronos: Perpetual Kinetic',
+    client: 'Aurora Watchmaking • Geneva Haute Horlogerie',
+    video: 'assets/luxury_commercial.webm',
+    poster: 'assets/luxury_watch_commercial.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K UHD 60FPS)',
+      colorSpace: 'ACEScc 12-bit Log Master',
+      audio: 'Mechanical Chrono Tick & Hydro Foley',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'Aurora_Chronos_4K_CinemaMaster_16x9.mov', size: '1.68 GB', type: '4K Cinema Master' },
+      { name: 'Aurora_Mechanical_GearOrbit_9x16.mp4', size: '210 MB', type: 'Vertical Macro Hook (9:16)' },
+      { name: 'Aurora_PDP_Luminescent_Loop_1x1.mp4', size: '115 MB', type: 'Kickstarter / PDP Loop (1:1)' },
+      { name: 'Aurora_Studio_HighRes_StillFrames.zip', size: '480 MB', type: '8K Print Campaign Stills' },
+      { name: 'Global_Commercial_License.pdf', size: '1.6 MB', type: 'Perpetual Rights' }
+    ]
+  },
+  'drone': {
+    projectId: 'project-drone',
+    title: 'AeroAI Valkyrie: Cyber Recon',
+    client: 'Aero Robotics • Smart Autonomous Aerospace',
+    video: 'assets/ecom_tech_gadget.webm',
+    poster: 'assets/drone_tech_commercial.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K UHD 60FPS)',
+      colorSpace: 'ACES Neon HDR Gamut',
+      audio: 'Sci-Fi Turbine & Lidar Laser Audio',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'AeroAI_Valkyrie_4K_Commercial_16x9.mov', size: '1.45 GB', type: '4K Broadcast Master' },
+      { name: 'AeroAI_SpeedBurst_TikTokSpark_9x16.mp4', size: '178 MB', type: 'TikTok Spark Hook (9:16)' },
+      { name: 'AeroAI_Amazon_SponsoredBrand_1x1.mp4', size: '96 MB', type: 'Amazon Video (1:1)' },
+      { name: 'AeroAI_Soundtrack_Stems_WAV.zip', size: '140 MB', type: 'Spatial Audio Stems' }
+    ]
+  },
+  'perfume': {
+    projectId: 'project-perfume',
+    title: 'Aurora Nocturne: Eau De Parfum',
+    client: 'Maison Aurora • Luxury French Fragrance',
+    video: 'assets/ecom_beauty_serum.webm',
+    poster: 'assets/fragrance_commercial.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K Macro 60FPS)',
+      colorSpace: 'ACES Golden Flare Gamut',
+      audio: 'Sensory Orchid Water Ripple Audio',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'Aurora_Nocturne_4K_Cinema_16x9.mov', size: '1.35 GB', type: '4K Master (16:9)' },
+      { name: 'Aurora_PetalSplash_Reels_9x16.mp4', size: '162 MB', type: 'Instagram Reels Cut (9:16)' },
+      { name: 'Aurora_Sephora_Shopify_Loop_1x1.mp4', size: '84 MB', type: 'Shopify PDP Loop (1:1)' },
+      { name: 'Aurora_Fragrance_Media_Kit.pdf', size: '2.4 MB', type: 'Press Kit & License' }
+    ]
+  },
+  'eyewear': {
+    projectId: 'project-eyewear',
+    title: 'Aeterna Carbon: Polarized Optics',
+    client: 'Aeterna Eyewear • Performance Luxury Optics',
+    video: 'assets/fashion_couture.webm',
+    poster: 'assets/eyewear_commercial.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K 60FPS)',
+      colorSpace: 'Polarized Prism Dynamic HDR',
+      audio: 'Wind Tunnel Aerodynamic Audio',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'Aeterna_Carbon_4K_Master_16x9.mov', size: '1.40 GB', type: '4K Commercial Master' },
+      { name: 'Aeterna_Polarized_LensGlow_9x16.mp4', size: '172 MB', type: 'Viral Hook Cut (9:16)' },
+      { name: 'Aeterna_Meta_Feed_Loop_1x1.mp4', size: '90 MB', type: 'Meta Ad Feed Cut (1:1)' },
+      { name: 'Aeterna_LUT_Color_Profile.cube', size: '14 MB', type: 'Prism 3D LUT' }
     ]
   }
 };
@@ -933,29 +1078,86 @@ function initMobileMenu() {
   function openDrawer() {
     drawer.classList.add('active');
     document.body.classList.add('drawer-open');
+    if (openBtn) {
+      openBtn.classList.add('is-open');
+      openBtn.setAttribute('aria-expanded', 'true');
+    }
   }
 
   function closeDrawer() {
     drawer.classList.remove('active');
     document.body.classList.remove('drawer-open');
+    if (openBtn) {
+      openBtn.classList.remove('is-open');
+      openBtn.setAttribute('aria-expanded', 'false');
+    }
   }
 
-  if (openBtn) openBtn.addEventListener('click', openDrawer);
-  if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+  function toggleDrawer() {
+    if (drawer.classList.contains('active')) {
+      closeDrawer();
+    } else {
+      openDrawer();
+    }
+  }
+
+  function smoothScrollTo(targetSelector) {
+    if (!targetSelector || !targetSelector.startsWith('#')) return;
+    const targetElement = document.querySelector(targetSelector);
+    if (!targetElement) return;
+
+    const navbar = document.getElementById('navbar');
+    const navHeight = navbar ? navbar.offsetHeight : 70;
+    const targetTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = Math.max(0, targetTop - navHeight - 14);
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
+
+  if (openBtn) {
+    openBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleDrawer();
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeDrawer();
+    });
+  }
 
   drawer.addEventListener('click', (e) => {
     if (e.target === drawer) closeDrawer();
   });
 
   drawerLinks.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+      const targetId = link.getAttribute('href');
       closeDrawer();
+      if (targetId && targetId.startsWith('#')) {
+        e.preventDefault();
+        setTimeout(() => {
+          smoothScrollTo(targetId);
+        }, 150);
+      }
     });
   });
 
   if (drawerCta) {
-    drawerCta.addEventListener('click', () => {
+    drawerCta.addEventListener('click', (e) => {
+      const targetId = drawerCta.getAttribute('href');
       closeDrawer();
+      if (targetId && targetId.startsWith('#')) {
+        e.preventDefault();
+        setTimeout(() => {
+          smoothScrollTo(targetId);
+        }, 150);
+      }
     });
   }
 

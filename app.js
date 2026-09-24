@@ -22,6 +22,114 @@ document.addEventListener('DOMContentLoaded', () => {
    E-Commerce & Brand Commercial Portfolio Projects
    ========================================================================== */
 const videoProjects = [
+  // ==========================================
+  // High-Impact Promotional & Commercial Launch Videos
+  // ==========================================
+  {
+    id: 'project-saas',
+    title: 'Nova AI: Autonomous Creative Engine',
+    client: 'Nova AI Labs • Next-Gen Creative Cloud',
+    category: 'promo tech',
+    duration: '0:30',
+    campaignType: 'SaaS Platform Launch & Global Teaser Ad',
+    deliverables: '4K Commercial Master (16:9), Viral Hook Suite (9:16), Product Demo Cut (1:1)',
+    roas: '+540% ROAS (B2B SaaS Scale)',
+    ctr: '7.2% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/promo_saas_ai.jpg',
+    video: 'assets/promo_saas_ai.webm',
+    synopsis: 'Futuristic promotional video showcasing holographic glass UI interfaces, real-time generative neural clusters, and AI workflow speed.',
+    strategy: 'Engineered for high-converting B2B SaaS top-of-funnel acquisition. Integrated dynamic 3-second kinetic hooks, holographic UI telemetry, and sound design to illustrate effortless speed and creative superpowers.',
+    results: 'Drove 42,000+ waitlist signups in the first 7 days, achieving an unprecedented 7.2% CTR on YouTube and LinkedIn ads with a 5.4x ROAS.'
+  },
+  {
+    id: 'project-gaming',
+    title: 'Vortex Pro: Cyberdeck Wireless Controller',
+    client: 'Vortex Gaming Gear • Esports Performance',
+    category: 'promo tech',
+    duration: '0:30',
+    campaignType: 'Global Hardware Launch & Twitch / TikTok Spark Ads',
+    deliverables: '4K Cinema Trailer (16:9), 9:16 TikTok Spark Cut, Amazon A+ Video (1:1)',
+    roas: '+490% ROAS (Esports Hardware)',
+    ctr: '6.8% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/promo_gaming_gear.jpg',
+    video: 'assets/promo_gaming_gear.webm',
+    synopsis: 'High-octane commercial ad featuring translucent mechanical switches, RGB chromatic surges, and slow-motion lightning collision physics.',
+    strategy: 'Crafted for competitive esports gamers and hardware enthusiasts. Visualized zero-latency hall-effect triggers, tactile mechanical switches, and customizable lighting profiles.',
+    results: 'The initial production run of 15,000 units sold out completely in under 36 hours from the promotional trailer drop.'
+  },
+  {
+    id: 'project-coldbrew',
+    title: 'Kona Draft: Liquid Gold Nitro Cold Brew',
+    client: 'Kona Coffee Roasters • Artisan Beverage',
+    category: 'promo beverage',
+    duration: '0:25',
+    campaignType: 'Direct-to-Consumer Summer Drop & Retail Promo',
+    deliverables: '4K Master Commercial (16:9), 9:16 Reels Cut, 1:1 Shopify Hero Video',
+    roas: '+410% ROAS (DTC Subscriptions)',
+    ctr: '5.9% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/promo_cold_brew.jpg',
+    video: 'assets/promo_cold_brew.webm',
+    synopsis: 'Sensory gourmet beverage commercial showcasing nitrogen cascading micro-foam, ice shatter physics, and roasted coffee bean explosions.',
+    strategy: 'Sensory-first beverage promotional spot emphasizing micro-nitrogen texture, roasted bean aroma visual cues, and ice-cold refreshment to drive immediate subscription conversions.',
+    results: 'Boosted DTC recurring subscription sales by +64% within month 1 and delivered a 5.9% CTR across Meta and TikTok paid ads.'
+  },
+  {
+    id: 'project-smartring',
+    title: 'Helix Titan: Biometric Precision Ring',
+    client: 'Helix Health Technologies • Precision Wearables',
+    category: 'promo tech',
+    duration: '0:30',
+    campaignType: 'Global Kickstarter Hero Video & Meta Ad Scale',
+    deliverables: '4K Cinema Master (16:9), 9:16 Vertical Story Cut, 1:1 PDP Cut',
+    roas: '+580% ROAS (Wearable Drops)',
+    ctr: '6.5% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/promo_smart_ring.jpg',
+    video: 'assets/promo_smart_ring.webm',
+    synopsis: 'Ultra-sleek titanium wearable commercial highlighting emerald green PPG optical sensors, sleep telemetry, and medical-grade accuracy.',
+    strategy: 'Structured as a compelling Apple-grade promotional film that challenges bulky smartwatches with titanium craftsmanship and futuristic laser sensor telemetry.',
+    results: 'Surpassed crowdfunding goal by 1,400%, generating $3.1M in pre-orders and ranking #1 trending health wearable.'
+  },
+  {
+    id: 'project-diamond',
+    title: 'Solitaire Astral: Flawless Platinum Diamond',
+    client: 'Astral High Jewelry • New York & Paris',
+    category: 'promo luxury',
+    duration: '0:30',
+    campaignType: 'Holiday Bridal Campaign & Luxury DTC Showcase',
+    deliverables: '4K Master (16:9), 9:16 Luxury Reels Cut, 1:1 Square Macro Loop',
+    roas: '+620% ROAS (High-Ticket Jewelry)',
+    ctr: '5.5% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/promo_diamond_ring.jpg',
+    video: 'assets/promo_diamond_ring.webm',
+    synopsis: 'Ultra-luxury diamond jewelry commercial capturing prismatic rainbow flare refractions, liquid velvet ripples, and 8K macro brilliance.',
+    strategy: 'Designed for high-ticket emotional purchase conversion. Showcases optical light caustics, laser-cut facet geometry, and silky dark luxury atmosphere without expensive physical jewelry film crews.',
+    results: 'Drove $4.8M in custom bridal bookings during Q4 holiday period with an outstanding 6.2x blended ROAS.'
+  },
+  {
+    id: 'project-mobility',
+    title: 'VoltRider Apex: Urban Hyper-Scooter',
+    client: 'VoltRider Mobility • High-Performance EV',
+    category: 'promo luxury',
+    duration: '0:35',
+    campaignType: 'Urban Product Reveal & YouTube Pre-Roll Campaign',
+    deliverables: '4K Broadcast Cut (16:9), 9:16 Speed Hook, 1:1 Feed Cut',
+    roas: '+450% ROAS (Direct Reservations)',
+    ctr: '5.7% CTR',
+    turnaround: '72 Hours',
+    image: 'assets/promo_urban_mobility.jpg',
+    video: 'assets/promo_urban_mobility.webm',
+    synopsis: 'Cinematic urban speed commercial featuring matte carbon fiber aero chassis, neon wet street reflections, and high-velocity light streaks.',
+    strategy: 'High-energy promotional video set against a neon metropolis at night. Highlights dual-motor acceleration, carbon fiber durability, and aerospace braking systems.',
+    results: 'Captured 5,200+ reservation deposits valued at over $11M in pipeline sales within 3 weeks of campaign launch.'
+  },
+  // ==========================================
+  // Core Brand Commercials
+  // ==========================================
   {
     id: 'project-earbuds',
     title: 'Acoustiq Titanium Pro',
@@ -136,7 +244,7 @@ const videoProjects = [
     ctr: '5.4% CTR',
     turnaround: '48 Hours',
     image: 'assets/luxury_watch_commercial.jpg',
-    video: 'assets/luxury_commercial.webm',
+    video: 'assets/luxury_watch_commercial.webm',
     synopsis: 'Macro mechanical luxury timepiece ad capturing micro-gears, water ripple levitation, and sapphire crystal luminescent reflections.',
     strategy: 'Full exploded 3D CAD mechanical tourbillon assembly with luminescent cyan dials. Engineered for ultra-high-converting luxury Kickstarter & DTC launch.',
     results: 'Drove over $2.4M in global backer pre-orders within 10 days of campaign debut.'
@@ -153,7 +261,7 @@ const videoProjects = [
     ctr: '6.3% CTR',
     turnaround: '48 Hours',
     image: 'assets/drone_tech_commercial.jpg',
-    video: 'assets/ecom_tech_gadget.webm',
+    video: 'assets/drone_tech_commercial.webm',
     synopsis: 'Atmospheric cyberpunk commercial showing aerodynamic carbon fiber drone hovering through neon violet and cyan fog vortex.',
     strategy: 'High-impact 3-second hook designed for TikTok Spark ads and YouTube Pre-Roll with motion blur and obstacle avoidance lidar laser visualization.',
     results: 'Generated 8.2M impressions and reached Amazon #1 Bestseller in Consumer Robotics.'
@@ -170,7 +278,7 @@ const videoProjects = [
     ctr: '5.6% CTR',
     turnaround: '48 Hours',
     image: 'assets/fragrance_commercial.jpg',
-    video: 'assets/ecom_beauty_serum.webm',
+    video: 'assets/fragrance_commercial.webm',
     synopsis: 'Sensory luxury perfume commercial featuring faceted crystal bottle floating over tranquil water ripples amidst floating orchid petals and warm golden sunbeams.',
     strategy: 'Sensory micro-fluidics highlighting bottle refraction, golden liquid glow, and delicate orchid petal physics for luxury holiday gift conversion.',
     results: 'Increased holiday DTC conversion rate by +48% on Shopify and Sephora digital placements.'
@@ -187,7 +295,7 @@ const videoProjects = [
     ctr: '5.9% CTR',
     turnaround: '48 Hours',
     image: 'assets/eyewear_commercial.jpg',
-    video: 'assets/fashion_couture.webm',
+    video: 'assets/eyewear_commercial.webm',
     synopsis: 'High-velocity performance eyewear commercial showcasing matte carbon fiber frames and iridescent polarized lens flare reflections.',
     strategy: 'Visualized UV400 polarization glare reduction with split-screen iridescent lens transmission and aerodynamic wind tunnel vapor trails.',
     results: 'Over 45,000 units sold during the 30-day summer drop across Meta, TikTok, and Amazon.'
@@ -446,7 +554,9 @@ function initShowcaseFilters() {
       const filter = btn.dataset.filter;
 
       videoCards.forEach(card => {
-        if (filter === 'all' || card.dataset.category === filter) {
+        const cat = card.dataset.category || '';
+        const matches = (filter === 'all') || cat.split(' ').includes(filter) || cat === filter;
+        if (matches) {
           card.style.display = 'flex';
           setTimeout(() => {
             card.style.opacity = '1';
@@ -468,6 +578,129 @@ function initShowcaseFilters() {
    Sample Deliverables & Client Output Suite Viewer
    ========================================================================== */
 const sampleDeliverablesData = {
+  // Promotional Video Samples
+  'promo-saas': {
+    projectId: 'project-saas',
+    title: 'Nova AI: Autonomous Creative Engine',
+    client: 'Nova AI Labs • Next-Gen Creative Cloud',
+    video: 'assets/promo_saas_ai.webm',
+    poster: 'assets/promo_saas_ai.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K 60FPS Master)',
+      colorSpace: 'ACES Cyber Neon Gamut 10-bit',
+      audio: '48kHz 24-bit Neural Hologram SFX',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'Nova_AI_4K_Platform_Trailer_16x9_60fps.mov', size: '1.65 GB', type: '4K Commercial Master' },
+      { name: 'Nova_AI_ViralHook_A_NeuralGrid_9x16.mp4', size: '190 MB', type: 'Viral Hook Cut A (9:16)' },
+      { name: 'Nova_AI_ViralHook_B_Frictionless_9x16.mp4', size: '182 MB', type: 'Viral Hook Cut B (9:16)' },
+      { name: 'Nova_AI_FeatureLoop_Shopify_1x1.mp4', size: '98 MB', type: 'SaaS Demo Feed Loop (1:1)' },
+      { name: 'Nova_Holographic_UI_Telemetry_Stems.zip', size: '320 MB', type: 'Motion Graphic Assets' },
+      { name: 'Global_Commercial_Broadcast_License.pdf', size: '1.8 MB', type: 'Perpetual Rights' }
+    ]
+  },
+  'promo-gaming': {
+    projectId: 'project-gaming',
+    title: 'Vortex Pro: Cyberdeck Wireless Controller',
+    client: 'Vortex Gaming Gear • Esports Performance',
+    video: 'assets/promo_gaming_gear.webm',
+    poster: 'assets/promo_gaming_gear.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K 60FPS)',
+      colorSpace: 'DCI-P3 High Dynamic Range',
+      audio: 'Tactile Mechanical Click & Bass Surge',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'VortexPro_4K_Esports_Promo_16x9.mov', size: '1.52 GB', type: '4K Cinema Trailer' },
+      { name: 'VortexPro_Mechanical_Trigger_Hook_9x16.mp4', size: '185 MB', type: 'Twitch / TikTok Hook (9:16)' },
+      { name: 'VortexPro_RGB_Overdrive_Loop_1x1.mp4', size: '94 MB', type: 'Amazon A+ Video (1:1)' },
+      { name: 'VortexPro_Custom_ACES_LUT.cube', size: '14 MB', type: 'Color Grade 3D LUT' },
+      { name: 'Worldwide_Commercial_Ad_Release.pdf', size: '1.5 MB', type: 'Commercial Rights' }
+    ]
+  },
+  'promo-coldbrew': {
+    projectId: 'project-coldbrew',
+    title: 'Kona Draft: Liquid Gold Nitro Cold Brew',
+    client: 'Kona Coffee Roasters • Artisan Beverage',
+    video: 'assets/promo_cold_brew.webm',
+    poster: 'assets/promo_cold_brew.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K Macro 60FPS)',
+      colorSpace: 'Warm Amber Cinema Tone 10-bit',
+      audio: 'Slow-Mo Liquid Splash & Coffee Aroma Foley',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'Kona_Nitro_LiquidGold_4K_16x9.mov', size: '1.45 GB', type: '4K Master Commercial' },
+      { name: 'Kona_Nitro_Cascading_Hook_9x16.mp4', size: '170 MB', type: 'Reels / TikTok Cut (9:16)' },
+      { name: 'Kona_ColdBrew_Shopify_PDP_Loop_1x1.mp4', size: '89 MB', type: 'Shopify Hero Video (1:1)' },
+      { name: 'Kona_Sensory_Soundtrack_WAV.zip', size: '110 MB', type: 'Commercial Audio Master' },
+      { name: 'DTC_Advertising_Rights_Release.pdf', size: '1.4 MB', type: 'Perpetual Rights' }
+    ]
+  },
+  'promo-smartring': {
+    projectId: 'project-smartring',
+    title: 'Helix Titan: Biometric Precision Ring',
+    client: 'Helix Health Technologies • Precision Wearables',
+    video: 'assets/promo_smart_ring.webm',
+    poster: 'assets/promo_smart_ring.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K UHD 60FPS)',
+      colorSpace: 'Apple-Grade Minimalist Tone 10-bit',
+      audio: 'Medical Laser Pulse & Sub-Bass Heartbeat',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'HelixTitan_4K_CinemaMaster_16x9.mov', size: '1.58 GB', type: '4K Launch Commercial' },
+      { name: 'HelixTitan_Biometric_Laser_Hook_9x16.mp4', size: '195 MB', type: 'TikTok Hook Cut (9:16)' },
+      { name: 'HelixTitan_Sleep_Loop_1x1.mp4', size: '91 MB', type: 'PDP Product Video (1:1)' },
+      { name: 'HelixTitan_Apple_Style_ColorGrade.cube', size: '12 MB', type: 'Color Grade 3D LUT' },
+      { name: 'Kickstarter_Commercial_License.pdf', size: '1.6 MB', type: 'Commercial Rights' }
+    ]
+  },
+  'promo-diamond': {
+    projectId: 'project-diamond',
+    title: 'Solitaire Astral: Flawless Platinum Diamond',
+    client: 'Astral High Jewelry • New York & Paris',
+    video: 'assets/promo_diamond_ring.webm',
+    poster: 'assets/promo_diamond_ring.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K Macro 60FPS)',
+      colorSpace: 'ACES Prismatic Gamut 12-bit Log',
+      audio: 'Crystal Chimes & Velvety Drone Stem',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'Solitaire_Astral_4K_HighJewelry_16x9.mov', size: '1.75 GB', type: '4K Cinema Commercial' },
+      { name: 'Solitaire_PrismSparkle_Hook_9x16.mp4', size: '215 MB', type: 'Luxury Reels Cut (9:16)' },
+      { name: 'Solitaire_Astral_PDP_Velvet_Loop_1x1.mp4', size: '105 MB', type: 'Square Macro Loop (1:1)' },
+      { name: 'Solitaire_8K_Print_Stills_Pack.zip', size: '520 MB', type: '8K Print Campaign Stills' },
+      { name: 'Global_HighJewelry_Perpetual_Rights.pdf', size: '2.0 MB', type: 'Perpetual Rights' }
+    ]
+  },
+  'promo-mobility': {
+    projectId: 'project-mobility',
+    title: 'VoltRider Apex: Urban Hyper-Scooter',
+    client: 'VoltRider Mobility • High-Performance EV',
+    video: 'assets/promo_urban_mobility.webm',
+    poster: 'assets/promo_urban_mobility.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K 60FPS)',
+      colorSpace: 'Cyberpunk Night Grade 10-bit HDR',
+      audio: 'High-Torque EV Whine & City Spatial Audio',
+      turnaround: '72 Hours Shipped'
+    },
+    files: [
+      { name: 'VoltRider_Apex_4K_Urban_Trailer_16x9.mov', size: '1.82 GB', type: '4K Broadcast Cut' },
+      { name: 'VoltRider_Velocity_LightTrail_9x16.mp4', size: '205 MB', type: 'Speed Hook Cut (9:16)' },
+      { name: 'VoltRider_Cyber_Loop_1x1.mp4', size: '112 MB', type: 'Meta Ad Feed Cut (1:1)' },
+      { name: 'VoltRider_Spatial_Soundtrack_Stems.zip', size: '185 MB', type: 'Spatial Audio Stems' },
+      { name: 'Automotive_Commercial_Perpetual_License.pdf', size: '1.9 MB', type: 'Perpetual Rights' }
+    ]
+  },
+  // Core Deliverables
   'tech': {
     projectId: 'project-earbuds',
     title: 'Acoustiq Titanium Pro Earbuds',
@@ -551,7 +784,7 @@ const sampleDeliverablesData = {
     projectId: 'project-watch',
     title: 'Aurora Chronos: Perpetual Kinetic',
     client: 'Aurora Watchmaking • Geneva Haute Horlogerie',
-    video: 'assets/luxury_commercial.webm',
+    video: 'assets/luxury_watch_commercial.webm',
     poster: 'assets/luxury_watch_commercial.jpg',
     specs: {
       resolution: '3840 x 2160 (4K UHD 60FPS)',
@@ -571,7 +804,7 @@ const sampleDeliverablesData = {
     projectId: 'project-drone',
     title: 'AeroAI Valkyrie: Cyber Recon',
     client: 'Aero Robotics • Smart Autonomous Aerospace',
-    video: 'assets/ecom_tech_gadget.webm',
+    video: 'assets/drone_tech_commercial.webm',
     poster: 'assets/drone_tech_commercial.jpg',
     specs: {
       resolution: '3840 x 2160 (4K UHD 60FPS)',
@@ -590,7 +823,7 @@ const sampleDeliverablesData = {
     projectId: 'project-perfume',
     title: 'Aurora Nocturne: Eau De Parfum',
     client: 'Maison Aurora • Luxury French Fragrance',
-    video: 'assets/ecom_beauty_serum.webm',
+    video: 'assets/fragrance_commercial.webm',
     poster: 'assets/fragrance_commercial.jpg',
     specs: {
       resolution: '3840 x 2160 (4K Macro 60FPS)',
@@ -609,7 +842,7 @@ const sampleDeliverablesData = {
     projectId: 'project-eyewear',
     title: 'Aeterna Carbon: Polarized Optics',
     client: 'Aeterna Eyewear • Performance Luxury Optics',
-    video: 'assets/fashion_couture.webm',
+    video: 'assets/eyewear_commercial.webm',
     poster: 'assets/eyewear_commercial.jpg',
     specs: {
       resolution: '3840 x 2160 (4K 60FPS)',
@@ -645,7 +878,7 @@ function initSampleOutputViewer() {
 
   if (!videoPlayer || !filesListEl) return;
 
-  let currentSku = 'tech';
+  let currentSku = 'promo-saas';
   let currentFormat = '16-9';
 
   function renderSku(skuKey) {
@@ -746,7 +979,7 @@ function initSampleOutputViewer() {
   if (previewModalBtn) previewModalBtn.addEventListener('click', openModalForCurrent);
   if (playOverlayTrigger) playOverlayTrigger.addEventListener('click', openModalForCurrent);
 
-  renderSku('tech');
+  renderSku('promo-saas');
 }
 
 /* ==========================================================================
@@ -1001,7 +1234,7 @@ function initCaseStudyModal() {
 }
 
 /* ==========================================================================
-   E-Commerce Campaign & ROI Calculator
+   E-Commerce Campaign & ROI Calculator & Pricing Action Integration
    ========================================================================== */
 function initBookingEstimator() {
   const scopeSelect = document.getElementById('est-scope');
@@ -1012,6 +1245,7 @@ function initBookingEstimator() {
   const priceDisplay = document.getElementById('est-price-val');
   const turnaroundDisplay = document.getElementById('est-time-val');
   const submitBtn = document.getElementById('booking-submit-btn');
+  const packageBtns = document.querySelectorAll('[data-package]');
 
   function calculate() {
     let basePrice = 1800;
@@ -1049,18 +1283,74 @@ function initBookingEstimator() {
 
   calculate();
 
+  // Handle pricing tier buttons
+  packageBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const packageKey = btn.dataset.package;
+      if (scopeSelect && packageKey) {
+        scopeSelect.value = packageKey;
+        calculate();
+        const optionName = scopeSelect.options[scopeSelect.selectedIndex].text;
+        showToast(`Selected Package: ${optionName}`);
+      }
+    });
+  });
+
   if (submitBtn) {
     submitBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      showToast('Campaign Brief Received! Jerome will send your custom ad sample within 24 hours.');
       const nameInput = document.getElementById('booking-name');
       const emailInput = document.getElementById('booking-email');
       const msgInput = document.getElementById('booking-message');
-      if (nameInput) nameInput.value = '';
-      if (emailInput) emailInput.value = '';
-      if (msgInput) msgInput.value = '';
+
+      if (!nameInput || !nameInput.value.trim()) {
+        showToast('Please enter your Brand Name & Contact Person.');
+        if (nameInput) nameInput.focus();
+        return;
+      }
+      if (!emailInput || !emailInput.value.trim() || !emailInput.value.includes('@')) {
+        showToast('Please enter a valid Work Email.');
+        if (emailInput) emailInput.focus();
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<i data-lucide="loader-2" class="spin-icon"></i> <span>Sending Creative Brief...</span>`;
+      if (window.lucide) lucide.createIcons();
+
+      setTimeout(() => {
+        showToast('✓ Campaign Brief Received! Jerome will send your custom ad sample within 24 hours.');
+        if (nameInput) nameInput.value = '';
+        if (emailInput) emailInput.value = '';
+        if (msgInput) msgInput.value = '';
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = `<i data-lucide="send"></i> <span>Request Free Custom Brand Sample</span>`;
+        if (window.lucide) lucide.createIcons();
+      }, 900);
     });
   }
+
+  // Global smooth scrolling for all anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId && targetId !== '#' && targetId.startsWith('#')) {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          const navbar = document.getElementById('main-nav') || document.getElementById('navbar');
+          const navHeight = navbar ? navbar.offsetHeight : 70;
+          const targetTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
+          const offsetPosition = Math.max(0, targetTop - navHeight - 14);
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  });
 }
 
 /* ==========================================================================
@@ -1074,6 +1364,10 @@ function initMobileMenu() {
   const drawerCta = document.getElementById('mobile-cta-btn');
 
   if (!drawer) return;
+
+  if (window.lucide && typeof window.lucide.createIcons === 'function') {
+    window.lucide.createIcons();
+  }
 
   function openDrawer() {
     drawer.classList.add('active');
@@ -1106,7 +1400,7 @@ function initMobileMenu() {
     const targetElement = document.querySelector(targetSelector);
     if (!targetElement) return;
 
-    const navbar = document.getElementById('navbar');
+    const navbar = document.getElementById('main-nav') || document.getElementById('navbar');
     const navHeight = navbar ? navbar.offsetHeight : 70;
     const targetTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
     const offsetPosition = Math.max(0, targetTop - navHeight - 14);
@@ -1143,7 +1437,7 @@ function initMobileMenu() {
         e.preventDefault();
         setTimeout(() => {
           smoothScrollTo(targetId);
-        }, 150);
+        }, 120);
       }
     });
   });
@@ -1156,7 +1450,7 @@ function initMobileMenu() {
         e.preventDefault();
         setTimeout(() => {
           smoothScrollTo(targetId);
-        }, 150);
+        }, 120);
       }
     });
   }

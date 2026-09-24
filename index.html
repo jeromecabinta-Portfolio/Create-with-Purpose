@@ -158,17 +158,17 @@
             </p>
 
             <div class="hero-cta-group">
-              <button class="btn-primary" id="hero-showreel-cta">
+              <button class="btn-primary" id="hero-showreel-cta" title="Launch 4K Commercial Reel">
                 <i data-lucide="play-circle"></i>
-                <span>▶ Play 2026 Commercial Reel</span>
+                <span>Play 2026 Commercial Reel</span>
               </button>
 
-              <a href="#samples" class="btn-secondary">
+              <a href="#samples" class="btn-secondary" title="View Sample Deliverables">
                 <i data-lucide="package-check"></i>
                 <span>View Sample Deliverables</span>
               </a>
 
-              <a href="#booking" class="btn-ghost-outline">
+              <a href="#booking" class="btn-ghost-outline" title="Estimate Campaign Fee">
                 <i data-lucide="calculator"></i>
                 <span>Estimate Campaign Fee</span>
               </a>
@@ -261,19 +261,224 @@
         <!-- Category Filters -->
         <div class="filter-tabs-wrapper">
           <div class="filter-tabs">
-            <button class="filter-btn active" data-filter="all">All Commercials (6)</button>
-            <button class="filter-btn" data-filter="tech">Consumer Tech & Audio</button>
-            <button class="filter-btn" data-filter="beauty">Skincare & Beauty Fluids</button>
-            <button class="filter-btn" data-filter="beverage">Beverage & Fluid FX</button>
+            <button class="filter-btn active" data-filter="all">All Commercials (16)</button>
+            <button class="filter-btn" data-filter="promo"><i data-lucide="sparkles"></i> Promotional & Launch Videos</button>
+            <button class="filter-btn" data-filter="tech">Consumer Tech & AI</button>
+            <button class="filter-btn" data-filter="beauty">Skincare & Beauty</button>
+            <button class="filter-btn" data-filter="beverage">Beverage & Food FX</button>
             <button class="filter-btn" data-filter="fashion">Footwear & Apparel</button>
-            <button class="filter-btn" data-filter="luxury">Luxury Automotive</button>
+            <button class="filter-btn" data-filter="luxury">Luxury & Automotive</button>
           </div>
         </div>
 
         <!-- Video Card Grid with Active Video Playback -->
         <div class="video-grid">
           
-          <!-- Card 1: Consumer Tech -->
+          <!-- Promo Card 1: SaaS AI Platform -->
+          <article class="video-card" data-category="promo tech">
+            <div class="video-thumbnail-box">
+              <video src="assets/promo_saas_ai.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/promo_saas_ai.jpg" class="card-video-media"></video>
+              <span class="card-model-badge cyan">SaaS Platform Promo</span>
+              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +540% ROAS</span>
+              <span class="card-duration-badge">0:30</span>
+              <div class="card-play-overlay" data-action="play-video" data-project-id="project-saas">
+                <div class="mini-play-btn"><i data-lucide="play"></i></div>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Nova AI Labs • Next-Gen Creative Cloud</div>
+              <h3 class="card-title">Nova AI: Autonomous Creative Engine</h3>
+              <p class="card-synopsis">Futuristic promotional video showcasing holographic glass UI interfaces, real-time generative neural clusters, and AI workflow speed.</p>
+              
+              <div class="card-meta-tags">
+                <span class="meta-tag">7.2% CTR</span>
+                <span class="meta-tag">Holographic HUD</span>
+                <span class="meta-tag">YouTube & LinkedIn</span>
+                <span class="meta-tag">48h Delivery</span>
+              </div>
+
+              <div class="card-footer-actions">
+                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-saas">
+                  <i data-lucide="play"></i> Watch 4K Video
+                </button>
+                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-saas">
+                  <i data-lucide="file-text"></i> Case Study
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Promo Card 2: Gaming Gear & Esports -->
+          <article class="video-card" data-category="promo tech">
+            <div class="video-thumbnail-box">
+              <video src="assets/promo_gaming_gear.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/promo_gaming_gear.jpg" class="card-video-media"></video>
+              <span class="card-model-badge cyan">Esports Hardware Promo</span>
+              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +490% ROAS</span>
+              <span class="card-duration-badge">0:30</span>
+              <div class="card-play-overlay" data-action="play-video" data-project-id="project-gaming">
+                <div class="mini-play-btn"><i data-lucide="play"></i></div>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Vortex Gaming Gear • Esports Performance</div>
+              <h3 class="card-title">Vortex Pro: Cyberdeck Controller</h3>
+              <p class="card-synopsis">High-octane commercial ad featuring translucent mechanical switches, RGB chromatic surges, and slow-motion lightning collision physics.</p>
+              
+              <div class="card-meta-tags">
+                <span class="meta-tag">6.8% CTR</span>
+                <span class="meta-tag">RGB Overdrive FX</span>
+                <span class="meta-tag">Twitch & TikTok</span>
+                <span class="meta-tag">48h Delivery</span>
+              </div>
+
+              <div class="card-footer-actions">
+                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-gaming">
+                  <i data-lucide="play"></i> Watch 4K Video
+                </button>
+                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-gaming">
+                  <i data-lucide="file-text"></i> Case Study
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Promo Card 3: Artisan Cold Brew Nitro -->
+          <article class="video-card" data-category="promo beverage">
+            <div class="video-thumbnail-box">
+              <video src="assets/promo_cold_brew.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/promo_cold_brew.jpg" class="card-video-media"></video>
+              <span class="card-model-badge amber">Artisan Beverage Promo</span>
+              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +410% ROAS</span>
+              <span class="card-duration-badge">0:25</span>
+              <div class="card-play-overlay" data-action="play-video" data-project-id="project-coldbrew">
+                <div class="mini-play-btn"><i data-lucide="play"></i></div>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Kona Coffee Roasters • Artisan Nitro</div>
+              <h3 class="card-title">Kona Draft: Liquid Gold Nitro</h3>
+              <p class="card-synopsis">Sensory gourmet beverage commercial showcasing nitrogen cascading micro-foam, ice shatter physics, and roasted coffee bean explosions.</p>
+              
+              <div class="card-meta-tags">
+                <span class="meta-tag">5.9% CTR</span>
+                <span class="meta-tag">Nitro Cascade FX</span>
+                <span class="meta-tag">Shopify & Reels</span>
+                <span class="meta-tag">48h Delivery</span>
+              </div>
+
+              <div class="card-footer-actions">
+                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-coldbrew">
+                  <i data-lucide="play"></i> Watch 4K Video
+                </button>
+                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-coldbrew">
+                  <i data-lucide="file-text"></i> Case Study
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Promo Card 4: Biometric Smart Ring -->
+          <article class="video-card" data-category="promo tech">
+            <div class="video-thumbnail-box">
+              <video src="assets/promo_smart_ring.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/promo_smart_ring.jpg" class="card-video-media"></video>
+              <span class="card-model-badge emerald">Precision Wearable Promo</span>
+              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +580% ROAS</span>
+              <span class="card-duration-badge">0:30</span>
+              <div class="card-play-overlay" data-action="play-video" data-project-id="project-smartring">
+                <div class="mini-play-btn"><i data-lucide="play"></i></div>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Helix Health • Precision Wearables</div>
+              <h3 class="card-title">Helix Titan: Biometric Ring</h3>
+              <p class="card-synopsis">Ultra-sleek titanium wearable commercial highlighting emerald green PPG optical sensors, sleep telemetry, and medical-grade accuracy.</p>
+              
+              <div class="card-meta-tags">
+                <span class="meta-tag">6.5% CTR</span>
+                <span class="meta-tag">PPG Laser Pulse</span>
+                <span class="meta-tag">Kickstarter Hero</span>
+                <span class="meta-tag">48h Delivery</span>
+              </div>
+
+              <div class="card-footer-actions">
+                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-smartring">
+                  <i data-lucide="play"></i> Watch 4K Video
+                </button>
+                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-smartring">
+                  <i data-lucide="file-text"></i> Case Study
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Promo Card 5: High-Jewelry Diamond Ring -->
+          <article class="video-card" data-category="promo luxury">
+            <div class="video-thumbnail-box">
+              <video src="assets/promo_diamond_ring.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/promo_diamond_ring.jpg" class="card-video-media"></video>
+              <span class="card-model-badge amber">High Jewelry Promo</span>
+              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +620% ROAS</span>
+              <span class="card-duration-badge">0:30</span>
+              <div class="card-play-overlay" data-action="play-video" data-project-id="project-diamond">
+                <div class="mini-play-btn"><i data-lucide="play"></i></div>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Astral High Jewelry • New York & Paris</div>
+              <h3 class="card-title">Solitaire Astral: Flawless Diamond</h3>
+              <p class="card-synopsis">Ultra-luxury diamond jewelry commercial capturing prismatic rainbow flare refractions, liquid velvet ripples, and 8K macro brilliance.</p>
+              
+              <div class="card-meta-tags">
+                <span class="meta-tag">5.5% CTR</span>
+                <span class="meta-tag">Prismatic Sparkle</span>
+                <span class="meta-tag">Luxury DTC Scale</span>
+                <span class="meta-tag">48h Delivery</span>
+              </div>
+
+              <div class="card-footer-actions">
+                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-diamond">
+                  <i data-lucide="play"></i> Watch 4K Video
+                </button>
+                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-diamond">
+                  <i data-lucide="file-text"></i> Case Study
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Promo Card 6: Urban Hyper-Scooter -->
+          <article class="video-card" data-category="promo luxury">
+            <div class="video-thumbnail-box">
+              <video src="assets/promo_urban_mobility.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/promo_urban_mobility.jpg" class="card-video-media"></video>
+              <span class="card-model-badge cyan">Urban Mobility Promo</span>
+              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +450% ROAS</span>
+              <span class="card-duration-badge">0:35</span>
+              <div class="card-play-overlay" data-action="play-video" data-project-id="project-mobility">
+                <div class="mini-play-btn"><i data-lucide="play"></i></div>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> VoltRider Mobility • High-Performance EV</div>
+              <h3 class="card-title">VoltRider Apex: Urban Hyper-Scooter</h3>
+              <p class="card-synopsis">Cinematic urban speed commercial featuring matte carbon fiber aero chassis, neon wet street reflections, and high-velocity light streaks.</p>
+              
+              <div class="card-meta-tags">
+                <span class="meta-tag">5.7% CTR</span>
+                <span class="meta-tag">Light Trails FX</span>
+                <span class="meta-tag">YouTube Pre-Roll</span>
+                <span class="meta-tag">72h Delivery</span>
+              </div>
+
+              <div class="card-footer-actions">
+                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-mobility">
+                  <i data-lucide="play"></i> Watch 4K Video
+                </button>
+                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-mobility">
+                  <i data-lucide="file-text"></i> Case Study
+                </button>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Card 7: Consumer Tech -->
           <article class="video-card" data-category="tech">
             <div class="video-thumbnail-box">
               <video src="assets/ecom_tech_gadget.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/ecom_tech_gadget.jpg" class="card-video-media"></video>
@@ -307,7 +512,7 @@
             </div>
           </article>
 
-          <!-- Card 2: Skincare & Beauty -->
+          <!-- Card 8: Skincare & Beauty -->
           <article class="video-card" data-category="beauty">
             <div class="video-thumbnail-box">
               <video src="assets/ecom_beauty_serum.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/ecom_beauty_serum.jpg" class="card-video-media"></video>
@@ -321,7 +526,7 @@
             <div class="card-content">
               <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Aura Skincare • Luxury Clean Beauty</div>
               <h3 class="card-title">Aura Skincare: 24K Botanical Dew</h3>
-              <p class="card-synopsis">Sensory cosmetic macro commercial capturing golden botanical argan oil and pink rosewater splashing around frosted glass.</p>
+              <p class="card-synopsis">Sensory cosmetic macro commercial capturing golden botanical argan oil and pink rosewater splashing dynamically around frosted glass.</p>
               
               <div class="card-meta-tags">
                 <span class="meta-tag">5.2% CTR</span>
@@ -341,7 +546,7 @@
             </div>
           </article>
 
-          <!-- Card 3: Beverage & Food -->
+          <!-- Card 9: Beverage & Food -->
           <article class="video-card" data-category="beverage">
             <div class="video-thumbnail-box">
               <video src="assets/ecom_beverage_splash.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/ecom_beverage_splash.jpg" class="card-video-media"></video>
@@ -375,7 +580,7 @@
             </div>
           </article>
 
-          <!-- Card 4: Footwear & Athletics -->
+          <!-- Card 10: Footwear & Athletics -->
           <article class="video-card" data-category="fashion">
             <div class="video-thumbnail-box">
               <video src="assets/ecom_sneaker_motion.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/ecom_sneaker_motion.jpg" class="card-video-media"></video>
@@ -409,7 +614,7 @@
             </div>
           </article>
 
-          <!-- Card 5: Luxury Automotive -->
+          <!-- Card 11: Luxury Automotive -->
           <article class="video-card" data-category="luxury">
             <div class="video-thumbnail-box">
               <video src="assets/luxury_commercial.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/luxury_commercial.jpg" class="card-video-media"></video>
@@ -443,7 +648,7 @@
             </div>
           </article>
 
-          <!-- Card 6: Haute Couture & Apparel -->
+          <!-- Card 12: Haute Couture & Apparel -->
           <article class="video-card" data-category="fashion">
             <div class="video-thumbnail-box">
               <video src="assets/fashion_couture.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/fashion_couture.jpg" class="card-video-media"></video>
@@ -477,10 +682,10 @@
             </div>
           </article>
 
-          <!-- Card 7: Luxury Watchmaking -->
+          <!-- Card 13: Luxury Watchmaking -->
           <article class="video-card" data-category="luxury">
             <div class="video-thumbnail-box">
-              <img src="assets/luxury_watch_commercial.jpg" alt="Aurora Chronos Titanium Chronograph Watch Commercial" class="card-video-media">
+              <video src="assets/luxury_watch_commercial.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/luxury_watch_commercial.jpg" class="card-video-media"></video>
               <span class="card-model-badge amber">Haute Horlogerie</span>
               <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +510% ROAS</span>
               <span class="card-duration-badge">0:30</span>
@@ -511,10 +716,10 @@
             </div>
           </article>
 
-          <!-- Card 8: Robotics & Aerospace Drone -->
+          <!-- Card 14: Robotics & Aerospace Drone -->
           <article class="video-card" data-category="tech">
             <div class="video-thumbnail-box">
-              <img src="assets/drone_tech_commercial.jpg" alt="AeroAI Valkyrie Autonomous Consumer Drone Commercial" class="card-video-media">
+              <video src="assets/drone_tech_commercial.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/drone_tech_commercial.jpg" class="card-video-media"></video>
               <span class="card-model-badge cyan">Autonomous Drone</span>
               <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +430% ROAS</span>
               <span class="card-duration-badge">0:25</span>
@@ -545,10 +750,10 @@
             </div>
           </article>
 
-          <!-- Card 9: Luxury Fragrance -->
+          <!-- Card 15: Luxury Fragrance -->
           <article class="video-card" data-category="beauty">
             <div class="video-thumbnail-box">
-              <img src="assets/fragrance_commercial.jpg" alt="Aurora Nocturne Eau De Parfum Luxury Fragrance Commercial" class="card-video-media">
+              <video src="assets/fragrance_commercial.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/fragrance_commercial.jpg" class="card-video-media"></video>
               <span class="card-model-badge amber">Luxury Fragrance</span>
               <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +390% ROAS</span>
               <span class="card-duration-badge">0:25</span>
@@ -579,10 +784,10 @@
             </div>
           </article>
 
-          <!-- Card 10: Performance Eyewear -->
+          <!-- Card 16: Performance Eyewear -->
           <article class="video-card" data-category="fashion">
             <div class="video-thumbnail-box">
-              <img src="assets/eyewear_commercial.jpg" alt="Aeterna Carbon Polarized Optics Performance Eyewear Commercial" class="card-video-media">
+              <video src="assets/eyewear_commercial.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/eyewear_commercial.jpg" class="card-video-media"></video>
               <span class="card-model-badge emerald">Performance Optics</span>
               <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +475% ROAS</span>
               <span class="card-duration-badge">0:20</span>
@@ -641,9 +846,15 @@
           <div class="sample-output-top-bar">
             <!-- Product SKU Chips -->
             <div class="sample-sku-selector">
-              <span class="sample-bar-label"><i data-lucide="tag"></i> Select Brand SKU:</span>
+              <span class="sample-bar-label"><i data-lucide="tag"></i> Select Brand SKU / Promo Sample:</span>
               <div class="sample-sku-chips">
-                <button class="sku-chip active" data-sku="tech">Acoustiq Earbuds</button>
+                <button class="sku-chip active" data-sku="promo-saas">Nova AI SaaS</button>
+                <button class="sku-chip" data-sku="promo-gaming">Vortex Controller</button>
+                <button class="sku-chip" data-sku="promo-coldbrew">Kona Cold Brew</button>
+                <button class="sku-chip" data-sku="promo-smartring">Helix Smart Ring</button>
+                <button class="sku-chip" data-sku="promo-diamond">Solitaire Diamond</button>
+                <button class="sku-chip" data-sku="promo-mobility">VoltRider EV</button>
+                <button class="sku-chip" data-sku="tech">Acoustiq Earbuds</button>
                 <button class="sku-chip" data-sku="beauty">Aura Serum</button>
                 <button class="sku-chip" data-sku="beverage">Voltaic Energy</button>
                 <button class="sku-chip" data-sku="fashion">Speedform Carbon</button>
@@ -1043,7 +1254,7 @@
               <li><i data-lucide="check"></i> 3 Business Day Turnaround</li>
             </ul>
 
-            <a href="#booking" class="btn-secondary" style="width: 100%; text-align: center;">Book Starter Pack</a>
+            <a href="#booking" class="btn-secondary" data-package="starter-pack" style="width: 100%; text-align: center;" title="Configure Starter Creative Pack">Book Starter Pack</a>
           </div>
 
           <!-- Tier 2: Growth Scaling (Featured) -->
@@ -1062,7 +1273,7 @@
               <li><i data-lucide="check"></i> 5 Business Day Turnaround</li>
             </ul>
 
-            <a href="#booking" class="btn-primary" style="width: 100%; text-align: center;">Book Growth Bundle</a>
+            <a href="#booking" class="btn-primary" data-package="growth-scale" style="width: 100%; text-align: center;" title="Configure Growth & Scale Bundle">Book Growth Bundle</a>
           </div>
 
           <!-- Tier 3: Omnichannel Launch -->
@@ -1080,7 +1291,7 @@
               <li><i data-lucide="check"></i> Expedited 8-Day Delivery</li>
             </ul>
 
-            <a href="#booking" class="btn-secondary" style="width: 100%; text-align: center;">Book Omnichannel Suite</a>
+            <a href="#booking" class="btn-secondary" data-package="omnichannel-launch" style="width: 100%; text-align: center;" title="Configure Omnichannel Launch Suite">Book Omnichannel Suite</a>
           </div>
 
         </div>

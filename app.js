@@ -185,7 +185,7 @@ const videoProjects = [
     id: 'project-sneaker',
     title: 'Speedform ZoomX Carbon',
     client: 'Speedform Athletics • Performance Footwear',
-    category: 'fashion',
+    category: 'fashion sneaker',
     duration: '0:35',
     campaignType: 'Global Shoe Drop & Digital Billboard',
     deliverables: '4K Broadcast (16:9), 9:16 Reels Cut, 3D Layer Exploded View',
@@ -197,6 +197,210 @@ const videoProjects = [
     synopsis: 'Deconstructed 3D performance running sneaker ad revealing interwoven carbon fiber threads, air cushioning, and explosive studio propulsion.',
     strategy: 'Full exploded-view 3D architectural breakdown of the proprietary carbon plate and nitrogen-infused foam. Combined athletic motion blur with laser-focused material macro shots.',
     results: 'The shoe model sold out completely within 48 hours of campaign launch, generating over 14 million organic impressions.'
+  },
+  {
+    id: 'project-nike-airmax',
+    title: 'Nike Air Max Pulse: Dynamic Air Chamber',
+    client: 'Nike Running & Sportswear • Global Campaign',
+    category: 'fashion sneaker promo',
+    duration: '0:30',
+    campaignType: 'Global Sneaker Drop & TikTok Spark Campaign',
+    deliverables: '4K Master Commercial (16:9), 9:16 Viral Kinetic Hook Suite, 1:1 Shopify Hero Video',
+    roas: '+530% ROAS (Global Drop)',
+    ctr: '6.9% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/nike_air_max_pulse.jpg',
+    video: 'assets/nike_air_max_pulse.webm',
+    synopsis: 'Futuristic sportswear commercial capturing Nike Air Max Pulse levitating in a dark atmospheric studio with cyan and electric volt air chamber luminescence.',
+    strategy: 'Showcased point-loaded cushioning system with explosive micro-particle physics and pressurized air unit glowing telemetry. Dialed in for high-converting TikTok Spark ads and SNKRS app drops.',
+    results: 'Achieved 6.9% CTR across Meta and TikTok paid ads, generating $3.6M in global pre-orders within the first 72 hours.'
+  },
+  {
+    id: 'project-nike-vaporfly',
+    title: 'Nike ZoomX Vaporfly 3: Carbon Energy Return',
+    client: 'Nike Performance Athletics • Elite Marathon Series',
+    category: 'fashion sneaker promo',
+    duration: '0:35',
+    campaignType: 'Olympic & Marathon Major Performance Campaign',
+    deliverables: '4K Broadcast Master (16:9), 9:16 Exploded Carbon Plate Hook, 1:1 Feed Cut',
+    roas: '+610% ROAS (Marathon Pre-Orders)',
+    ctr: '7.4% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/nike_zoomx_vaporfly.jpg',
+    video: 'assets/nike_zoomx_vaporfly.webm',
+    synopsis: 'High-tech athletic commercial featuring an exploded architectural view of the Nike ZoomX Vaporfly with full-length carbon Flyplate and wind-tunnel laser streamlines.',
+    strategy: 'Engineered an exploded 3D CAD breakdown highlighting proprietary ZoomX foam and full-length carbon fiber Flyplate. Visualized aerodynamic wind-tunnel airflow for elite runners seeking PR performance.',
+    results: 'Ranked #1 highest-converting performance footwear campaign of Q3 with over 22,000 units sold out globally in 24 hours.'
+  },
+  {
+    id: 'project-nike-dunk',
+    title: 'Nike Dunk Low: Urban Heritage Edition',
+    client: 'Nike Sportswear • Street Culture & SNKRS Drop',
+    category: 'fashion sneaker',
+    duration: '0:25',
+    campaignType: 'SNKRS Exclusive Drop & Streetwear Retail Launch',
+    deliverables: '4K Master (16:9), 9:16 Street Style Cut, 1:1 PDP Cut',
+    roas: '+480% ROAS (SNKRS App Scale)',
+    ctr: '6.2% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/nike_dunk_low.jpg',
+    video: 'assets/nike_dunk_low.webm',
+    synopsis: 'Iconic street culture sneaker commercial showcasing the Nike Dunk Low obsidian and sail leather colorway floating above wet reflective asphalt with rim lighting.',
+    strategy: 'Targeted street culture and sneakerhead communities. Captured premium tumbled leather texture and vintage court silhouette with asphalt puddle reflection aesthetics and cinematic street lighting.',
+    results: 'Generated over 18 million impressions across Instagram Reels and TikTok, selling out 40,000 pairs during the SNKRS pass event.'
+  },
+  {
+    id: 'project-converse-chuck',
+    title: 'Converse Chuck 70: Vintage Canvas Heritage',
+    client: 'Converse Global • Heritage & Street Culture',
+    category: 'fashion sneaker promo',
+    duration: '0:30',
+    campaignType: 'Global Heritage Campaign & E-Commerce Flagship Video',
+    deliverables: '4K Master (16:9), 9:16 Vintage Film Hook Suite, 1:1 E-Commerce Loop',
+    roas: '+520% ROAS (DTC E-Commerce)',
+    ctr: '6.0% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/converse_chuck_70.jpg',
+    video: 'assets/converse_chuck_70.webm',
+    synopsis: 'Cinematic heritage commercial spotlighting the iconic Converse Chuck 70 high-top with 12oz heavy vintage canvas, ankle star patch, and glossy egret foxing.',
+    strategy: 'Warm vintage film aesthetic capturing tactile canvas stitching, glossy vulcanized rubber toe cap, and timeless high-top silhouette. Emphasized archival craftsmanship to boost direct e-commerce basket size.',
+    results: 'Boosted Converse.com direct conversion rates by +39% and lowered customer acquisition cost (CAC) by 28% across Meta Ads.'
+  },
+  {
+    id: 'project-converse-runstar',
+    title: 'Converse Run Star Motion: CX Wave Platform',
+    client: 'Converse Avant-Garde • Streetwear Innovation',
+    category: 'fashion sneaker promo',
+    duration: '0:30',
+    campaignType: 'Avant-Garde Streetwear Drop & TikTok Spark Ads',
+    deliverables: '4K Master (16:9), 9:16 Cyberpunk Platform Hook, 1:1 PDP Cut',
+    roas: '+560% ROAS (Streetwear Drop)',
+    ctr: '6.7% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/converse_run_star_motion.jpg',
+    video: 'assets/converse_run_star_motion.webm',
+    synopsis: 'Bold cyberpunk commercial ad revealing the exaggerated sculpted wavy CX foam midsole and lugged outsole of the Converse Run Star Motion over rippling water.',
+    strategy: 'Engineered for modern Gen-Z streetwear culture. Blended fluid neon lighting, exaggerated sculptural foam geometry, and dynamic bass hits to emphasize ultra-light CX comfort and statement elevation.',
+    results: 'Generated 11.5M views on TikTok Spark Ads in week 1 with an extraordinary 6.7% CTR and 5.6x ROAS.'
+  },
+  {
+    id: 'project-converse-weapon',
+    title: 'Converse Weapon CX: 1986 Court Legacy',
+    client: 'Converse Basketball • Retro Court Heritage',
+    category: 'fashion sneaker',
+    duration: '0:30',
+    campaignType: 'Court Heritage Revival & YouTube Pre-Roll Campaign',
+    deliverables: '4K Master (16:9), 9:16 Hardwood Court Hook, 1:1 PDP Loop',
+    roas: '+490% ROAS (Court Revival)',
+    ctr: '5.9% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/converse_weapon_cx.jpg',
+    video: 'assets/converse_weapon_cx.webm',
+    synopsis: 'Retro-futuristic basketball commercial showcasing the iconic Converse Weapon CX high-top leather silhouette spinning in an illuminated hardwood arena.',
+    strategy: 'Revitalized the legendary 1980s basketball icon for modern lifestyle wear. Featured arena stadium beams, polished hardwood floor reflections, and CX foam cushioning callouts.',
+    results: 'Drove $2.8M in direct sales across launch week, establishing the Weapon CX as a top trending retro court sneaker.'
+  },
+  {
+    id: 'project-jordan-chicago',
+    title: 'Air Jordan 1 High: Chicago Legacy Edition',
+    client: 'Jordan Brand • Heritage Basketball & Global Drop',
+    category: 'fashion sneaker promo',
+    duration: '0:30',
+    campaignType: 'Global SNKRS Drop & Digital Billboard Commercial',
+    deliverables: '4K Cinema Master (16:9), 9:16 Viral Kinetic Hook Suite, 1:1 PDP Loop',
+    roas: '+640% ROAS (Global Drop)',
+    ctr: '7.8% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/nike_jordan_1_chicago.jpg',
+    video: 'assets/nike_jordan_1_chicago.webm',
+    synopsis: 'Legendary varsity red, white, and black Air Jordan 1 High floating through cinematic red smoke ribbons and burning ember studio physics.',
+    strategy: 'Celebrated basketball heritage with dynamic 3-second kinetic hooks, rising embers, and macro leather grain focus designed for viral top-of-funnel hype and record SNKRS conversion.',
+    results: 'Drove $4.2M in direct-to-consumer sales during launch weekend, delivering a 7.8% CTR on TikTok and Meta Ads.'
+  },
+  {
+    id: 'project-nike-af1',
+    title: 'Nike Air Force 1 07: Pure White Architectural',
+    client: 'Nike Sportswear • Everyday Icon Series',
+    category: 'fashion sneaker',
+    duration: '0:25',
+    campaignType: 'Evergreen DTC Performance & Amazon Video Ads',
+    deliverables: '4K Master (16:9), 9:16 Street Style Cut, 1:1 Shopify Hero Video',
+    roas: '+450% ROAS (Evergreen Scale)',
+    ctr: '5.6% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/nike_air_force_1_white.jpg',
+    video: 'assets/nike_air_force_1_white.webm',
+    synopsis: 'Minimalist high-key commercial showcasing the iconic triple-white Air Force 1 floating amidst pristine museum-grade studio light caustics.',
+    strategy: 'Clean architectural lighting highlighting timeless white leather panels, metal deubré dubrae tag, and pivot-point sole geometry to maintain #1 bestseller momentum.',
+    results: 'Maintained 4.5x blended ROAS across evergreen Meta, Amazon, and Google Shopping performance video channels.'
+  },
+  {
+    id: 'project-nike-acg',
+    title: 'Nike ACG Mountain Fly: Gore-Tex All-Conditions',
+    client: 'Nike ACG • Outdoor & Technical Trail Innovation',
+    category: 'fashion sneaker promo',
+    duration: '0:35',
+    campaignType: 'Seasonal Technical Outdoor Drop & YouTube Pre-Roll',
+    deliverables: '4K Broadcast Master (16:9), 9:16 Water-Repel Hook, 1:1 Feed Cut',
+    roas: '+580% ROAS (Technical Outerwear)',
+    ctr: '6.5% CTR',
+    turnaround: '72 Hours',
+    image: 'assets/nike_acg_mountain_fly.jpg',
+    video: 'assets/nike_acg_mountain_fly.webm',
+    synopsis: 'Rugged outdoor commercial featuring the Nike ACG Mountain Fly conquering mountain rain mist, mossy terrain, and neon orange technical utility cords.',
+    strategy: 'Engineered extreme weather CGI elements showcasing Gore-Tex waterproofing, chevron lug traction, and React foam cushioning for gorpcore and trail enthusiasts.',
+    results: 'Sold out full seasonal production inventory in 4 days across Europe and North America with 6.5% CTR on YouTube Pre-Roll.'
+  },
+  {
+    id: 'project-converse-deluxe',
+    title: 'Converse Chuck 70 De Luxe: Geometric Square Platform',
+    client: 'Converse Design Studio • Avant-Garde Runway',
+    category: 'fashion sneaker promo',
+    duration: '0:30',
+    campaignType: 'Paris Fashion Week Runway Teaser & DTC Editorial',
+    deliverables: '4K Cinema Master (16:9), 9:16 Geometric Laser Hook, 1:1 PDP Cut',
+    roas: '+510% ROAS (Avant-Garde Drop)',
+    ctr: '6.1% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/converse_deluxe_square.jpg',
+    video: 'assets/converse_deluxe_square.webm',
+    synopsis: 'Sculptural fashion commercial revealing angular geometric square platform rubber toe caps and ultraviolet runway laser scanning lines.',
+    strategy: 'Avant-garde high-fashion pacing blending angular brutalist perspective grids with high-contrast chrome and heavy black canvas craftsmanship.',
+    results: 'Featured in Hypebeast and Highsnobiety, achieving +64% lift in DTC average order value (AOV) on Converse.com.'
+  },
+  {
+    id: 'project-converse-cruise',
+    title: 'Converse Cruise Skate: Layered Canvas Elevation',
+    client: 'Converse Skateboarding • Youth & Street Culture',
+    category: 'fashion sneaker',
+    duration: '0:25',
+    campaignType: 'Summer Skate & TikTok Creator Spark Ads',
+    deliverables: '4K Master (16:9), 9:16 Skate Park Hook, 1:1 PDP Loop',
+    roas: '+470% ROAS (Youth Streetwear)',
+    ctr: '6.3% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/converse_cruise_skate.jpg',
+    video: 'assets/converse_cruise_skate.webm',
+    synopsis: 'Sun-drenched California skate commercial capturing chunky layered canvas panels and distorted heritage foxing in golden sunlight.',
+    strategy: 'Warm nostalgic film look with high-energy skate motion blur and tactile double-canvas layer breakdowns for Gen-Z skateboarding communities.',
+    results: 'Drove 14.8M impressions on TikTok and Instagram Reels with over 35,000 pairs sold within month 1.'
+  },
+  {
+    id: 'project-converse-bb',
+    title: 'Converse All Star BB Prototype: CX Court Performance',
+    client: 'Converse Hoops • Next-Gen Basketball Innovation',
+    category: 'fashion sneaker promo',
+    duration: '0:35',
+    campaignType: 'NBA Season Tip-Off & Global Basketball Campaign',
+    deliverables: '4K Broadcast (16:9), 9:16 Shot Tracker Hook, 1:1 Amazon Video',
+    roas: '+590% ROAS (Hoops Launch)',
+    ctr: '7.1% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/converse_bb_prototype.jpg',
+    video: 'assets/converse_bb_prototype.webm',
+    synopsis: 'High-velocity basketball commercial showing the Converse All Star BB Prototype hovering over neon court telemetry lines with glowing CX foam & Zoom Air cushioning.',
+    strategy: 'Engineered responsive court trajectory telemetry and Zoom Air shock absorption visual cues tailored for modern explosive hoopers.',
+    results: 'Surpassed basketball footwear category pre-order target by +180% with 7.1% CTR across NBA YouTube streams.'
   },
   {
     id: 'project-hypercar',
@@ -778,6 +982,239 @@ const sampleDeliverablesData = {
       { name: 'Speedform_ExplodedCAD_Cut_9x16.mp4', size: '198 MB', type: 'Viral 3D CAD Hook (9:16)' },
       { name: 'Speedform_Instagram_Story_9x16.mp4', size: '160 MB', type: 'Reels Cut (9:16)' },
       { name: 'Speedform_Footwear_3D_ColorGrade.cube', size: '15 MB', type: 'Color Grade 3D LUT' }
+    ]
+  },
+  'nike-airmax': {
+    projectId: 'project-nike-airmax',
+    title: 'Nike Air Max Pulse: Dynamic Air Chamber',
+    client: 'Nike Running & Sportswear • Global Campaign',
+    video: 'assets/nike_air_max_pulse.webm',
+    poster: 'assets/nike_air_max_pulse.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K 60FPS Master)',
+      colorSpace: 'DCI-P3 Electric Neon 10-bit',
+      audio: 'Pressurized Air Cushion Foley & Stems',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'Nike_AirMaxPulse_4K_CinemaMaster_16x9.mov', size: '1.58 GB', type: '4K Cinema Master' },
+      { name: 'Nike_AirMax_AirChamber_Hook_9x16.mp4', size: '192 MB', type: 'TikTok Spark Cut (9:16)' },
+      { name: 'Nike_AirMax_ProductGrid_1x1.mp4', size: '95 MB', type: 'PDP Hero Loop (1:1)' },
+      { name: 'Nike_AirMax_VoltGlow_ColorGrade.cube', size: '14 MB', type: 'Color Grade 3D LUT' },
+      { name: 'Nike_Global_Commercial_License.pdf', size: '1.8 MB', type: 'Commercial Rights' }
+    ]
+  },
+  'nike-vaporfly': {
+    projectId: 'project-nike-vaporfly',
+    title: 'Nike ZoomX Vaporfly 3: Carbon Energy Return',
+    client: 'Nike Performance Athletics • Elite Marathon Series',
+    video: 'assets/nike_zoomx_vaporfly.webm',
+    poster: 'assets/nike_zoomx_vaporfly.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K 60FPS Master)',
+      colorSpace: 'ACEScc High-Velocity Gamut',
+      audio: 'Wind Tunnel Aero & Carbon Flex Stems',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'Nike_Vaporfly3_4K_Broadcast_Master_16x9.mov', size: '1.68 GB', type: '4K Broadcast Master' },
+      { name: 'Nike_Vaporfly_CarbonExploded_Cut_9x16.mp4', size: '205 MB', type: 'Viral 3D CAD Hook (9:16)' },
+      { name: 'Nike_Vaporfly_WindTunnel_1x1.mp4', size: '98 MB', type: 'Amazon A+ Video (1:1)' },
+      { name: 'Nike_Aero_Soundtrack_Stems.zip', size: '130 MB', type: 'Spatial Audio Stems' },
+      { name: 'Nike_Marathon_Global_Ad_Release.pdf', size: '1.9 MB', type: 'Commercial Rights' }
+    ]
+  },
+  'nike-dunk': {
+    projectId: 'project-nike-dunk',
+    title: 'Nike Dunk Low: Urban Heritage Edition',
+    client: 'Nike Sportswear • Street Culture & SNKRS Drop',
+    video: 'assets/nike_dunk_low.webm',
+    poster: 'assets/nike_dunk_low.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K UHD 60FPS)',
+      colorSpace: 'Rec.709 Cinematic Contrast',
+      audio: 'Street Asphalt Foley & Lo-Fi Beats',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'Nike_DunkLow_4K_Cinema_16x9.mov', size: '1.45 GB', type: '4K Cinema Commercial' },
+      { name: 'Nike_DunkLow_StreetVibe_Hook_9x16.mp4', size: '175 MB', type: 'Reels / TikTok Hook (9:16)' },
+      { name: 'Nike_DunkLow_Shopify_Loop_1x1.mp4', size: '89 MB', type: 'PDP Hero Video (1:1)' },
+      { name: 'Nike_DunkLow_Editorial_Stills.zip', size: '390 MB', type: '8K High-Res Stills' }
+    ]
+  },
+  'converse-chuck': {
+    projectId: 'project-converse-chuck',
+    title: 'Converse Chuck 70: Vintage Canvas Heritage',
+    client: 'Converse Global • Heritage & Street Culture',
+    video: 'assets/converse_chuck_70.webm',
+    poster: 'assets/converse_chuck_70.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K Master 60FPS)',
+      colorSpace: 'Warm Amber 35mm Vintage Film',
+      audio: 'Tactile Canvas & Studio Foley',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'Converse_Chuck70_4K_Heritage_16x9.mov', size: '1.50 GB', type: '4K Cinema Commercial' },
+      { name: 'Converse_Chuck70_Vintage_Hook_9x16.mp4', size: '180 MB', type: 'Instagram Reels Cut (9:16)' },
+      { name: 'Converse_Chuck70_PDP_Loop_1x1.mp4', size: '86 MB', type: 'Shopify / PDP Loop (1:1)' },
+      { name: 'Converse_35mm_Film_LUT.cube', size: '12 MB', type: 'Vintage Film 3D LUT' },
+      { name: 'Converse_Global_Heritage_License.pdf', size: '1.6 MB', type: 'Perpetual Rights' }
+    ]
+  },
+  'converse-runstar': {
+    projectId: 'project-converse-runstar',
+    title: 'Converse Run Star Motion: CX Wave Platform',
+    client: 'Converse Avant-Garde • Streetwear Innovation',
+    video: 'assets/converse_run_star_motion.webm',
+    poster: 'assets/converse_run_star_motion.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K 60FPS Master)',
+      colorSpace: 'Cyberpunk Neon HDR 10-bit',
+      audio: 'Sub-Bass Drop & Sculpted Foam Foley',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'Converse_RunStar_4K_Cyber_16x9.mov', size: '1.62 GB', type: '4K Cinema Master' },
+      { name: 'Converse_RunStar_WaveMotion_9x16.mp4', size: '198 MB', type: 'TikTok Spark Cut (9:16)' },
+      { name: 'Converse_RunStar_PDP_Orbit_1x1.mp4', size: '94 MB', type: 'Square PDP Orbit Loop' },
+      { name: 'Converse_CX_Audio_BassDrop_Stems.zip', size: '115 MB', type: 'Master Audio Stems' },
+      { name: 'Converse_Fashion_Campaign_Rights.pdf', size: '1.7 MB', type: 'Commercial Rights' }
+    ]
+  },
+  'converse-weapon': {
+    projectId: 'project-converse-weapon',
+    title: 'Converse Weapon CX: 1986 Court Legacy',
+    client: 'Converse Basketball • Retro Court Heritage',
+    video: 'assets/converse_weapon_cx.webm',
+    poster: 'assets/converse_weapon_cx.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K 60FPS)',
+      colorSpace: 'Vintage Court ACES 10-bit',
+      audio: 'Hardwood Squeak & Arena Crowd Stems',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'Converse_WeaponCX_4K_Arena_16x9.mov', size: '1.54 GB', type: '4K Master Commercial' },
+      { name: 'Converse_WeaponCX_CourtSpin_9x16.mp4', size: '185 MB', type: 'Viral Reels Cut (9:16)' },
+      { name: 'Converse_WeaponCX_Hardwood_Loop_1x1.mp4', size: '91 MB', type: 'PDP Hero Video (1:1)' },
+      { name: 'Converse_WeaponCX_Editorial_MediaKit.pdf', size: '2.1 MB', type: 'Press Kit & Rights' }
+    ]
+  },
+  'jordan-chicago': {
+    projectId: 'project-jordan-chicago',
+    title: 'Air Jordan 1 High: Chicago Legacy Edition',
+    client: 'Jordan Brand • Heritage Basketball & Global Drop',
+    video: 'assets/nike_jordan_1_chicago.webm',
+    poster: 'assets/nike_jordan_1_chicago.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K 60FPS Master)',
+      colorSpace: 'Crimson ACEScc 12-bit Log',
+      audio: 'Sub-Bass Embers & Leather Foley Stems',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'Jordan1_Chicago_4K_CinemaMaster_16x9.mov', size: '1.65 GB', type: '4K Cinema Commercial' },
+      { name: 'Jordan1_Chicago_SmokeEmber_Hook_9x16.mp4', size: '195 MB', type: 'TikTok Spark Cut (9:16)' },
+      { name: 'Jordan1_Chicago_PDP_Loop_1x1.mp4', size: '96 MB', type: 'SNKRS / Shopify Loop (1:1)' },
+      { name: 'Jordan_Chicago_ACES_ColorLUT.cube', size: '14 MB', type: '3D Color Grade LUT' },
+      { name: 'Global_Jordan_Commercial_License.pdf', size: '1.8 MB', type: 'Perpetual Rights' }
+    ]
+  },
+  'nike-af1': {
+    projectId: 'project-nike-af1',
+    title: 'Nike Air Force 1 07: Pure White Architectural',
+    client: 'Nike Sportswear • Everyday Icon Series',
+    video: 'assets/nike_air_force_1_white.webm',
+    poster: 'assets/nike_air_force_1_white.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K UHD 60FPS)',
+      colorSpace: 'Clean Museum White Rec.709',
+      audio: 'Architectural Light Caustic Audio',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'Nike_AF1_White_4K_Commercial_16x9.mov', size: '1.42 GB', type: '4K Commercial Master' },
+      { name: 'Nike_AF1_PureWhite_Hook_9x16.mp4', size: '172 MB', type: 'Reels Style Cut (9:16)' },
+      { name: 'Nike_AF1_HeroLoop_1x1.mp4', size: '88 MB', type: 'Amazon Video (1:1)' },
+      { name: 'Nike_AF1_Commercial_Release.pdf', size: '1.5 MB', type: 'Commercial Rights' }
+    ]
+  },
+  'nike-acg': {
+    projectId: 'project-nike-acg',
+    title: 'Nike ACG Mountain Fly: Gore-Tex All-Conditions',
+    client: 'Nike ACG • Outdoor & Technical Trail Innovation',
+    video: 'assets/nike_acg_mountain_fly.webm',
+    poster: 'assets/nike_acg_mountain_fly.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K 60FPS Master)',
+      colorSpace: 'High-Contrast Technical Gamut',
+      audio: 'Rain Mist Foley & Trail Impact Stems',
+      turnaround: '72 Hours Shipped'
+    },
+    files: [
+      { name: 'Nike_ACG_MountainFly_4K_Trailer_16x9.mov', size: '1.72 GB', type: '4K Broadcast Master' },
+      { name: 'Nike_ACG_GoreTex_Splash_9x16.mp4', size: '202 MB', type: 'Waterproof Hook Cut (9:16)' },
+      { name: 'Nike_ACG_Traction_Grid_1x1.mp4', size: '99 MB', type: 'PDP Product Video (1:1)' },
+      { name: 'Nike_ACG_Trail_Soundtrack_Stems.zip', size: '145 MB', type: 'Audio Stems' }
+    ]
+  },
+  'converse-deluxe': {
+    projectId: 'project-converse-deluxe',
+    title: 'Converse Chuck 70 De Luxe: Geometric Square Platform',
+    client: 'Converse Design Studio • Avant-Garde Runway',
+    video: 'assets/converse_deluxe_square.webm',
+    poster: 'assets/converse_deluxe_square.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K Cinema 60FPS)',
+      colorSpace: 'Ultraviolet Cyber HDR 10-bit',
+      audio: 'Brutalist Laser Scan & Deep Sub Foley',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'Converse_DeLuxe_4K_Runway_16x9.mov', size: '1.58 GB', type: '4K Master (16:9)' },
+      { name: 'Converse_DeLuxe_SquareToe_Hook_9x16.mp4', size: '190 MB', type: 'Editorial Cut (9:16)' },
+      { name: 'Converse_DeLuxe_PDP_Loop_1x1.mp4', size: '92 MB', type: 'Shopify Hero Video (1:1)' },
+      { name: 'Converse_DeLuxe_Hypebeast_Stills.zip', size: '410 MB', type: '8K Editorial Stills' }
+    ]
+  },
+  'converse-cruise': {
+    projectId: 'project-converse-cruise',
+    title: 'Converse Cruise Skate: Layered Canvas Elevation',
+    client: 'Converse Skateboarding • Youth & Street Culture',
+    video: 'assets/converse_cruise_skate.webm',
+    poster: 'assets/converse_cruise_skate.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K 60FPS Master)',
+      colorSpace: 'Warm California Sunset 35mm',
+      audio: 'Skate Concrete Roll & Dynamic Pops',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'Converse_Cruise_4K_Skate_16x9.mov', size: '1.48 GB', type: '4K Commercial Master' },
+      { name: 'Converse_Cruise_SunFlare_Hook_9x16.mp4', size: '178 MB', type: 'TikTok Spark Cut (9:16)' },
+      { name: 'Converse_Cruise_PDP_Loop_1x1.mp4', size: '87 MB', type: 'PDP Loop (1:1)' },
+      { name: 'Converse_Cruise_Media_Kit.pdf', size: '1.9 MB', type: 'Commercial Rights' }
+    ]
+  },
+  'converse-bb': {
+    projectId: 'project-converse-bb',
+    title: 'Converse All Star BB Prototype: CX Court Performance',
+    client: 'Converse Hoops • Next-Gen Basketball Innovation',
+    video: 'assets/converse_bb_prototype.webm',
+    poster: 'assets/converse_bb_prototype.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K 60FPS Master)',
+      colorSpace: 'Arena Electric Neon 10-bit',
+      audio: 'Court Squeak & Zoom Air Pulse Stems',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'Converse_BBPrototype_4K_Master_16x9.mov', size: '1.62 GB', type: '4K Broadcast Master' },
+      { name: 'Converse_BBPrototype_ShotTracker_9x16.mp4', size: '196 MB', type: 'Viral Hook Cut (9:16)' },
+      { name: 'Converse_BBPrototype_PDP_Orbit_1x1.mp4', size: '94 MB', type: 'Amazon A+ Video (1:1)' },
+      { name: 'Converse_Hoops_Audio_Stems.zip', size: '125 MB', type: 'Spatial Audio Stems' }
     ]
   },
   'watch': {

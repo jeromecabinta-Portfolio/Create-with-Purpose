@@ -1309,6 +1309,8 @@ body.drawer-open {
 .card-model-badge.cyan { background: rgba(6, 182, 212, 0.85); box-shadow: 0 0 12px rgba(6, 182, 212, 0.5); }
 .card-model-badge.amber { background: rgba(245, 158, 11, 0.85); box-shadow: 0 0 12px rgba(245, 158, 11, 0.5); }
 .card-model-badge.emerald { background: rgba(16, 185, 129, 0.85); box-shadow: 0 0 12px rgba(16, 185, 129, 0.5); }
+.card-model-badge.magenta { background: rgba(217, 70, 239, 0.85); box-shadow: 0 0 12px rgba(217, 70, 239, 0.5); }
+.card-model-badge.rose { background: rgba(244, 63, 94, 0.85); box-shadow: 0 0 12px rgba(244, 63, 94, 0.5); }
 
 .card-play-overlay {
   position: absolute;

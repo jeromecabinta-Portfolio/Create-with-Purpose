@@ -48,7 +48,114 @@
   <canvas id="recCanvas" width="960" height="540" style="display:none;"></canvas>
 
   <script>
+    const postersToGenerate = [
+      {
+        name: 'nike_jordan_1_chicago.jpg',
+        baseImg: 'assets/nike_dunk_low.jpg',
+        filter: 'jordan_chicago'
+      },
+      {
+        name: 'nike_air_force_1_white.jpg',
+        baseImg: 'assets/nike_dunk_low.jpg',
+        filter: 'af1_triple_white'
+      },
+      {
+        name: 'nike_acg_mountain_fly.jpg',
+        baseImg: 'assets/ecom_sneaker_motion.jpg',
+        filter: 'acg_trail'
+      },
+      {
+        name: 'converse_deluxe_square.jpg',
+        baseImg: 'assets/converse_chuck_70.jpg',
+        filter: 'converse_deluxe'
+      },
+      {
+        name: 'converse_cruise_skate.jpg',
+        baseImg: 'assets/converse_run_star_motion.jpg',
+        filter: 'converse_cruise'
+      },
+      {
+        name: 'converse_bb_prototype.jpg',
+        baseImg: 'assets/converse_weapon_cx.jpg',
+        filter: 'converse_bb'
+      }
+    ];
+
     const videosToGenerate = [
+      // Batch 2: 6 Additional Nike & Converse Commercials
+      {
+        name: 'nike_jordan_1_chicago.webm',
+        imgSrc: 'assets/nike_jordan_1_chicago.jpg',
+        duration: 3500,
+        effect: 'jordan_smoke_embers'
+      },
+      {
+        name: 'nike_air_force_1_white.webm',
+        imgSrc: 'assets/nike_air_force_1_white.jpg',
+        duration: 3500,
+        effect: 'pristine_light_caustics'
+      },
+      {
+        name: 'nike_acg_mountain_fly.webm',
+        imgSrc: 'assets/nike_acg_mountain_fly.jpg',
+        duration: 3500,
+        effect: 'trail_mist_waterproof'
+      },
+      {
+        name: 'converse_deluxe_square.webm',
+        imgSrc: 'assets/converse_deluxe_square.jpg',
+        duration: 3500,
+        effect: 'geometric_laser_grid'
+      },
+      {
+        name: 'converse_cruise_skate.webm',
+        imgSrc: 'assets/converse_cruise_skate.jpg',
+        duration: 3500,
+        effect: 'skate_golden_sunlight'
+      },
+      {
+        name: 'converse_bb_prototype.webm',
+        imgSrc: 'assets/converse_bb_prototype.jpg',
+        duration: 3500,
+        effect: 'court_laser_telemetry'
+      },
+      // Batch 1: Initial Nike & Converse Commercials
+      {
+        name: 'nike_air_max_pulse.webm',
+        imgSrc: 'assets/nike_air_max_pulse.jpg',
+        duration: 3500,
+        effect: 'nike_air_pulse'
+      },
+      {
+        name: 'nike_zoomx_vaporfly.webm',
+        imgSrc: 'assets/nike_zoomx_vaporfly.jpg',
+        duration: 3500,
+        effect: 'nike_vaporfly_speed'
+      },
+      {
+        name: 'nike_dunk_low.webm',
+        imgSrc: 'assets/nike_dunk_low.jpg',
+        duration: 3500,
+        effect: 'nike_dunk_urban'
+      },
+      {
+        name: 'converse_chuck_70.webm',
+        imgSrc: 'assets/converse_chuck_70.jpg',
+        duration: 3500,
+        effect: 'converse_vintage_grain'
+      },
+      {
+        name: 'converse_run_star_motion.webm',
+        imgSrc: 'assets/converse_run_star_motion.jpg',
+        duration: 3500,
+        effect: 'converse_motion_wave'
+      },
+      {
+        name: 'converse_weapon_cx.webm',
+        imgSrc: 'assets/converse_weapon_cx.jpg',
+        duration: 3500,
+        effect: 'converse_weapon_arena'
+      },
       // Promotional Video Samples
       {
         name: 'promo_saas_ai.webm',
@@ -162,6 +269,82 @@
       logDiv.scrollTop = logDiv.scrollHeight;
     }
 
+    async function generatePoster(poster) {
+      log(`Synthesizing Studio Poster: <strong>${poster.name}</strong> (${poster.filter})...`);
+      const img = new Image();
+      img.src = poster.baseImg;
+      await new Promise(r => { img.onload = r; img.onerror = r; });
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if (img.complete && img.naturalWidth > 0) {
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      } else {
+        ctx.fillStyle = '#0a0d14';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      }
+
+      if (poster.filter === 'jordan_chicago') {
+        const redGrad = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, 40, canvas.width / 2, canvas.height / 2, 420);
+        redGrad.addColorStop(0, 'rgba(239, 68, 68, 0.35)');
+        redGrad.addColorStop(0.7, 'rgba(185, 28, 28, 0.2)');
+        redGrad.addColorStop(1, 'rgba(10, 10, 15, 0.6)');
+        ctx.fillStyle = redGrad;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Chicago red studio embers
+        for (let e = 0; e < 35; e++) {
+          ctx.fillStyle = e % 2 === 0 ? 'rgba(254, 202, 202, 0.8)' : 'rgba(239, 68, 68, 0.8)';
+          ctx.beginPath();
+          ctx.arc(Math.random() * canvas.width, Math.random() * canvas.height, Math.random() * 2 + 1, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      } else if (poster.filter === 'af1_triple_white') {
+        const whiteGrad = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2 - 40, 50, canvas.width / 2, canvas.height / 2, 380);
+        whiteGrad.addColorStop(0, 'rgba(255, 255, 255, 0.3)');
+        whiteGrad.addColorStop(0.5, 'rgba(6, 182, 212, 0.15)');
+        whiteGrad.addColorStop(1, 'rgba(10, 15, 25, 0.5)');
+        ctx.fillStyle = whiteGrad;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      } else if (poster.filter === 'acg_trail') {
+        const trailGrad = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+        trailGrad.addColorStop(0, 'rgba(16, 185, 129, 0.2)');
+        trailGrad.addColorStop(0.5, 'rgba(249, 115, 22, 0.2)');
+        trailGrad.addColorStop(1, 'rgba(15, 23, 42, 0.5)');
+        ctx.fillStyle = trailGrad;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      } else if (poster.filter === 'converse_deluxe') {
+        const ultraGrad = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, 60, canvas.width / 2, canvas.height / 2, 400);
+        ultraGrad.addColorStop(0, 'rgba(168, 85, 247, 0.35)');
+        ultraGrad.addColorStop(0.6, 'rgba(6, 182, 212, 0.2)');
+        ultraGrad.addColorStop(1, 'rgba(7, 8, 13, 0.7)');
+        ctx.fillStyle = ultraGrad;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      } else if (poster.filter === 'converse_cruise') {
+        const sunGrad = ctx.createRadialGradient(canvas.width - 150, 100, 30, canvas.width / 2, canvas.height / 2, 420);
+        sunGrad.addColorStop(0, 'rgba(251, 191, 36, 0.45)');
+        sunGrad.addColorStop(0.6, 'rgba(245, 158, 11, 0.2)');
+        sunGrad.addColorStop(1, 'rgba(15, 10, 25, 0.5)');
+        ctx.fillStyle = sunGrad;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      } else if (poster.filter === 'converse_bb') {
+        const courtGrad = ctx.createLinearGradient(0, canvas.height, 0, 0);
+        courtGrad.addColorStop(0, 'rgba(6, 182, 212, 0.35)');
+        courtGrad.addColorStop(0.6, 'rgba(139, 92, 246, 0.2)');
+        courtGrad.addColorStop(1, 'rgba(10, 10, 20, 0.6)');
+        ctx.fillStyle = courtGrad;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      }
+
+      // Convert to blob and save
+      const blob = await new Promise(r => canvas.toBlob(r, 'image/jpeg', 0.95));
+      const formData = new FormData();
+      formData.append('filename', poster.name);
+      formData.append('video', blob, poster.name);
+
+      await fetch('/save-video', { method: 'POST', body: formData });
+      log(`✓ Saved poster: <strong>${poster.name}</strong>`);
+    }
+
     async function recordVideo(config) {
       statusDiv.innerHTML = `Recording & Synthesizing: <strong>${config.name}</strong> (${config.effect})`;
       log(`Starting render for ${config.name}...`);
@@ -216,8 +399,150 @@
 
         // Procedural Motion FX Pipelines
         try {
-          if (config.effect === 'holographic_neural') {
-            // Holographic scan line
+          if (config.effect === 'jordan_smoke_embers') {
+            // Crimson smoke ribbons and rising embers
+            const redGlow = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, 40, canvas.width / 2, canvas.height / 2, 380);
+            redGlow.addColorStop(0, `rgba(239, 68, 68, ${Math.abs(Math.sin(t * 3)) * 0.3 + 0.1})`);
+            redGlow.addColorStop(1, 'rgba(0,0,0,0)');
+            ctx.fillStyle = redGlow;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            for (let e = 0; e < 28; e++) {
+              const ex = (canvas.width / 2 + Math.sin(t * 2 + e) * (180 + e * 5));
+              const ey = canvas.height - ((t * 80 + e * 30) % canvas.height);
+              ctx.fillStyle = `rgba(254, 202, 202, ${Math.abs(Math.sin(t * 5 + e)) * 0.85})`;
+              ctx.beginPath();
+              ctx.arc(ex, ey, Math.sin(t * 4 + e) * 1.5 + 2, 0, Math.PI * 2);
+              ctx.fill();
+            }
+          } else if (config.effect === 'pristine_light_caustics') {
+            const sweepX = (t * 200) % (canvas.width + 200) - 100;
+            const causticsGrad = ctx.createLinearGradient(sweepX - 80, 0, sweepX + 80, 0);
+            causticsGrad.addColorStop(0, 'rgba(255, 255, 255, 0)');
+            causticsGrad.addColorStop(0.5, 'rgba(255, 255, 255, 0.35)');
+            causticsGrad.addColorStop(1, 'rgba(6, 182, 212, 0)');
+            ctx.fillStyle = causticsGrad;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+          } else if (config.effect === 'trail_mist_waterproof') {
+            for (let m = 0; m < 30; m++) {
+              const mx = (m * 45 + t * 90) % canvas.width;
+              const my = 200 + Math.sin(m + t * 2) * 120;
+              ctx.fillStyle = `rgba(52, 211, 153, ${Math.abs(Math.sin(t * 3 + m)) * 0.5})`;
+              ctx.beginPath();
+              ctx.arc(mx, my, 2, 0, Math.PI * 2);
+              ctx.fill();
+            }
+          } else if (config.effect === 'geometric_laser_grid') {
+            for (let g = 0; g < 6; g++) {
+              const gy = 180 + g * 50 + Math.sin(t * 2) * 10;
+              ctx.strokeStyle = `rgba(168, 85, 247, ${0.4 * (1 - g / 6)})`;
+              ctx.lineWidth = 2;
+              ctx.beginPath();
+              ctx.moveTo(100, gy);
+              ctx.lineTo(canvas.width - 100, gy);
+              ctx.stroke();
+            }
+          } else if (config.effect === 'skate_golden_sunlight') {
+            const sunX = canvas.width - 120 + Math.sin(t * 1.5) * 40;
+            const sunY = 120 + Math.cos(t) * 30;
+            const sunGrad = ctx.createRadialGradient(sunX, sunY, 30, sunX, sunY, 380);
+            sunGrad.addColorStop(0, 'rgba(251, 191, 36, 0.35)');
+            sunGrad.addColorStop(0.6, 'rgba(245, 158, 11, 0.15)');
+            sunGrad.addColorStop(1, 'rgba(0,0,0,0)');
+            ctx.fillStyle = sunGrad;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+          } else if (config.effect === 'court_laser_telemetry') {
+            for (let i = 0; i < 8; i++) {
+              const lx = ((i * 120 + t * 450) % (canvas.width + 200)) - 100;
+              const ly = 300 + Math.sin(i + t) * 40;
+              ctx.strokeStyle = i % 2 === 0 ? 'rgba(6, 182, 212, 0.5)' : 'rgba(139, 92, 246, 0.5)';
+              ctx.lineWidth = 3;
+              ctx.beginPath();
+              ctx.moveTo(lx - 140, ly);
+              ctx.lineTo(lx, ly);
+              ctx.stroke();
+            }
+          } else if (config.effect === 'nike_air_pulse') {
+            // Glowing cyan & volt air cushion pulse
+            for (let r = 0; r < 4; r++) {
+              const radius = ((t * 75 + r * 50) % 180) + 30;
+              const alpha = Math.max(0, 1 - radius / 210) * 0.5;
+              ctx.beginPath();
+              ctx.arc(380 + panX, 360 + panY, radius, 0, Math.PI * 2);
+              ctx.strokeStyle = r % 2 === 0 ? `rgba(6, 182, 212, ${alpha})` : `rgba(132, 204, 22, ${alpha})`;
+              ctx.lineWidth = 3;
+              ctx.stroke();
+            }
+            // Sparkle particles
+            for (let p = 0; p < 25; p++) {
+              const px = (380 + Math.sin(t * 3 + p * 1.5) * (180 + p * 6));
+              const py = (360 + Math.cos(t * 3.5 + p * 1.2) * (100 + p * 4));
+              ctx.fillStyle = `rgba(6, 182, 212, ${Math.abs(Math.sin(t * 6 + p)) * 0.8})`;
+              ctx.beginPath();
+              ctx.arc(px, py, 2, 0, Math.PI * 2);
+              ctx.fill();
+            }
+          } else if (config.effect === 'nike_vaporfly_speed') {
+            // High velocity aerodynamic wind-tunnel laser streaks
+            for (let i = 0; i < 12; i++) {
+              const lx = ((i * 100 + t * 650) % (canvas.width + 300)) - 150;
+              const ly = 180 + Math.sin(i * 1.5 + t * 2) * 90 + i * 20;
+              ctx.strokeStyle = i % 2 === 0 ? 'rgba(163, 230, 53, 0.65)' : 'rgba(239, 68, 68, 0.6)';
+              ctx.lineWidth = 3;
+              ctx.beginPath();
+              ctx.moveTo(lx - 180, ly);
+              ctx.lineTo(lx, ly);
+              ctx.stroke();
+            }
+          } else if (config.effect === 'nike_dunk_urban') {
+            // Streetlight reflection sweep & asphalt haze
+            const sweepX = ((t * 180) % (canvas.width + 200)) - 100;
+            const grad = ctx.createLinearGradient(sweepX - 80, 0, sweepX + 80, 0);
+            grad.addColorStop(0, 'rgba(6, 182, 212, 0)');
+            grad.addColorStop(0.5, 'rgba(6, 182, 212, 0.2)');
+            grad.addColorStop(1, 'rgba(245, 158, 11, 0)');
+            ctx.fillStyle = grad;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+          } else if (config.effect === 'converse_vintage_grain') {
+            // Warm vintage golden light flare
+            const flareX = canvas.width / 2 + Math.sin(t * 1.2) * 50;
+            const flareY = 220 + Math.cos(t) * 20;
+            const rad = ctx.createRadialGradient(flareX, flareY, 20, flareX, flareY, 320);
+            rad.addColorStop(0, 'rgba(245, 158, 11, 0.25)');
+            rad.addColorStop(0.6, 'rgba(217, 119, 6, 0.1)');
+            rad.addColorStop(1, 'rgba(0,0,0,0)');
+            ctx.fillStyle = rad;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+          } else if (config.effect === 'converse_motion_wave') {
+            // Sculpted wave ripples and cyberpunk neon grids
+            for (let w = 0; w < 5; w++) {
+              const rad = ((t * 60 + w * 45) % 190) + 40;
+              const alpha = Math.max(0, 1 - rad / 210) * 0.45;
+              ctx.beginPath();
+              ctx.arc(canvas.width / 2 + panX, canvas.height / 2 + 80 + panY, rad, 0, Math.PI * 2);
+              ctx.strokeStyle = w % 2 === 0 ? `rgba(6, 182, 212, ${alpha})` : `rgba(217, 70, 239, ${alpha})`;
+              ctx.lineWidth = 3.5;
+              ctx.stroke();
+            }
+          } else if (config.effect === 'converse_weapon_arena') {
+            // Arena stadium beam sweep
+            const beamAngle = Math.sin(t * 1.8) * 0.4;
+            ctx.save();
+            ctx.translate(canvas.width / 2, 0);
+            ctx.rotate(beamAngle);
+            const beamGrad = ctx.createLinearGradient(0, 0, 0, canvas.height);
+            beamGrad.addColorStop(0, 'rgba(255, 255, 255, 0.25)');
+            beamGrad.addColorStop(1, 'rgba(168, 85, 247, 0)');
+            ctx.fillStyle = beamGrad;
+            ctx.beginPath();
+            ctx.moveTo(-40, 0);
+            ctx.lineTo(40, 0);
+            ctx.lineTo(160, canvas.height);
+            ctx.lineTo(-160, canvas.height);
+            ctx.closePath();
+            ctx.fill();
+            ctx.restore();
+          } else if (config.effect === 'holographic_neural') {
             const scanY = (t * 180) % canvas.height;
             ctx.strokeStyle = 'rgba(6, 182, 212, 0.5)';
             ctx.lineWidth = 2.5;
@@ -225,214 +550,6 @@
             ctx.moveTo(0, scanY);
             ctx.lineTo(canvas.width, scanY);
             ctx.stroke();
-
-            // Neural data node particles
-            for (let i = 0; i < 24; i++) {
-              const nx = 200 + Math.sin(t * 2 + i * 0.8) * 320 + Math.cos(i) * 60;
-              const ny = 140 + Math.cos(t * 2.5 + i * 0.6) * 180;
-              const nSize = Math.sin(t * 4 + i) * 2.5 + 3.5;
-              ctx.fillStyle = i % 2 === 0 ? 'rgba(6, 182, 212, 0.85)' : 'rgba(168, 85, 247, 0.85)';
-              ctx.beginPath();
-              ctx.arc(nx, ny, Math.max(1, nSize), 0, Math.PI * 2);
-              ctx.fill();
-
-              if (i > 0 && i % 3 === 0) {
-                ctx.strokeStyle = 'rgba(6, 182, 212, 0.25)';
-                ctx.lineWidth = 1;
-                ctx.beginPath();
-                ctx.moveTo(nx, ny);
-                ctx.lineTo(canvas.width / 2, canvas.height / 2);
-                ctx.stroke();
-              }
-            }
-          } else if (config.effect === 'rgb_overdrive') {
-            const hue = (t * 100) % 360;
-            const radial = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, 40, canvas.width / 2, canvas.height / 2, 380);
-            radial.addColorStop(0, `hsla(${hue}, 100%, 65%, 0.25)`);
-            radial.addColorStop(0.6, `hsla(${(hue + 60) % 360}, 100%, 55%, 0.1)`);
-            radial.addColorStop(1, 'rgba(0,0,0,0)');
-            ctx.fillStyle = radial;
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            for (let s = 0; s < 25; s++) {
-              const sx = canvas.width / 2 + Math.cos(t * 5 + s) * (180 + s * 4);
-              const sy = canvas.height / 2 + Math.sin(t * 6 + s * 1.2) * (120 + s * 3);
-              ctx.fillStyle = `rgba(255, 255, 255, ${Math.abs(Math.sin(t * 8 + s)) * 0.9})`;
-              ctx.beginPath();
-              ctx.arc(sx, sy, Math.random() * 2.5 + 1.5, 0, Math.PI * 2);
-              ctx.fill();
-            }
-          } else if (config.effect === 'nitro_cascade') {
-            // Warm golden glow
-            const radial = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, 30, canvas.width / 2, canvas.height / 2, 320);
-            radial.addColorStop(0, 'rgba(245, 158, 11, 0.25)');
-            radial.addColorStop(1, 'rgba(0,0,0,0)');
-            ctx.fillStyle = radial;
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            // Swirling nitro bubbles rising
-            for (let b = 0; b < 30; b++) {
-              const bx = (canvas.width / 2 - 120 + ((b * 45 + t * 40) % 240));
-              const by = canvas.height - ((t * 90 + b * 28) % canvas.height);
-              ctx.fillStyle = `rgba(253, 230, 138, ${Math.abs(Math.sin(t * 3 + b)) * 0.75})`;
-              ctx.beginPath();
-              ctx.arc(bx, by, Math.sin(t * 4 + b) * 1.5 + 2, 0, Math.PI * 2);
-              ctx.fill();
-            }
-          } else if (config.effect === 'biometric_pulse') {
-            for (let r = 0; r < 4; r++) {
-              const radius = ((t * 70 + r * 65) % 220) + 40;
-              const alpha = Math.max(0, 1 - radius / 250) * 0.45;
-              ctx.beginPath();
-              ctx.arc(canvas.width / 2 + panX, canvas.height / 2 + 30 + panY, radius, 0, Math.PI * 2);
-              ctx.strokeStyle = `rgba(16, 185, 129, ${alpha})`;
-              ctx.lineWidth = 3.5;
-              ctx.stroke();
-            }
-
-            // Heartbeat ECG waveform
-            ctx.beginPath();
-            ctx.strokeStyle = 'rgba(52, 211, 153, 0.5)';
-            ctx.lineWidth = 2.5;
-            for (let x = 0; x < canvas.width; x += 15) {
-              const normX = (x + t * 250) % canvas.width;
-              let pulse = Math.sin(normX * 0.05);
-              if (normX > 400 && normX < 550) {
-                pulse = Math.sin((normX - 400) * 0.2) * 45;
-              }
-              const y = canvas.height - 70 + pulse;
-              if (x === 0) ctx.moveTo(x, y);
-              else ctx.lineTo(x, y);
-            }
-            ctx.stroke();
-          } else if (config.effect === 'prismatic_flare') {
-            const flareX = canvas.width / 2 + Math.sin(t * 1.5) * 80;
-            const flareY = 200 + Math.cos(t * 1.2) * 30;
-
-            const angles = [0, Math.PI / 4, Math.PI / 2, (3 * Math.PI) / 4];
-            const colors = ['rgba(239, 68, 68, 0.6)', 'rgba(6, 182, 212, 0.7)', 'rgba(168, 85, 247, 0.6)', 'rgba(234, 179, 8, 0.7)'];
-            angles.forEach((ang, idx) => {
-              ctx.save();
-              ctx.translate(flareX, flareY);
-              ctx.rotate(ang + t * 0.5);
-              ctx.strokeStyle = colors[idx];
-              ctx.lineWidth = 3;
-              ctx.beginPath();
-              ctx.moveTo(-90, 0);
-              ctx.lineTo(90, 0);
-              ctx.stroke();
-              ctx.restore();
-            });
-
-            for (let d = 0; d < 22; d++) {
-              const dx = (canvas.width / 2 + Math.sin(t * 2.5 + d * 2) * (140 + d * 8));
-              const dy = (canvas.height / 2 + Math.cos(t * 3 + d * 1.8) * (100 + d * 6));
-              ctx.fillStyle = `rgba(255, 255, 255, ${Math.abs(Math.sin(t * 6 + d)) * 0.9})`;
-              ctx.beginPath();
-              ctx.arc(dx, dy, 2.5, 0, Math.PI * 2);
-              ctx.fill();
-            }
-          } else if (config.effect === 'neon_velocity') {
-            for (let i = 0; i < 10; i++) {
-              const lx = ((i * 110 + t * 500) % (canvas.width + 300)) - 150;
-              const ly = 320 + Math.sin(i + t) * 60;
-              ctx.strokeStyle = i % 2 === 0 ? 'rgba(6, 182, 212, 0.55)' : 'rgba(249, 115, 22, 0.55)';
-              ctx.lineWidth = 3.5;
-              ctx.beginPath();
-              ctx.moveTo(lx - 160, ly);
-              ctx.lineTo(lx, ly);
-              ctx.stroke();
-            }
-          } else if (config.effect === 'chronos_kinetic') {
-            for (let g = 0; g < 3; g++) {
-              const rot = t * (0.8 + g * 0.4);
-              ctx.save();
-              ctx.translate(canvas.width / 2 + panX, canvas.height / 2 + panY);
-              ctx.rotate(rot);
-              ctx.strokeStyle = 'rgba(245, 158, 11, 0.35)';
-              ctx.lineWidth = 2;
-              ctx.beginPath();
-              ctx.arc(0, 0, 90 + g * 50, 0, Math.PI * 1.5);
-              ctx.stroke();
-              ctx.restore();
-            }
-          } else if (config.effect === 'lidar_recon') {
-            const sweepAngle = (t * 3) % (Math.PI * 2);
-            ctx.save();
-            ctx.translate(canvas.width / 2, canvas.height / 2);
-            ctx.rotate(sweepAngle);
-            ctx.strokeStyle = 'rgba(6, 182, 212, 0.45)';
-            ctx.lineWidth = 3;
-            ctx.beginPath();
-            ctx.moveTo(0, 0);
-            ctx.lineTo(260, 0);
-            ctx.stroke();
-            ctx.restore();
-          } else if (config.effect === 'crystal_shimmer') {
-            const grad = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, 30, canvas.width / 2, canvas.height / 2, 300);
-            grad.addColorStop(0, 'rgba(253, 230, 138, 0.25)');
-            grad.addColorStop(1, 'rgba(0,0,0,0)');
-            ctx.fillStyle = grad;
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-          } else if (config.effect === 'polarized_prism') {
-            const sweepX = (t * 220) % canvas.width;
-            ctx.fillStyle = 'rgba(6, 182, 212, 0.15)';
-            ctx.fillRect(sweepX - 60, 0, 120, canvas.height);
-          } else if (config.effect === 'acoustic_ripple') {
-            for (let r = 0; r < 4; r++) {
-              const radius = ((t * 80 + r * 60) % 200) + 30;
-              const alpha = Math.max(0, 1 - radius / 230) * 0.4;
-              ctx.beginPath();
-              ctx.arc(360 + panX, 220 + panY, radius, 0, Math.PI * 2);
-              ctx.strokeStyle = `rgba(6, 182, 212, ${alpha})`;
-              ctx.lineWidth = 3;
-              ctx.stroke();
-            }
-          } else if (config.effect === 'liquid_shimmer') {
-            const radial = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, 20, canvas.width / 2, canvas.height / 2, 300);
-            radial.addColorStop(0, 'rgba(245, 158, 11, 0.25)');
-            radial.addColorStop(1, 'rgba(0,0,0,0)');
-            ctx.fillStyle = radial;
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-          } else if (config.effect === 'vortex_pulse') {
-            const pulse = Math.abs(Math.sin(t * 4)) * 0.35 + 0.1;
-            const radial = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, 20, canvas.width / 2, canvas.height / 2, 350);
-            radial.addColorStop(0, `rgba(245, 158, 11, ${pulse})`);
-            radial.addColorStop(0.5, `rgba(16, 185, 129, ${pulse * 0.6})`);
-            radial.addColorStop(1, 'rgba(0,0,0,0)');
-            ctx.fillStyle = radial;
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-          } else if (config.effect === 'cyber_energy') {
-            const sweepY = (t * 200) % canvas.height;
-            ctx.strokeStyle = 'rgba(6, 182, 212, 0.4)';
-            ctx.lineWidth = 2;
-            ctx.beginPath();
-            ctx.moveTo(0, sweepY);
-            ctx.lineTo(canvas.width, sweepY);
-            ctx.stroke();
-          } else if (config.effect === 'speed_chase') {
-            for (let i = 0; i < 8; i++) {
-              const lx = ((i * 120 + t * 400) % (canvas.width + 200)) - 100;
-              const ly = 280 + i * 15;
-              ctx.strokeStyle = `rgba(6, 182, 212, ${0.4 * (1 - i / 8)})`;
-              ctx.lineWidth = 3;
-              ctx.beginPath();
-              ctx.moveTo(lx - 120, ly);
-              ctx.lineTo(lx, ly);
-              ctx.stroke();
-            }
-          } else if (config.effect === 'fluid_smoke') {
-            const laserAngle = Math.sin(t * 2) * 0.3;
-            ctx.save();
-            ctx.translate(canvas.width / 2, canvas.height / 2);
-            ctx.rotate(laserAngle);
-            ctx.strokeStyle = 'rgba(139, 92, 246, 0.35)';
-            ctx.lineWidth = 4;
-            ctx.beginPath();
-            ctx.moveTo(-canvas.width, -80);
-            ctx.lineTo(canvas.width, 80);
-            ctx.stroke();
-            ctx.restore();
           }
         } catch (fxErr) {
           // FX guard
@@ -457,6 +574,13 @@
     }
 
     async function generateAll() {
+      // Step 1: Generate & Save Posters
+      statusDiv.innerHTML = `Synthesizing ${postersToGenerate.length} Studio Posters...`;
+      for (const p of postersToGenerate) {
+        await generatePoster(p);
+      }
+
+      // Step 2: Generate & Save Videos
       let idx = 0;
       for (const item of videosToGenerate) {
         idx++;
@@ -480,7 +604,7 @@
       }
 
       progressFill.style.width = '100%';
-      statusDiv.innerHTML = `✓ All ${videosToGenerate.length} AI Commercial & Promotional Videos Generated Successfully!`;
+      statusDiv.innerHTML = `✓ All Commercial Posters & Videos Generated Successfully!`;
       log('All video renders completed and saved into /assets directory.');
     }
 

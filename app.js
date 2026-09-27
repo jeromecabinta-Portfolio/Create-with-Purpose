@@ -4,9 +4,6 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initAmbientCanvas();
-  initCursorGlow();
-  initAudioSynthesizer();
   initShowcaseFilters();
   initSampleOutputViewer();
   initAspectRatioSwitcher();
@@ -23,203 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
    ========================================================================== */
 const videoProjects = [
   // ==========================================
-  // High-Impact Promotional & Commercial Launch Videos
+  // Nike Performance & Sportswear Commercials
   // ==========================================
-  {
-    id: 'project-saas',
-    title: 'Nova AI: Autonomous Creative Engine',
-    client: 'Nova AI Labs • Next-Gen Creative Cloud',
-    category: 'promo tech',
-    duration: '0:30',
-    campaignType: 'SaaS Platform Launch & Global Teaser Ad',
-    deliverables: '4K Commercial Master (16:9), Viral Hook Suite (9:16), Product Demo Cut (1:1)',
-    roas: '+540% ROAS (B2B SaaS Scale)',
-    ctr: '7.2% CTR',
-    turnaround: '48 Hours',
-    image: 'assets/promo_saas_ai.jpg',
-    video: 'assets/promo_saas_ai.webm',
-    synopsis: 'Futuristic promotional video showcasing holographic glass UI interfaces, real-time generative neural clusters, and AI workflow speed.',
-    strategy: 'Engineered for high-converting B2B SaaS top-of-funnel acquisition. Integrated dynamic 3-second kinetic hooks, holographic UI telemetry, and sound design to illustrate effortless speed and creative superpowers.',
-    results: 'Drove 42,000+ waitlist signups in the first 7 days, achieving an unprecedented 7.2% CTR on YouTube and LinkedIn ads with a 5.4x ROAS.'
-  },
-  {
-    id: 'project-gaming',
-    title: 'Vortex Pro: Cyberdeck Wireless Controller',
-    client: 'Vortex Gaming Gear • Esports Performance',
-    category: 'promo tech',
-    duration: '0:30',
-    campaignType: 'Global Hardware Launch & Twitch / TikTok Spark Ads',
-    deliverables: '4K Cinema Trailer (16:9), 9:16 TikTok Spark Cut, Amazon A+ Video (1:1)',
-    roas: '+490% ROAS (Esports Hardware)',
-    ctr: '6.8% CTR',
-    turnaround: '48 Hours',
-    image: 'assets/promo_gaming_gear.jpg',
-    video: 'assets/promo_gaming_gear.webm',
-    synopsis: 'High-octane commercial ad featuring translucent mechanical switches, RGB chromatic surges, and slow-motion lightning collision physics.',
-    strategy: 'Crafted for competitive esports gamers and hardware enthusiasts. Visualized zero-latency hall-effect triggers, tactile mechanical switches, and customizable lighting profiles.',
-    results: 'The initial production run of 15,000 units sold out completely in under 36 hours from the promotional trailer drop.'
-  },
-  {
-    id: 'project-coldbrew',
-    title: 'Kona Draft: Liquid Gold Nitro Cold Brew',
-    client: 'Kona Coffee Roasters • Artisan Beverage',
-    category: 'promo beverage',
-    duration: '0:25',
-    campaignType: 'Direct-to-Consumer Summer Drop & Retail Promo',
-    deliverables: '4K Master Commercial (16:9), 9:16 Reels Cut, 1:1 Shopify Hero Video',
-    roas: '+410% ROAS (DTC Subscriptions)',
-    ctr: '5.9% CTR',
-    turnaround: '48 Hours',
-    image: 'assets/promo_cold_brew.jpg',
-    video: 'assets/promo_cold_brew.webm',
-    synopsis: 'Sensory gourmet beverage commercial showcasing nitrogen cascading micro-foam, ice shatter physics, and roasted coffee bean explosions.',
-    strategy: 'Sensory-first beverage promotional spot emphasizing micro-nitrogen texture, roasted bean aroma visual cues, and ice-cold refreshment to drive immediate subscription conversions.',
-    results: 'Boosted DTC recurring subscription sales by +64% within month 1 and delivered a 5.9% CTR across Meta and TikTok paid ads.'
-  },
-  {
-    id: 'project-smartring',
-    title: 'Helix Titan: Biometric Precision Ring',
-    client: 'Helix Health Technologies • Precision Wearables',
-    category: 'promo tech',
-    duration: '0:30',
-    campaignType: 'Global Kickstarter Hero Video & Meta Ad Scale',
-    deliverables: '4K Cinema Master (16:9), 9:16 Vertical Story Cut, 1:1 PDP Cut',
-    roas: '+580% ROAS (Wearable Drops)',
-    ctr: '6.5% CTR',
-    turnaround: '48 Hours',
-    image: 'assets/promo_smart_ring.jpg',
-    video: 'assets/promo_smart_ring.webm',
-    synopsis: 'Ultra-sleek titanium wearable commercial highlighting emerald green PPG optical sensors, sleep telemetry, and medical-grade accuracy.',
-    strategy: 'Structured as a compelling Apple-grade promotional film that challenges bulky smartwatches with titanium craftsmanship and futuristic laser sensor telemetry.',
-    results: 'Surpassed crowdfunding goal by 1,400%, generating $3.1M in pre-orders and ranking #1 trending health wearable.'
-  },
-  {
-    id: 'project-diamond',
-    title: 'Solitaire Astral: Flawless Platinum Diamond',
-    client: 'Astral High Jewelry • New York & Paris',
-    category: 'promo luxury',
-    duration: '0:30',
-    campaignType: 'Holiday Bridal Campaign & Luxury DTC Showcase',
-    deliverables: '4K Master (16:9), 9:16 Luxury Reels Cut, 1:1 Square Macro Loop',
-    roas: '+620% ROAS (High-Ticket Jewelry)',
-    ctr: '5.5% CTR',
-    turnaround: '48 Hours',
-    image: 'assets/promo_diamond_ring.jpg',
-    video: 'assets/promo_diamond_ring.webm',
-    synopsis: 'Ultra-luxury diamond jewelry commercial capturing prismatic rainbow flare refractions, liquid velvet ripples, and 8K macro brilliance.',
-    strategy: 'Designed for high-ticket emotional purchase conversion. Showcases optical light caustics, laser-cut facet geometry, and silky dark luxury atmosphere without expensive physical jewelry film crews.',
-    results: 'Drove $4.8M in custom bridal bookings during Q4 holiday period with an outstanding 6.2x blended ROAS.'
-  },
-  {
-    id: 'project-mobility',
-    title: 'VoltRider Apex: Urban Hyper-Scooter',
-    client: 'VoltRider Mobility • High-Performance EV',
-    category: 'promo luxury',
-    duration: '0:35',
-    campaignType: 'Urban Product Reveal & YouTube Pre-Roll Campaign',
-    deliverables: '4K Broadcast Cut (16:9), 9:16 Speed Hook, 1:1 Feed Cut',
-    roas: '+450% ROAS (Direct Reservations)',
-    ctr: '5.7% CTR',
-    turnaround: '72 Hours',
-    image: 'assets/promo_urban_mobility.jpg',
-    video: 'assets/promo_urban_mobility.webm',
-    synopsis: 'Cinematic urban speed commercial featuring matte carbon fiber aero chassis, neon wet street reflections, and high-velocity light streaks.',
-    strategy: 'High-energy promotional video set against a neon metropolis at night. Highlights dual-motor acceleration, carbon fiber durability, and aerospace braking systems.',
-    results: 'Captured 5,200+ reservation deposits valued at over $11M in pipeline sales within 3 weeks of campaign launch.'
-  },
-  // ==========================================
-  // Core Brand Commercials
-  // ==========================================
-  {
-    id: 'project-earbuds',
-    title: 'Acoustiq Titanium Pro',
-    client: 'Acoustiq Audio • Global Audio Brand',
-    category: 'tech',
-    duration: '0:30',
-    campaignType: 'Global Product Reveal & Performance Ads',
-    deliverables: '4K Master (16:9), TikTok/Reels (9:16), Amazon A+ Video (1:1)',
-    roas: '+420% ROAS (Meta & TikTok)',
-    ctr: '4.9% CTR',
-    turnaround: '48 Hours',
-    image: 'assets/ecom_tech_gadget.jpg',
-    video: 'assets/ecom_tech_gadget.webm',
-    synopsis: 'High-converting consumer tech commercial showcasing titanium earbuds levitating amidst acoustic ripple rings and water splash micro-physics.',
-    strategy: 'Direct-to-consumer launch commercial engineered for high top-of-funnel retention. Utilized 3D CAD conditioning and acoustic wave fluid physics to demonstrate IPX7 water resistance and active noise cancellation.',
-    results: 'Drove over $1.2M in pre-orders within the first 14 days of launch with an average ROAS of 4.2x across paid social channels.'
-  },
-  {
-    id: 'project-serum',
-    title: 'Aura 24K Botanical Dew',
-    client: 'Aura Skincare • Luxury Clean Beauty',
-    category: 'beauty',
-    duration: '0:25',
-    campaignType: 'DTC E-Commerce & Sephora Digital Endcap',
-    deliverables: '4K Vertical (9:16), Meta Feed (1:1), Shopify Hero Loop',
-    roas: '+380% ROAS (Shopify Scale)',
-    ctr: '5.2% CTR',
-    turnaround: '48 Hours',
-    image: 'assets/ecom_beauty_serum.jpg',
-    video: 'assets/ecom_beauty_serum.webm',
-    synopsis: 'Sensory macro cosmetic commercial capturing golden botanical argan oil and pink rosewater splashing dynamically around frosted glass.',
-    strategy: 'Crafted a visceral, sensory-first beauty ad highlighting the dual-phase hydration formula. High-speed fluid dynamics and botanical refraction were dialed in to evoke instant luxury texture and absorption.',
-    results: 'Increased conversion rate on Shopify product page by +42% and achieved a 5.2% CTR on Meta video ads.'
-  },
-  {
-    id: 'project-energy',
-    title: 'Voltaic Energy Citrus Blast',
-    client: 'Voltaic Beverages • Performance Energy Drink',
-    category: 'beverage',
-    duration: '0:20',
-    campaignType: 'Amazon Prime Ad & TikTok Spark Campaign',
-    deliverables: 'TikTok Hook Suite (9:16), Amazon Video (16:9), Square (1:1)',
-    roas: '+340% ROAS (Amazon Ads)',
-    ctr: '6.1% CTR',
-    turnaround: '48 Hours',
-    image: 'assets/ecom_beverage_splash.jpg',
-    video: 'assets/ecom_beverage_splash.webm',
-    synopsis: 'Electrifying beverage ad featuring a matte black can bursting through crystal ice cubes and glowing citrus liquid vortex.',
-    strategy: 'Explosive 3-second hook designed to disrupt fast-scrolling mobile feeds. Coordinated freeze-frame ice collision physics with high-contrast neon palette to emphasize zero-sugar clean energy.',
-    results: 'Achieved a record 6.1% CTR on TikTok and Amazon Sponsored Brand Video, driving top-seller ranking in energy drinks.'
-  },
-  {
-    id: 'project-sneaker',
-    title: 'Speedform ZoomX Carbon',
-    client: 'Speedform Athletics • Performance Footwear',
-    category: 'fashion sneaker',
-    duration: '0:35',
-    campaignType: 'Global Shoe Drop & Digital Billboard',
-    deliverables: '4K Broadcast (16:9), 9:16 Reels Cut, 3D Layer Exploded View',
-    roas: '+460% ROAS (Global Launch)',
-    ctr: '5.8% CTR',
-    turnaround: '72 Hours',
-    image: 'assets/ecom_sneaker_motion.jpg',
-    video: 'assets/ecom_sneaker_motion.webm',
-    synopsis: 'Deconstructed 3D performance running sneaker ad revealing interwoven carbon fiber threads, air cushioning, and explosive studio propulsion.',
-    strategy: 'Full exploded-view 3D architectural breakdown of the proprietary carbon plate and nitrogen-infused foam. Combined athletic motion blur with laser-focused material macro shots.',
-    results: 'The shoe model sold out completely within 48 hours of campaign launch, generating over 14 million organic impressions.'
-  },
-  {
-    id: 'project-nike-airmax',
-    title: 'Nike Air Max Pulse: Dynamic Air Chamber',
-    client: 'Nike Running & Sportswear • Global Campaign',
-    category: 'fashion sneaker promo',
-    duration: '0:30',
-    campaignType: 'Global Sneaker Drop & TikTok Spark Campaign',
-    deliverables: '4K Master Commercial (16:9), 9:16 Viral Kinetic Hook Suite, 1:1 Shopify Hero Video',
-    roas: '+530% ROAS (Global Drop)',
-    ctr: '6.9% CTR',
-    turnaround: '48 Hours',
-    image: 'assets/nike_air_max_pulse.jpg',
-    video: 'assets/nike_air_max_pulse.webm',
-    synopsis: 'Futuristic sportswear commercial capturing Nike Air Max Pulse levitating in a dark atmospheric studio with cyan and electric volt air chamber luminescence.',
-    strategy: 'Showcased point-loaded cushioning system with explosive micro-particle physics and pressurized air unit glowing telemetry. Dialed in for high-converting TikTok Spark ads and SNKRS app drops.',
-    results: 'Achieved 6.9% CTR across Meta and TikTok paid ads, generating $3.6M in global pre-orders within the first 72 hours.'
-  },
   {
     id: 'project-nike-vaporfly',
     title: 'Nike ZoomX Vaporfly 3: Carbon Energy Return',
     client: 'Nike Performance Athletics • Elite Marathon Series',
-    category: 'fashion sneaker promo',
+    category: 'nike running promo',
     duration: '0:35',
     campaignType: 'Olympic & Marathon Major Performance Campaign',
     deliverables: '4K Broadcast Master (16:9), 9:16 Exploded Carbon Plate Hook, 1:1 Feed Cut',
@@ -233,78 +40,27 @@ const videoProjects = [
     results: 'Ranked #1 highest-converting performance footwear campaign of Q3 with over 22,000 units sold out globally in 24 hours.'
   },
   {
-    id: 'project-nike-dunk',
-    title: 'Nike Dunk Low: Urban Heritage Edition',
-    client: 'Nike Sportswear • Street Culture & SNKRS Drop',
-    category: 'fashion sneaker',
-    duration: '0:25',
-    campaignType: 'SNKRS Exclusive Drop & Streetwear Retail Launch',
-    deliverables: '4K Master (16:9), 9:16 Street Style Cut, 1:1 PDP Cut',
-    roas: '+480% ROAS (SNKRS App Scale)',
-    ctr: '6.2% CTR',
-    turnaround: '48 Hours',
-    image: 'assets/nike_dunk_low.jpg',
-    video: 'assets/nike_dunk_low.webm',
-    synopsis: 'Iconic street culture sneaker commercial showcasing the Nike Dunk Low obsidian and sail leather colorway floating above wet reflective asphalt with rim lighting.',
-    strategy: 'Targeted street culture and sneakerhead communities. Captured premium tumbled leather texture and vintage court silhouette with asphalt puddle reflection aesthetics and cinematic street lighting.',
-    results: 'Generated over 18 million impressions across Instagram Reels and TikTok, selling out 40,000 pairs during the SNKRS pass event.'
-  },
-  {
-    id: 'project-converse-chuck',
-    title: 'Converse Chuck 70: Vintage Canvas Heritage',
-    client: 'Converse Global • Heritage & Street Culture',
-    category: 'fashion sneaker promo',
+    id: 'project-nike-airmax',
+    title: 'Nike Air Max Pulse: Dynamic Air Chamber',
+    client: 'Nike Running & Sportswear • Global Campaign',
+    category: 'nike streetwear promo',
     duration: '0:30',
-    campaignType: 'Global Heritage Campaign & E-Commerce Flagship Video',
-    deliverables: '4K Master (16:9), 9:16 Vintage Film Hook Suite, 1:1 E-Commerce Loop',
-    roas: '+520% ROAS (DTC E-Commerce)',
-    ctr: '6.0% CTR',
+    campaignType: 'Global Sneaker Drop & TikTok Spark Campaign',
+    deliverables: '4K Master Commercial (16:9), 9:16 Viral Kinetic Hook Suite, 1:1 Shopify Hero Video',
+    roas: '+530% ROAS (Global Drop)',
+    ctr: '6.9% CTR',
     turnaround: '48 Hours',
-    image: 'assets/converse_chuck_70.jpg',
-    video: 'assets/converse_chuck_70.webm',
-    synopsis: 'Cinematic heritage commercial spotlighting the iconic Converse Chuck 70 high-top with 12oz heavy vintage canvas, ankle star patch, and glossy egret foxing.',
-    strategy: 'Warm vintage film aesthetic capturing tactile canvas stitching, glossy vulcanized rubber toe cap, and timeless high-top silhouette. Emphasized archival craftsmanship to boost direct e-commerce basket size.',
-    results: 'Boosted Converse.com direct conversion rates by +39% and lowered customer acquisition cost (CAC) by 28% across Meta Ads.'
-  },
-  {
-    id: 'project-converse-runstar',
-    title: 'Converse Run Star Motion: CX Wave Platform',
-    client: 'Converse Avant-Garde • Streetwear Innovation',
-    category: 'fashion sneaker promo',
-    duration: '0:30',
-    campaignType: 'Avant-Garde Streetwear Drop & TikTok Spark Ads',
-    deliverables: '4K Master (16:9), 9:16 Cyberpunk Platform Hook, 1:1 PDP Cut',
-    roas: '+560% ROAS (Streetwear Drop)',
-    ctr: '6.7% CTR',
-    turnaround: '48 Hours',
-    image: 'assets/converse_run_star_motion.jpg',
-    video: 'assets/converse_run_star_motion.webm',
-    synopsis: 'Bold cyberpunk commercial ad revealing the exaggerated sculpted wavy CX foam midsole and lugged outsole of the Converse Run Star Motion over rippling water.',
-    strategy: 'Engineered for modern Gen-Z streetwear culture. Blended fluid neon lighting, exaggerated sculptural foam geometry, and dynamic bass hits to emphasize ultra-light CX comfort and statement elevation.',
-    results: 'Generated 11.5M views on TikTok Spark Ads in week 1 with an extraordinary 6.7% CTR and 5.6x ROAS.'
-  },
-  {
-    id: 'project-converse-weapon',
-    title: 'Converse Weapon CX: 1986 Court Legacy',
-    client: 'Converse Basketball • Retro Court Heritage',
-    category: 'fashion sneaker',
-    duration: '0:30',
-    campaignType: 'Court Heritage Revival & YouTube Pre-Roll Campaign',
-    deliverables: '4K Master (16:9), 9:16 Hardwood Court Hook, 1:1 PDP Loop',
-    roas: '+490% ROAS (Court Revival)',
-    ctr: '5.9% CTR',
-    turnaround: '48 Hours',
-    image: 'assets/converse_weapon_cx.jpg',
-    video: 'assets/converse_weapon_cx.webm',
-    synopsis: 'Retro-futuristic basketball commercial showcasing the iconic Converse Weapon CX high-top leather silhouette spinning in an illuminated hardwood arena.',
-    strategy: 'Revitalized the legendary 1980s basketball icon for modern lifestyle wear. Featured arena stadium beams, polished hardwood floor reflections, and CX foam cushioning callouts.',
-    results: 'Drove $2.8M in direct sales across launch week, establishing the Weapon CX as a top trending retro court sneaker.'
+    image: 'assets/nike_air_max_pulse.jpg',
+    video: 'assets/nike_air_max_pulse.webm',
+    synopsis: 'Futuristic sportswear commercial capturing Nike Air Max Pulse levitating in a dark atmospheric studio with cyan and electric volt air chamber luminescence.',
+    strategy: 'Showcased point-loaded cushioning system with explosive micro-particle physics and pressurized air unit glowing telemetry. Dialed in for high-converting TikTok Spark ads and SNKRS app drops.',
+    results: 'Achieved 6.9% CTR across Meta and TikTok paid ads, generating $3.6M in global pre-orders within the first 72 hours.'
   },
   {
     id: 'project-jordan-chicago',
     title: 'Air Jordan 1 High: Chicago Legacy Edition',
-    client: 'Jordan Brand • Heritage Basketball & Global Drop',
-    category: 'fashion sneaker promo',
+    client: 'Nike Jordan Brand • Heritage Basketball & Global Drop',
+    category: 'nike hoops promo',
     duration: '0:30',
     campaignType: 'Global SNKRS Drop & Digital Billboard Commercial',
     deliverables: '4K Cinema Master (16:9), 9:16 Viral Kinetic Hook Suite, 1:1 PDP Loop',
@@ -318,10 +74,27 @@ const videoProjects = [
     results: 'Drove $4.2M in direct-to-consumer sales during launch weekend, delivering a 7.8% CTR on TikTok and Meta Ads.'
   },
   {
+    id: 'project-nike-dunk',
+    title: 'Nike Dunk Low: Urban Heritage Edition',
+    client: 'Nike Sportswear • Street Culture & SNKRS Drop',
+    category: 'nike streetwear',
+    duration: '0:25',
+    campaignType: 'SNKRS Exclusive Drop & Streetwear Retail Launch',
+    deliverables: '4K Master (16:9), 9:16 Street Style Cut, 1:1 PDP Cut',
+    roas: '+480% ROAS (SNKRS App Scale)',
+    ctr: '6.2% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/nike_dunk_low.jpg',
+    video: 'assets/nike_dunk_low.webm',
+    synopsis: 'Iconic street culture sneaker commercial showcasing the Nike Dunk Low obsidian and sail leather colorway floating above wet reflective asphalt with rim lighting.',
+    strategy: 'Targeted street culture and sneakerhead communities. Captured premium tumbled leather texture and vintage court silhouette with asphalt puddle reflection aesthetics and cinematic street lighting.',
+    results: 'Generated over 18 million impressions across Instagram Reels and TikTok, selling out 40,000 pairs during the SNKRS pass event.'
+  },
+  {
     id: 'project-nike-af1',
     title: 'Nike Air Force 1 07: Pure White Architectural',
     client: 'Nike Sportswear • Everyday Icon Series',
-    category: 'fashion sneaker',
+    category: 'nike streetwear',
     duration: '0:25',
     campaignType: 'Evergreen DTC Performance & Amazon Video Ads',
     deliverables: '4K Master (16:9), 9:16 Street Style Cut, 1:1 Shopify Hero Video',
@@ -336,9 +109,9 @@ const videoProjects = [
   },
   {
     id: 'project-nike-acg',
-    title: 'Nike ACG Mountain Fly: Gore-Tex All-Conditions',
+    title: 'Nike ACG Mountain Fly: Gore-Tex Trail Armor',
     client: 'Nike ACG • Outdoor & Technical Trail Innovation',
-    category: 'fashion sneaker promo',
+    category: 'nike apparel promo',
     duration: '0:35',
     campaignType: 'Seasonal Technical Outdoor Drop & YouTube Pre-Roll',
     deliverables: '4K Broadcast Master (16:9), 9:16 Water-Repel Hook, 1:1 Feed Cut',
@@ -352,148 +125,29 @@ const videoProjects = [
     results: 'Sold out full seasonal production inventory in 4 days across Europe and North America with 6.5% CTR on YouTube Pre-Roll.'
   },
   {
-    id: 'project-converse-deluxe',
-    title: 'Converse Chuck 70 De Luxe: Geometric Square Platform',
-    client: 'Converse Design Studio • Avant-Garde Runway',
-    category: 'fashion sneaker promo',
-    duration: '0:30',
-    campaignType: 'Paris Fashion Week Runway Teaser & DTC Editorial',
-    deliverables: '4K Cinema Master (16:9), 9:16 Geometric Laser Hook, 1:1 PDP Cut',
-    roas: '+510% ROAS (Avant-Garde Drop)',
-    ctr: '6.1% CTR',
-    turnaround: '48 Hours',
-    image: 'assets/converse_deluxe_square.jpg',
-    video: 'assets/converse_deluxe_square.webm',
-    synopsis: 'Sculptural fashion commercial revealing angular geometric square platform rubber toe caps and ultraviolet runway laser scanning lines.',
-    strategy: 'Avant-garde high-fashion pacing blending angular brutalist perspective grids with high-contrast chrome and heavy black canvas craftsmanship.',
-    results: 'Featured in Hypebeast and Highsnobiety, achieving +64% lift in DTC average order value (AOV) on Converse.com.'
-  },
-  {
-    id: 'project-converse-cruise',
-    title: 'Converse Cruise Skate: Layered Canvas Elevation',
-    client: 'Converse Skateboarding • Youth & Street Culture',
-    category: 'fashion sneaker',
-    duration: '0:25',
-    campaignType: 'Summer Skate & TikTok Creator Spark Ads',
-    deliverables: '4K Master (16:9), 9:16 Skate Park Hook, 1:1 PDP Loop',
-    roas: '+470% ROAS (Youth Streetwear)',
-    ctr: '6.3% CTR',
-    turnaround: '48 Hours',
-    image: 'assets/converse_cruise_skate.jpg',
-    video: 'assets/converse_cruise_skate.webm',
-    synopsis: 'Sun-drenched California skate commercial capturing chunky layered canvas panels and distorted heritage foxing in golden sunlight.',
-    strategy: 'Warm nostalgic film look with high-energy skate motion blur and tactile double-canvas layer breakdowns for Gen-Z skateboarding communities.',
-    results: 'Drove 14.8M impressions on TikTok and Instagram Reels with over 35,000 pairs sold within month 1.'
-  },
-  {
-    id: 'project-converse-bb',
-    title: 'Converse All Star BB Prototype: CX Court Performance',
-    client: 'Converse Hoops • Next-Gen Basketball Innovation',
-    category: 'fashion sneaker promo',
+    id: 'project-nike-alphafly',
+    title: 'Nike Alphafly 3: World Record Propulsion',
+    client: 'Nike Performance Running • Breaking2 Innovation',
+    category: 'nike running promo',
     duration: '0:35',
-    campaignType: 'NBA Season Tip-Off & Global Basketball Campaign',
-    deliverables: '4K Broadcast (16:9), 9:16 Shot Tracker Hook, 1:1 Amazon Video',
-    roas: '+590% ROAS (Hoops Launch)',
-    ctr: '7.1% CTR',
+    campaignType: 'World Marathon Majors Launch & Digital Billboard',
+    deliverables: '4K Broadcast (16:9), 9:16 Reels Cut, 3D Layer Exploded View',
+    roas: '+560% ROAS (Marathon Launch)',
+    ctr: '6.8% CTR',
     turnaround: '48 Hours',
-    image: 'assets/converse_bb_prototype.jpg',
-    video: 'assets/converse_bb_prototype.webm',
-    synopsis: 'High-velocity basketball commercial showing the Converse All Star BB Prototype hovering over neon court telemetry lines with glowing CX foam & Zoom Air cushioning.',
-    strategy: 'Engineered responsive court trajectory telemetry and Zoom Air shock absorption visual cues tailored for modern explosive hoopers.',
-    results: 'Surpassed basketball footwear category pre-order target by +180% with 7.1% CTR across NBA YouTube streams.'
+    image: 'assets/ecom_sneaker_motion.jpg',
+    video: 'assets/ecom_sneaker_motion.webm',
+    synopsis: 'Deconstructed 3D performance running sneaker ad revealing interwoven carbon fiber threads, dual Zoom Air pods, and explosive studio propulsion.',
+    strategy: 'Full exploded-view 3D architectural breakdown of the proprietary carbon plate and ZoomX foam. Combined athletic motion blur with laser-focused material macro shots.',
+    results: 'The shoe model sold out completely within 24 hours of campaign launch, generating over 16 million organic impressions.'
   },
   {
-    id: 'project-hypercar',
-    title: 'Apex Spectre EV: Phantom',
-    client: 'Apex Automotive • Luxury Electric Vehicles',
-    category: 'luxury',
-    duration: '0:45',
-    campaignType: 'Global Brand Reveal & YouTube Pre-Roll',
-    deliverables: '4K Cinema Master (16:9), ACES Color Grade, Spatial Audio Master',
-    roas: '+290% ROAS (Qualified Leads)',
-    ctr: '4.1% CTR',
-    turnaround: '4 Business Days',
-    image: 'assets/luxury_commercial.jpg',
-    video: 'assets/luxury_commercial.webm',
-    synopsis: 'High-end luxury brand commercial capturing an electric hypercar cutting through Nordic coastal mist with reflection physics.',
-    strategy: 'Atmospheric Nordic twilight cinematic setting focusing on aerodynamic silhouette and cyan lighting signature. Zero physical vehicle shipment required; rendered entirely from initial CAD files.',
-    results: 'Secured 3,800+ VIP pre-reservation test drive deposits across Europe and North America.'
-  },
-  {
-    id: 'project-couture',
-    title: 'Maison Lumina: Molten Metal',
-    client: 'Maison Lumina Paris • Haute Couture',
-    category: 'fashion',
-    duration: '0:30',
-    campaignType: 'Paris Fashion Week Digital Runway & Editorial',
-    deliverables: '9:16 Instagram Video, 4K Display Cut, Vogue Media Kit',
-    roas: '+310% ROAS (Engagement)',
-    ctr: '4.7% CTR',
-    turnaround: '48 Hours',
-    image: 'assets/fashion_couture.jpg',
-    video: 'assets/fashion_couture.webm',
-    synopsis: 'Avant-garde digital fashion commercial showcasing a sculpted molten chrome gown morphing dynamically into silk smoke ribbons.',
-    strategy: 'Pioneering digital couture installation blending hyper-detailed chrome cloth simulation with dark volumetric lighting for high-fashion runway immersion.',
-    results: 'Featured in Vogue Digital Arts and received the 2025 AI Fashion Film Excellence Award.'
-  },
-  {
-    id: 'project-watch',
-    title: 'Aurora Chronos: Perpetual Kinetic',
-    client: 'Aurora Watchmaking • Geneva Haute Horlogerie',
-    category: 'luxury',
-    duration: '0:30',
-    campaignType: 'Global Luxury Timepiece Launch & Kickstarter Hero',
-    deliverables: '4K Master (16:9), Vertical Macro Hook (9:16), Square PDP (1:1)',
-    roas: '+510% ROAS (Pre-Order Drops)',
-    ctr: '5.4% CTR',
-    turnaround: '48 Hours',
-    image: 'assets/luxury_watch_commercial.jpg',
-    video: 'assets/luxury_watch_commercial.webm',
-    synopsis: 'Macro mechanical luxury timepiece ad capturing micro-gears, water ripple levitation, and sapphire crystal luminescent reflections.',
-    strategy: 'Full exploded 3D CAD mechanical tourbillon assembly with luminescent cyan dials. Engineered for ultra-high-converting luxury Kickstarter & DTC launch.',
-    results: 'Drove over $2.4M in global backer pre-orders within 10 days of campaign debut.'
-  },
-  {
-    id: 'project-drone',
-    title: 'AeroAI Valkyrie: Cyber Recon',
-    client: 'Aero Robotics • Autonomous Consumer Aerospace',
-    category: 'tech',
-    duration: '0:25',
-    campaignType: 'Amazon Prime Video Ad & TikTok Spark Campaign',
-    deliverables: '4K Cinema Cut (16:9), 9:16 TikTok Spark, Amazon Video (1:1)',
-    roas: '+430% ROAS (Omnichannel Scale)',
-    ctr: '6.3% CTR',
-    turnaround: '48 Hours',
-    image: 'assets/drone_tech_commercial.jpg',
-    video: 'assets/drone_tech_commercial.webm',
-    synopsis: 'Atmospheric cyberpunk commercial showing aerodynamic carbon fiber drone hovering through neon violet and cyan fog vortex.',
-    strategy: 'High-impact 3-second hook designed for TikTok Spark ads and YouTube Pre-Roll with motion blur and obstacle avoidance lidar laser visualization.',
-    results: 'Generated 8.2M impressions and reached Amazon #1 Bestseller in Consumer Robotics.'
-  },
-  {
-    id: 'project-perfume',
-    title: 'Aurora Nocturne: Eau De Parfum',
-    client: 'Maison Aurora • Luxury French Fragrance',
-    category: 'beauty',
-    duration: '0:25',
-    campaignType: 'Holiday Global DTC Launch & Sephora Digital Endcap',
-    deliverables: '4K Macro (16:9), 9:16 Reels Cut, 1:1 Shopify Hero Loop',
-    roas: '+390% ROAS (Holiday Drops)',
-    ctr: '5.6% CTR',
-    turnaround: '48 Hours',
-    image: 'assets/fragrance_commercial.jpg',
-    video: 'assets/fragrance_commercial.webm',
-    synopsis: 'Sensory luxury perfume commercial featuring faceted crystal bottle floating over tranquil water ripples amidst floating orchid petals and warm golden sunbeams.',
-    strategy: 'Sensory micro-fluidics highlighting bottle refraction, golden liquid glow, and delicate orchid petal physics for luxury holiday gift conversion.',
-    results: 'Increased holiday DTC conversion rate by +48% on Shopify and Sephora digital placements.'
-  },
-  {
-    id: 'project-eyewear',
-    title: 'Aeterna Carbon: Polarized Optics',
-    client: 'Aeterna Eyewear • Performance Luxury Optics',
-    category: 'fashion',
+    id: 'project-nike-vision',
+    title: 'Nike Vision Windshield Elite: Polarized Optics',
+    client: 'Nike Vision • High-Performance Sport Eyewear',
+    category: 'nike apparel',
     duration: '0:20',
-    campaignType: 'Summer Drop & Instagram Performance Ad Suite',
+    campaignType: 'Summer Marathon & Track Performance Ad Suite',
     deliverables: '4K Master (16:9), 9:16 Reels Hook Suite, 1:1 PDP Cut',
     roas: '+475% ROAS (Summer Drops)',
     ctr: '5.9% CTR',
@@ -501,207 +155,355 @@ const videoProjects = [
     image: 'assets/eyewear_commercial.jpg',
     video: 'assets/eyewear_commercial.webm',
     synopsis: 'High-velocity performance eyewear commercial showcasing matte carbon fiber frames and iridescent polarized lens flare reflections.',
-    strategy: 'Visualized UV400 polarization glare reduction with split-screen iridescent lens transmission and aerodynamic wind tunnel vapor trails.',
+    strategy: 'Visualized UV400 polarization glare reduction with split-screen iridescent lens transmission and aerodynamic wind tunnel vapor trails for marathon runners and cyclists.',
     results: 'Over 45,000 units sold during the 30-day summer drop across Meta, TikTok, and Amazon.'
+  },
+  {
+    id: 'project-nike-techfleece',
+    title: 'Nike Tech Fleece AeroShield: Thermal Apparel',
+    client: 'Nike Sportswear • Engineered Technical Apparel',
+    category: 'nike apparel',
+    duration: '0:30',
+    campaignType: 'Global Winter Apparel Drop & Digital Runway',
+    deliverables: '9:16 Instagram Video, 4K Display Cut, Media Kit',
+    roas: '+430% ROAS (Apparel Scale)',
+    ctr: '5.8% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/fashion_couture.jpg',
+    video: 'assets/fashion_couture.webm',
+    synopsis: 'Avant-garde digital sportswear commercial showcasing dynamic molten chrome cloth simulations morphing into lightweight breathable thermal fleece.',
+    strategy: 'Pioneering digital sportswear installation blending hyper-detailed cloth simulation with dark volumetric lighting for high-fashion athletic immersion.',
+    results: 'Drove 2.4x higher conversion rate on Nike.com apparel product detail pages during launch week.'
+  },
+  {
+    id: 'project-nike-gps',
+    title: 'Nike Sport GPS Pro: Precision Athletic Telemetry',
+    client: 'Nike Running Club • Precision Athletic Wearables',
+    category: 'nike apparel promo',
+    duration: '0:30',
+    campaignType: 'NRC Global Hardware Integration & Hero Video',
+    deliverables: '4K Master (16:9), Vertical Macro Hook (9:16), Square PDP (1:1)',
+    roas: '+510% ROAS (Pre-Order Drops)',
+    ctr: '5.4% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/luxury_watch_commercial.jpg',
+    video: 'assets/luxury_watch_commercial.webm',
+    synopsis: 'Macro mechanical luxury athletic timepiece ad capturing micro-chassis, water ripple levitation, and sapphire crystal luminescent pace telemetry.',
+    strategy: 'Full 3D CAD mechanical assembly with luminescent cyan dials. Engineered for ultra-high-converting athlete training & NRC app integration.',
+    results: 'Drove over $2.4M in global athlete pre-orders within 10 days of campaign debut.'
+  },
+  {
+    id: 'project-nike-aerotrack',
+    title: 'Nike AeroTrack Drone: Autonomous Motion Tracking',
+    client: 'Nike Innovation Kitchen • Autonomous Tracking Systems',
+    category: 'nike apparel',
+    duration: '0:25',
+    campaignType: 'Nike Training Club Commercial & YouTube Pre-Roll',
+    deliverables: '4K Cinema Cut (16:9), 9:16 TikTok Spark, Amazon Video (1:1)',
+    roas: '+430% ROAS (Omnichannel Scale)',
+    ctr: '6.3% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/drone_tech_commercial.jpg',
+    video: 'assets/drone_tech_commercial.webm',
+    synopsis: 'Atmospheric cyberpunk commercial showing aerodynamic carbon fiber drone tracking athletes through neon violet and cyan fog vortex.',
+    strategy: 'High-impact 3-second hook designed for TikTok Spark ads and YouTube Pre-Roll with motion blur and athletic obstacle avoidance lidar laser visualization.',
+    results: 'Generated 8.2M impressions and reached top-ranking engagement across sports tech categories.'
+  },
+  {
+    id: 'project-nike-hyperfuel',
+    title: 'Nike HyperFuel Pro: Citrus Electrolyte Vortex',
+    client: 'Nike Performance Lab • Sports Hydration & Energy',
+    category: 'nike running',
+    duration: '0:20',
+    campaignType: 'Amazon Prime Ad & TikTok Spark Campaign',
+    deliverables: 'TikTok Hook Suite (9:16), Amazon Video (16:9), Square (1:1)',
+    roas: '+440% ROAS (Amazon Ads)',
+    ctr: '6.1% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/ecom_beverage_splash.jpg',
+    video: 'assets/ecom_beverage_splash.webm',
+    synopsis: 'Electrifying sports hydration ad featuring an aerodynamic bottle bursting through crystal ice cubes and glowing citrus isotonic fluid vortex.',
+    strategy: 'Explosive 3-second hook designed to disrupt fast-scrolling mobile feeds. Coordinated freeze-frame ice collision physics with high-contrast neon palette to emphasize zero-sugar endurance energy.',
+    results: 'Achieved a record 6.1% CTR on TikTok and Amazon Sponsored Brand Video, driving top-seller ranking in athletic hydration.'
+  },
+  {
+    id: 'project-nike-recovery',
+    title: 'Nike Pro Muscle Lab: Botanical Athletic Recovery',
+    client: 'Nike Training • Post-Workout Muscle Recovery',
+    category: 'nike running',
+    duration: '0:25',
+    campaignType: 'DTC E-Commerce & Athletic Endcap Campaign',
+    deliverables: '4K Vertical (9:16), Meta Feed (1:1), Shopify Hero Loop',
+    roas: '+380% ROAS (Shopify Scale)',
+    ctr: '5.2% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/ecom_beauty_serum.jpg',
+    video: 'assets/ecom_beauty_serum.webm',
+    synopsis: 'Sensory macro cosmetic commercial capturing golden botanical argan oil and muscle recovery serum splashing dynamically around frosted glass.',
+    strategy: 'Crafted a visceral, sensory-first athletic recovery ad highlighting dual-phase absorption formula. High-speed fluid dynamics and botanical refraction evoke instant relief.',
+    results: 'Increased conversion rate on Shopify product page by +42% and achieved a 5.2% CTR on Meta video ads.'
+  },
+
+  // ==========================================
+  // ANTA Sports & Hoops Signature Commercials
+  // ==========================================
+  {
+    id: 'project-anta-kai1',
+    title: 'ANTA KAI 1 "Artist on Court": Kyrie Irving Edition',
+    client: 'ANTA Basketball • Kyrie Irving Signature Series',
+    category: 'anta hoops promo',
+    duration: '0:35',
+    campaignType: 'NBA Season Tip-Off & Global Sneaker Drop',
+    deliverables: '4K Broadcast (16:9), 9:16 Shot Tracker Hook, 1:1 Amazon Video',
+    roas: '+690% ROAS (Global Signature Drop)',
+    ctr: '7.9% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/converse_bb_prototype.jpg',
+    video: 'assets/converse_bb_prototype.webm',
+    synopsis: 'High-velocity signature basketball commercial showcasing Kyrie Irving\'s ANTA KAI 1 hovering over neon court telemetry lines with NitroEdge nitrogen foam and ancestral woven embroidery.',
+    strategy: 'Engineered responsive court trajectory telemetry and nitrogen foam shock absorption visual cues tailored for Kyrie Irving\'s signature handles and explosive guard play.',
+    results: 'Over 80,000 pairs sold out globally in under 15 minutes during the global launch event, generating 24M+ organic impressions.'
+  },
+  {
+    id: 'project-anta-kt9',
+    title: 'ANTA KT9 "Gold Standard": Klay Thompson Edition',
+    client: 'ANTA Basketball • Klay Thompson Signature Line',
+    category: 'anta hoops promo',
+    duration: '0:30',
+    campaignType: 'NBA Playoffs Campaign & YouTube Pre-Roll',
+    deliverables: '4K Master (16:9), 9:16 Hardwood Court Hook, 1:1 PDP Loop',
+    roas: '+580% ROAS (Championship Series)',
+    ctr: '6.8% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/converse_weapon_cx.jpg',
+    video: 'assets/converse_weapon_cx.webm',
+    synopsis: 'Championship court commercial showcasing the iconic ANTA KT9 high-performance basketball shoe spinning amidst arena beams, 3-point arcs, and SMART S.A.M shock modules.',
+    strategy: 'Celebrated Klay Thompson\'s 4-time championship legacy with stadium lighting beams, polished hardwood floor reflections, and full-palm NitroEdge cushioning callouts.',
+    results: 'Drove $3.8M in direct sales across launch week, establishing the KT9 as a top trending performance basketball shoe.'
+  },
+  {
+    id: 'project-anta-shockwave',
+    title: 'ANTA Shock Wave 5 Pro: Cyber Battle Court',
+    client: 'ANTA Hoops • High-Intensity Outdoor Hoops',
+    category: 'anta hoops promo',
+    duration: '0:30',
+    campaignType: 'Summer Streetball Tour & TikTok Spark Ads',
+    deliverables: '4K Master (16:9), 9:16 Cyberpunk Platform Hook, 1:1 PDP Cut',
+    roas: '+560% ROAS (Streetball Drop)',
+    ctr: '6.7% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/converse_run_star_motion.jpg',
+    video: 'assets/converse_run_star_motion.webm',
+    synopsis: 'Bold cyberpunk commercial ad revealing the exaggerated sculpted NitroEdge midsole and high-abrasion cement traction outsole of the ANTA Shock Wave 5 Pro over rippling neon water.',
+    strategy: 'Engineered for modern outdoor streetball battle. Blended fluid neon lighting, exaggerated sculptural nitrogen foam geometry, and dynamic bass hits to emphasize indestructible court traction.',
+    results: 'Generated 14.5M views on TikTok Spark Ads in week 1 with an extraordinary 6.7% CTR and 5.6x ROAS.'
+  },
+  {
+    id: 'project-anta-c202',
+    title: 'ANTA C202 5 GT Pro: Nitrogen Carbon Elite Marathon',
+    client: 'ANTA Running • Sub-2 Marathon Racing Series',
+    category: 'anta running promo',
+    duration: '0:30',
+    campaignType: 'Major Marathon Global Launch & Editorial',
+    deliverables: '4K Cinema Master (16:9), 9:16 Geometric Laser Hook, 1:1 PDP Cut',
+    roas: '+590% ROAS (Elite Marathon Series)',
+    ctr: '6.9% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/converse_deluxe_square.jpg',
+    video: 'assets/converse_deluxe_square.webm',
+    synopsis: 'Sculptural elite running commercial revealing 3D bionic carbon plate architecture, dual-density NitroEdge nitrogen foam, and ultraviolet laser aerodynamic streamlines.',
+    strategy: 'High-performance marathon pacing blending carbon plate structural exploded views with high-contrast road testing and breathable mono-mesh craftsmanship.',
+    results: 'Achieved +72% lift in DTC average order value on Anta.com and earned top-tier podium recognition in international marathons.'
+  },
+  {
+    id: 'project-anta-pg7',
+    title: 'ANTA PG7 Cloud Ride: All-Day Nitrogen Comfort',
+    client: 'ANTA Lifestyle & Running • Everyday Performance',
+    category: 'anta streetwear promo',
+    duration: '0:30',
+    campaignType: 'Global DTC Lifestyle Drop & Flagship Video',
+    deliverables: '4K Master (16:9), 9:16 Street Style Hook Suite, 1:1 E-Commerce Loop',
+    roas: '+520% ROAS (DTC E-Commerce)',
+    ctr: '6.0% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/converse_chuck_70.jpg',
+    video: 'assets/converse_chuck_70.webm',
+    synopsis: 'Cinematic heritage commercial spotlighting the versatile ANTA PG7 with nitrogen cloud cushioning, breathable dual-layer upper, and gum rubber outsole.',
+    strategy: 'Clean street lifestyle aesthetic capturing tactile breathable mesh, cushioned nitrogen rebound, and modern court-to-street versatility to maximize DTC basket size.',
+    results: 'Boosted Anta.com direct conversion rates by +41% and lowered customer acquisition cost (CAC) by 32% across Meta Ads.'
+  },
+  {
+    id: 'project-anta-mach4',
+    title: 'ANTA NitroEdge Mach 4: Speed Road Trainer',
+    client: 'ANTA Speed Lab • Tempo & Track Training',
+    category: 'anta running',
+    duration: '0:25',
+    campaignType: 'Summer Track Season & TikTok Creator Spark Ads',
+    deliverables: '4K Master (16:9), 9:16 Track Hook, 1:1 PDP Loop',
+    roas: '+470% ROAS (Track & Field Drop)',
+    ctr: '6.3% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/converse_cruise_skate.jpg',
+    video: 'assets/converse_cruise_skate.webm',
+    synopsis: 'Sun-drenched road running commercial capturing high-resilience NitroEdge foam propulsion and GOZONE wear-resistant rubber grip in golden sunlight.',
+    strategy: 'Warm athletic film look with high-energy track motion blur and tactile nitrogen foam layer breakdowns for competitive road and tempo runners.',
+    results: 'Drove 14.8M impressions on TikTok and Instagram Reels with over 35,000 pairs sold within month 1.'
+  },
+  {
+    id: 'project-anta-zap1',
+    title: 'ANTA ZAP 1 "Electric Wave": Quick Guard Court',
+    client: 'ANTA Hoops • Explosive Guard Signature Line',
+    category: 'anta hoops',
+    duration: '0:30',
+    campaignType: 'Global Basketball Product Reveal & Performance Ads',
+    deliverables: '4K Master (16:9), TikTok/Reels (9:16), Amazon Video (1:1)',
+    roas: '+490% ROAS (Meta & TikTok)',
+    ctr: '5.9% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/ecom_tech_gadget.jpg',
+    video: 'assets/ecom_tech_gadget.webm',
+    synopsis: 'High-converting performance court commercial showcasing ANTA ZAP 1 levitating amidst acoustic ripple rings, lateral TPU lock, and speed vortex physics.',
+    strategy: 'Direct-to-consumer launch commercial engineered for high top-of-funnel retention. Utilized 3D CAD conditioning and court traction physics to demonstrate lateral containment.',
+    results: 'Drove over $1.8M in pre-orders within the first 14 days of launch with an average ROAS of 4.9x across paid social channels.'
+  },
+  {
+    id: 'project-anta-olympic',
+    title: 'ANTA Olympic Podium Champion Kit: Dragon Armor',
+    client: 'ANTA Olympic Games • Official National Team Apparel',
+    category: 'anta apparel promo',
+    duration: '0:30',
+    campaignType: 'Olympic Games Global Reveal & Teaser Ad',
+    deliverables: '4K Commercial Master (16:9), Viral Hook Suite (9:16), Product Cut (1:1)',
+    roas: '+570% ROAS (Olympic Apparel Scale)',
+    ctr: '7.5% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/promo_saas_ai.jpg',
+    video: 'assets/promo_saas_ai.webm',
+    synopsis: 'Futuristic promotional video showcasing holographic dragon scale fabric telemetry, aerodynamic wind resistance reduction, and gold-trimmed podium jackets.',
+    strategy: 'Engineered for high-converting Olympic apparel launch. Integrated dynamic 3-second kinetic hooks, holographic UI telemetry, and sound design to illustrate athletic pride and aero speed.',
+    results: 'Drove 52,000+ pre-orders in the first 7 days, achieving an unprecedented 7.5% CTR on YouTube and digital broadcast with a 5.7x ROAS.'
+  },
+  {
+    id: 'project-anta-controller',
+    title: 'ANTA Esports Pro Footwear: Ergonomic Insole',
+    client: 'ANTA Gaming • Pro Esports Performance',
+    category: 'anta streetwear',
+    duration: '0:30',
+    campaignType: 'Global Hardware & Apparel Launch on Twitch / TikTok',
+    deliverables: '4K Cinema Trailer (16:9), 9:16 TikTok Spark Cut, Amazon Video (1:1)',
+    roas: '+490% ROAS (Esports Gear)',
+    ctr: '6.8% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/promo_gaming_gear.jpg',
+    video: 'assets/promo_gaming_gear.webm',
+    synopsis: 'High-octane commercial ad featuring translucent ergonomic footbed switches, RGB chromatic surges, and slow-motion shock absorption physics.',
+    strategy: 'Crafted for competitive esports gamers and athletes. Visualized zero-fatigue arch support, tactile grip, and breathable thermal airflow.',
+    results: 'The initial production run of 15,000 units sold out completely in under 36 hours from the promotional trailer drop.'
+  },
+  {
+    id: 'project-anta-electrolyte',
+    title: 'ANTA Nitro Fuel: High-Altitude Endurance Recovery',
+    client: 'ANTA Performance Lab • Sports Recovery Fuel',
+    category: 'anta running',
+    duration: '0:25',
+    campaignType: 'Direct-to-Consumer Drop & Retail Promo',
+    deliverables: '4K Master Commercial (16:9), 9:16 Reels Cut, 1:1 Hero Video',
+    roas: '+410% ROAS (DTC Subscriptions)',
+    ctr: '5.9% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/promo_cold_brew.jpg',
+    video: 'assets/promo_cold_brew.webm',
+    synopsis: 'Sensory gourmet athletic recovery beverage commercial showcasing nitrogen cascading micro-foam, ice shatter physics, and electrolyte infusion.',
+    strategy: 'Sensory-first performance beverage spot emphasizing micro-nitrogen texture, fast electrolyte absorption, and ice-cold recovery to drive subscription conversions.',
+    results: 'Boosted DTC recurring subscription sales by +64% within month 1 and delivered a 5.9% CTR across Meta and TikTok paid ads.'
+  },
+  {
+    id: 'project-anta-smartring',
+    title: 'ANTA Biometric Recovery Tracker: Athlete Ring',
+    client: 'ANTA Sports Science Lab • Precision Wearables',
+    category: 'anta apparel promo',
+    duration: '0:30',
+    campaignType: 'Global Athlete Launch Video & Meta Ad Scale',
+    deliverables: '4K Cinema Master (16:9), 9:16 Vertical Story Cut, 1:1 PDP Cut',
+    roas: '+580% ROAS (Wearable Drops)',
+    ctr: '6.5% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/promo_smart_ring.jpg',
+    video: 'assets/promo_smart_ring.webm',
+    synopsis: 'Ultra-sleek titanium wearable commercial highlighting emerald green PPG optical sensors, muscle recovery telemetry, and medical-grade accuracy.',
+    strategy: 'Structured as a compelling pro-grade promotional film that tracks athlete strain, sleep recovery cycles, and VO2 max telemetry in lightweight titanium.',
+    results: 'Surpassed pre-order goal by 1,400%, generating $3.1M in reservations and ranking #1 trending athletic recovery wearable.'
+  },
+  {
+    id: 'project-anta-championship',
+    title: 'ANTA Championship Ring: NBA Finals Gold',
+    client: 'ANTA Basketball Heritage • Klay & Kyrie Legacy',
+    category: 'anta hoops promo',
+    duration: '0:30',
+    campaignType: 'Championship Heritage Showcase & Global Launch',
+    deliverables: '4K Master (16:9), 9:16 Luxury Reels Cut, 1:1 Square Macro Loop',
+    roas: '+620% ROAS (Heritage Collectibles)',
+    ctr: '5.5% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/promo_diamond_ring.jpg',
+    video: 'assets/promo_diamond_ring.webm',
+    synopsis: 'Ultra-luxury championship ring commercial capturing prismatic rainbow flare refractions, liquid velvet ripples, and 8K macro brilliance.',
+    strategy: 'Designed for high-ticket emotional purchase conversion celebrating Kyrie Irving and Klay Thompson NBA championship pedigree.',
+    results: 'Drove $4.8M in limited edition championship collectible sales with an outstanding 6.2x blended ROAS.'
+  },
+  {
+    id: 'project-anta-speedrider',
+    title: 'ANTA Urban Speed EV: Athlete Mobility Scooter',
+    client: 'ANTA Mobility • High-Performance Athlete EV',
+    category: 'anta streetwear promo',
+    duration: '0:35',
+    campaignType: 'Urban Product Reveal & YouTube Pre-Roll Campaign',
+    deliverables: '4K Broadcast Cut (16:9), 9:16 Speed Hook, 1:1 Feed Cut',
+    roas: '+450% ROAS (Direct Reservations)',
+    ctr: '5.7% CTR',
+    turnaround: '72 Hours',
+    image: 'assets/promo_urban_mobility.jpg',
+    video: 'assets/promo_urban_mobility.webm',
+    synopsis: 'Cinematic urban speed commercial featuring matte carbon fiber aero chassis, neon wet street reflections, and high-velocity light streaks.',
+    strategy: 'High-energy promotional video set against a neon metropolis at night. Highlights dual-motor acceleration and carbon fiber durability for urban athletes.',
+    results: 'Captured 5,200+ reservation deposits valued at over $11M in pipeline sales within 3 weeks of campaign launch.'
+  },
+  {
+    id: 'project-nike-speedcar',
+    title: 'Nike AeroSpeed Vision: Hyper-Aero Prototype',
+    client: 'Nike Motorsport & Athletics • Aero Speed Lab',
+    category: 'nike apparel',
+    duration: '0:45',
+    campaignType: 'Global Brand Reveal & YouTube Pre-Roll',
+    deliverables: '4K Cinema Master (16:9), ACES Color Grade, Spatial Audio Master',
+    roas: '+390% ROAS (Brand Innovation)',
+    ctr: '4.8% CTR',
+    turnaround: '4 Business Days',
+    image: 'assets/luxury_commercial.jpg',
+    video: 'assets/luxury_commercial.webm',
+    synopsis: 'High-end athletic innovation commercial capturing an electric aerodynamic vehicle testing wind-tunnel airflow and skin suit drag reduction.',
+    strategy: 'Atmospheric twilight cinematic setting focusing on aerodynamic silhouette and cyan lighting signature for Nike Innovation Lab.',
+    results: 'Secured 3,800+ VIP pre-reservation requests and millions of social impressions across athletic communities.'
+  },
+  {
+    id: 'project-nike-perfume',
+    title: 'Nike Victory Elixir: Athletic Botanical Fragrance',
+    client: 'Nike Lifestyle • Sport Luxury Fragrance',
+    category: 'nike streetwear',
+    duration: '0:25',
+    campaignType: 'Holiday Global DTC Launch & Sephora Digital Endcap',
+    deliverables: '4K Macro (16:9), 9:16 Reels Cut, 1:1 Shopify Hero Loop',
+    roas: '+410% ROAS (Holiday Drops)',
+    ctr: '5.6% CTR',
+    turnaround: '48 Hours',
+    image: 'assets/fragrance_commercial.jpg',
+    video: 'assets/fragrance_commercial.webm',
+    synopsis: 'Sensory luxury sport perfume commercial featuring faceted crystal bottle floating over tranquil water ripples amidst floating orchid petals and warm golden sunbeams.',
+    strategy: 'Sensory micro-fluidics highlighting bottle refraction, fresh citrus bergamot glow, and cedarwood notes for sports luxury gift conversion.',
+    results: 'Increased holiday DTC conversion rate by +48% on Nike.com and Sephora digital placements.'
   }
 ];
 
-/* ==========================================================================
-   Ambient Canvas Background Animation
-   ========================================================================== */
-function initAmbientCanvas() {
-  const canvas = document.getElementById('ambient-canvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  
-  let width, height;
-  let particles = [];
-  const particleCount = 45;
-
-  function resize() {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-  }
-
-  window.addEventListener('resize', resize);
-  resize();
-
-  class Particle {
-    constructor() {
-      this.reset();
-    }
-    reset() {
-      this.x = Math.random() * width;
-      this.y = Math.random() * height;
-      this.vx = (Math.random() - 0.5) * 0.4;
-      this.vy = (Math.random() - 0.5) * 0.4;
-      this.radius = Math.random() * 2 + 1;
-      this.alpha = Math.random() * 0.5 + 0.1;
-      this.color = Math.random() > 0.5 ? '6, 182, 212' : '139, 92, 246';
-    }
-    update() {
-      this.x += this.vx;
-      this.y += this.vy;
-      if (this.x < 0 || this.x > width || this.y < 0 || this.y > height) {
-        this.reset();
-      }
-    }
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(${this.color}, ${this.alpha})`;
-      ctx.fill();
-    }
-  }
-
-  for (let i = 0; i < particleCount; i++) {
-    particles.push(new Particle());
-  }
-
-  function animate() {
-    ctx.clearRect(0, 0, width, height);
-
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 140) {
-          ctx.beginPath();
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(6, 182, 212, ${0.08 * (1 - dist / 140)})`;
-          ctx.lineWidth = 1;
-          ctx.stroke();
-        }
-      }
-    }
-
-    particles.forEach(p => {
-      p.update();
-      p.draw();
-    });
-
-    requestAnimationFrame(animate);
-  }
-
-  animate();
-}
-
-/* ==========================================================================
-   Cursor Glow Follower
-   ========================================================================== */
-function initCursorGlow() {
-  const glow = document.querySelector('.cursor-glow');
-  if (!glow) return;
-
-  let mouseX = window.innerWidth / 2;
-  let mouseY = window.innerHeight / 2;
-  let currentX = mouseX;
-  let currentY = mouseY;
-
-  window.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
-
-  function update() {
-    currentX += (mouseX - currentX) * 0.08;
-    currentY += (mouseY - currentY) * 0.08;
-    glow.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
-    requestAnimationFrame(update);
-  }
-  update();
-}
-
-/* ==========================================================================
-   Web Audio Commercial Drone Synthesizer (Desktop & Mobile Sync)
-   ========================================================================== */
-function initAudioSynthesizer() {
-  const audioBtn = document.getElementById('audio-toggle');
-  const mobileAudioBtn = document.getElementById('mobile-audio-toggle');
-  const allAudioBtns = [audioBtn, mobileAudioBtn].filter(Boolean);
-  if (allAudioBtns.length === 0) return;
-
-  let audioCtx = null;
-  let isPlaying = false;
-  let osc1 = null, osc2 = null, filter = null, gainNode = null;
-
-  function updateButtonsUI(playing) {
-    allAudioBtns.forEach(btn => {
-      const textSpan = btn.querySelector('.audio-status-text');
-      if (playing) {
-        btn.classList.add('playing');
-        if (textSpan) textSpan.textContent = 'CINEMA AUDIO: ON';
-      } else {
-        btn.classList.remove('playing');
-        if (textSpan) textSpan.textContent = 'AMBIENT AUDIO';
-      }
-    });
-  }
-
-  function startAudio() {
-    try {
-      const AudioContext = window.AudioContext || window.webkitAudioContext;
-      audioCtx = new AudioContext();
-
-      osc1 = audioCtx.createOscillator();
-      osc2 = audioCtx.createOscillator();
-      filter = audioCtx.createBiquadFilter();
-      gainNode = audioCtx.createGain();
-
-      osc1.type = 'sawtooth';
-      osc1.frequency.setValueAtTime(55, audioCtx.currentTime);
-
-      osc2.type = 'sine';
-      osc2.frequency.setValueAtTime(110, audioCtx.currentTime);
-
-      filter.type = 'lowpass';
-      filter.frequency.setValueAtTime(420, audioCtx.currentTime);
-      filter.Q.setValueAtTime(3, audioCtx.currentTime);
-
-      gainNode.gain.setValueAtTime(0.01, audioCtx.currentTime);
-      gainNode.gain.exponentialRampToValueAtTime(0.12, audioCtx.currentTime + 3);
-
-      osc1.connect(filter);
-      osc2.connect(filter);
-      filter.connect(gainNode);
-      gainNode.connect(audioCtx.destination);
-
-      osc1.start();
-      osc2.start();
-
-      isPlaying = true;
-      updateButtonsUI(true);
-      showToast('Brand Commercial Audio FX Activated');
-    } catch (e) {
-      console.warn('Web Audio API error:', e);
-    }
-  }
-
-  function stopAudio() {
-    if (gainNode && audioCtx) {
-      gainNode.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 1);
-      setTimeout(() => {
-        if (osc1) osc1.stop();
-        if (osc2) osc2.stop();
-        if (audioCtx) audioCtx.close();
-        audioCtx = null;
-      }, 1000);
-    }
-    isPlaying = false;
-    updateButtonsUI(false);
-    showToast('Ambient Audio Muted');
-  }
-
-  allAudioBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      if (!isPlaying) startAudio();
-      else stopAudio();
-    });
-  });
-}
 
 /* ==========================================================================
    Aspect Ratio Switcher
@@ -782,206 +584,44 @@ function initShowcaseFilters() {
    Sample Deliverables & Client Output Suite Viewer
    ========================================================================== */
 const sampleDeliverablesData = {
-  // Promotional Video Samples
-  'promo-saas': {
-    projectId: 'project-saas',
-    title: 'Nova AI: Autonomous Creative Engine',
-    client: 'Nova AI Labs • Next-Gen Creative Cloud',
-    video: 'assets/promo_saas_ai.webm',
-    poster: 'assets/promo_saas_ai.jpg',
+  'nike-vaporfly': {
+    projectId: 'project-nike-vaporfly',
+    title: 'Nike ZoomX Vaporfly 3: Carbon Energy Return',
+    client: 'Nike Performance Athletics • Elite Marathon Series',
+    video: 'assets/nike_zoomx_vaporfly.webm',
+    poster: 'assets/nike_zoomx_vaporfly.jpg',
     specs: {
       resolution: '3840 x 2160 (4K 60FPS Master)',
-      colorSpace: 'ACES Cyber Neon Gamut 10-bit',
-      audio: '48kHz 24-bit Neural Hologram SFX',
+      colorSpace: 'ACEScc High-Velocity Gamut',
+      audio: 'Wind Tunnel Aero & Carbon Flex Stems',
       turnaround: '48 Hours Shipped'
     },
     files: [
-      { name: 'Nova_AI_4K_Platform_Trailer_16x9_60fps.mov', size: '1.65 GB', type: '4K Commercial Master' },
-      { name: 'Nova_AI_ViralHook_A_NeuralGrid_9x16.mp4', size: '190 MB', type: 'Viral Hook Cut A (9:16)' },
-      { name: 'Nova_AI_ViralHook_B_Frictionless_9x16.mp4', size: '182 MB', type: 'Viral Hook Cut B (9:16)' },
-      { name: 'Nova_AI_FeatureLoop_Shopify_1x1.mp4', size: '98 MB', type: 'SaaS Demo Feed Loop (1:1)' },
-      { name: 'Nova_Holographic_UI_Telemetry_Stems.zip', size: '320 MB', type: 'Motion Graphic Assets' },
-      { name: 'Global_Commercial_Broadcast_License.pdf', size: '1.8 MB', type: 'Perpetual Rights' }
+      { name: 'Nike_Vaporfly3_4K_Broadcast_Master_16x9.mov', size: '1.68 GB', type: '4K Broadcast Master' },
+      { name: 'Nike_Vaporfly_CarbonExploded_Cut_9x16.mp4', size: '205 MB', type: 'Viral 3D CAD Hook (9:16)' },
+      { name: 'Nike_Vaporfly_WindTunnel_1x1.mp4', size: '98 MB', type: 'Amazon A+ Video (1:1)' },
+      { name: 'Nike_Aero_Soundtrack_Stems.zip', size: '130 MB', type: 'Spatial Audio Stems' },
+      { name: 'Nike_Marathon_Global_Ad_Release.pdf', size: '1.9 MB', type: 'Commercial Rights' }
     ]
   },
-  'promo-gaming': {
-    projectId: 'project-gaming',
-    title: 'Vortex Pro: Cyberdeck Wireless Controller',
-    client: 'Vortex Gaming Gear • Esports Performance',
-    video: 'assets/promo_gaming_gear.webm',
-    poster: 'assets/promo_gaming_gear.jpg',
+  'anta-kai1': {
+    projectId: 'project-anta-kai1',
+    title: 'ANTA KAI 1 "Artist on Court": Kyrie Irving Edition',
+    client: 'ANTA Basketball • Kyrie Irving Signature Series',
+    video: 'assets/converse_bb_prototype.webm',
+    poster: 'assets/converse_bb_prototype.jpg',
     specs: {
-      resolution: '3840 x 2160 (4K 60FPS)',
-      colorSpace: 'DCI-P3 High Dynamic Range',
-      audio: 'Tactile Mechanical Click & Bass Surge',
+      resolution: '3840 x 2160 (4K 60FPS Master)',
+      colorSpace: 'Arena Electric Neon 10-bit',
+      audio: 'Court Squeak & NitroEdge Pulse Stems',
       turnaround: '48 Hours Shipped'
     },
     files: [
-      { name: 'VortexPro_4K_Esports_Promo_16x9.mov', size: '1.52 GB', type: '4K Cinema Trailer' },
-      { name: 'VortexPro_Mechanical_Trigger_Hook_9x16.mp4', size: '185 MB', type: 'Twitch / TikTok Hook (9:16)' },
-      { name: 'VortexPro_RGB_Overdrive_Loop_1x1.mp4', size: '94 MB', type: 'Amazon A+ Video (1:1)' },
-      { name: 'VortexPro_Custom_ACES_LUT.cube', size: '14 MB', type: 'Color Grade 3D LUT' },
-      { name: 'Worldwide_Commercial_Ad_Release.pdf', size: '1.5 MB', type: 'Commercial Rights' }
-    ]
-  },
-  'promo-coldbrew': {
-    projectId: 'project-coldbrew',
-    title: 'Kona Draft: Liquid Gold Nitro Cold Brew',
-    client: 'Kona Coffee Roasters • Artisan Beverage',
-    video: 'assets/promo_cold_brew.webm',
-    poster: 'assets/promo_cold_brew.jpg',
-    specs: {
-      resolution: '3840 x 2160 (4K Macro 60FPS)',
-      colorSpace: 'Warm Amber Cinema Tone 10-bit',
-      audio: 'Slow-Mo Liquid Splash & Coffee Aroma Foley',
-      turnaround: '48 Hours Shipped'
-    },
-    files: [
-      { name: 'Kona_Nitro_LiquidGold_4K_16x9.mov', size: '1.45 GB', type: '4K Master Commercial' },
-      { name: 'Kona_Nitro_Cascading_Hook_9x16.mp4', size: '170 MB', type: 'Reels / TikTok Cut (9:16)' },
-      { name: 'Kona_ColdBrew_Shopify_PDP_Loop_1x1.mp4', size: '89 MB', type: 'Shopify Hero Video (1:1)' },
-      { name: 'Kona_Sensory_Soundtrack_WAV.zip', size: '110 MB', type: 'Commercial Audio Master' },
-      { name: 'DTC_Advertising_Rights_Release.pdf', size: '1.4 MB', type: 'Perpetual Rights' }
-    ]
-  },
-  'promo-smartring': {
-    projectId: 'project-smartring',
-    title: 'Helix Titan: Biometric Precision Ring',
-    client: 'Helix Health Technologies • Precision Wearables',
-    video: 'assets/promo_smart_ring.webm',
-    poster: 'assets/promo_smart_ring.jpg',
-    specs: {
-      resolution: '3840 x 2160 (4K UHD 60FPS)',
-      colorSpace: 'Apple-Grade Minimalist Tone 10-bit',
-      audio: 'Medical Laser Pulse & Sub-Bass Heartbeat',
-      turnaround: '48 Hours Shipped'
-    },
-    files: [
-      { name: 'HelixTitan_4K_CinemaMaster_16x9.mov', size: '1.58 GB', type: '4K Launch Commercial' },
-      { name: 'HelixTitan_Biometric_Laser_Hook_9x16.mp4', size: '195 MB', type: 'TikTok Hook Cut (9:16)' },
-      { name: 'HelixTitan_Sleep_Loop_1x1.mp4', size: '91 MB', type: 'PDP Product Video (1:1)' },
-      { name: 'HelixTitan_Apple_Style_ColorGrade.cube', size: '12 MB', type: 'Color Grade 3D LUT' },
-      { name: 'Kickstarter_Commercial_License.pdf', size: '1.6 MB', type: 'Commercial Rights' }
-    ]
-  },
-  'promo-diamond': {
-    projectId: 'project-diamond',
-    title: 'Solitaire Astral: Flawless Platinum Diamond',
-    client: 'Astral High Jewelry • New York & Paris',
-    video: 'assets/promo_diamond_ring.webm',
-    poster: 'assets/promo_diamond_ring.jpg',
-    specs: {
-      resolution: '3840 x 2160 (4K Macro 60FPS)',
-      colorSpace: 'ACES Prismatic Gamut 12-bit Log',
-      audio: 'Crystal Chimes & Velvety Drone Stem',
-      turnaround: '48 Hours Shipped'
-    },
-    files: [
-      { name: 'Solitaire_Astral_4K_HighJewelry_16x9.mov', size: '1.75 GB', type: '4K Cinema Commercial' },
-      { name: 'Solitaire_PrismSparkle_Hook_9x16.mp4', size: '215 MB', type: 'Luxury Reels Cut (9:16)' },
-      { name: 'Solitaire_Astral_PDP_Velvet_Loop_1x1.mp4', size: '105 MB', type: 'Square Macro Loop (1:1)' },
-      { name: 'Solitaire_8K_Print_Stills_Pack.zip', size: '520 MB', type: '8K Print Campaign Stills' },
-      { name: 'Global_HighJewelry_Perpetual_Rights.pdf', size: '2.0 MB', type: 'Perpetual Rights' }
-    ]
-  },
-  'promo-mobility': {
-    projectId: 'project-mobility',
-    title: 'VoltRider Apex: Urban Hyper-Scooter',
-    client: 'VoltRider Mobility • High-Performance EV',
-    video: 'assets/promo_urban_mobility.webm',
-    poster: 'assets/promo_urban_mobility.jpg',
-    specs: {
-      resolution: '3840 x 2160 (4K 60FPS)',
-      colorSpace: 'Cyberpunk Night Grade 10-bit HDR',
-      audio: 'High-Torque EV Whine & City Spatial Audio',
-      turnaround: '72 Hours Shipped'
-    },
-    files: [
-      { name: 'VoltRider_Apex_4K_Urban_Trailer_16x9.mov', size: '1.82 GB', type: '4K Broadcast Cut' },
-      { name: 'VoltRider_Velocity_LightTrail_9x16.mp4', size: '205 MB', type: 'Speed Hook Cut (9:16)' },
-      { name: 'VoltRider_Cyber_Loop_1x1.mp4', size: '112 MB', type: 'Meta Ad Feed Cut (1:1)' },
-      { name: 'VoltRider_Spatial_Soundtrack_Stems.zip', size: '185 MB', type: 'Spatial Audio Stems' },
-      { name: 'Automotive_Commercial_Perpetual_License.pdf', size: '1.9 MB', type: 'Perpetual Rights' }
-    ]
-  },
-  // Core Deliverables
-  'tech': {
-    projectId: 'project-earbuds',
-    title: 'Acoustiq Titanium Pro Earbuds',
-    client: 'Acoustiq Audio • Global Audio Brand',
-    video: 'assets/ecom_tech_gadget.webm',
-    poster: 'assets/ecom_tech_gadget.jpg',
-    specs: {
-      resolution: '3840 x 2160 (4K UHD 60FPS)',
-      colorSpace: 'Rec.709 / ACEScc 10-bit',
-      audio: '48kHz 24-bit Spatial Foley + Stems',
-      turnaround: '48 Hours Shipped'
-    },
-    files: [
-      { name: 'Acoustiq_Titanium_4K_Master_16x9_60fps.mov', size: '1.42 GB', type: '4K Cinema Master' },
-      { name: 'Acoustiq_ViralHook_A_WaterSplash_9x16.mp4', size: '185 MB', type: 'Hook Cut A (Splash)' },
-      { name: 'Acoustiq_ViralHook_B_CADDeconstruct_9x16.mp4', size: '192 MB', type: 'Hook Cut B (CAD Orbit)' },
-      { name: 'Acoustiq_Shopify_Hero_Loop_1x1.mp4', size: '94 MB', type: 'Shopify PDP Loop' },
-      { name: 'Acoustiq_ACES_LUT_Package.cube', size: '12 MB', type: 'Color Grade 3D LUT' },
-      { name: 'Worldwide_Perpetual_Ad_License.pdf', size: '1.8 MB', type: 'Commercial Rights' }
-    ]
-  },
-  'beauty': {
-    projectId: 'project-serum',
-    title: 'Aura 24K Botanical Dew Serum',
-    client: 'Aura Skincare • Luxury Clean Beauty',
-    video: 'assets/ecom_beauty_serum.webm',
-    poster: 'assets/ecom_beauty_serum.jpg',
-    specs: {
-      resolution: '3840 x 2160 (4K Macro 60FPS)',
-      colorSpace: 'ACES HDR 10-bit Wide Gamut',
-      audio: '48kHz 24-bit Sensory Dew Audio',
-      turnaround: '48 Hours Shipped'
-    },
-    files: [
-      { name: 'Aura_24K_Botanical_4K_Master_16x9.mov', size: '1.25 GB', type: '4K Master (16:9)' },
-      { name: 'Aura_DewSplash_Hook_9x16.mp4', size: '168 MB', type: 'TikTok Hook Cut (9:16)' },
-      { name: 'Aura_Sephora_Endcap_Loop_1x1.mp4', size: '88 MB', type: 'Sephora PDP Loop (1:1)' },
-      { name: 'Aura_Sensory_Audio_Foley_Stem.wav', size: '64 MB', type: 'Uncompressed Audio Stem' },
-      { name: 'Commercial_Media_Buy_Release.pdf', size: '1.4 MB', type: 'Commercial Rights' }
-    ]
-  },
-  'beverage': {
-    projectId: 'project-energy',
-    title: 'Voltaic Energy Citrus Vortex Blast',
-    client: 'Voltaic Beverages • Performance Energy',
-    video: 'assets/ecom_beverage_splash.webm',
-    poster: 'assets/ecom_beverage_splash.jpg',
-    specs: {
-      resolution: '3840 x 2160 (4K 60FPS)',
-      colorSpace: 'DCI-P3 High Dynamic Range',
-      audio: 'High-Impact Bass & Ice Sound FX',
-      turnaround: '48 Hours Shipped'
-    },
-    files: [
-      { name: 'Voltaic_CitrusBlast_4K_Master_16x9.mov', size: '1.38 GB', type: '4K Cinema Commercial' },
-      { name: 'Voltaic_IceSmash_Hook_9x16.mp4', size: '175 MB', type: 'TikTok Spark Cut (9:16)' },
-      { name: 'Voltaic_Amazon_SponsoredVideo_1x1.mp4', size: '92 MB', type: 'Amazon A+ Feed Video' },
-      { name: 'Voltaic_Audio_Master_Stem.wav', size: '72 MB', type: 'Audio Stem Master' }
-    ]
-  },
-  'fashion': {
-    projectId: 'project-sneaker',
-    title: 'Speedform ZoomX: Zero-G Carbon',
-    client: 'Speedform Athletics • Performance Footwear',
-    video: 'assets/ecom_sneaker_motion.webm',
-    poster: 'assets/ecom_sneaker_motion.jpg',
-    specs: {
-      resolution: '3840 x 2160 (4K 60FPS)',
-      colorSpace: 'Rec.709 High Contrast',
-      audio: 'Sub-Bass Propulsion Foley',
-      turnaround: '72 Hours Shipped'
-    },
-    files: [
-      { name: 'Speedform_ZoomX_4K_Broadcast_Master.mov', size: '1.55 GB', type: '4K Broadcast Master' },
-      { name: 'Speedform_ExplodedCAD_Cut_9x16.mp4', size: '198 MB', type: 'Viral 3D CAD Hook (9:16)' },
-      { name: 'Speedform_Instagram_Story_9x16.mp4', size: '160 MB', type: 'Reels Cut (9:16)' },
-      { name: 'Speedform_Footwear_3D_ColorGrade.cube', size: '15 MB', type: 'Color Grade 3D LUT' }
+      { name: 'ANTA_KAI1_4K_Global_Master_16x9.mov', size: '1.62 GB', type: '4K Broadcast Master' },
+      { name: 'ANTA_KAI1_ShotTracker_Hook_9x16.mp4', size: '196 MB', type: 'Viral Hook Cut (9:16)' },
+      { name: 'ANTA_KAI1_PDP_Orbit_Loop_1x1.mp4', size: '94 MB', type: 'Amazon A+ / PDP Video (1:1)' },
+      { name: 'ANTA_KyrieSignature_Audio_Stems.zip', size: '125 MB', type: 'Spatial Audio Stems' },
+      { name: 'ANTA_Global_Commercial_Release.pdf', size: '1.8 MB', type: 'Perpetual Rights' }
     ]
   },
   'nike-airmax': {
@@ -1004,24 +644,63 @@ const sampleDeliverablesData = {
       { name: 'Nike_Global_Commercial_License.pdf', size: '1.8 MB', type: 'Commercial Rights' }
     ]
   },
-  'nike-vaporfly': {
-    projectId: 'project-nike-vaporfly',
-    title: 'Nike ZoomX Vaporfly 3: Carbon Energy Return',
-    client: 'Nike Performance Athletics • Elite Marathon Series',
-    video: 'assets/nike_zoomx_vaporfly.webm',
-    poster: 'assets/nike_zoomx_vaporfly.jpg',
+  'anta-kt9': {
+    projectId: 'project-anta-kt9',
+    title: 'ANTA KT9 "Gold Standard": Klay Thompson Edition',
+    client: 'ANTA Basketball • Klay Thompson Signature Line',
+    video: 'assets/converse_weapon_cx.webm',
+    poster: 'assets/converse_weapon_cx.jpg',
     specs: {
-      resolution: '3840 x 2160 (4K 60FPS Master)',
-      colorSpace: 'ACEScc High-Velocity Gamut',
-      audio: 'Wind Tunnel Aero & Carbon Flex Stems',
+      resolution: '3840 x 2160 (4K 60FPS)',
+      colorSpace: 'Championship Court ACES 10-bit',
+      audio: 'Hardwood Squeak & Arena Crowd Stems',
       turnaround: '48 Hours Shipped'
     },
     files: [
-      { name: 'Nike_Vaporfly3_4K_Broadcast_Master_16x9.mov', size: '1.68 GB', type: '4K Broadcast Master' },
-      { name: 'Nike_Vaporfly_CarbonExploded_Cut_9x16.mp4', size: '205 MB', type: 'Viral 3D CAD Hook (9:16)' },
-      { name: 'Nike_Vaporfly_WindTunnel_1x1.mp4', size: '98 MB', type: 'Amazon A+ Video (1:1)' },
-      { name: 'Nike_Aero_Soundtrack_Stems.zip', size: '130 MB', type: 'Spatial Audio Stems' },
-      { name: 'Nike_Marathon_Global_Ad_Release.pdf', size: '1.9 MB', type: 'Commercial Rights' }
+      { name: 'ANTA_KT9_4K_Arena_Master_16x9.mov', size: '1.54 GB', type: '4K Master Commercial' },
+      { name: 'ANTA_KT9_CourtSpin_Hook_9x16.mp4', size: '185 MB', type: 'Viral Reels Cut (9:16)' },
+      { name: 'ANTA_KT9_Hardwood_Loop_1x1.mp4', size: '91 MB', type: 'PDP Hero Video (1:1)' },
+      { name: 'ANTA_KT9_Editorial_MediaKit.pdf', size: '2.1 MB', type: 'Press Kit & Rights' }
+    ]
+  },
+  'jordan-chicago': {
+    projectId: 'project-jordan-chicago',
+    title: 'Air Jordan 1 High: Chicago Legacy Edition',
+    client: 'Nike Jordan Brand • Heritage Basketball & Global Drop',
+    video: 'assets/nike_jordan_1_chicago.webm',
+    poster: 'assets/nike_jordan_1_chicago.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K 60FPS Master)',
+      colorSpace: 'Crimson ACEScc 12-bit Log',
+      audio: 'Sub-Bass Embers & Leather Foley Stems',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'Jordan1_Chicago_4K_CinemaMaster_16x9.mov', size: '1.65 GB', type: '4K Cinema Commercial' },
+      { name: 'Jordan1_Chicago_SmokeEmber_Hook_9x16.mp4', size: '195 MB', type: 'TikTok Spark Cut (9:16)' },
+      { name: 'Jordan1_Chicago_PDP_Loop_1x1.mp4', size: '96 MB', type: 'SNKRS / Shopify Loop (1:1)' },
+      { name: 'Jordan_Chicago_ACES_ColorLUT.cube', size: '14 MB', type: '3D Color Grade LUT' },
+      { name: 'Global_Jordan_Commercial_License.pdf', size: '1.8 MB', type: 'Perpetual Rights' }
+    ]
+  },
+  'anta-shockwave': {
+    projectId: 'project-anta-shockwave',
+    title: 'ANTA Shock Wave 5 Pro: Cyber Battle Court',
+    client: 'ANTA Hoops • High-Intensity Outdoor Hoops',
+    video: 'assets/converse_run_star_motion.webm',
+    poster: 'assets/converse_run_star_motion.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K 60FPS Master)',
+      colorSpace: 'Cyberpunk Neon HDR 10-bit',
+      audio: 'Sub-Bass Drop & Sculpted Foam Foley',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'ANTA_ShockWave_4K_Cyber_16x9.mov', size: '1.62 GB', type: '4K Cinema Master' },
+      { name: 'ANTA_ShockWave_WaveMotion_9x16.mp4', size: '198 MB', type: 'TikTok Spark Cut (9:16)' },
+      { name: 'ANTA_ShockWave_PDP_Orbit_1x1.mp4', size: '94 MB', type: 'Square PDP Orbit Loop' },
+      { name: 'ANTA_NitroEdge_Audio_BassDrop_Stems.zip', size: '115 MB', type: 'Master Audio Stems' },
+      { name: 'ANTA_Hoops_Campaign_Rights.pdf', size: '1.7 MB', type: 'Commercial Rights' }
     ]
   },
   'nike-dunk': {
@@ -1043,83 +722,23 @@ const sampleDeliverablesData = {
       { name: 'Nike_DunkLow_Editorial_Stills.zip', size: '390 MB', type: '8K High-Res Stills' }
     ]
   },
-  'converse-chuck': {
-    projectId: 'project-converse-chuck',
-    title: 'Converse Chuck 70: Vintage Canvas Heritage',
-    client: 'Converse Global • Heritage & Street Culture',
-    video: 'assets/converse_chuck_70.webm',
-    poster: 'assets/converse_chuck_70.jpg',
+  'anta-c202': {
+    projectId: 'project-anta-c202',
+    title: 'ANTA C202 5 GT Pro: Nitrogen Carbon Elite',
+    client: 'ANTA Running • Sub-2 Marathon Racing Series',
+    video: 'assets/converse_deluxe_square.webm',
+    poster: 'assets/converse_deluxe_square.jpg',
     specs: {
-      resolution: '3840 x 2160 (4K Master 60FPS)',
-      colorSpace: 'Warm Amber 35mm Vintage Film',
-      audio: 'Tactile Canvas & Studio Foley',
+      resolution: '3840 x 2160 (4K Cinema 60FPS)',
+      colorSpace: 'Ultraviolet Cyber HDR 10-bit',
+      audio: 'Bionic Carbon Flex & Laser Stream Foley',
       turnaround: '48 Hours Shipped'
     },
     files: [
-      { name: 'Converse_Chuck70_4K_Heritage_16x9.mov', size: '1.50 GB', type: '4K Cinema Commercial' },
-      { name: 'Converse_Chuck70_Vintage_Hook_9x16.mp4', size: '180 MB', type: 'Instagram Reels Cut (9:16)' },
-      { name: 'Converse_Chuck70_PDP_Loop_1x1.mp4', size: '86 MB', type: 'Shopify / PDP Loop (1:1)' },
-      { name: 'Converse_35mm_Film_LUT.cube', size: '12 MB', type: 'Vintage Film 3D LUT' },
-      { name: 'Converse_Global_Heritage_License.pdf', size: '1.6 MB', type: 'Perpetual Rights' }
-    ]
-  },
-  'converse-runstar': {
-    projectId: 'project-converse-runstar',
-    title: 'Converse Run Star Motion: CX Wave Platform',
-    client: 'Converse Avant-Garde • Streetwear Innovation',
-    video: 'assets/converse_run_star_motion.webm',
-    poster: 'assets/converse_run_star_motion.jpg',
-    specs: {
-      resolution: '3840 x 2160 (4K 60FPS Master)',
-      colorSpace: 'Cyberpunk Neon HDR 10-bit',
-      audio: 'Sub-Bass Drop & Sculpted Foam Foley',
-      turnaround: '48 Hours Shipped'
-    },
-    files: [
-      { name: 'Converse_RunStar_4K_Cyber_16x9.mov', size: '1.62 GB', type: '4K Cinema Master' },
-      { name: 'Converse_RunStar_WaveMotion_9x16.mp4', size: '198 MB', type: 'TikTok Spark Cut (9:16)' },
-      { name: 'Converse_RunStar_PDP_Orbit_1x1.mp4', size: '94 MB', type: 'Square PDP Orbit Loop' },
-      { name: 'Converse_CX_Audio_BassDrop_Stems.zip', size: '115 MB', type: 'Master Audio Stems' },
-      { name: 'Converse_Fashion_Campaign_Rights.pdf', size: '1.7 MB', type: 'Commercial Rights' }
-    ]
-  },
-  'converse-weapon': {
-    projectId: 'project-converse-weapon',
-    title: 'Converse Weapon CX: 1986 Court Legacy',
-    client: 'Converse Basketball • Retro Court Heritage',
-    video: 'assets/converse_weapon_cx.webm',
-    poster: 'assets/converse_weapon_cx.jpg',
-    specs: {
-      resolution: '3840 x 2160 (4K 60FPS)',
-      colorSpace: 'Vintage Court ACES 10-bit',
-      audio: 'Hardwood Squeak & Arena Crowd Stems',
-      turnaround: '48 Hours Shipped'
-    },
-    files: [
-      { name: 'Converse_WeaponCX_4K_Arena_16x9.mov', size: '1.54 GB', type: '4K Master Commercial' },
-      { name: 'Converse_WeaponCX_CourtSpin_9x16.mp4', size: '185 MB', type: 'Viral Reels Cut (9:16)' },
-      { name: 'Converse_WeaponCX_Hardwood_Loop_1x1.mp4', size: '91 MB', type: 'PDP Hero Video (1:1)' },
-      { name: 'Converse_WeaponCX_Editorial_MediaKit.pdf', size: '2.1 MB', type: 'Press Kit & Rights' }
-    ]
-  },
-  'jordan-chicago': {
-    projectId: 'project-jordan-chicago',
-    title: 'Air Jordan 1 High: Chicago Legacy Edition',
-    client: 'Jordan Brand • Heritage Basketball & Global Drop',
-    video: 'assets/nike_jordan_1_chicago.webm',
-    poster: 'assets/nike_jordan_1_chicago.jpg',
-    specs: {
-      resolution: '3840 x 2160 (4K 60FPS Master)',
-      colorSpace: 'Crimson ACEScc 12-bit Log',
-      audio: 'Sub-Bass Embers & Leather Foley Stems',
-      turnaround: '48 Hours Shipped'
-    },
-    files: [
-      { name: 'Jordan1_Chicago_4K_CinemaMaster_16x9.mov', size: '1.65 GB', type: '4K Cinema Commercial' },
-      { name: 'Jordan1_Chicago_SmokeEmber_Hook_9x16.mp4', size: '195 MB', type: 'TikTok Spark Cut (9:16)' },
-      { name: 'Jordan1_Chicago_PDP_Loop_1x1.mp4', size: '96 MB', type: 'SNKRS / Shopify Loop (1:1)' },
-      { name: 'Jordan_Chicago_ACES_ColorLUT.cube', size: '14 MB', type: '3D Color Grade LUT' },
-      { name: 'Global_Jordan_Commercial_License.pdf', size: '1.8 MB', type: 'Perpetual Rights' }
+      { name: 'ANTA_C202_GT_4K_Marathon_16x9.mov', size: '1.58 GB', type: '4K Master (16:9)' },
+      { name: 'ANTA_C202_GT_CarbonExploded_9x16.mp4', size: '190 MB', type: 'Editorial Cut (9:16)' },
+      { name: 'ANTA_C202_GT_PDP_Loop_1x1.mp4', size: '92 MB', type: 'Shopify Hero Video (1:1)' },
+      { name: 'ANTA_C202_GT_Editorial_Stills.zip', size: '410 MB', type: '8K Editorial Stills' }
     ]
   },
   'nike-af1': {
@@ -1141,9 +760,28 @@ const sampleDeliverablesData = {
       { name: 'Nike_AF1_Commercial_Release.pdf', size: '1.5 MB', type: 'Commercial Rights' }
     ]
   },
+  'anta-pg7': {
+    projectId: 'project-anta-pg7',
+    title: 'ANTA PG7 Cloud Ride: All-Day Nitrogen Comfort',
+    client: 'ANTA Lifestyle & Running • Everyday Performance',
+    video: 'assets/converse_chuck_70.webm',
+    poster: 'assets/converse_chuck_70.jpg',
+    specs: {
+      resolution: '3840 x 2160 (4K Master 60FPS)',
+      colorSpace: 'Warm Lifestyle Cinema 10-bit',
+      audio: 'Tactile Knit & Nitrogen Cushion Foley',
+      turnaround: '48 Hours Shipped'
+    },
+    files: [
+      { name: 'ANTA_PG7_4K_Lifestyle_16x9.mov', size: '1.50 GB', type: '4K Cinema Commercial' },
+      { name: 'ANTA_PG7_Cloud_Hook_9x16.mp4', size: '180 MB', type: 'Instagram Reels Cut (9:16)' },
+      { name: 'ANTA_PG7_PDP_Loop_1x1.mp4', size: '86 MB', type: 'Shopify / PDP Loop (1:1)' },
+      { name: 'ANTA_PG7_Lifestyle_LUT.cube', size: '12 MB', type: '3D Color Grade LUT' }
+    ]
+  },
   'nike-acg': {
     projectId: 'project-nike-acg',
-    title: 'Nike ACG Mountain Fly: Gore-Tex All-Conditions',
+    title: 'Nike ACG Mountain Fly: Gore-Tex Trail Armor',
     client: 'Nike ACG • Outdoor & Technical Trail Innovation',
     video: 'assets/nike_acg_mountain_fly.webm',
     poster: 'assets/nike_acg_mountain_fly.jpg',
@@ -1160,138 +798,23 @@ const sampleDeliverablesData = {
       { name: 'Nike_ACG_Trail_Soundtrack_Stems.zip', size: '145 MB', type: 'Audio Stems' }
     ]
   },
-  'converse-deluxe': {
-    projectId: 'project-converse-deluxe',
-    title: 'Converse Chuck 70 De Luxe: Geometric Square Platform',
-    client: 'Converse Design Studio • Avant-Garde Runway',
-    video: 'assets/converse_deluxe_square.webm',
-    poster: 'assets/converse_deluxe_square.jpg',
-    specs: {
-      resolution: '3840 x 2160 (4K Cinema 60FPS)',
-      colorSpace: 'Ultraviolet Cyber HDR 10-bit',
-      audio: 'Brutalist Laser Scan & Deep Sub Foley',
-      turnaround: '48 Hours Shipped'
-    },
-    files: [
-      { name: 'Converse_DeLuxe_4K_Runway_16x9.mov', size: '1.58 GB', type: '4K Master (16:9)' },
-      { name: 'Converse_DeLuxe_SquareToe_Hook_9x16.mp4', size: '190 MB', type: 'Editorial Cut (9:16)' },
-      { name: 'Converse_DeLuxe_PDP_Loop_1x1.mp4', size: '92 MB', type: 'Shopify Hero Video (1:1)' },
-      { name: 'Converse_DeLuxe_Hypebeast_Stills.zip', size: '410 MB', type: '8K Editorial Stills' }
-    ]
-  },
-  'converse-cruise': {
-    projectId: 'project-converse-cruise',
-    title: 'Converse Cruise Skate: Layered Canvas Elevation',
-    client: 'Converse Skateboarding • Youth & Street Culture',
+  'anta-mach4': {
+    projectId: 'project-anta-mach4',
+    title: 'ANTA NitroEdge Mach 4: Speed Road Trainer',
+    client: 'ANTA Speed Lab • Tempo & Track Training',
     video: 'assets/converse_cruise_skate.webm',
     poster: 'assets/converse_cruise_skate.jpg',
     specs: {
       resolution: '3840 x 2160 (4K 60FPS Master)',
-      colorSpace: 'Warm California Sunset 35mm',
-      audio: 'Skate Concrete Roll & Dynamic Pops',
+      colorSpace: 'Warm Morning Road Running 10-bit',
+      audio: 'Tempo Foot Strike & Track Audio',
       turnaround: '48 Hours Shipped'
     },
     files: [
-      { name: 'Converse_Cruise_4K_Skate_16x9.mov', size: '1.48 GB', type: '4K Commercial Master' },
-      { name: 'Converse_Cruise_SunFlare_Hook_9x16.mp4', size: '178 MB', type: 'TikTok Spark Cut (9:16)' },
-      { name: 'Converse_Cruise_PDP_Loop_1x1.mp4', size: '87 MB', type: 'PDP Loop (1:1)' },
-      { name: 'Converse_Cruise_Media_Kit.pdf', size: '1.9 MB', type: 'Commercial Rights' }
-    ]
-  },
-  'converse-bb': {
-    projectId: 'project-converse-bb',
-    title: 'Converse All Star BB Prototype: CX Court Performance',
-    client: 'Converse Hoops • Next-Gen Basketball Innovation',
-    video: 'assets/converse_bb_prototype.webm',
-    poster: 'assets/converse_bb_prototype.jpg',
-    specs: {
-      resolution: '3840 x 2160 (4K 60FPS Master)',
-      colorSpace: 'Arena Electric Neon 10-bit',
-      audio: 'Court Squeak & Zoom Air Pulse Stems',
-      turnaround: '48 Hours Shipped'
-    },
-    files: [
-      { name: 'Converse_BBPrototype_4K_Master_16x9.mov', size: '1.62 GB', type: '4K Broadcast Master' },
-      { name: 'Converse_BBPrototype_ShotTracker_9x16.mp4', size: '196 MB', type: 'Viral Hook Cut (9:16)' },
-      { name: 'Converse_BBPrototype_PDP_Orbit_1x1.mp4', size: '94 MB', type: 'Amazon A+ Video (1:1)' },
-      { name: 'Converse_Hoops_Audio_Stems.zip', size: '125 MB', type: 'Spatial Audio Stems' }
-    ]
-  },
-  'watch': {
-    projectId: 'project-watch',
-    title: 'Aurora Chronos: Perpetual Kinetic',
-    client: 'Aurora Watchmaking • Geneva Haute Horlogerie',
-    video: 'assets/luxury_watch_commercial.webm',
-    poster: 'assets/luxury_watch_commercial.jpg',
-    specs: {
-      resolution: '3840 x 2160 (4K UHD 60FPS)',
-      colorSpace: 'ACEScc 12-bit Log Master',
-      audio: 'Mechanical Chrono Tick & Hydro Foley',
-      turnaround: '48 Hours Shipped'
-    },
-    files: [
-      { name: 'Aurora_Chronos_4K_CinemaMaster_16x9.mov', size: '1.68 GB', type: '4K Cinema Master' },
-      { name: 'Aurora_Mechanical_GearOrbit_9x16.mp4', size: '210 MB', type: 'Vertical Macro Hook (9:16)' },
-      { name: 'Aurora_PDP_Luminescent_Loop_1x1.mp4', size: '115 MB', type: 'Kickstarter / PDP Loop (1:1)' },
-      { name: 'Aurora_Studio_HighRes_StillFrames.zip', size: '480 MB', type: '8K Print Campaign Stills' },
-      { name: 'Global_Commercial_License.pdf', size: '1.6 MB', type: 'Perpetual Rights' }
-    ]
-  },
-  'drone': {
-    projectId: 'project-drone',
-    title: 'AeroAI Valkyrie: Cyber Recon',
-    client: 'Aero Robotics • Smart Autonomous Aerospace',
-    video: 'assets/drone_tech_commercial.webm',
-    poster: 'assets/drone_tech_commercial.jpg',
-    specs: {
-      resolution: '3840 x 2160 (4K UHD 60FPS)',
-      colorSpace: 'ACES Neon HDR Gamut',
-      audio: 'Sci-Fi Turbine & Lidar Laser Audio',
-      turnaround: '48 Hours Shipped'
-    },
-    files: [
-      { name: 'AeroAI_Valkyrie_4K_Commercial_16x9.mov', size: '1.45 GB', type: '4K Broadcast Master' },
-      { name: 'AeroAI_SpeedBurst_TikTokSpark_9x16.mp4', size: '178 MB', type: 'TikTok Spark Hook (9:16)' },
-      { name: 'AeroAI_Amazon_SponsoredBrand_1x1.mp4', size: '96 MB', type: 'Amazon Video (1:1)' },
-      { name: 'AeroAI_Soundtrack_Stems_WAV.zip', size: '140 MB', type: 'Spatial Audio Stems' }
-    ]
-  },
-  'perfume': {
-    projectId: 'project-perfume',
-    title: 'Aurora Nocturne: Eau De Parfum',
-    client: 'Maison Aurora • Luxury French Fragrance',
-    video: 'assets/fragrance_commercial.webm',
-    poster: 'assets/fragrance_commercial.jpg',
-    specs: {
-      resolution: '3840 x 2160 (4K Macro 60FPS)',
-      colorSpace: 'ACES Golden Flare Gamut',
-      audio: 'Sensory Orchid Water Ripple Audio',
-      turnaround: '48 Hours Shipped'
-    },
-    files: [
-      { name: 'Aurora_Nocturne_4K_Cinema_16x9.mov', size: '1.35 GB', type: '4K Master (16:9)' },
-      { name: 'Aurora_PetalSplash_Reels_9x16.mp4', size: '162 MB', type: 'Instagram Reels Cut (9:16)' },
-      { name: 'Aurora_Sephora_Shopify_Loop_1x1.mp4', size: '84 MB', type: 'Shopify PDP Loop (1:1)' },
-      { name: 'Aurora_Fragrance_Media_Kit.pdf', size: '2.4 MB', type: 'Press Kit & License' }
-    ]
-  },
-  'eyewear': {
-    projectId: 'project-eyewear',
-    title: 'Aeterna Carbon: Polarized Optics',
-    client: 'Aeterna Eyewear • Performance Luxury Optics',
-    video: 'assets/eyewear_commercial.webm',
-    poster: 'assets/eyewear_commercial.jpg',
-    specs: {
-      resolution: '3840 x 2160 (4K 60FPS)',
-      colorSpace: 'Polarized Prism Dynamic HDR',
-      audio: 'Wind Tunnel Aerodynamic Audio',
-      turnaround: '48 Hours Shipped'
-    },
-    files: [
-      { name: 'Aeterna_Carbon_4K_Master_16x9.mov', size: '1.40 GB', type: '4K Commercial Master' },
-      { name: 'Aeterna_Polarized_LensGlow_9x16.mp4', size: '172 MB', type: 'Viral Hook Cut (9:16)' },
-      { name: 'Aeterna_Meta_Feed_Loop_1x1.mp4', size: '90 MB', type: 'Meta Ad Feed Cut (1:1)' },
-      { name: 'Aeterna_LUT_Color_Profile.cube', size: '14 MB', type: 'Prism 3D LUT' }
+      { name: 'ANTA_Mach4_4K_RoadRun_16x9.mov', size: '1.48 GB', type: '4K Commercial Master' },
+      { name: 'ANTA_Mach4_Speed_Hook_9x16.mp4', size: '178 MB', type: 'TikTok Spark Cut (9:16)' },
+      { name: 'ANTA_Mach4_PDP_Loop_1x1.mp4', size: '87 MB', type: 'PDP Loop (1:1)' },
+      { name: 'ANTA_Mach4_Media_Kit.pdf', size: '1.9 MB', type: 'Commercial Rights' }
     ]
   }
 };
@@ -1315,7 +838,7 @@ function initSampleOutputViewer() {
 
   if (!videoPlayer || !filesListEl) return;
 
-  let currentSku = 'promo-saas';
+  let currentSku = 'nike-vaporfly';
   let currentFormat = '16-9';
 
   function renderSku(skuKey) {
@@ -1527,8 +1050,9 @@ function initVideoTheaterModal() {
 
   if (theaterVideo) {
     theaterVideo.addEventListener('timeupdate', () => {
-      const cur = theaterVideo.currentTime;
-      const dur = theaterVideo.duration || 30;
+      const cur = theaterVideo.currentTime || 0;
+      const rawDur = theaterVideo.duration;
+      const dur = (Number.isFinite(rawDur) && rawDur > 0) ? rawDur : 14;
       const min = Math.floor(cur / 60);
       const sec = Math.floor(cur % 60);
       const totMin = Math.floor(dur / 60);
@@ -1537,7 +1061,7 @@ function initVideoTheaterModal() {
         timecode.textContent = `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')} / ${String(totMin).padStart(2, '0')}:${String(totSec).padStart(2, '0')}`;
       }
       if (progressBar) {
-        progressBar.style.width = `${(cur / dur) * 100}%`;
+        progressBar.style.width = `${Math.min(100, (cur / dur) * 100)}%`;
       }
     });
 
@@ -1566,7 +1090,9 @@ function initVideoTheaterModal() {
       const rect = scrubber.getBoundingClientRect();
       const clickX = e.clientX - rect.left;
       const ratio = Math.max(0, Math.min(1, clickX / rect.width));
-      theaterVideo.currentTime = ratio * (theaterVideo.duration || 30);
+      const rawDur = theaterVideo.duration;
+      const dur = (Number.isFinite(rawDur) && rawDur > 0) ? rawDur : 14;
+      theaterVideo.currentTime = ratio * dur;
     });
   }
 

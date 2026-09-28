@@ -41,88 +41,91 @@
   </style>
 </head>
 <body>
-  <h2>Generating AI Commercial & Promotional Videos...</h2>
+  <h2>Generating AI Commercial Videos for New Signature Products...</h2>
   <div id="status">Initializing Video Pipeline...</div>
   <div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
   <div id="log"></div>
   <canvas id="recCanvas" width="960" height="540" style="display:none;"></canvas>
 
   <script>
-    const postersToGenerate = [
-      {
-        name: 'nike_jordan_1_chicago.jpg',
-        baseImg: 'assets/nike_dunk_low.jpg',
-        filter: 'jordan_chicago'
-      },
-      {
-        name: 'nike_air_force_1_white.jpg',
-        baseImg: 'assets/nike_dunk_low.jpg',
-        filter: 'af1_triple_white'
-      },
-      {
-        name: 'nike_acg_mountain_fly.jpg',
-        baseImg: 'assets/ecom_sneaker_motion.jpg',
-        filter: 'acg_trail'
-      },
-      {
-        name: 'converse_deluxe_square.jpg',
-        baseImg: 'assets/converse_chuck_70.jpg',
-        filter: 'converse_deluxe'
-      },
-      {
-        name: 'converse_cruise_skate.jpg',
-        baseImg: 'assets/converse_run_star_motion.jpg',
-        filter: 'converse_cruise'
-      },
-      {
-        name: 'converse_bb_prototype.jpg',
-        baseImg: 'assets/converse_weapon_cx.jpg',
-        filter: 'converse_bb'
-      }
-    ];
-
     const videosToGenerate = [
       {
-        name: 'nike_zoomx_vaporfly.webm',
-        imgSrc: 'assets/nike_zoomx_vaporfly.jpg',
-        duration: 13500,
-        effect: 'nike_vaporfly_speed'
+        name: 'anta_kai_1.webm',
+        imgSrc: 'assets/anta_kai_1.jpg',
+        duration: 4000,
+        effect: 'court_laser_telemetry'
       },
       {
-        name: 'nike_air_max_pulse.webm',
-        imgSrc: 'assets/nike_air_max_pulse.jpg',
-        duration: 13500,
-        effect: 'nike_air_pulse'
+        name: 'anta_kt9.webm',
+        imgSrc: 'assets/anta_kt9.jpg',
+        duration: 4000,
+        effect: 'converse_weapon_arena'
       },
       {
-        name: 'nike_air_force_1_white.webm',
-        imgSrc: 'assets/nike_air_force_1_white.jpg',
-        duration: 13500,
-        effect: 'pristine_light_caustics'
-      },
-      {
-        name: 'nike_acg_mountain_fly.webm',
-        imgSrc: 'assets/nike_acg_mountain_fly.jpg',
-        duration: 13500,
-        effect: 'trail_mist_waterproof'
-      },
-      {
-        name: 'converse_deluxe_square.webm',
-        imgSrc: 'assets/converse_deluxe_square.jpg',
-        duration: 13500,
+        name: 'anta_shockwave_5.webm',
+        imgSrc: 'assets/anta_shockwave_5.jpg',
+        duration: 4000,
         effect: 'geometric_laser_grid'
       },
       {
-        name: 'converse_cruise_skate.webm',
-        imgSrc: 'assets/converse_cruise_skate.jpg',
-        duration: 13500,
+        name: 'anta_c202_gt_pro.webm',
+        imgSrc: 'assets/anta_c202_gt_pro.jpg',
+        duration: 4000,
+        effect: 'nike_vaporfly_speed'
+      },
+      {
+        name: 'nike_alphafly_3.webm',
+        imgSrc: 'assets/nike_alphafly_3.jpg',
+        duration: 4000,
+        effect: 'nike_vaporfly_speed'
+      },
+      {
+        name: 'nike_kobe_8_protro.webm',
+        imgSrc: 'assets/nike_kobe_8_protro.jpg',
+        duration: 4000,
+        effect: 'court_laser_telemetry'
+      },
+      {
+        name: 'nike_ja_2.webm',
+        imgSrc: 'assets/nike_ja_2.jpg',
+        duration: 4000,
+        effect: 'jordan_smoke_embers'
+      },
+      {
+        name: 'nike_lebron_21.webm',
+        imgSrc: 'assets/nike_lebron_21.jpg',
+        duration: 4000,
+        effect: 'pristine_light_caustics'
+      },
+      {
+        name: 'nike_sabrina_2.webm',
+        imgSrc: 'assets/nike_sabrina_2.jpg',
+        duration: 4000,
+        effect: 'geometric_laser_grid'
+      },
+      {
+        name: 'nike_air_max_dn.webm',
+        imgSrc: 'assets/nike_air_max_dn.jpg',
+        duration: 4000,
+        effect: 'nike_air_pulse'
+      },
+      {
+        name: 'nike_gt_cut_3.webm',
+        imgSrc: 'assets/nike_gt_cut_3.jpg',
+        duration: 4000,
+        effect: 'holographic_neural'
+      },
+      {
+        name: 'nike_book_1.webm',
+        imgSrc: 'assets/nike_book_1.jpg',
+        duration: 4000,
         effect: 'skate_golden_sunlight'
       },
       {
-        name: 'converse_bb_prototype.webm',
-        imgSrc: 'assets/converse_bb_prototype.jpg',
-        duration: 13500,
-        effect: 'court_laser_telemetry'
+        name: 'nike_pegasus_41.webm',
+        imgSrc: 'assets/nike_pegasus_41.jpg',
+        duration: 4000,
+        effect: 'nike_vaporfly_speed'
       }
     ];
 
@@ -139,82 +142,6 @@
       logDiv.scrollTop = logDiv.scrollHeight;
     }
 
-    async function generatePoster(poster) {
-      log(`Synthesizing Studio Poster: <strong>${poster.name}</strong> (${poster.filter})...`);
-      const img = new Image();
-      img.src = poster.baseImg;
-      await new Promise(r => { img.onload = r; img.onerror = r; });
-
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      if (img.complete && img.naturalWidth > 0) {
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-      } else {
-        ctx.fillStyle = '#0a0d14';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-      }
-
-      if (poster.filter === 'jordan_chicago') {
-        const redGrad = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, 40, canvas.width / 2, canvas.height / 2, 420);
-        redGrad.addColorStop(0, 'rgba(239, 68, 68, 0.35)');
-        redGrad.addColorStop(0.7, 'rgba(185, 28, 28, 0.2)');
-        redGrad.addColorStop(1, 'rgba(10, 10, 15, 0.6)');
-        ctx.fillStyle = redGrad;
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-        // Chicago red studio embers
-        for (let e = 0; e < 35; e++) {
-          ctx.fillStyle = e % 2 === 0 ? 'rgba(254, 202, 202, 0.8)' : 'rgba(239, 68, 68, 0.8)';
-          ctx.beginPath();
-          ctx.arc(Math.random() * canvas.width, Math.random() * canvas.height, Math.random() * 2 + 1, 0, Math.PI * 2);
-          ctx.fill();
-        }
-      } else if (poster.filter === 'af1_triple_white') {
-        const whiteGrad = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2 - 40, 50, canvas.width / 2, canvas.height / 2, 380);
-        whiteGrad.addColorStop(0, 'rgba(255, 255, 255, 0.3)');
-        whiteGrad.addColorStop(0.5, 'rgba(6, 182, 212, 0.15)');
-        whiteGrad.addColorStop(1, 'rgba(10, 15, 25, 0.5)');
-        ctx.fillStyle = whiteGrad;
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-      } else if (poster.filter === 'acg_trail') {
-        const trailGrad = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-        trailGrad.addColorStop(0, 'rgba(16, 185, 129, 0.2)');
-        trailGrad.addColorStop(0.5, 'rgba(249, 115, 22, 0.2)');
-        trailGrad.addColorStop(1, 'rgba(15, 23, 42, 0.5)');
-        ctx.fillStyle = trailGrad;
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-      } else if (poster.filter === 'converse_deluxe') {
-        const ultraGrad = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, 60, canvas.width / 2, canvas.height / 2, 400);
-        ultraGrad.addColorStop(0, 'rgba(168, 85, 247, 0.35)');
-        ultraGrad.addColorStop(0.6, 'rgba(6, 182, 212, 0.2)');
-        ultraGrad.addColorStop(1, 'rgba(7, 8, 13, 0.7)');
-        ctx.fillStyle = ultraGrad;
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-      } else if (poster.filter === 'converse_cruise') {
-        const sunGrad = ctx.createRadialGradient(canvas.width - 150, 100, 30, canvas.width / 2, canvas.height / 2, 420);
-        sunGrad.addColorStop(0, 'rgba(251, 191, 36, 0.45)');
-        sunGrad.addColorStop(0.6, 'rgba(245, 158, 11, 0.2)');
-        sunGrad.addColorStop(1, 'rgba(15, 10, 25, 0.5)');
-        ctx.fillStyle = sunGrad;
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-      } else if (poster.filter === 'converse_bb') {
-        const courtGrad = ctx.createLinearGradient(0, canvas.height, 0, 0);
-        courtGrad.addColorStop(0, 'rgba(6, 182, 212, 0.35)');
-        courtGrad.addColorStop(0.6, 'rgba(139, 92, 246, 0.2)');
-        courtGrad.addColorStop(1, 'rgba(10, 10, 20, 0.6)');
-        ctx.fillStyle = courtGrad;
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-      }
-
-      // Convert to blob and save
-      const blob = await new Promise(r => canvas.toBlob(r, 'image/jpeg', 0.95));
-      const formData = new FormData();
-      formData.append('filename', poster.name);
-      formData.append('video', blob, poster.name);
-
-      await fetch('/save-video', { method: 'POST', body: formData });
-      log(`✓ Saved poster: <strong>${poster.name}</strong>`);
-    }
-
     async function recordVideo(config) {
       statusDiv.innerHTML = `Recording & Synthesizing: <strong>${config.name}</strong> (${config.effect})`;
       log(`Starting render for ${config.name}...`);
@@ -224,12 +151,11 @@
       await new Promise((resolve) => {
         img.onload = resolve;
         img.onerror = () => {
-          log(`Warning: Failed to load ${config.imgSrc}, using fallback gradient.`);
+          log(`Warning: Failed to load ${config.imgSrc}`);
           resolve();
         };
       });
 
-      // Draw initial frame before stream capture
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       if (img.complete && img.naturalWidth > 0) {
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
@@ -250,7 +176,7 @@
         };
       });
 
-      recorder.start(500);
+      recorder.start(250);
 
       const fps = 30;
       const frameInterval = 1000 / fps;
@@ -265,10 +191,10 @@
 
           ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-          // Dynamic Cinematic Camera Zoom & Micro-Pan
-          const zoom = 1 + 0.07 * Math.sin(progress * Math.PI);
-          const panX = Math.sin(t * 1.3) * 12;
-          const panY = Math.cos(t * 0.9) * 7;
+          // Dynamic Cinematic Camera Zoom & Pan
+          const zoom = 1 + 0.06 * Math.sin(progress * Math.PI);
+          const panX = Math.sin(t * 1.5) * 10;
+          const panY = Math.cos(t * 1.1) * 6;
 
           ctx.save();
           ctx.translate(canvas.width / 2 + panX, canvas.height / 2 + panY);
@@ -281,16 +207,16 @@
           }
           ctx.restore();
 
-          // Procedural Motion FX Pipelines
+          // Procedural Motion FX
           try {
             if (config.effect === 'jordan_smoke_embers') {
               const redGlow = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, 40, canvas.width / 2, canvas.height / 2, 380);
-              redGlow.addColorStop(0, `rgba(239, 68, 68, ${Math.abs(Math.sin(t * 3)) * 0.3 + 0.1})`);
+              redGlow.addColorStop(0, `rgba(239, 68, 68, ${Math.abs(Math.sin(t * 3)) * 0.25 + 0.1})`);
               redGlow.addColorStop(1, 'rgba(0,0,0,0)');
               ctx.fillStyle = redGlow;
               ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-              for (let e = 0; e < 28; e++) {
+              for (let e = 0; e < 24; e++) {
                 const ex = (canvas.width / 2 + Math.sin(t * 2 + e) * (180 + e * 5));
                 const ey = canvas.height - ((t * 80 + e * 30) % canvas.height);
                 ctx.fillStyle = `rgba(254, 202, 202, ${Math.abs(Math.sin(t * 5 + e)) * 0.85})`;
@@ -299,24 +225,15 @@
                 ctx.fill();
               }
             } else if (config.effect === 'pristine_light_caustics') {
-              const sweepX = (t * 200) % (canvas.width + 200) - 100;
+              const sweepX = (t * 220) % (canvas.width + 200) - 100;
               const causticsGrad = ctx.createLinearGradient(sweepX - 80, 0, sweepX + 80, 0);
               causticsGrad.addColorStop(0, 'rgba(255, 255, 255, 0)');
               causticsGrad.addColorStop(0.5, 'rgba(255, 255, 255, 0.35)');
               causticsGrad.addColorStop(1, 'rgba(6, 182, 212, 0)');
               ctx.fillStyle = causticsGrad;
               ctx.fillRect(0, 0, canvas.width, canvas.height);
-            } else if (config.effect === 'trail_mist_waterproof') {
-              for (let m = 0; m < 30; m++) {
-                const mx = (m * 45 + t * 90) % canvas.width;
-                const my = 200 + Math.sin(m + t * 2) * 120;
-                ctx.fillStyle = `rgba(52, 211, 153, ${Math.abs(Math.sin(t * 3 + m)) * 0.5})`;
-                ctx.beginPath();
-                ctx.arc(mx, my, Math.sin(t * 4 + m) * 2 + 3, 0, Math.PI * 2);
-                ctx.fill();
-              }
             } else if (config.effect === 'geometric_laser_grid') {
-              ctx.strokeStyle = `rgba(168, 85, 247, ${Math.abs(Math.sin(t * 2)) * 0.4 + 0.2})`;
+              ctx.strokeStyle = `rgba(168, 85, 247, ${Math.abs(Math.sin(t * 2)) * 0.35 + 0.15})`;
               ctx.lineWidth = 1.5;
               for (let y = 0; y < canvas.height; y += 40) {
                 ctx.beginPath();
@@ -328,8 +245,8 @@
               const flareX = canvas.width - 200 + Math.sin(t * 1.5) * 80;
               const flareY = 150 + Math.cos(t * 1.2) * 50;
               const sunFlare = ctx.createRadialGradient(flareX, flareY, 20, flareX, flareY, 350);
-              sunFlare.addColorStop(0, 'rgba(254, 240, 138, 0.4)');
-              sunFlare.addColorStop(0.4, 'rgba(245, 158, 11, 0.2)');
+              sunFlare.addColorStop(0, 'rgba(254, 240, 138, 0.35)');
+              sunFlare.addColorStop(0.4, 'rgba(245, 158, 11, 0.15)');
               sunFlare.addColorStop(1, 'rgba(0,0,0,0)');
               ctx.fillStyle = sunFlare;
               ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -342,7 +259,7 @@
               ctx.stroke();
             } else if (config.effect === 'nike_air_pulse') {
               const pulseR = (t * 120) % 280;
-              ctx.strokeStyle = `rgba(6, 182, 212, ${1 - pulseR / 280})`;
+              ctx.strokeStyle = `rgba(168, 85, 247, ${1 - pulseR / 280})`;
               ctx.lineWidth = 2.5;
               ctx.beginPath();
               ctx.arc(canvas.width / 2, canvas.height / 2, pulseR, 0, Math.PI * 2);
@@ -358,29 +275,13 @@
                 ctx.lineTo(sx - 120, sy);
                 ctx.stroke();
               }
-            } else if (config.effect === 'nike_dunk_urban') {
-              ctx.fillStyle = 'rgba(6, 182, 212, 0.08)';
-              ctx.fillRect(0, canvas.height - 120, canvas.width, 120);
-            } else if (config.effect === 'converse_vintage_grain') {
-              ctx.fillStyle = 'rgba(251, 191, 36, 0.06)';
-              ctx.fillRect(0, 0, canvas.width, canvas.height);
-            } else if (config.effect === 'converse_motion_wave') {
-              for (let w = 0; w < 4; w++) {
-                const waveY = canvas.height - 60 + Math.sin(t * 3 + w) * 15;
-                ctx.strokeStyle = `rgba(236, 72, 153, ${0.4 - w * 0.08})`;
-                ctx.lineWidth = 3;
-                ctx.beginPath();
-                ctx.moveTo(0, waveY);
-                ctx.bezierCurveTo(canvas.width * 0.3, waveY - 30, canvas.width * 0.7, waveY + 30, canvas.width, waveY);
-                ctx.stroke();
-              }
             } else if (config.effect === 'converse_weapon_arena') {
               ctx.save();
               ctx.translate(canvas.width / 2, 0);
-              ctx.rotate(Math.sin(t * 1.5) * 0.15);
+              ctx.rotate(Math.sin(t * 1.5) * 0.12);
               const beamGrad = ctx.createLinearGradient(0, 0, 0, canvas.height);
-              beamGrad.addColorStop(0, 'rgba(255, 255, 255, 0.25)');
-              beamGrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+              beamGrad.addColorStop(0, 'rgba(250, 204, 21, 0.25)');
+              beamGrad.addColorStop(1, 'rgba(250, 204, 21, 0)');
               ctx.fillStyle = beamGrad;
               ctx.beginPath();
               ctx.moveTo(0, 0);
@@ -400,9 +301,9 @@
             }
           } catch (fxErr) {}
 
-          // Cinematic Film Grain
-          ctx.fillStyle = 'rgba(255, 255, 255, 0.025)';
-          for (let g = 0; g < 80; g++) {
+          // Subtle Film Grain
+          ctx.fillStyle = 'rgba(255, 255, 255, 0.02)';
+          for (let g = 0; g < 60; g++) {
             ctx.fillRect(Math.random() * canvas.width, Math.random() * canvas.height, 1.5, 1.5);
           }
 
@@ -411,7 +312,7 @@
             setTimeout(() => {
               recorder.stop();
               resolve();
-            }, 300);
+            }, 250);
           }
         }, frameInterval);
       });
@@ -421,13 +322,6 @@
     }
 
     async function generateAll() {
-      // Step 1: Generate & Save Posters
-      statusDiv.innerHTML = `Synthesizing ${postersToGenerate.length} Studio Posters...`;
-      for (const p of postersToGenerate) {
-        await generatePoster(p);
-      }
-
-      // Step 2: Generate & Save Videos
       let idx = 0;
       for (const item of videosToGenerate) {
         idx++;
@@ -444,15 +338,15 @@
             body: formData
           });
           const json = await res.json();
-          log(`✓ Successfully saved: <strong>${item.name}</strong> (${Math.round(blob.size / 1024)} KB)`);
+          log(`✓ Saved: <strong>${item.name}</strong> (${Math.round(blob.size / 1024)} KB)`);
         } catch (err) {
           log(`⚠️ Failed saving ${item.name}: ${err.message}`);
         }
       }
 
       progressFill.style.width = '100%';
-      statusDiv.innerHTML = `✓ All Commercial Posters & Videos Generated Successfully!`;
-      log('All video renders completed and saved into /assets directory.');
+      statusDiv.innerHTML = `✓ All Commercial Videos Generated Successfully!`;
+      log('Done!');
     }
 
     window.onload = generateAll;

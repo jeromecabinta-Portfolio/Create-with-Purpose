@@ -1,2013 +1,1047 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-  <title>Create with Purpose | AI Video Production Portfolio for E-Commerce & Brands</title>
-  <meta name="description" content="Commercial AI video production portfolio by Jerome Cabinta. Delivering high-converting 4K cinematic video ads in 48 hours for DTC, Amazon, TikTok, and Meta global brands.">
-  <meta name="keywords" content="AI Video Commercials, E-Commerce Video Ads, Brand Video Production, Runway Gen-3, Sora, Kling AI, TikTok Ads, Meta Ads, Amazon Video Ads, Jerome Cabinta Portfolio">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PURPOSE VAULT | Official Nike & ANTA Footwear & Streetwear Store</title>
+  <meta name="description" content="Shop 100% authentic deadstock Nike and ANTA athletic performance and signature basketball shoes. Free worldwide express shipping, carbon marathon super-shoes, and limited drops." />
   
-  <!-- Mobile PWA & iOS / Android Meta -->
-  <meta name="theme-color" content="#07080d" media="(prefers-color-scheme: dark)">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Create with Purpose">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="mobile-web-app-capable" content="yes">
-
-  <!-- Open Graph / Meta -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Create with Purpose | E-Commerce & Brand AI Video Production">
-  <meta property="og:description" content="High-converting 4K product commercial ads created in 48 hours using next-gen generative AI video pipelines.">
-  
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Fonts: Syne (Display), Outfit (Body), Space Mono (Tech) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
   
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- ==========================================================================
+       Top Announcement Ticker
+       ========================================================================== -->
+  <div class="top-announcement-bar">
+    <div class="announcement-content">
+      <span class="announcement-pill"><i data-lucide="zap"></i> SPRING 2026 DROP</span>
+      <span>⚡ <strong>FREE WORLDWIDE EXPRESS SHIPPING</strong> ON ALL ORDERS OVER $150</span>
+      <span class="announcement-divider">•</span>
+      <span>100% VERIFIED AUTHENTIC DEADSTOCK</span>
+      <span class="announcement-divider">•</span>
+      <span>USE CODE <strong class="code-highlight">PURPOSE10</strong> FOR 10% OFF</span>
+    </div>
+  </div>
 
-  <div class="app-wrapper">
+  <!-- ==========================================================================
+       Main E-Commerce Navigation Bar
+       ========================================================================== -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo">
+        <span class="logo-text">PURPOSE<span class="logo-accent">VAULT</span></span>
+        <span class="logo-subline">NIKE & ANTA OFFICIAL ARCHIVE</span>
+      </a>
 
-    <!-- ==========================================================================
-         Navigation Header
-         ========================================================================== -->
-    <nav class="main-nav" id="main-nav">
-      <div class="container nav-container">
-        <a href="#hero" class="nav-brand">
-          <div class="brand-symbol">
-            <i data-lucide="sparkles"></i>
-          </div>
-          <div class="brand-text">
-            <span class="brand-title">
-              <span>CREATE</span>
-              <span>WITH PURPOSE</span>
-            </span>
-            <span class="brand-subtitle">AI VIDEO PRODUCTION</span>
-          </div>
-        </a>
+      <!-- Desktop Nav Categories -->
+      <nav class="desktop-nav">
+        <button class="nav-link brand-tab-btn active" data-brand="all">All Footwear</button>
+        <button class="nav-link brand-tab-btn" data-brand="nike">Nike Performance</button>
+        <button class="nav-link brand-tab-btn" data-brand="anta">ANTA Lineup</button>
+        <button class="nav-link brand-tab-btn" data-brand="jordan">Jordan Brand</button>
+        <a href="#guarantee" class="nav-link">Authenticity</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+      </nav>
 
-        <ul class="nav-links">
-          <li><a href="#showcase" class="nav-link">Showcase</a></li>
-          <li><a href="#samples" class="nav-link">Deliverables</a></li>
-          <li><a href="#comparison" class="nav-link">CAD vs. 4K</a></li>
-          <li><a href="#roi" class="nav-link">Traditional vs. AI</a></li>
-          <li><a href="#capabilities" class="nav-link">Capabilities</a></li>
-          <li><a href="#pricing" class="nav-link">Ad Packages</a></li>
-          <li><a href="#booking" class="nav-link">Estimator</a></li>
-        </ul>
-
-        <div class="nav-actions">
-          <a href="#booking" class="btn-primary">
-            <i data-lucide="zap"></i>
-            <span>Get Brand Sample</span>
-          </a>
-
-          <button class="mobile-menu-toggle" id="mobile-menu-open" aria-label="Open navigation menu" title="Open Navigation Menu" aria-controls="mobile-drawer" aria-expanded="false">
-            <span class="burger-lines">
-              <span class="line line-1"></span>
-              <span class="line line-2"></span>
-              <span class="line line-3"></span>
-            </span>
-          </button>
+      <!-- Global Search & Header Actions -->
+      <div class="header-actions">
+        <!-- Live Search Bar -->
+        <div class="header-search-wrapper">
+          <i data-lucide="search" class="search-icon"></i>
+          <input type="text" id="header-search-input" placeholder="Search Nike, ANTA, Kyrie, Kobe..." autocomplete="off" />
         </div>
+
+        <!-- Currency Selector -->
+        <div class="currency-selector-wrap">
+          <select class="currency-selector-select" aria-label="Select Currency">
+            <option value="USD">USD ($)</option>
+            <option value="EUR">EUR (€)</option>
+            <option value="GBP">GBP (£)</option>
+            <option value="JPY">JPY (¥)</option>
+            <option value="PHP">PHP (₱)</option>
+          </select>
+        </div>
+
+        <!-- Wishlist Button -->
+        <button class="header-action-btn" data-action="open-wishlist" aria-label="View Wishlist" title="Your Wishlist">
+          <i data-lucide="heart"></i>
+          <span class="badge-count wishlist-badge-count" style="display:none;">0</span>
+        </button>
+
+        <!-- Cart Drawer Button -->
+        <button class="header-action-btn cart-btn-highlight" data-action="open-cart" aria-label="View Shopping Bag" title="Your Shopping Bag">
+          <i data-lucide="shopping-bag"></i>
+          <span class="badge-count cart-badge-count" style="display:none;">0</span>
+          <span class="cart-btn-label">Bag</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open Mobile Menu">
+          <i data-lucide="menu"></i>
+        </button>
       </div>
-    </nav>
 
-    <!-- ==========================================================================
-         Mobile Navigation Drawer (iOS & Android)
-         ========================================================================== -->
-    <div class="mobile-drawer-overlay" id="mobile-drawer">
-      <div class="mobile-drawer-content">
-        <div class="mobile-drawer-header">
-          <div class="nav-brand">
-            <div class="brand-symbol">
-              <i data-lucide="sparkles"></i>
-            </div>
-            <div class="brand-text">
-              <span class="brand-title">
-                <span>CREATE</span>
-                <span>WITH PURPOSE</span>
-              </span>
-              <span class="brand-subtitle">AI VIDEO PRODUCTION</span>
-            </div>
-          </div>
-          <button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close navigation menu" title="Close Menu">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          </button>
-        </div>
-        
-        <ul class="mobile-nav-links">
-          <li><a href="#showcase" class="mobile-nav-link"><i data-lucide="video"></i> Commercial Showcase</a></li>
-          <li><a href="#samples" class="mobile-nav-link"><i data-lucide="package-check"></i> Sample Deliverables</a></li>
-          <li><a href="#comparison" class="mobile-nav-link"><i data-lucide="git-commit"></i> CAD vs. 4K Video</a></li>
-          <li><a href="#roi" class="mobile-nav-link"><i data-lucide="trending-up"></i> Traditional vs. AI</a></li>
-          <li><a href="#capabilities" class="mobile-nav-link"><i data-lucide="sparkles"></i> Capabilities & FX</a></li>
-          <li><a href="#pricing" class="mobile-nav-link"><i data-lucide="box"></i> Ad Packages</a></li>
-          <li><a href="#booking" class="mobile-nav-link"><i data-lucide="calculator"></i> Campaign Estimator</a></li>
-        </ul>
+    </div>
+  </header>
 
-        <div class="mobile-drawer-footer">
-          <a href="#booking" class="btn-primary mobile-cta-btn" id="mobile-cta-btn">
-            <i data-lucide="zap"></i>
-            <span>Get Free Brand Sample</span>
-          </a>
-        </div>
-      </div>
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <span class="mobile-logo">PURPOSE<span class="logo-accent">VAULT</span></span>
+      <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close Navigation"><i data-lucide="x"></i></button>
     </div>
 
-    <!-- ==========================================================================
-         Hero Section
-         ========================================================================== -->
-    <header class="hero-section" id="hero">
-      <div class="container">
-        <div class="hero-grid">
-          
-          <!-- Hero Left Content -->
-          <div class="hero-content">
-            <div class="hero-badge-pill">
-              <span class="badge-dot"></span>
-              <span>COMMERCIAL AI VIDEO STUDIO • 48-HOUR TURNAROUND • +340% ROAS</span>
-            </div>
+    <!-- Mobile Search -->
+    <div class="mobile-search-box">
+      <i data-lucide="search"></i>
+      <input type="text" id="mobile-search-input" placeholder="Search Nike, ANTA, Kyrie..." />
+    </div>
 
-            <h1 class="hero-title">
-              <span class="gradient-text-cyan">AI VIDEO ADS</span><br>
-              <span class="gradient-text-emerald">FOR E-COMMERCE</span><br>
-              <span class="gradient-text-purple">& GLOBAL BRANDS.</span>
-            </h1>
+    <div class="mobile-nav-links">
+      <button class="mobile-nav-link brand-tab-btn" data-brand="all"><i data-lucide="grid"></i> All Footwear (48)</button>
+      <button class="mobile-nav-link brand-tab-btn" data-brand="nike"><i data-lucide="check"></i> Nike Performance</button>
+      <button class="mobile-nav-link brand-tab-btn" data-brand="anta"><i data-lucide="flame"></i> ANTA Signature Hoops</button>
+      <button class="mobile-nav-link brand-tab-btn" data-brand="jordan"><i data-lucide="award"></i> Jordan Brand</button>
+      <a href="#guarantee" class="mobile-nav-link"><i data-lucide="shield-check"></i> Authenticity Guarantee</a>
+      <a href="#reviews" class="mobile-nav-link"><i data-lucide="star"></i> Customer Reviews</a>
+    </div>
 
-            <p class="hero-subtitle">
-              Transform static product photos and 3D CAD blueprints into high-converting 4K cinematic commercial ads in 48 hours. Accelerating millions in DTC revenue across TikTok, Meta, Amazon, YouTube, and digital broadcast.
-            </p>
-
-            <div class="hero-cta-group">
-              <button class="btn-primary" id="hero-showreel-cta" title="Launch 4K Commercial Reel">
-                <i data-lucide="play-circle"></i>
-                <span>Play 2026 Commercial Reel</span>
-              </button>
-
-              <a href="#samples" class="btn-secondary" title="View Sample Deliverables">
-                <i data-lucide="package-check"></i>
-                <span>View Sample Deliverables</span>
-              </a>
-
-              <a href="#booking" class="btn-ghost-outline" title="Estimate Campaign Fee">
-                <i data-lucide="calculator"></i>
-                <span>Estimate Campaign Fee</span>
-              </a>
-            </div>
-
-            <!-- Multi-Format Aspect Ratio Switcher -->
-            <div style="margin-bottom: 2rem;">
-              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; display: block; margin-bottom: 0.4rem;">
-                Preview Multichannel Ad Formats:
-              </span>
-              <div class="ratio-switcher">
-                <button class="ratio-btn active" data-ratio="16-9"><i data-lucide="tv" style="width: 12px; height: 12px;"></i> 16:9 Landscape (YouTube / TV)</button>
-                <button class="ratio-btn" data-ratio="9-16"><i data-lucide="smartphone" style="width: 12px; height: 12px;"></i> 9:16 Vertical (TikTok / Reels)</button>
-                <button class="ratio-btn" data-ratio="1-1"><i data-lucide="square" style="width: 12px; height: 12px;"></i> 1:1 Square (Shopify / Meta)</button>
-              </div>
-            </div>
-
-            <!-- Hero Stats HUD -->
-            <div class="hero-stats-row">
-              <div class="stat-item">
-                <div class="stat-num">$45M<span>+</span></div>
-                <div class="stat-label">Brand Revenue Driven</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-num">+340<span>%</span></div>
-                <div class="stat-label">Average ROAS Lift</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-num">48<span>h</span></div>
-                <div class="stat-label">Turnaround Time</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-num">500<span>+</span></div>
-                <div class="stat-label">Commercials Shipped</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Hero Right Visual Card with Active Playing Video -->
-          <div class="hero-visual-card">
-            <div class="hero-img-wrap">
-              <video src="assets/nike_zoomx_vaporfly.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/nike_zoomx_vaporfly.jpg" class="hero-video-media"></video>
-              <div class="hero-scan-line"></div>
-              
-              <div class="hero-hud-overlay">
-                <span class="hud-tag live-video"><span class="badge-dot" style="background: #f43f5e; box-shadow: 0 0 8px #f43f5e;"></span> LIVE 4K COMMERCIAL</span>
-                <span class="hud-tag roas"><i data-lucide="trending-up"></i> +610% ROAS LIFT</span>
-              </div>
-
-              <div class="hero-play-trigger" id="hero-play-trigger" title="Launch 4K Commercial Theater">
-                <div class="play-circle">
-                  <i data-lucide="play"></i>
-                </div>
-              </div>
-            </div>
-
-            <div class="hero-card-footer">
-              <div>
-                <h3 class="hero-clip-title">Nike ZoomX Vaporfly 3: Carbon Energy Return</h3>
-                <span class="hero-clip-meta">Nike Performance Athletics • Elite Marathon Series • 7.4% CTR • 48h Delivery</span>
-              </div>
-              <button class="btn-card-action primary" data-action="view-case-study" data-project-id="project-nike-vaporfly">
-                <i data-lucide="file-text"></i>
-                <span>View Case Study</span>
-              </button>
-            </div>
-          </div>
-
-        </div>
+    <div class="mobile-nav-footer">
+      <div class="mobile-currency-row">
+        <span>Currency:</span>
+        <select class="currency-selector-select" aria-label="Mobile Currency Selector">
+          <option value="USD">USD ($)</option>
+          <option value="EUR">EUR (€)</option>
+          <option value="GBP">GBP (£)</option>
+          <option value="JPY">JPY (¥)</option>
+          <option value="PHP">PHP (₱)</option>
+        </select>
       </div>
-    </header>
-
-    <!-- ==========================================================================
-         Curated E-Commerce & Brand Video Showcase Matrix
-         ========================================================================== -->
-    <section class="section" id="showcase">
-      <div class="container">
-        
-        <div class="section-header">
-          <div class="section-tag">
-            <i data-lucide="award"></i>
-            <span>Nike & ANTA Commercial Creatives</span>
-          </div>
-          <h2 class="section-title">Nike & ANTA Commercial Showcase</h2>
-          <p class="section-desc">
-            Explore high-converting generative commercial video ads created for elite Nike athletics, Jordan Brand drops, and signature ANTA basketball & running lines.
-          </p>
-        </div>
-
-        <!-- Category Filters -->
-        <div class="filter-tabs-wrapper">
-          <div class="filter-tabs">
-            <button class="filter-btn active" data-filter="all">All Commercials (28)</button>
-            <button class="filter-btn" data-filter="nike"><i data-lucide="award"></i> Nike Athletics (14)</button>
-            <button class="filter-btn" data-filter="anta"><i data-lucide="zap"></i> ANTA Sports & Hoops (14)</button>
-            <button class="filter-btn" data-filter="hoops"><i data-lucide="dribbble"></i> Basketball & Signature</button>
-            <button class="filter-btn" data-filter="running"><i data-lucide="footprints"></i> Elite Running & Marathons</button>
-            <button class="filter-btn" data-filter="streetwear"><i data-lucide="sparkles"></i> Streetwear & Drops</button>
-            <button class="filter-btn" data-filter="apparel"><i data-lucide="shield"></i> Technical Apparel & Gear</button>
-          </div>
-        </div>
-
-        <!-- Video Card Grid with Active Video Playback -->
-        <div class="video-grid">
-          
-          <!-- Card: Nike ZoomX Vaporfly 3: Carbon Energy Return -->
-          <article class="video-card" data-category="nike running promo">
-            <div class="video-thumbnail-box">
-              <video src="assets/nike_zoomx_vaporfly.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/nike_zoomx_vaporfly.jpg" class="card-video-media"></video>
-              <span class="card-model-badge emerald">Nike Marathon Racing</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +610% ROAS</span>
-              <span class="card-duration-badge">0:35</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-nike-vaporfly">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Nike Performance Athletics • Elite Marathon Series</div>
-              <h3 class="card-title">Nike ZoomX Vaporfly 3: Carbon Energy Return</h3>
-              <p class="card-synopsis">High-tech athletic commercial featuring an exploded architectural view of the Nike ZoomX Vaporfly with full-length carbon Flyplate and wind-tunnel laser streamlines.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">7.4% CTR</span>
-                <span class="meta-tag">Carbon Flyplate 3D</span>
-                <span class="meta-tag">Olympic Series</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-nike-vaporfly">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-nike-vaporfly">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: Nike Air Max Pulse: Dynamic Air Chamber -->
-          <article class="video-card" data-category="nike streetwear promo">
-            <div class="video-thumbnail-box">
-              <video src="assets/nike_air_max_pulse.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/nike_air_max_pulse.jpg" class="card-video-media"></video>
-              <span class="card-model-badge cyan">Nike Air Max Drop</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +530% ROAS</span>
-              <span class="card-duration-badge">0:30</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-nike-airmax">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Nike Running & Sportswear • Global Campaign</div>
-              <h3 class="card-title">Nike Air Max Pulse: Dynamic Air Chamber</h3>
-              <p class="card-synopsis">Futuristic sportswear commercial capturing Nike Air Max Pulse levitating in a dark atmospheric studio with cyan and electric volt air chamber luminescence.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">6.9% CTR</span>
-                <span class="meta-tag">Point-Loaded Air</span>
-                <span class="meta-tag">SNKRS Drop</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-nike-airmax">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-nike-airmax">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: Air Jordan 1 High: Chicago Legacy Edition -->
-          <article class="video-card" data-category="nike hoops promo">
-            <div class="video-thumbnail-box">
-              <video src="assets/nike_jordan_1_chicago.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/nike_jordan_1_chicago.jpg" class="card-video-media"></video>
-              <span class="card-model-badge amber">Air Jordan Heritage</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +640% ROAS</span>
-              <span class="card-duration-badge">0:30</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-jordan-chicago">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Nike Jordan Brand • Heritage Basketball & Global Drop</div>
-              <h3 class="card-title">Air Jordan 1 High: Chicago Legacy Edition</h3>
-              <p class="card-synopsis">Legendary varsity red, white, and black Air Jordan 1 High floating through cinematic red smoke ribbons and burning ember studio physics.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">7.8% CTR</span>
-                <span class="meta-tag">Smoke & Embers</span>
-                <span class="meta-tag">SNKRS Drop</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-jordan-chicago">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-jordan-chicago">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: Nike Dunk Low: Urban Heritage Edition -->
-          <article class="video-card" data-category="nike streetwear">
-            <div class="video-thumbnail-box">
-              <video src="assets/nike_dunk_low.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/nike_dunk_low.jpg" class="card-video-media"></video>
-              <span class="card-model-badge cyan">Nike Street Culture</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +480% ROAS</span>
-              <span class="card-duration-badge">0:25</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-nike-dunk">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Nike Sportswear • Street Culture & SNKRS Drop</div>
-              <h3 class="card-title">Nike Dunk Low: Urban Heritage Edition</h3>
-              <p class="card-synopsis">Iconic street culture sneaker commercial showcasing the Nike Dunk Low obsidian and sail leather colorway floating above wet reflective asphalt with rim lighting.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">6.2% CTR</span>
-                <span class="meta-tag">Tumbled Leather</span>
-                <span class="meta-tag">Streetwear Scale</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-nike-dunk">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-nike-dunk">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: Nike Air Force 1 07: Pure White Architectural -->
-          <article class="video-card" data-category="nike streetwear">
-            <div class="video-thumbnail-box">
-              <video src="assets/nike_air_force_1_white.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/nike_air_force_1_white.jpg" class="card-video-media"></video>
-              <span class="card-model-badge emerald">Nike Icon Series</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +450% ROAS</span>
-              <span class="card-duration-badge">0:25</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-nike-af1">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Nike Sportswear • Everyday Icon Series</div>
-              <h3 class="card-title">Nike Air Force 1 07: Pure White Architectural</h3>
-              <p class="card-synopsis">Minimalist high-key commercial showcasing the iconic triple-white Air Force 1 floating amidst pristine museum-grade studio light caustics.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">5.6% CTR</span>
-                <span class="meta-tag">Architectural White</span>
-                <span class="meta-tag">Amazon Video</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-nike-af1">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-nike-af1">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: Nike ACG Mountain Fly: Gore-Tex Trail Armor -->
-          <article class="video-card" data-category="nike apparel promo">
-            <div class="video-thumbnail-box">
-              <video src="assets/nike_acg_mountain_fly.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/nike_acg_mountain_fly.jpg" class="card-video-media"></video>
-              <span class="card-model-badge amber">Nike ACG Outdoor</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +580% ROAS</span>
-              <span class="card-duration-badge">0:35</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-nike-acg">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Nike ACG • Outdoor & Technical Trail Innovation</div>
-              <h3 class="card-title">Nike ACG Mountain Fly: Gore-Tex Trail Armor</h3>
-              <p class="card-synopsis">Rugged outdoor commercial featuring the Nike ACG Mountain Fly conquering mountain rain mist, mossy terrain, and neon orange technical utility cords.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">6.5% CTR</span>
-                <span class="meta-tag">Gore-Tex Rain FX</span>
-                <span class="meta-tag">YouTube Pre-Roll</span>
-                <span class="meta-tag">72h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-nike-acg">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-nike-acg">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: Nike Alphafly 3: World Record Propulsion -->
-          <article class="video-card" data-category="nike running promo">
-            <div class="video-thumbnail-box">
-              <video src="assets/ecom_sneaker_motion.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/ecom_sneaker_motion.jpg" class="card-video-media"></video>
-              <span class="card-model-badge cyan">Nike Breaking2</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +560% ROAS</span>
-              <span class="card-duration-badge">0:35</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-nike-alphafly">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Nike Performance Running • Breaking2 Innovation</div>
-              <h3 class="card-title">Nike Alphafly 3: World Record Propulsion</h3>
-              <p class="card-synopsis">Deconstructed 3D performance running sneaker ad revealing interwoven carbon fiber threads, dual Zoom Air pods, and explosive studio propulsion.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">6.8% CTR</span>
-                <span class="meta-tag">Dual Zoom Air Pods</span>
-                <span class="meta-tag">World Majors</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-nike-alphafly">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-nike-alphafly">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: Nike Vision Windshield Elite: Polarized Optics -->
-          <article class="video-card" data-category="nike apparel">
-            <div class="video-thumbnail-box">
-              <video src="assets/eyewear_commercial.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/eyewear_commercial.jpg" class="card-video-media"></video>
-              <span class="card-model-badge cyan">Nike Vision Pro</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +475% ROAS</span>
-              <span class="card-duration-badge">0:20</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-nike-vision">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Nike Vision • High-Performance Sport Eyewear</div>
-              <h3 class="card-title">Nike Vision Windshield Elite: Polarized Optics</h3>
-              <p class="card-synopsis">High-velocity performance eyewear commercial showcasing matte carbon fiber frames and iridescent polarized lens flare reflections.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">5.9% CTR</span>
-                <span class="meta-tag">Polarized Optics</span>
-                <span class="meta-tag">Reels Hook Suite</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-nike-vision">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-nike-vision">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: Nike Tech Fleece AeroShield: Thermal Apparel -->
-          <article class="video-card" data-category="nike apparel">
-            <div class="video-thumbnail-box">
-              <video src="assets/fashion_couture.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/fashion_couture.jpg" class="card-video-media"></video>
-              <span class="card-model-badge magenta">Nike Tech Apparel</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +430% ROAS</span>
-              <span class="card-duration-badge">0:30</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-nike-techfleece">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Nike Sportswear • Engineered Technical Apparel</div>
-              <h3 class="card-title">Nike Tech Fleece AeroShield: Thermal Apparel</h3>
-              <p class="card-synopsis">Avant-garde digital sportswear commercial showcasing dynamic molten chrome cloth simulations morphing into lightweight breathable thermal fleece.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">5.8% CTR</span>
-                <span class="meta-tag">Cloth Simulation</span>
-                <span class="meta-tag">Digital Runway</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-nike-techfleece">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-nike-techfleece">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: Nike Sport GPS Pro: Precision Athletic Telemetry -->
-          <article class="video-card" data-category="nike apparel promo">
-            <div class="video-thumbnail-box">
-              <video src="assets/luxury_watch_commercial.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/luxury_watch_commercial.jpg" class="card-video-media"></video>
-              <span class="card-model-badge cyan">Nike NRC Wearable</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +510% ROAS</span>
-              <span class="card-duration-badge">0:30</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-nike-gps">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Nike Running Club • Precision Athletic Wearables</div>
-              <h3 class="card-title">Nike Sport GPS Pro: Precision Athletic Telemetry</h3>
-              <p class="card-synopsis">Macro mechanical luxury athletic timepiece ad capturing micro-chassis, water ripple levitation, and sapphire crystal luminescent pace telemetry.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">5.4% CTR</span>
-                <span class="meta-tag">NRC Telemetry</span>
-                <span class="meta-tag">Titanium Chassis</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-nike-gps">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-nike-gps">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: Nike AeroTrack Drone: Autonomous Motion Tracking -->
-          <article class="video-card" data-category="nike apparel">
-            <div class="video-thumbnail-box">
-              <video src="assets/drone_tech_commercial.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/drone_tech_commercial.jpg" class="card-video-media"></video>
-              <span class="card-model-badge magenta">Nike Innovation Lab</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +430% ROAS</span>
-              <span class="card-duration-badge">0:25</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-nike-aerotrack">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Nike Innovation Kitchen • Autonomous Tracking Systems</div>
-              <h3 class="card-title">Nike AeroTrack Drone: Autonomous Motion Tracking</h3>
-              <p class="card-synopsis">Atmospheric cyberpunk commercial showing aerodynamic carbon fiber drone tracking athletes through neon violet and cyan fog vortex.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">6.3% CTR</span>
-                <span class="meta-tag">Autonomous Tracking</span>
-                <span class="meta-tag">NTC Integration</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-nike-aerotrack">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-nike-aerotrack">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: Nike HyperFuel Pro: Citrus Electrolyte Vortex -->
-          <article class="video-card" data-category="nike running">
-            <div class="video-thumbnail-box">
-              <video src="assets/ecom_beverage_splash.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/ecom_beverage_splash.jpg" class="card-video-media"></video>
-              <span class="card-model-badge amber">Nike Performance Lab</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +440% ROAS</span>
-              <span class="card-duration-badge">0:20</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-nike-hyperfuel">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Nike Performance Lab • Sports Hydration & Energy</div>
-              <h3 class="card-title">Nike HyperFuel Pro: Citrus Electrolyte Vortex</h3>
-              <p class="card-synopsis">Electrifying sports hydration ad featuring an aerodynamic bottle bursting through crystal ice cubes and glowing citrus isotonic fluid vortex.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">6.1% CTR</span>
-                <span class="meta-tag">Fluid Splash FX</span>
-                <span class="meta-tag">TikTok Spark Ads</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-nike-hyperfuel">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-nike-hyperfuel">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: Nike Pro Muscle Lab: Botanical Athletic Recovery -->
-          <article class="video-card" data-category="nike running">
-            <div class="video-thumbnail-box">
-              <video src="assets/ecom_beauty_serum.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/ecom_beauty_serum.jpg" class="card-video-media"></video>
-              <span class="card-model-badge emerald">Nike Muscle Recovery</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +380% ROAS</span>
-              <span class="card-duration-badge">0:25</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-nike-recovery">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Nike Training • Post-Workout Muscle Recovery</div>
-              <h3 class="card-title">Nike Pro Muscle Lab: Botanical Athletic Recovery</h3>
-              <p class="card-synopsis">Sensory macro cosmetic commercial capturing golden botanical argan oil and muscle recovery serum splashing dynamically around frosted glass.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">5.2% CTR</span>
-                <span class="meta-tag">Botanical Recovery</span>
-                <span class="meta-tag">Shopify Hero</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-nike-recovery">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-nike-recovery">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: ANTA KAI 1 "Artist on Court": Kyrie Irving Edition -->
-          <article class="video-card" data-category="anta hoops promo">
-            <div class="video-thumbnail-box">
-              <video src="assets/converse_bb_prototype.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/converse_bb_prototype.jpg" class="card-video-media"></video>
-              <span class="card-model-badge cyan">ANTA Kyrie Irving</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +690% ROAS</span>
-              <span class="card-duration-badge">0:35</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-anta-kai1">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> ANTA Basketball • Kyrie Irving Signature Series</div>
-              <h3 class="card-title">ANTA KAI 1 "Artist on Court": Kyrie Irving Edition</h3>
-              <p class="card-synopsis">High-velocity signature basketball commercial showcasing Kyrie Irving's ANTA KAI 1 hovering over neon court telemetry lines with NitroEdge nitrogen foam and ancestral woven embroidery.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">7.9% CTR</span>
-                <span class="meta-tag">NitroEdge Nitrogen</span>
-                <span class="meta-tag">Signature Drop</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-anta-kai1">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-anta-kai1">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: ANTA KT9 "Gold Standard": Klay Thompson Edition -->
-          <article class="video-card" data-category="anta hoops promo">
-            <div class="video-thumbnail-box">
-              <video src="assets/converse_weapon_cx.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/converse_weapon_cx.jpg" class="card-video-media"></video>
-              <span class="card-model-badge amber">ANTA Klay Thompson</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +580% ROAS</span>
-              <span class="card-duration-badge">0:30</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-anta-kt9">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> ANTA Basketball • Klay Thompson Signature Line</div>
-              <h3 class="card-title">ANTA KT9 "Gold Standard": Klay Thompson Edition</h3>
-              <p class="card-synopsis">Championship court commercial showcasing the iconic ANTA KT9 high-performance basketball shoe spinning amidst arena beams, 3-point arcs, and SMART S.A.M shock modules.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">6.8% CTR</span>
-                <span class="meta-tag">SMART S.A.M Shock</span>
-                <span class="meta-tag">Playoffs Series</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-anta-kt9">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-anta-kt9">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: ANTA Shock Wave 5 Pro: Cyber Battle Court -->
-          <article class="video-card" data-category="anta hoops promo">
-            <div class="video-thumbnail-box">
-              <video src="assets/converse_run_star_motion.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/converse_run_star_motion.jpg" class="card-video-media"></video>
-              <span class="card-model-badge magenta">ANTA Outdoor Hoops</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +560% ROAS</span>
-              <span class="card-duration-badge">0:30</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-anta-shockwave">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> ANTA Hoops • High-Intensity Outdoor Hoops</div>
-              <h3 class="card-title">ANTA Shock Wave 5 Pro: Cyber Battle Court</h3>
-              <p class="card-synopsis">Bold cyberpunk commercial ad revealing the exaggerated sculpted NitroEdge midsole and high-abrasion cement traction outsole of the ANTA Shock Wave 5 Pro over rippling neon water.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">6.7% CTR</span>
-                <span class="meta-tag">Cement Traction</span>
-                <span class="meta-tag">Streetball Tour</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-anta-shockwave">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-anta-shockwave">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: ANTA C202 5 GT Pro: Nitrogen Carbon Elite Marathon -->
-          <article class="video-card" data-category="anta running promo">
-            <div class="video-thumbnail-box">
-              <video src="assets/converse_deluxe_square.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/converse_deluxe_square.jpg" class="card-video-media"></video>
-              <span class="card-model-badge magenta">ANTA Marathon Racing</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +590% ROAS</span>
-              <span class="card-duration-badge">0:30</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-anta-c202">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> ANTA Running • Sub-2 Marathon Racing Series</div>
-              <h3 class="card-title">ANTA C202 5 GT Pro: Nitrogen Carbon Elite Marathon</h3>
-              <p class="card-synopsis">Sculptural elite running commercial revealing 3D bionic carbon plate architecture, dual-density NitroEdge nitrogen foam, and ultraviolet laser aerodynamic streamlines.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">6.9% CTR</span>
-                <span class="meta-tag">3D Bionic Carbon</span>
-                <span class="meta-tag">Sub-2 Marathon</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-anta-c202">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-anta-c202">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: ANTA PG7 Cloud Ride: All-Day Nitrogen Comfort -->
-          <article class="video-card" data-category="anta streetwear promo">
-            <div class="video-thumbnail-box">
-              <video src="assets/converse_chuck_70.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/converse_chuck_70.jpg" class="card-video-media"></video>
-              <span class="card-model-badge amber">ANTA Lifestyle Comfort</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +520% ROAS</span>
-              <span class="card-duration-badge">0:30</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-anta-pg7">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> ANTA Lifestyle & Running • Everyday Performance</div>
-              <h3 class="card-title">ANTA PG7 Cloud Ride: All-Day Nitrogen Comfort</h3>
-              <p class="card-synopsis">Cinematic heritage commercial spotlighting the versatile ANTA PG7 with nitrogen cloud cushioning, breathable dual-layer upper, and gum rubber outsole.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">6.0% CTR</span>
-                <span class="meta-tag">Cloud Cushioning</span>
-                <span class="meta-tag">DTC Scale</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-anta-pg7">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-anta-pg7">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: ANTA NitroEdge Mach 4: Speed Road Trainer -->
-          <article class="video-card" data-category="anta running">
-            <div class="video-thumbnail-box">
-              <video src="assets/converse_cruise_skate.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/converse_cruise_skate.jpg" class="card-video-media"></video>
-              <span class="card-model-badge amber">ANTA Speed Road</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +470% ROAS</span>
-              <span class="card-duration-badge">0:25</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-anta-mach4">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> ANTA Speed Lab • Tempo & Track Training</div>
-              <h3 class="card-title">ANTA NitroEdge Mach 4: Speed Road Trainer</h3>
-              <p class="card-synopsis">Sun-drenched road running commercial capturing high-resilience NitroEdge foam propulsion and GOZONE wear-resistant rubber grip in golden sunlight.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">6.3% CTR</span>
-                <span class="meta-tag">GOZONE Traction</span>
-                <span class="meta-tag">Track Season</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-anta-mach4">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-anta-mach4">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: ANTA ZAP 1 "Electric Wave": Quick Guard Court -->
-          <article class="video-card" data-category="anta hoops">
-            <div class="video-thumbnail-box">
-              <video src="assets/ecom_tech_gadget.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/ecom_tech_gadget.jpg" class="card-video-media"></video>
-              <span class="card-model-badge cyan">ANTA Guard Series</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +490% ROAS</span>
-              <span class="card-duration-badge">0:30</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-anta-zap1">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> ANTA Hoops • Explosive Guard Signature Line</div>
-              <h3 class="card-title">ANTA ZAP 1 "Electric Wave": Quick Guard Court</h3>
-              <p class="card-synopsis">High-converting performance court commercial showcasing ANTA ZAP 1 levitating amidst acoustic ripple rings, lateral TPU lock, and speed vortex physics.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">5.9% CTR</span>
-                <span class="meta-tag">Lateral TPU Lock</span>
-                <span class="meta-tag">TikTok Ads</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-anta-zap1">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-anta-zap1">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: ANTA Olympic Podium Champion Kit: Dragon Armor -->
-          <article class="video-card" data-category="anta apparel promo">
-            <div class="video-thumbnail-box">
-              <video src="assets/promo_saas_ai.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/promo_saas_ai.jpg" class="card-video-media"></video>
-              <span class="card-model-badge cyan">ANTA Olympic Games</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +570% ROAS</span>
-              <span class="card-duration-badge">0:30</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-anta-olympic">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> ANTA Olympic Games • Official National Team Apparel</div>
-              <h3 class="card-title">ANTA Olympic Podium Champion Kit: Dragon Armor</h3>
-              <p class="card-synopsis">Futuristic promotional video showcasing holographic dragon scale fabric telemetry, aerodynamic wind resistance reduction, and gold-trimmed podium jackets.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">7.5% CTR</span>
-                <span class="meta-tag">Dragon Scale Telemetry</span>
-                <span class="meta-tag">Podium Kit</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-anta-olympic">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-anta-olympic">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: ANTA Esports Pro Footwear: Ergonomic Insole -->
-          <article class="video-card" data-category="anta streetwear">
-            <div class="video-thumbnail-box">
-              <video src="assets/promo_gaming_gear.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/promo_gaming_gear.jpg" class="card-video-media"></video>
-              <span class="card-model-badge cyan">ANTA Esports Gear</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +490% ROAS</span>
-              <span class="card-duration-badge">0:30</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-anta-controller">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> ANTA Gaming • Pro Esports Performance</div>
-              <h3 class="card-title">ANTA Esports Pro Footwear: Ergonomic Insole</h3>
-              <p class="card-synopsis">High-octane commercial ad featuring translucent ergonomic footbed switches, RGB chromatic surges, and slow-motion shock absorption physics.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">6.8% CTR</span>
-                <span class="meta-tag">Ergonomic Footbed</span>
-                <span class="meta-tag">Twitch & TikTok</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-anta-controller">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-anta-controller">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: ANTA Nitro Fuel: High-Altitude Endurance Recovery -->
-          <article class="video-card" data-category="anta running">
-            <div class="video-thumbnail-box">
-              <video src="assets/promo_cold_brew.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/promo_cold_brew.jpg" class="card-video-media"></video>
-              <span class="card-model-badge amber">ANTA Nitro Fuel</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +410% ROAS</span>
-              <span class="card-duration-badge">0:25</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-anta-electrolyte">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> ANTA Performance Lab • Sports Recovery Fuel</div>
-              <h3 class="card-title">ANTA Nitro Fuel: High-Altitude Endurance Recovery</h3>
-              <p class="card-synopsis">Sensory gourmet athletic recovery beverage commercial showcasing nitrogen cascading micro-foam, ice shatter physics, and electrolyte infusion.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">5.9% CTR</span>
-                <span class="meta-tag">Micro-Foam Fusion</span>
-                <span class="meta-tag">DTC Subscriptions</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-anta-electrolyte">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-anta-electrolyte">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: ANTA Biometric Recovery Tracker: Athlete Ring -->
-          <article class="video-card" data-category="anta apparel promo">
-            <div class="video-thumbnail-box">
-              <video src="assets/promo_smart_ring.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/promo_smart_ring.jpg" class="card-video-media"></video>
-              <span class="card-model-badge emerald">ANTA Sports Science</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +580% ROAS</span>
-              <span class="card-duration-badge">0:30</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-anta-smartring">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> ANTA Sports Science Lab • Precision Wearables</div>
-              <h3 class="card-title">ANTA Biometric Recovery Tracker: Athlete Ring</h3>
-              <p class="card-synopsis">Ultra-sleek titanium wearable commercial highlighting emerald green PPG optical sensors, muscle recovery telemetry, and medical-grade accuracy.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">6.5% CTR</span>
-                <span class="meta-tag">PPG Athlete Recovery</span>
-                <span class="meta-tag">Meta Ad Scale</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-anta-smartring">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-anta-smartring">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: ANTA Championship Ring: NBA Finals Gold -->
-          <article class="video-card" data-category="anta hoops promo">
-            <div class="video-thumbnail-box">
-              <video src="assets/promo_diamond_ring.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/promo_diamond_ring.jpg" class="card-video-media"></video>
-              <span class="card-model-badge amber">ANTA Championship</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +620% ROAS</span>
-              <span class="card-duration-badge">0:30</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-anta-championship">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> ANTA Basketball Heritage • Klay & Kyrie Legacy</div>
-              <h3 class="card-title">ANTA Championship Ring: NBA Finals Gold</h3>
-              <p class="card-synopsis">Ultra-luxury championship ring commercial capturing prismatic rainbow flare refractions, liquid velvet ripples, and 8K macro brilliance.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">5.5% CTR</span>
-                <span class="meta-tag">NBA Finals Gold</span>
-                <span class="meta-tag">Heritage Collectible</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-anta-championship">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-anta-championship">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: ANTA Urban Speed EV: Athlete Mobility Scooter -->
-          <article class="video-card" data-category="anta streetwear promo">
-            <div class="video-thumbnail-box">
-              <video src="assets/promo_urban_mobility.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/promo_urban_mobility.jpg" class="card-video-media"></video>
-              <span class="card-model-badge cyan">ANTA Athlete Mobility</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +450% ROAS</span>
-              <span class="card-duration-badge">0:35</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-anta-speedrider">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> ANTA Mobility • High-Performance Athlete EV</div>
-              <h3 class="card-title">ANTA Urban Speed EV: Athlete Mobility Scooter</h3>
-              <p class="card-synopsis">Cinematic urban speed commercial featuring matte carbon fiber aero chassis, neon wet street reflections, and high-velocity light streaks.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">5.7% CTR</span>
-                <span class="meta-tag">Carbon Fiber Aero</span>
-                <span class="meta-tag">Urban Athlete EV</span>
-                <span class="meta-tag">72h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-anta-speedrider">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-anta-speedrider">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: Nike AeroSpeed Vision: Hyper-Aero Prototype -->
-          <article class="video-card" data-category="nike apparel">
-            <div class="video-thumbnail-box">
-              <video src="assets/luxury_commercial.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/luxury_commercial.jpg" class="card-video-media"></video>
-              <span class="card-model-badge cyan">Nike Aero Speed Lab</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +390% ROAS</span>
-              <span class="card-duration-badge">0:45</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-nike-speedcar">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Nike Motorsport & Athletics • Aero Speed Lab</div>
-              <h3 class="card-title">Nike AeroSpeed Vision: Hyper-Aero Prototype</h3>
-              <p class="card-synopsis">High-end athletic innovation commercial capturing an electric aerodynamic vehicle testing wind-tunnel airflow and skin suit drag reduction.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">4.8% CTR</span>
-                <span class="meta-tag">Wind Tunnel Aero</span>
-                <span class="meta-tag">YouTube Pre-Roll</span>
-                <span class="meta-tag">4 Business Days</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-nike-speedcar">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-nike-speedcar">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card: Nike Victory Elixir: Athletic Botanical Fragrance -->
-          <article class="video-card" data-category="nike streetwear">
-            <div class="video-thumbnail-box">
-              <video src="assets/fragrance_commercial.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/fragrance_commercial.jpg" class="card-video-media"></video>
-              <span class="card-model-badge magenta">Nike Sport Luxury</span>
-              <span class="card-roas-badge"><i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> +410% ROAS</span>
-              <span class="card-duration-badge">0:25</span>
-              <div class="card-play-overlay" data-action="play-video" data-project-id="project-nike-perfume">
-                <div class="mini-play-btn"><i data-lucide="play"></i></div>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-client-tag"><i data-lucide="award" style="width: 14px; height: 14px;"></i> Nike Lifestyle • Sport Luxury Fragrance</div>
-              <h3 class="card-title">Nike Victory Elixir: Athletic Botanical Fragrance</h3>
-              <p class="card-synopsis">Sensory luxury sport perfume commercial featuring faceted crystal bottle floating over tranquil water ripples amidst floating orchid petals and warm golden sunbeams.</p>
-              
-              <div class="card-meta-tags">
-                <span class="meta-tag">5.6% CTR</span>
-                <span class="meta-tag">Citrus Bergamot</span>
-                <span class="meta-tag">Nike.com Holiday</span>
-                <span class="meta-tag">48h Delivery</span>
-              </div>
-
-              <div class="card-footer-actions">
-                <button class="btn-card-action primary" data-action="play-video" data-project-id="project-nike-perfume">
-                  <i data-lucide="play"></i> Watch 4K Video
-                </button>
-                <button class="btn-card-action" data-action="view-case-study" data-project-id="project-nike-perfume">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </article>
-
-        </div>
+      <div class="mobile-nav-quick-actions">
+        <button class="btn-secondary btn-full" data-action="open-wishlist"><i data-lucide="heart"></i> Wishlist (<span class="wishlist-badge-count">0</span>)</button>
+        <button class="btn-primary btn-full" data-action="open-cart"><i data-lucide="shopping-bag"></i> Shopping Bag (<span class="cart-badge-count">0</span>)</button>
       </div>
-    </section>
+    </div>
+  </div>
 
+  <main>
+    
     <!-- ==========================================================================
-         Client Deliverables & Sample Output Suite
+         Hero Showcase Banner
          ========================================================================== -->
-    <section class="section sample-output-section" id="samples">
-      <div class="container">
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-glow"></div>
+      
+      <div class="container hero-container">
         
-        <div class="section-header">
-          <div class="section-tag">
-            <i data-lucide="package-check"></i>
-            <span>Commercial Deliverables Suite</span>
-          </div>
-          <h2 class="section-title">Sample Client Output & Delivery Pack</h2>
-          <p class="section-desc">
-            Experience the complete, omnichannel commercial package our studio delivers within 48 hours. Inspect 4K masters, vertical hook variations, PDP loops, and studio assets.
-          </p>
-        </div>
-
-        <!-- Sample Output Interactive Card -->
-        <div class="sample-output-card">
-          
-          <!-- Top Controls: SKU Selector & Deliverable Format Tabs -->
-          <div class="sample-output-top-bar">
-            <!-- Product SKU Chips -->
-            <div class="sample-sku-selector">
-              <span class="sample-bar-label"><i data-lucide="tag"></i> Select Brand SKU / Promo Sample:</span>
-              <div class="sample-sku-chips">
-                <button class="sku-chip active" data-sku="nike-vaporfly">Nike ZoomX Vaporfly 3</button>
-                <button class="sku-chip" data-sku="anta-kai1">ANTA KAI 1 Kyrie Irving</button>
-                <button class="sku-chip" data-sku="nike-airmax">Nike Air Max Pulse</button>
-                <button class="sku-chip" data-sku="anta-kt9">ANTA KT9 Klay Thompson</button>
-                <button class="sku-chip" data-sku="jordan-chicago">Air Jordan 1 High Chicago</button>
-                <button class="sku-chip" data-sku="anta-shockwave">ANTA Shock Wave 5 Pro</button>
-                <button class="sku-chip" data-sku="nike-dunk">Nike Dunk Low</button>
-                <button class="sku-chip" data-sku="anta-c202">ANTA C202 5 GT Pro</button>
-                <button class="sku-chip" data-sku="nike-af1">Nike Air Force 1 '07</button>
-                <button class="sku-chip" data-sku="anta-pg7">ANTA PG7 Cloud Ride</button>
-                <button class="sku-chip" data-sku="nike-acg">Nike ACG Mountain Fly</button>
-                <button class="sku-chip" data-sku="anta-mach4">ANTA NitroEdge Mach 4</button>
-              </div>
-            </div>
-
-            <!-- Deliverable Format Switcher -->
-            <div class="sample-format-tabs">
-              <button class="sample-tab-btn active" data-format="16-9">
-                <i data-lucide="tv"></i>
-                <span>4K Master (16:9)</span>
-              </button>
-              <button class="sample-tab-btn" data-format="9-16">
-                <i data-lucide="smartphone"></i>
-                <span>Viral Hook (9:16)</span>
-              </button>
-              <button class="sample-tab-btn" data-format="1-1">
-                <i data-lucide="square"></i>
-                <span>PDP Loop (1:1)</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Main Interactive Viewport & Deliverables Breakdown -->
-          <div class="sample-grid">
-            
-            <!-- Left: Active Deliverable Media Viewport -->
-            <div class="sample-player-container">
-              <div class="sample-video-box" id="sample-video-box">
-                <video id="sample-video-player" src="assets/nike_zoomx_vaporfly.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="assets/nike_zoomx_vaporfly.jpg" class="sample-video-element"></video>
-                <div class="sample-video-hud">
-                  <span class="hud-tag live-video"><span class="badge-dot" style="background: #10b981; box-shadow: 0 0 8px #10b981;"></span> <span id="sample-hud-format">4K MASTER PRORES 422</span></span>
-                  <span class="hud-tag" id="sample-hud-fps"><i data-lucide="film"></i> 60 FPS UHD</span>
-                </div>
-                
-                <div class="sample-video-action-overlay" id="sample-play-modal-trigger" title="Launch in 4K Cinema Theater">
-                  <div class="mini-play-btn"><i data-lucide="maximize-2"></i></div>
-                </div>
-              </div>
-
-              <!-- Quick File Download Action Bar -->
-              <div class="sample-delivery-actions">
-                <button class="btn-primary sample-download-btn" id="sample-download-pkg-btn">
-                  <i data-lucide="download-cloud"></i>
-                  <span>Download Sample Package (.ZIP)</span>
-                </button>
-                <button class="btn-secondary" id="sample-preview-modal-btn">
-                  <i data-lucide="play-circle"></i>
-                  <span>Theater Preview</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- Right: Studio Specs & Shipped File Manifest -->
-            <div class="sample-details-panel">
-              
-              <div class="sample-manifest-header">
-                <div>
-                  <span class="sample-client-pill" id="sample-client-name">Nike Performance Athletics</span>
-                  <h3 class="sample-project-title" id="sample-project-name">Nike ZoomX Vaporfly 3: Carbon Energy Return</h3>
-                </div>
-                <div class="sample-badge-ready">
-                  <i data-lucide="check-circle-2"></i>
-                  <span>DELIVERY READY</span>
-                </div>
-              </div>
-
-              <!-- Technical Specifications Grid -->
-              <div class="sample-specs-grid">
-                <div class="spec-card">
-                  <div class="spec-label">Master Resolution</div>
-                  <div class="spec-value" id="sample-spec-res">3840 x 2160 (4K 60FPS)</div>
-                </div>
-                <div class="spec-card">
-                  <div class="spec-label">Color Pipeline</div>
-                  <div class="spec-value" id="sample-spec-color">Rec.709 / ACEScc 10-bit</div>
-                </div>
-                <div class="spec-card">
-                  <div class="spec-label">Master Audio</div>
-                  <div class="spec-value" id="sample-spec-audio">48kHz 24-bit Foley + Stems</div>
-                </div>
-                <div class="spec-card">
-                  <div class="spec-label">Turnaround Schedule</div>
-                  <div class="spec-value" id="sample-spec-turnaround">48 Hours Shipped</div>
-                </div>
-              </div>
-
-              <!-- Shipped Files List -->
-              <div class="sample-files-container">
-                <span class="sample-files-heading"><i data-lucide="folder-archive"></i> Included Campaign Deliverables:</span>
-                <ul class="sample-files-list" id="sample-files-list">
-                  <!-- Dynamically populated via JavaScript -->
-                </ul>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         Product CAD Blueprint vs. 4K AI Commercial Video Split Slider
-         ========================================================================== -->
-    <section class="section comparison-section" id="comparison">
-      <div class="container">
-        
-        <div class="section-header">
-          <div class="section-tag">
-            <i data-lucide="git-commit"></i>
-            <span>From Raw CAD to Superbowl Ad</span>
-          </div>
-          <h2 class="section-title">Static Packshot / CAD vs. 4K AI Video</h2>
-          <p class="section-desc">
-            Drag the interactive slider below to see how standard e-commerce CAD models and flat studio packshots are transformed into high-octane 4K commercial videos.
-          </p>
-        </div>
-
-        <div class="comparison-card">
-          <!-- Interactive Image Split Viewport with Playing Video -->
-          <div class="comparison-viewport" id="comparison-viewport">
-            <video src="assets/nike_zoomx_vaporfly.webm" autoplay loop muted playsinline webkit-playsinline preload="metadata" class="comp-media"></video>
-            <span class="comp-label after">4K AI Video Commercial</span>
-
-            <!-- Clipped Overlay with Storyboard Sketch -->
-            <div class="comp-overlay" id="comp-overlay">
-              <img src="assets/storyboard_sketch.jpg" alt="Raw CAD Blueprint & Storyboard" class="comp-media">
-              <span class="comp-label before">Raw CAD Blueprint / Packshot</span>
-            </div>
-
-            <!-- Draggable Center Handle -->
-            <div class="comp-slider-handle" id="comp-handle">
-              <i data-lucide="move-horizontal"></i>
-            </div>
-          </div>
-
-          <!-- Technical Breakdown Details -->
-          <div class="comparison-details">
-            <div class="comp-info">
-              <h4>Product: Nike ZoomX Vaporfly 3 • Full-Length Flyplate</h4>
-              <p>
-                From raw 3D footwear CAD and sole mesh models, our AI pipeline synthesized a broadcast-ready commercial with aerodynamic wind-tunnel streamlines, dynamic ZoomX compression physics, and macro carbon fiber weave reflections in under 48 hours.
-              </p>
-            </div>
-            
-            <div class="comp-stats-grid">
-              <div class="comp-stat-box">
-                <div class="comp-stat-label">Production Speed</div>
-                <div class="comp-stat-val">48 Hours vs. 6 Weeks</div>
-              </div>
-              <div class="comp-stat-box">
-                <div class="comp-stat-label">Ad Spend ROI Lift</div>
-                <div class="comp-stat-val">+610% ROAS</div>
-              </div>
-              <div class="comp-stat-box">
-                <div class="comp-stat-label">Output Resolution</div>
-                <div class="comp-stat-val">3840 x 2160 (4K 60FPS)</div>
-              </div>
-              <div class="comp-stat-box">
-                <div class="comp-stat-label">Cost Savings</div>
-                <div class="comp-stat-val">88% Lower than Film Crew</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         Traditional Production vs. AI Video Engine Comparison Table
-         ========================================================================== -->
-    <section class="section" id="roi">
-      <div class="container">
-        
-        <div class="section-header">
-          <div class="section-tag">
-            <i data-lucide="trending-up"></i>
-            <span>Performance & Unit Economics</span>
-          </div>
-          <h2 class="section-title">Traditional Agency vs. AI Video Studio</h2>
-          <p class="section-desc">
-            Why modern eight-figure DTC brands and growth marketers are switching from $50k physical video shoots to our 48-hour generative video ad pipeline.
-          </p>
-        </div>
-
-        <div class="roi-table-card">
-          <div class="roi-table-scroll-hint">
-            <i data-lucide="move-horizontal"></i>
-            <span>Swipe horizontally to compare full features</span>
-          </div>
-          <div class="roi-table-responsive-wrap">
-            <table class="roi-table">
-              <thead>
-                <tr>
-                  <th>Feature & Deliverable</th>
-                  <th>Traditional Production Agency</th>
-                  <th style="color: var(--accent-cyan);">Create with Purpose (AI Studio)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Production Cost per Campaign</strong></td>
-                  <td><span class="roi-badge-loser">$35,000 – $75,000</span></td>
-                  <td><span class="roi-badge-winner"><i data-lucide="check"></i> $1,800 – $5,500</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Delivery Turnaround Time</strong></td>
-                  <td><span class="roi-badge-loser">6 to 8 Weeks</span></td>
-                  <td><span class="roi-badge-winner"><i data-lucide="check"></i> 48 to 72 Hours</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Creative A/B Hook Variations</strong></td>
-                  <td><span class="roi-badge-loser">1 to 2 Cutdowns</span></td>
-                  <td><span class="roi-badge-winner"><i data-lucide="check"></i> 10 to 20 Viral Hook Variations</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Physical Sample Shipping & Crew</strong></td>
-                  <td><span class="roi-badge-loser">Actors, Studio Rental, Logistics</span></td>
-                  <td><span class="roi-badge-winner"><i data-lucide="check"></i> 100% Digital CAD & Image Conditioning</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Multi-Format Cuts (9:16, 16:9, 1:1)</strong></td>
-                  <td><span class="roi-badge-loser">Expensive Re-Framing Fees</span></td>
-                  <td><span class="roi-badge-winner"><i data-lucide="check"></i> Included for TikTok, Meta & Amazon</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Creative Fatigue Scalability</strong></td>
-                  <td><span class="roi-badge-loser">Ads burn out in 3 weeks</span></td>
-                  <td><span class="roi-badge-winner"><i data-lucide="check"></i> Infinite Weekly Refresh Packs</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         Creative Capabilities & Production Suite (Portfolio Feature Showcase)
-         ========================================================================== -->
-    <section class="section" id="capabilities">
-      <div class="container">
-        
-        <div class="section-header">
-          <div class="section-tag">
+        <!-- Left Hero Content -->
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span class="tag-pulse"></span>
             <i data-lucide="sparkles"></i>
-            <span>Commercial Production Suite</span>
+            <span>SPRING 2026 OFFICIAL DROP ARCHIVE</span>
           </div>
-          <h2 class="section-title">Creative Capabilities & FX</h2>
-          <p class="section-desc">
-            Hollywood-grade visual effects and AI generative workflows engineered specifically for high-conversion e-commerce and global brand storytelling.
+
+          <h1 class="hero-title">
+            ENGINEERED FOR SUPREMACY.
+            <span class="gradient-text">NIKE & ANTA OFFICIAL DROPS.</span>
+          </h1>
+
+          <p class="hero-desc">
+            Explore world-record marathon super-shoes, championship signature basketball models, and verified deadstock streetwear classics. 100% authentic, double-boxed, and shipped worldwide within 24 hours.
           </p>
-        </div>
 
-        <div class="capabilities-grid">
-          
-          <!-- Cap 1: Fluid Dynamics -->
-          <div class="capability-card">
-            <div class="cap-icon">
-              <i data-lucide="droplet"></i>
+          <!-- Trust Badges Strip -->
+          <div class="hero-trust-grid">
+            <div class="trust-item">
+              <i data-lucide="shield-check"></i>
+              <span>100% Deadstock Verified</span>
             </div>
-            <h3 class="cap-title">Dynamic Fluid & Viscosity FX</h3>
-            <p class="cap-desc">
-              Hyper-realistic liquid splashes, beverage vortex carbonation, cosmetic serum dew drops, and optical caustics for sensory product marketing.
-            </p>
-            <div class="cap-tags">
-              <span class="meta-tag">Slow-Motion</span>
-              <span class="meta-tag">Refraction</span>
-              <span class="meta-tag">Cosmetics</span>
+            <div class="trust-item">
+              <i data-lucide="truck"></i>
+              <span>Free Express Over $150</span>
+            </div>
+            <div class="trust-item">
+              <i data-lucide="refresh-cw"></i>
+              <span>30-Day Hassle-Free Returns</span>
             </div>
           </div>
 
-          <!-- Cap 2: 3D CAD Deconstruction -->
-          <div class="capability-card">
-            <div class="cap-icon">
-              <i data-lucide="layers"></i>
-            </div>
-            <h3 class="cap-title">3D CAD & Blueprint Explosion</h3>
-            <p class="cap-desc">
-              Zero-G exploded part animations revealing internal chips, titanium frames, acoustic chambers, and carbon fiber architecture without physical tear-downs.
-            </p>
-            <div class="cap-tags">
-              <span class="meta-tag">CAD Conditioning</span>
-              <span class="meta-tag">Levitation</span>
-              <span class="meta-tag">Consumer Tech</span>
-            </div>
-          </div>
-
-          <!-- Cap 3: High-Speed Tracking -->
-          <div class="capability-card">
-            <div class="cap-icon">
-              <i data-lucide="camera"></i>
-            </div>
-            <h3 class="cap-title">Virtual Robotic Camera Moves</h3>
-            <p class="cap-desc">
-              Dynamic high-speed tracking shots, 360° product orbits, FPV drone swoops, and cinematic push-ins with natural optical motion blur.
-            </p>
-            <div class="cap-tags">
-              <span class="meta-tag">Arri Alexa Look</span>
-              <span class="meta-tag">Chase Cam</span>
-              <span class="meta-tag">Automotive</span>
-            </div>
-          </div>
-
-          <!-- Cap 4: Digital Couture & Cloth Sim -->
-          <div class="capability-card">
-            <div class="cap-icon">
-              <i data-lucide="sparkles"></i>
-            </div>
-            <h3 class="cap-title">Digital Couture & Cloth Physics</h3>
-            <p class="cap-desc">
-              Avant-garde morphing materials, molten chrome fabrics, billowing silks, and volumetric runway lighting for luxury fashion and apparel campaigns.
-            </p>
-            <div class="cap-tags">
-              <span class="meta-tag">Vogue Grade</span>
-              <span class="meta-tag">Morphing</span>
-              <span class="meta-tag">Apparel</span>
-            </div>
-          </div>
-
-          <!-- Cap 5: Micro-Macro Lighting -->
-          <div class="capability-card">
-            <div class="cap-icon">
-              <i data-lucide="sun"></i>
-            </div>
-            <h3 class="cap-title">Macro Lighting & Color Grading</h3>
-            <p class="cap-desc">
-              ACES color-managed pipelines, studio specular highlights, moody rim lighting, and crystal-clear macro texture fidelity.
-            </p>
-            <div class="cap-tags">
-              <span class="meta-tag">ACES Pipeline</span>
-              <span class="meta-tag">4K 60FPS</span>
-              <span class="meta-tag">HDR Ready</span>
-            </div>
-          </div>
-
-          <!-- Cap 6: Omnichannel Multi-Format -->
-          <div class="capability-card">
-            <div class="cap-icon">
-              <i data-lucide="smartphone"></i>
-            </div>
-            <h3 class="cap-title">Omnichannel Multi-Format Scale</h3>
-            <p class="cap-desc">
-              Native vertical 9:16 cuts for TikTok and Meta Reels, 16:9 4K masters for YouTube & Connected TV, and 1:1 square loops for Shopify and Amazon A+.
-            </p>
-            <div class="cap-tags">
-              <span class="meta-tag">TikTok Spark</span>
-              <span class="meta-tag">Amazon Video</span>
-              <span class="meta-tag">Shopify Loop</span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         E-Commerce Campaign Packages
-         ========================================================================== -->
-    <section class="section" id="pricing">
-      <div class="container">
-        
-        <div class="section-header">
-          <div class="section-tag">
-            <i data-lucide="box"></i>
-            <span>Transparent Creative Pricing</span>
-          </div>
-          <h2 class="section-title">E-Commerce Video Ad Packages</h2>
-          <p class="section-desc">
-            Select a tailored creative package designed to lower your customer acquisition cost (CPA) and unlock scalable ad spend.
-          </p>
-        </div>
-
-        <div class="pricing-grid">
-          
-          <!-- Tier 1: Starter Pack -->
-          <div class="pricing-card">
-            <div class="pricing-tier-name">Starter Ad Creative Pack</div>
-            <div class="pricing-tier-desc">Ideal for launching a new SKU or testing AI video ads against existing creatives.</div>
-            <div class="pricing-price">$1,800 <span>/ one-time</span></div>
-
-            <ul class="pricing-features">
-              <li><i data-lucide="check"></i> <strong>5 High-Converting Video Ads</strong> (15-30s)</li>
-              <li><i data-lucide="check"></i> 9:16 Vertical (TikTok/Reels) + 1:1 Square</li>
-              <li><i data-lucide="check"></i> 4K 60FPS Neural Upscaling</li>
-              <li><i data-lucide="check"></i> Commercial Sound FX & Voiceover</li>
-              <li><i data-lucide="check"></i> 3 Business Day Turnaround</li>
-            </ul>
-
-            <a href="#booking" class="btn-secondary" data-package="starter-pack" style="width: 100%; text-align: center;" title="Configure Starter Creative Pack">Book Starter Pack</a>
-          </div>
-
-          <!-- Tier 2: Growth Scaling (Featured) -->
-          <div class="pricing-card featured">
-            <div class="pricing-popular-tag">Most Popular for DTC Brands</div>
-            <div class="pricing-tier-name">Scale & Growth Bundle</div>
-            <div class="pricing-tier-desc">Comprehensive creative battery with multiple hook variations to combat ad fatigue.</div>
-            <div class="pricing-price">$3,600 <span>/ campaign</span></div>
-
-            <ul class="pricing-features">
-              <li><i data-lucide="check"></i> <strong>15 High-Converting Video Ads</strong></li>
-              <li><i data-lucide="check"></i> <strong>5 Unique Hook Cuts</strong> (First 3-Second Hooks)</li>
-              <li><i data-lucide="check"></i> Multi-Format: 9:16, 16:9, and 1:1</li>
-              <li><i data-lucide="check"></i> Custom CAD / LoRA Consistency Model</li>
-              <li><i data-lucide="check"></i> Hollywood ACES Color Grading</li>
-              <li><i data-lucide="check"></i> 5 Business Day Turnaround</li>
-            </ul>
-
-            <a href="#booking" class="btn-primary" data-package="growth-scale" style="width: 100%; text-align: center;" title="Configure Growth & Scale Bundle">Book Growth Bundle</a>
-          </div>
-
-          <!-- Tier 3: Omnichannel Launch -->
-          <div class="pricing-card">
-            <div class="pricing-tier-name">Omnichannel Brand Launch</div>
-            <div class="pricing-tier-desc">Full 360° commercial suite for global product launches, TV broadcasts, and mega-funnels.</div>
-            <div class="pricing-price">$6,800 <span>/ launch</span></div>
-
-            <ul class="pricing-features">
-              <li><i data-lucide="check"></i> <strong>30+ Omnichannel Video Ads</strong></li>
-              <li><i data-lucide="check"></i> 4K Broadcast Master (TV / YouTube 16:9)</li>
-              <li><i data-lucide="check"></i> 10 3D Product Exploded View Animations</li>
-              <li><i data-lucide="check"></i> Unlimited Hook & CTA A/B Variants</li>
-              <li><i data-lucide="check"></i> Dedicated Creative Director Strategy</li>
-              <li><i data-lucide="check"></i> Expedited 8-Day Delivery</li>
-            </ul>
-
-            <a href="#booking" class="btn-secondary" data-package="omnichannel-launch" style="width: 100%; text-align: center;" title="Configure Omnichannel Launch Suite">Book Omnichannel Suite</a>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         Interactive Project Estimator & Booking Section
-         ========================================================================== -->
-    <section class="section" id="booking">
-      <div class="container">
-        
-        <div class="section-header">
-          <div class="section-tag">
-            <i data-lucide="calculator"></i>
-            <span>Instant Quote & ROI Estimator</span>
-          </div>
-          <h2 class="section-title">Configure Your Brand Campaign</h2>
-          <p class="section-desc">
-            Customize your deliverables to see an estimated investment and delivery timeframe, then submit your product link or CAD files for a free customized ad sample.
-          </p>
-        </div>
-
-        <div class="booking-card">
-          <div class="booking-grid">
-            
-            <!-- Interactive Estimator Form -->
-            <form id="booking-form">
-              
-              <div class="form-group">
-                <label class="form-label" for="est-scope">Campaign Creative Scope</label>
-                <select class="form-select" id="est-scope">
-                  <option value="starter-pack">Starter Pack (5 High-Converting Video Ads)</option>
-                  <option value="growth-scale" selected>Scale & Growth Bundle (15 Video Ads + 5 Hook Cuts)</option>
-                  <option value="omnichannel-launch">Omnichannel Brand Launch (30+ Multi-Format Video Ads)</option>
-                  <option value="monthly-retainer">Monthly Retainer (20 New Video Ads Every Month)</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="est-model">Generative Consistency & Conditioning</label>
-                <select class="form-select" id="est-model">
-                  <option value="standard" selected>Standard Model Conditioning (Runway Gen-3 + 4K Topaz)</option>
-                  <option value="custom-lora">Custom CAD / 3D Product LoRA Training (+ $1,000)</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="est-audio">Sound Design & Voice</label>
-                <select class="form-select" id="est-audio">
-                  <option value="none">Visual Video Only (Client provides Audio)</option>
-                  <option value="spatial-sfx" selected>Full Cinematic Foley, AI Voiceover & Commercial License (+ $600)</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="est-turnaround">Production Schedule</label>
-                <select class="form-select" id="est-turnaround">
-                  <option value="standard" selected>Standard Schedule</option>
-                  <option value="rush">Express 48-Hour Rush Delivery (+35%)</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="booking-name">Brand Name & Contact Person</label>
-                <input type="text" class="form-input" id="booking-name" placeholder="e.g. Elena Vance, Aura Skincare" required autocomplete="name">
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="booking-email">Work Email</label>
-                <input type="email" class="form-input" id="booking-email" placeholder="elena@auraskincare.com" required autocomplete="email" inputmode="email">
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="booking-message">Product Link / Shopify Store & Goals</label>
-                <textarea class="form-textarea" id="booking-message" rows="3" placeholder="Share your website URL, product specs, target ad channels (TikTok, Meta, Amazon)..."></textarea>
-              </div>
-
-              <button type="submit" class="btn-primary" id="booking-submit-btn" style="width: 100%;">
-                <i data-lucide="send"></i>
-                <span>Request Free Custom Brand Sample</span>
-              </button>
-            </form>
-
-            <!-- Live Calculated Summary Box -->
-            <div class="estimate-summary-box">
-              <div>
-                <h3 class="est-header">Campaign Estimate & Projected ROI</h3>
-                
-                <div class="est-row">
-                  <span>Projected ROAS Lift</span>
-                  <span style="color: var(--accent-emerald); font-weight: 700;">+340% to +450%</span>
-                </div>
-                <div class="est-row">
-                  <span>4K 60FPS Master Video Renders</span>
-                  <span>Included (ProRes 422)</span>
-                </div>
-                <div class="est-row">
-                  <span>Full Commercial Advertising Rights</span>
-                  <span>Perpetual Worldwide</span>
-                </div>
-                <div class="est-row">
-                  <span>Estimated Delivery Time</span>
-                  <span id="est-time-val" style="color: var(--accent-emerald); font-weight: 700;">5 Business Days</span>
-                </div>
-
-                <div class="est-total-box">
-                  <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Estimated Project Fee</span>
-                  <div class="est-price-display" id="est-price-val">$4,200</div>
-                </div>
-              </div>
-
-              <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; margin-top: 1.5rem;">
-                <i data-lucide="shield-check" style="color: var(--accent-cyan); vertical-align: middle; width: 16px; height: 16px;"></i>
-                Includes 2 rounds of creative revisions, multi-format video exports (9:16, 16:9, 1:1), and high-resolution master deliverables.
-              </div>
-            </div>
-
+          <!-- Hero CTAs -->
+          <div class="hero-actions">
+            <a href="#catalog" class="btn-primary btn-lg">
+              <i data-lucide="shopping-bag"></i>
+              <span>Shop All 48 Footwear Drops</span>
+            </a>
+            <button class="btn-secondary btn-lg" onclick="currentBrandFilter='anta'; renderProductGrid(); document.getElementById('catalog').scrollIntoView({behavior:'smooth'});">
+              <i data-lucide="flame"></i>
+              <span>Explore ANTA KAI & KT9</span>
+            </button>
           </div>
         </div>
 
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         Footer
-         ========================================================================== -->
-    <footer class="main-footer">
-      <div class="container">
-        <div class="footer-grid">
-          
-          <div class="footer-col">
-            <div class="brand-title" style="margin-bottom: 0.8rem;">CREATE WITH PURPOSE</div>
-            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.2rem;">
-              The high-performance commercial AI video production portfolio of Jerome Cabinta. Helping e-commerce and commercial brands scale ad creative velocity and maximize ROAS.
-            </p>
-            <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan);">
-              commercials@createwithpurpose.ai
-            </div>
-          </div>
-
-          <div class="footer-col">
-            <h5>Performance Categories</h5>
-            <ul class="footer-links">
-              <li><a href="#showcase">Nike Performance Running</a></li>
-              <li><a href="#showcase">ANTA Signature Basketball</a></li>
-              <li><a href="#showcase">Jordan Brand & SNKRS Drops</a></li>
-              <li><a href="#showcase">ANTA NitroEdge & Marathons</a></li>
-              <li><a href="#showcase">Nike ACG & Technical Apparel</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h5>Production Capabilities</h5>
-            <ul class="footer-links">
-              <li><a href="#samples">Sample Output & Deliverables</a></li>
-              <li><a href="#capabilities">Fluid Dynamics & Viscosity</a></li>
-              <li><a href="#capabilities">3D CAD Deconstruction</a></li>
-              <li><a href="#capabilities">Virtual Robotic Camera Moves</a></li>
-              <li><a href="#capabilities">Digital Couture & Cloth FX</a></li>
-              <li><a href="#capabilities">ACES Macro Color Grading</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h5>Connect & Collaborate</h5>
-            <ul class="footer-links">
-              <li><a href="https://youtube.com" target="_blank" rel="noopener">YouTube Ad Showcase</a></li>
-              <li><a href="https://x.com" target="_blank" rel="noopener">X / Twitter (@JeromeAI)</a></li>
-              <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram (@CreateWithPurpose)</a></li>
-              <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn / Jerome Cabinta</a></li>
-              <li><a href="https://github.com" target="_blank" rel="noopener">Creative Agency Repos</a></li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="footer-bottom">
-          <div>© 2026 Create with Purpose • Jerome Cabinta. All rights reserved.</div>
-          <div style="font-family: var(--font-mono); font-size: 0.75rem;">HIGH-CONVERTING E-COMMERCE AI VIDEO PRODUCTION</div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- ==========================================================================
-         4K Commercial Video Theater Modal
-         ========================================================================== -->
-    <div class="modal-overlay" id="video-modal">
-      <div class="modal-theater">
-        
-        <div class="modal-header">
-          <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <!-- Right Hero Featured Quick-Buy Card -->
+        <div class="hero-featured-card">
+          <div class="featured-card-badge">
             <span class="badge-dot"></span>
-            <span style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent-cyan); font-weight: 700;">4K COMMERCIAL VIDEO THEATER</span>
+            <span>FEATURED MARATHON SUPER-SHOE</span>
           </div>
-          <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
-            <i data-lucide="x"></i>
-          </button>
+
+          <div class="featured-media-box">
+            <video src="assets/nike_zoomx_vaporfly.webm" autoplay loop muted playsinline poster="assets/nike_zoomx_vaporfly.jpg" class="featured-hero-video"></video>
+            <div class="featured-price-tag">$260.00 USD</div>
+          </div>
+
+          <div class="featured-card-info">
+            <div class="featured-card-header">
+              <span class="featured-brand-pill">Nike Performance</span>
+              <span class="featured-rating">★ 4.9 (184 reviews)</span>
+            </div>
+            <h3 class="featured-card-title">Nike ZoomX Vaporfly 3</h3>
+            <p class="featured-card-sub">Full-Length Carbon Fiber Flyplate • 85% Energy Return ZoomX</p>
+
+            <!-- Quick Size Buttons -->
+            <div class="hero-quick-sizes">
+              <span class="size-label">Select US Size:</span>
+              <div class="hero-size-buttons">
+                <button class="hero-quick-size-btn" data-size="8.5">US 8.5</button>
+                <button class="hero-quick-size-btn" data-size="9">US 9</button>
+                <button class="hero-quick-size-btn" data-size="9.5">US 9.5</button>
+                <button class="hero-quick-size-btn active" data-size="10">US 10</button>
+                <button class="hero-quick-size-btn" data-size="10.5">US 10.5</button>
+                <button class="hero-quick-size-btn" data-size="11">US 11</button>
+              </div>
+            </div>
+
+            <!-- Instant Quick Buy Button -->
+            <button class="btn-primary btn-full" id="hero-quick-add-btn" data-product-id="nike-vaporfly-3">
+              <i data-lucide="shopping-bag"></i>
+              <span>Quick Add to Bag • $260.00</span>
+            </button>
+          </div>
         </div>
 
-        <!-- Real HTML5 Video Player Viewport -->
-        <div class="theater-viewport">
-          <video id="theater-video" class="theater-video-element" playsinline webkit-playsinline preload="metadata" poster="assets/ecom_tech_gadget.jpg" src="assets/ecom_tech_gadget.webm"></video>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Brand Spotlight & Innovation Strip
+         ========================================================================== -->
+    <section class="brand-spotlight-section">
+      <div class="container">
+        <div class="spotlight-grid">
           
-          <!-- Animated Controls Overlay -->
-          <div class="theater-controls-bar">
-            <div class="timeline-scrubber" id="theater-scrubber">
-              <div class="timeline-progress" id="theater-progress-bar"></div>
+          <!-- Nike Innovation Banner -->
+          <div class="spotlight-card spotlight-nike" onclick="currentBrandFilter='nike'; renderProductGrid(); document.getElementById('catalog').scrollIntoView({behavior:'smooth'});">
+            <div class="spotlight-overlay"></div>
+            <div class="spotlight-content">
+              <span class="spotlight-tag">NIKE PERFORMANCE LAB</span>
+              <h3>ZoomX, Air Max Dn & Mamba Legacy</h3>
+              <p>Cutting-edge propulsion, pressurized 4-tube dynamic air, and iconic hardwood silhouettes.</p>
+              <span class="spotlight-btn">Shop Nike Vault <i data-lucide="arrow-right"></i></span>
             </div>
+          </div>
 
-            <div class="controls-row">
-              <div class="ctrl-left">
-                <button class="theater-btn" id="theater-play-toggle" aria-label="Play or pause video">
-                  <i data-lucide="play" id="theater-play-icon" style="display: none;"></i>
-                  <i data-lucide="pause" id="theater-pause-icon"></i>
-                </button>
-                <div class="timecode-display" id="theater-timecode">00:00 / 00:30</div>
-              </div>
-
-              <div class="ctrl-right">
-                <span class="hud-tag" id="theater-motion" style="font-size: 0.7rem;">360° Orbit</span>
-                <span class="hud-tag" id="theater-model" style="font-size: 0.7rem;">4K Master</span>
-              </div>
+          <!-- ANTA NitroEdge Banner -->
+          <div class="spotlight-card spotlight-anta" onclick="currentBrandFilter='anta'; renderProductGrid(); document.getElementById('catalog').scrollIntoView({behavior:'smooth'});">
+            <div class="spotlight-overlay"></div>
+            <div class="spotlight-content">
+              <span class="spotlight-tag">ANTA HOOPS & NITROEDGE</span>
+              <h3>Kyrie KAI 1 & Klay Thompson KT9</h3>
+              <p>Supercritical nitrogen foam and championship-proven stability engineered for master playmakers.</p>
+              <span class="spotlight-btn">Shop ANTA Lineup <i data-lucide="arrow-right"></i></span>
             </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Interactive E-Commerce Product Catalog
+         ========================================================================== -->
+    <section class="catalog-section" id="catalog">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="catalog-header">
+          <div>
+            <div class="section-tag">
+              <i data-lucide="layers"></i>
+              <span>Live Inventory & Drops</span>
+            </div>
+            <h2 class="section-title">The Complete Footwear Catalog</h2>
+            <p class="section-desc" id="products-count">48 Authentic Footwear Drops Available</p>
+          </div>
+
+          <!-- Brand Switcher Tabs -->
+          <div class="brand-filter-tabs">
+            <button class="brand-tab-btn active" data-brand="all">
+              <i data-lucide="grid"></i> All Brands (48)
+            </button>
+            <button class="brand-tab-btn" data-brand="nike">
+              <i data-lucide="check"></i> Nike Performance (31)
+            </button>
+            <button class="brand-tab-btn" data-brand="anta">
+              <i data-lucide="flame"></i> ANTA Hoops & Racing (12)
+            </button>
+            <button class="brand-tab-btn" data-brand="jordan">
+              <i data-lucide="award"></i> Jordan Brand (5)
+            </button>
           </div>
         </div>
 
-        <!-- Meta Information Panel -->
-        <div class="theater-info-panel">
-          <div>
-            <div class="card-client-tag" id="theater-client">Nike Performance Athletics • Elite Marathon Series</div>
-            <h3 class="theater-meta-title" id="theater-title">Nike ZoomX Vaporfly 3: Carbon Energy Return</h3>
-            <p id="theater-strategy" style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">
-              Direct-to-consumer launch commercial engineered for high top-of-funnel retention. Utilized 3D CAD conditioning and acoustic wave fluid physics to demonstrate IPX7 water resistance.
-            </p>
+        <!-- Filter & Control Toolbar -->
+        <div class="catalog-toolbar">
+          
+          <!-- Category Filter Pills -->
+          <div class="category-pills-row">
+            <button class="category-filter-btn active" data-category="all">All Categories</button>
+            <button class="category-filter-btn" data-category="basketball">Basketball / Hoops</button>
+            <button class="category-filter-btn" data-category="running">Marathon / Racing</button>
+            <button class="category-filter-btn" data-category="streetwear">Streetwear Classics</button>
+            <button class="category-filter-btn" data-category="outdoor">Outdoor / Trail ACG</button>
           </div>
 
-          <div>
-            <div class="case-study-badge-grid">
-              <div class="case-study-badge">
-                <div class="case-study-label">Performance Metric</div>
-                <div class="case-study-val" id="theater-roas">+420% ROAS</div>
-              </div>
-              <div class="case-study-badge">
-                <div class="case-study-label">Turnaround Schedule</div>
-                <div class="case-study-val" id="theater-turnaround">48 Hours</div>
-              </div>
+          <!-- Secondary Filter Controls (Search, Price, Size, Sort) -->
+          <div class="toolbar-controls-grid">
+            
+            <!-- Catalog Search -->
+            <div class="catalog-search-wrap">
+              <i data-lucide="search"></i>
+              <input type="text" id="catalog-search-input" placeholder="Search model or colorway..." />
             </div>
 
-            <div style="margin-top: 1rem;">
-              <div class="case-study-label">Deliverables Shipped</div>
-              <div id="theater-deliverables" style="font-size: 0.85rem; color: var(--text-primary); margin-top: 0.3rem;">4K Master (16:9), TikTok/Reels (9:16), Amazon (1:1)</div>
+            <!-- Price Range Filter -->
+            <div class="control-select-wrap">
+              <label for="catalog-price-select" class="sr-only">Price Range</label>
+              <select id="catalog-price-select" aria-label="Filter by Price">
+                <option value="all">All Price Ranges</option>
+                <option value="under-130">Under $130</option>
+                <option value="130-180">$130 - $180</option>
+                <option value="180-220">$180 - $220</option>
+                <option value="220-plus">$220 and above</option>
+              </select>
+            </div>
+
+            <!-- Sort By -->
+            <div class="control-select-wrap">
+              <label for="catalog-sort-select" class="sr-only">Sort By</label>
+              <select id="catalog-sort-select" aria-label="Sort Footwear">
+                <option value="featured">Featured Drops</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Highest Customer Rating</option>
+                <option value="newest">Most Reviews</option>
+              </select>
+            </div>
+
+          </div>
+
+          <!-- Size Filter Strip -->
+          <div class="size-filter-strip">
+            <span class="size-filter-label"><i data-lucide="ruler"></i> Filter by US Size:</span>
+            <div class="size-chips-list">
+              <button class="size-filter-chip active" data-size="all">All Sizes</button>
+              <button class="size-filter-chip" data-size="7">7</button>
+              <button class="size-filter-chip" data-size="7.5">7.5</button>
+              <button class="size-filter-chip" data-size="8">8</button>
+              <button class="size-filter-chip" data-size="8.5">8.5</button>
+              <button class="size-filter-chip" data-size="9">9</button>
+              <button class="size-filter-chip" data-size="9.5">9.5</button>
+              <button class="size-filter-chip" data-size="10">10</button>
+              <button class="size-filter-chip" data-size="10.5">10.5</button>
+              <button class="size-filter-chip" data-size="11">11</button>
+              <button class="size-filter-chip" data-size="11.5">11.5</button>
+              <button class="size-filter-chip" data-size="12">12</button>
+              <button class="size-filter-chip" data-size="13">13</button>
             </div>
           </div>
+
         </div>
 
+        <!-- Dynamic Product Cards Grid -->
+        <div class="products-grid" id="products-grid">
+          <!-- Populated dynamically by app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Trust & Authenticity Guarantee Section
+         ========================================================================== -->
+    <section class="guarantee-section" id="guarantee">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <i data-lucide="shield-check"></i>
+            <span>The Purpose Vault Standard</span>
+          </div>
+          <h2 class="section-title">100% Authenticity & Performance Guaranteed</h2>
+          <p class="section-desc">
+            We operate a temperature-controlled deadstock facility with certified sneaker authenticators inspecting every stitch, code, and compound before dispatch.
+          </p>
+        </div>
+
+        <div class="guarantee-cards-grid">
+          
+          <div class="guarantee-card">
+            <div class="guarantee-icon"><i data-lucide="fingerprint"></i></div>
+            <h3>Multi-Point Authentication</h3>
+            <p>Every pair undergoes high-intensity UV light inspection, serial code verification, and RFID verification against brand master databases.</p>
+          </div>
+
+          <div class="guarantee-card">
+            <div class="guarantee-icon"><i data-lucide="package-check"></i></div>
+            <h3>Reinforced Double-Box Shipping</h3>
+            <p>Your authentic footwear arrives in pristine condition with factory packaging, extra laces, and official vault authenticity certificates.</p>
+          </div>
+
+          <div class="guarantee-card">
+            <div class="guarantee-icon"><i data-lucide="refresh-ccw"></i></div>
+            <h3>30-Day Hassle-Free Returns</h3>
+            <p>Enjoy complete peace of mind with complimentary prepaid return labels and instant refunds or size exchanges on all unworn pairs.</p>
+          </div>
+
+          <div class="guarantee-card">
+            <div class="guarantee-icon"><i data-lucide="headphones"></i></div>
+            <h3>24/7 Sneaker Concierge</h3>
+            <p>Connect with our expert footwear specialists for personalized sizing advice, marathon race-day recommendations, and VIP drop access.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Verified Customer Reviews & Ratings
+         ========================================================================== -->
+    <section class="reviews-section" id="reviews">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <i data-lucide="star"></i>
+            <span>Verified Customer Feedback</span>
+          </div>
+          <h2 class="section-title">Rated 4.9/5 by 3,400+ Athletes Worldwide</h2>
+          <p class="section-desc">Read firsthand experiences from marathon finishers, collegiate athletes, and collectors.</p>
+        </div>
+
+        <div class="reviews-grid">
+          
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-stars">★★★★★</div>
+              <span class="review-badge"><i data-lucide="check-circle-2"></i> Verified Buyer</span>
+            </div>
+            <h4>"The Alphafly 3 got me a Boston Qualifying time!"</h4>
+            <p>"Ordered on Tuesday, arrived on Thursday in double-boxed perfection. The bounce and propulsion on these shoes helped me shave 8 minutes off my marathon time."</p>
+            <div class="review-user">
+              <div class="user-avatar">MK</div>
+              <div>
+                <strong>Marcus K.</strong>
+                <span>Chicago, IL • Purchased Nike Alphafly 3</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-stars">★★★★★</div>
+              <span class="review-badge"><i data-lucide="check-circle-2"></i> Verified Buyer</span>
+            </div>
+            <h4>"ANTA KAI 1 is the best basketball shoe of 2026."</h4>
+            <p>"The materials and cushion for $125 are unreal. The NitroEdge foam stops on a dime and the court feel is elite. Super fast shipping from Purpose Vault!"</p>
+            <div class="review-user">
+              <div class="user-avatar">JL</div>
+              <div>
+                <strong>Justin L.</strong>
+                <span>Dallas, TX • Purchased ANTA KAI 1</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-stars">★★★★★</div>
+              <span class="review-badge"><i data-lucide="check-circle-2"></i> Verified Buyer</span>
+            </div>
+            <h4>"Kobe 8 Protro with React drop-in is perfection."</h4>
+            <p>"Been looking for a deadstock Kobe 8 for months without insane resale prices. Authenticity tag checked out perfectly. Will definitely buy again."</p>
+            <div class="review-user">
+              <div class="user-avatar">DR</div>
+              <div>
+                <strong>Darnell R.</strong>
+                <span>Los Angeles, CA • Purchased Nike Kobe 8 Protro</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         VIP Drop Alert / Newsletter
+         ========================================================================== -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-card">
+          <div class="newsletter-content">
+            <span class="newsletter-pill"><i data-lucide="bell"></i> VIP VAULT MEMBERSHIP</span>
+            <h3>Get Early Access to Limited Nike SNKRS & ANTA Drops</h3>
+            <p>Subscribe to receive SMS & email drop notifications 15 minutes before public release + instant <strong>10% off</strong> coupon code.</p>
+          </div>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" id="newsletter-email" placeholder="Enter your email address..." required />
+            <button type="submit" class="btn-primary">
+              <span>Claim 10% Off</span>
+              <i data-lucide="arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       Interactive Slide-Over Shopping Cart Drawer
+       ========================================================================== -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Bag">
+    
+    <div class="cart-drawer-header">
+      <div class="cart-title-row">
+        <i data-lucide="shopping-bag"></i>
+        <h3>Your Shopping Bag (<span class="cart-badge-count">0</span>)</h3>
+      </div>
+      <button class="cart-close-btn" id="cart-drawer-close" aria-label="Close Shopping Bag">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <!-- Free Shipping Progress Tracker -->
+    <div class="shipping-progress-container">
+      <p id="shipping-progress-text">Add <strong>$150.00</strong> more to unlock <strong>FREE Express Shipping!</strong></p>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="shipping-progress-bar" style="width: 0%;"></div>
       </div>
     </div>
 
-    <!-- ==========================================================================
-         Client Case Study Modal (Clean, Non-Technical)
-         ========================================================================== -->
-    <div class="modal-overlay" id="casestudy-modal">
-      <div class="modal-theater" style="max-width: 800px;">
+    <!-- Empty Cart State -->
+    <div class="cart-empty-state" id="cart-empty-state">
+      <div class="empty-cart-icon"><i data-lucide="shopping-bag"></i></div>
+      <h4>Your Shopping Bag is Empty</h4>
+      <p>Discover our lineup of authentic Nike marathon shoes and ANTA signature basketball sneakers.</p>
+      <button class="btn-primary btn-sm" onclick="closeCartDrawer(); document.getElementById('catalog').scrollIntoView({behavior:'smooth'});">
+        <span>Explore All Footwear</span>
+      </button>
+    </div>
+
+    <!-- Cart Items Container -->
+    <div class="cart-items-list" id="cart-items-list">
+      <!-- Populated dynamically by app.js -->
+    </div>
+
+    <!-- Cart Drawer Footer & Checkout Action -->
+    <div class="cart-drawer-footer" id="cart-drawer-footer">
+      
+      <!-- Promo Code Section -->
+      <div class="cart-promo-section">
+        <div class="promo-input-wrap">
+          <input type="text" id="cart-promo-input" placeholder="Promo code (e.g. PURPOSE10)" />
+          <button id="cart-promo-apply-btn" class="btn-ghost-sm">Apply</button>
+        </div>
+      </div>
+
+      <!-- Price Breakdown -->
+      <div class="cart-summary-rows">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal-val">$0.00</span>
+        </div>
+        <div class="summary-row discount-row" id="cart-discount-row" style="display:none;">
+          <span>Promo Discount</span>
+          <span id="cart-discount-val" style="color: #10b981;">-$0.00</span>
+        </div>
+        <div class="summary-row">
+          <span>Estimated Shipping</span>
+          <span id="cart-shipping-val">Calculated at checkout</span>
+        </div>
+        <div class="summary-row">
+          <span>Estimated Tax</span>
+          <span id="cart-tax-val">$0.00</span>
+        </div>
+        <div class="summary-row total-row">
+          <span>Estimated Total</span>
+          <span id="cart-total-val">$0.00</span>
+        </div>
+      </div>
+
+      <!-- Checkout Trigger Button -->
+      <button class="btn-primary btn-full btn-checkout-action" id="cart-checkout-btn">
+        <i data-lucide="lock"></i>
+        <span>Proceed to Secure Checkout</span>
+      </button>
+
+      <!-- Trust Badges & Accepted Payments -->
+      <div class="cart-trust-strip">
+        <span class="trust-pill"><i data-lucide="shield-check"></i> 256-Bit SSL Encrypted</span>
+        <span class="trust-pill"><i data-lucide="zap"></i> Instant Dispatch</span>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ==========================================================================
+       Interactive Slide-Over Wishlist Drawer
+       ========================================================================== -->
+  <div class="wishlist-overlay" id="wishlist-overlay"></div>
+  <aside class="wishlist-drawer" id="wishlist-drawer" aria-label="Your Saved Wishlist">
+    <div class="cart-drawer-header">
+      <div class="cart-title-row">
+        <i data-lucide="heart"></i>
+        <h3>Saved Wishlist (<span class="wishlist-badge-count">0</span>)</h3>
+      </div>
+      <button class="cart-close-btn" id="wishlist-drawer-close" aria-label="Close Wishlist">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <div class="cart-empty-state" id="wishlist-empty-state">
+      <div class="empty-cart-icon"><i data-lucide="heart"></i></div>
+      <h4>Your Wishlist is Empty</h4>
+      <p>Save your favorite Nike and ANTA sneakers to track drops and price updates.</p>
+    </div>
+
+    <div class="wishlist-items-list" id="wishlist-items-list">
+      <!-- Populated dynamically by app.js -->
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       Product Detail & Quick View Modal
+       ========================================================================== -->
+  <div class="product-modal-overlay" id="product-modal-overlay"></div>
+  <div class="product-detail-modal" id="product-detail-modal" role="dialog" aria-modal="true" aria-labelledby="modal-product-title">
+    <button class="product-modal-close" id="product-modal-close" aria-label="Close details modal">
+      <i data-lucide="x"></i>
+    </button>
+
+    <div class="product-modal-grid">
+      
+      <!-- Left: Media Viewer with Photo vs 4K Motion Video tabs -->
+      <div class="modal-media-column">
         
-        <div class="modal-header">
-          <div style="display: flex; align-items: center; gap: 0.75rem;">
-            <i data-lucide="award" style="color: var(--accent-cyan);"></i>
-            <span style="font-family: var(--font-mono); font-size: 0.88rem; color: #ffffff; font-weight: 700;">CLIENT CAMPAIGN CASE STUDY</span>
-          </div>
-          <button class="modal-close-btn" id="casestudy-close-btn" aria-label="Close case study">
-            <i data-lucide="x"></i>
+        <div class="modal-media-viewport">
+          <img src="" alt="" id="modal-product-img" class="modal-media-img" />
+          <video src="" id="modal-product-video" class="modal-media-video" loop muted playsinline style="display:none;"></video>
+        </div>
+
+        <div class="modal-media-tabs">
+          <button class="modal-media-tab active" data-mode="photo">
+            <i data-lucide="image"></i> High-Res Shoot
+          </button>
+          <button class="modal-media-tab" data-mode="video">
+            <i data-lucide="play-circle"></i> 4K Commercial Motion
           </button>
         </div>
 
-        <div style="padding: 2rem; overflow-y: auto; max-height: 75vh; -webkit-overflow-scrolling: touch;">
-          <div class="card-client-tag" id="cs-client" style="font-size: 0.85rem; margin-bottom: 0.5rem;">Nike Performance Athletics • Elite Marathon Series</div>
-          <h3 id="cs-title" style="font-family: var(--font-display); font-size: 1.6rem; margin-bottom: 1.5rem;">Nike ZoomX Vaporfly 3</h3>
-          
-          <div class="case-study-badge-grid" style="margin-bottom: 1.5rem;">
-            <div class="case-study-badge">
-              <div class="case-study-label">Performance Metric</div>
-              <div class="case-study-val" id="cs-roas">+420% ROAS (Meta & TikTok)</div>
-            </div>
-            <div class="case-study-badge">
-              <div class="case-study-label">Turnaround Schedule</div>
-              <div class="case-study-val" id="cs-turnaround">48 Hours</div>
-            </div>
+        <div class="modal-authenticity-badge">
+          <i data-lucide="shield-check"></i>
+          <div>
+            <strong>100% Deadstock Verified</strong>
+            <span>Inspected with UV & RFID authentication before shipment</span>
           </div>
-
-          <div style="margin-bottom: 1.5rem;">
-            <span class="form-label" style="display: block; margin-bottom: 0.4rem; color: var(--accent-cyan);">Campaign Strategy & Director Vision</span>
-            <p id="cs-strategy" style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">Direct-to-consumer launch commercial engineered for high top-of-funnel retention. Utilized 3D CAD conditioning and acoustic wave fluid physics to demonstrate IPX7 water resistance and active noise cancellation.</p>
-          </div>
-
-          <div style="margin-bottom: 1.5rem;">
-            <span class="form-label" style="display: block; margin-bottom: 0.4rem; color: var(--accent-emerald);">Commercial Deliverables Shipped</span>
-            <p id="cs-deliverables" style="color: var(--text-highlight); font-weight: 500; font-size: 0.95rem;">4K Master (16:9), TikTok/Reels (9:16), Amazon A+ Video (1:1)</p>
-          </div>
-
-          <div style="margin-bottom: 2rem;">
-            <span class="form-label" style="display: block; margin-bottom: 0.4rem; color: var(--accent-purple);">Business Impact & Sales Lift</span>
-            <p id="cs-results" style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">Drove over $1.2M in pre-orders within the first 14 days of launch with an average ROAS of 4.2x across paid social channels.</p>
-          </div>
-
-          <button class="btn-primary" id="cs-book-cta" style="width: 100%;">
-            <i data-lucide="zap"></i>
-            <span>Request Similar Campaign for Your Brand</span>
-          </button>
         </div>
 
       </div>
+
+      <!-- Right: Detailed Info, Sizes & Buy Actions -->
+      <div class="modal-info-column">
+        
+        <div class="modal-brand-row">
+          <span class="modal-brand-tag" id="modal-product-brand">Nike Performance</span>
+          <div class="modal-rating-box">
+            <span class="stars" id="modal-rating-stars">★★★★★</span>
+            <span class="val" id="modal-rating-val">4.9 (184 reviews)</span>
+          </div>
+        </div>
+
+        <h2 class="modal-title" id="modal-product-title">Nike ZoomX Vaporfly 3</h2>
+        <p class="modal-colorway" id="modal-product-colorway">Electric Mint / White / Black</p>
+
+        <!-- Price Display & Klarna installments -->
+        <div class="modal-price-box">
+          <span class="modal-price" id="modal-product-price">$260.00</span>
+          <span class="modal-klarna">or 4 interest-free payments of <strong id="modal-klarna-price">$65.00</strong> with Klarna</span>
+        </div>
+
+        <p class="modal-desc" id="modal-product-desc"></p>
+
+        <!-- Size Selector Grid -->
+        <div class="modal-size-section">
+          <div class="size-section-header">
+            <span class="size-title">Select US Men's Size:</span>
+            <span class="in-stock-notice"><i data-lucide="check"></i> In Stock & Ready to Ship</span>
+          </div>
+          <div class="modal-sizes-grid" id="modal-sizes-grid">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <!-- Quantity & Primary Action Buttons -->
+        <div class="modal-actions-row">
+          <div class="modal-qty-box">
+            <label for="modal-qty-input" class="sr-only">Quantity</label>
+            <input type="number" id="modal-qty-input" value="1" min="1" max="10" />
+          </div>
+          <button class="btn-primary btn-lg" id="modal-add-to-bag-btn">
+            <i data-lucide="shopping-bag"></i>
+            <span>Add to Bag</span>
+          </button>
+          <button class="btn-secondary btn-lg" id="modal-buy-now-btn">
+            <i data-lucide="zap"></i>
+            <span>1-Click Buy Now</span>
+          </button>
+        </div>
+
+        <!-- Performance Specs Key-Value Table -->
+        <div class="modal-specs-section">
+          <h4><i data-lucide="cpu"></i> Engineering & Performance Specifications</h4>
+          <div class="modal-specs-list" id="modal-specs-list">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <!-- Verified Reviews Section inside Modal -->
+        <div class="modal-reviews-section">
+          <h4><i data-lucide="message-square"></i> Verified Customer Reviews</h4>
+          <div class="modal-reviews-list" id="modal-reviews-list">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       3-Step Interactive Checkout Modal
+       ========================================================================== -->
+  <div class="checkout-overlay" id="checkout-overlay"></div>
+  <div class="checkout-modal" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+    <button class="checkout-close-btn" id="checkout-modal-close" aria-label="Close checkout">
+      <i data-lucide="x"></i>
+    </button>
+
+    <div class="checkout-wrapper" id="checkout-main-flow">
+      
+      <!-- Left: 3-Step Checkout Panels -->
+      <div class="checkout-form-container">
+        
+        <div class="checkout-header">
+          <span class="checkout-tag"><i data-lucide="lock"></i> 256-BIT SSL ENCRYPTED VAULT</span>
+          <h2 id="checkout-title">Secure Express Checkout</h2>
+        </div>
+
+        <!-- Step Indicators -->
+        <div class="checkout-steps-bar">
+          <div class="checkout-step-indicator active" data-step="1">
+            <span class="step-num">1</span>
+            <span class="step-txt">Shipping Address</span>
+          </div>
+          <div class="checkout-step-indicator" data-step="2">
+            <span class="step-num">2</span>
+            <span class="step-txt">Delivery Speed</span>
+          </div>
+          <div class="checkout-step-indicator" data-step="3">
+            <span class="step-num">3</span>
+            <span class="step-txt">Payment Method</span>
+          </div>
+        </div>
+
+        <!-- Step 1: Shipping Address -->
+        <div class="checkout-step-panel active" id="checkout-step-1">
+          <h3>Customer & Delivery Information</h3>
+          <div class="form-grid">
+            <div class="form-group span-2">
+              <label>Email Address for Order Tracking</label>
+              <input type="email" placeholder="athlete@example.com" value="customer@example.com" required />
+            </div>
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="John" value="Jerome" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Doe" value="Cabinta" required />
+            </div>
+            <div class="form-group span-2">
+              <label>Street Address</label>
+              <input type="text" placeholder="123 Sneakerhead Blvd, Apt 4B" value="742 Evergreen Terrace" required />
+            </div>
+            <div class="form-group">
+              <label>City</label>
+              <input type="text" placeholder="New York" value="San Francisco" required />
+            </div>
+            <div class="form-group">
+              <label>State / Province</label>
+              <input type="text" placeholder="NY" value="CA" required />
+            </div>
+            <div class="form-group">
+              <label>Postal Code</label>
+              <input type="text" placeholder="10001" value="94103" required />
+            </div>
+            <div class="form-group">
+              <label>Country</label>
+              <select>
+                <option value="US">United States</option>
+                <option value="CA">Canada</option>
+                <option value="UK">United Kingdom</option>
+                <option value="AU">Australia</option>
+                <option value="PH">Philippines</option>
+                <option value="JP">Japan</option>
+                <option value="DE">Germany</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn-primary btn-full mt-4" id="checkout-to-step-2">
+            <span>Continue to Delivery Options</span>
+            <i data-lucide="arrow-right"></i>
+          </button>
+        </div>
+
+        <!-- Step 2: Delivery Speed -->
+        <div class="checkout-step-panel" id="checkout-step-2">
+          <h3>Select Shipping Speed</h3>
+          <div class="shipping-options-list">
+            <label class="shipping-option-card">
+              <input type="radio" name="shipping-speed" value="standard" checked />
+              <div class="option-details">
+                <strong>Standard Double-Box Express (3-5 Business Days)</strong>
+                <span>Complimentary on orders over $150</span>
+              </div>
+              <span class="option-price">FREE</span>
+            </label>
+
+            <label class="shipping-option-card">
+              <input type="radio" name="shipping-speed" value="priority" />
+              <div class="option-details">
+                <strong>Priority Air Dispatch (2 Business Days)</strong>
+                <span>Guaranteed priority courier delivery with signature required</span>
+              </div>
+              <span class="option-price">+$15.00</span>
+            </label>
+
+            <label class="shipping-option-card">
+              <input type="radio" name="shipping-speed" value="overnight" />
+              <div class="option-details">
+                <strong>Vault Overnight Priority (Next Morning by 10:30 AM)</strong>
+                <span>Immediate warehouse dispatch with GPS tracking</span>
+              </div>
+              <span class="option-price">+$25.00</span>
+            </label>
+          </div>
+
+          <div class="checkout-nav-row mt-4">
+            <button class="btn-secondary" id="checkout-back-to-step-1"><i data-lucide="arrow-left"></i> Back</button>
+            <button class="btn-primary" id="checkout-to-step-3"><span>Continue to Payment</span> <i data-lucide="arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Step 3: Payment Method -->
+        <div class="checkout-step-panel" id="checkout-step-3">
+          <h3>Payment Details</h3>
+          
+          <div class="payment-method-selector">
+            <button class="pay-method-btn active"><i data-lucide="credit-card"></i> Credit / Debit Card</button>
+            <button class="pay-method-btn"><i data-lucide="smartphone"></i> Apple Pay</button>
+            <button class="pay-method-btn"><i data-lucide="zap"></i> Klarna 4x</button>
+          </div>
+
+          <div class="credit-card-form">
+            <div class="form-group">
+              <label>Cardholder Full Name</label>
+              <input type="text" value="Jerome Cabinta" required />
+            </div>
+            <div class="form-group">
+              <label>Card Number</label>
+              <input type="text" value="4532 •••• •••• 8892" required />
+            </div>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label>Expiration</label>
+                <input type="text" placeholder="MM/YY" value="08/28" required />
+              </div>
+              <div class="form-group">
+                <label>CVV / CVC</label>
+                <input type="password" placeholder="CVC" value="384" required />
+              </div>
+            </div>
+          </div>
+
+          <div class="checkout-nav-row mt-4">
+            <button class="btn-secondary" id="checkout-back-to-step-2"><i data-lucide="arrow-left"></i> Back</button>
+            <button class="btn-primary btn-place-order" id="checkout-place-order-btn">
+              <i data-lucide="shield-check"></i>
+              <span>Authorize & Place Order</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: Live Order Summary Sidebar -->
+      <div class="checkout-summary-sidebar">
+        <h4>Order Summary</h4>
+        <div class="checkout-items-summary-list" id="checkout-items-summary-list">
+          <!-- Populated dynamically -->
+        </div>
+
+        <div class="checkout-totals-box">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="checkout-subtotal">$0.00</span>
+          </div>
+          <div class="summary-row discount-row" id="checkout-discount-row" style="display:none;">
+            <span>Discount</span>
+            <span id="checkout-discount" style="color:#10b981;">-$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Shipping</span>
+            <span id="checkout-shipping">FREE</span>
+          </div>
+          <div class="summary-row">
+            <span>Estimated Tax</span>
+            <span id="checkout-tax">$0.00</span>
+          </div>
+          <div class="summary-row total-row">
+            <span>Total</span>
+            <span id="checkout-grand-total">$0.00</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Order Confirmed Success Screen -->
+    <div class="order-success-screen" id="checkout-success-screen" style="display:none;">
+      <div class="success-icon-box"><i data-lucide="check-circle-2"></i></div>
+      <h2>Order Confirmed & Authenticated!</h2>
+      <p>Thank you for purchasing from Purpose Vault. Your order has been securely allocated from our deadstock warehouse.</p>
+      
+      <div class="order-receipt-card">
+        <div class="receipt-row">
+          <span>Order Reference:</span>
+          <strong id="order-confirmed-number">PV-892104</strong>
+        </div>
+        <div class="receipt-row">
+          <span>Estimated Delivery:</span>
+          <strong>3 Business Days (Express Air)</strong>
+        </div>
+        <div class="receipt-row">
+          <span>Authenticity Certificate:</span>
+          <strong style="color: #10b981;">NFC-Verified Deadstock</strong>
+        </div>
+      </div>
+
+      <button class="btn-primary" onclick="closeCheckoutModal(); document.getElementById('catalog').scrollIntoView({behavior:'smooth'});">
+        <i data-lucide="shopping-bag"></i>
+        <span>Continue Shopping</span>
+      </button>
     </div>
 
   </div>
 
-  <!-- Initialize Lucide Icons -->
-  <script>
-    lucide.createIcons();
-  </script>
-  <!-- Main Script -->
+  <!-- ==========================================================================
+       Store Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <div class="footer-brand-col">
+        <span class="logo-text">PURPOSE<span class="logo-accent">VAULT</span></span>
+        <p class="footer-about">
+          The premier authorized deadstock marketplace for authentic Nike and ANTA athletic performance footwear and signature basketball editions.
+        </p>
+        <div class="footer-badges">
+          <span class="footer-badge"><i data-lucide="shield-check"></i> 100% Authentic</span>
+          <span class="footer-badge"><i data-lucide="truck"></i> Worldwide Dispatch</span>
+        </div>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Nike Performance</h4>
+        <ul>
+          <li><a href="#catalog" onclick="currentBrandFilter='nike'; renderProductGrid();">Nike ZoomX Vaporfly 3</a></li>
+          <li><a href="#catalog" onclick="currentBrandFilter='nike'; renderProductGrid();">Nike Alphafly 3 World Record</a></li>
+          <li><a href="#catalog" onclick="currentBrandFilter='nike'; renderProductGrid();">Nike Kobe 8 Protro Halo</a></li>
+          <li><a href="#catalog" onclick="currentBrandFilter='nike'; renderProductGrid();">Nike LeBron 20 Trinity</a></li>
+          <li><a href="#catalog" onclick="currentBrandFilter='nike'; renderProductGrid();">Nike Air Max Dn Dynamic Air</a></li>
+          <li><a href="#catalog" onclick="currentBrandFilter='nike'; renderProductGrid();">Nike Zoom Vomero 5</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>ANTA Lineup</h4>
+        <ul>
+          <li><a href="#catalog" onclick="currentBrandFilter='anta'; renderProductGrid();">ANTA KAI 1 "Artist on Court"</a></li>
+          <li><a href="#catalog" onclick="currentBrandFilter='anta'; renderProductGrid();">ANTA KAI 1 "Enlightened Warrior"</a></li>
+          <li><a href="#catalog" onclick="currentBrandFilter='anta'; renderProductGrid();">ANTA KT9 "Captain Klay"</a></li>
+          <li><a href="#catalog" onclick="currentBrandFilter='anta'; renderProductGrid();">ANTA Shock Wave 5 Pro</a></li>
+          <li><a href="#catalog" onclick="currentBrandFilter='anta'; renderProductGrid();">ANTA C202 5 GT Pro Marathon</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Customer Care</h4>
+        <ul>
+          <li><a href="#guarantee">Authenticity Verification</a></li>
+          <li><a href="#guarantee">Shipping & Delivery Rates</a></li>
+          <li><a href="#guarantee">30-Day Return Portal</a></li>
+          <li><a href="#hero">Size Guide & Fit Advisor</a></li>
+          <li><a href="#hero">Contact Sneaker Concierge</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p>© 2026 Purpose Vault • All Nike & ANTA models shown are 100% authentic deadstock.</p>
+        <div class="payment-icons-strip">
+          <span>VISA</span>
+          <span>MASTERCARD</span>
+          <span>AMEX</span>
+          <span>APPLE PAY</span>
+          <span>GOOGLE PAY</span>
+          <span>KLARNA</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
   <script src="app.js"></script>
 </body>
 </html>

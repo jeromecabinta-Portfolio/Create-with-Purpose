@@ -1596,6 +1596,798 @@ const PRODUCTS_DATA = [
     reviews: [
       { author: 'Lucas B.', rating: 5, date: '1 day ago', title: 'World-class energy return', text: 'Comparable to any marathon super-shoe on the planet. Neon color turns heads at race day.' }
     ]
+  },
+  {
+    id: 'converse-chuck-70',
+    sku: 'CV-C70-049',
+    brand: 'Converse',
+    brandBadge: 'Converse Heritage',
+    brandColor: 'amber',
+    name: 'Converse Chuck 70 Vintage Canvas',
+    subtitle: '1970s Heavyweight 12oz Duck Canvas High Top',
+    price: 90.00,
+    originalPrice: 90.00,
+    rating: 4.9,
+    reviewsCount: 480,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Black / Egret / Garnet Red / Vintage Sail',
+    sizes: [6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 45,
+    badge: 'Timeless Icon',
+    image: 'assets/converse_chuck_70.jpg',
+    video: 'assets/converse_chuck_70.webm',
+    description: 'Built from that original 1970s design with premium materials, deliberate nuance and an extraordinary attention to detail. 12oz heavyweight organic duck canvas upper, vintage license plate branding on the heel, varnished egret foxing tape, and OrthoLite cushioning for all-day comfort.',
+    specs: {
+      cushioning: 'Plush OrthoLite Insole Cushioning',
+      materials: '12oz Heavyweight Organic Duck Canvas',
+      midsole: 'Glossy 1970s Egret Vulcanized Rubber Tape',
+      details: 'Winged Tongue Stitching & Vintage All Star License Plate',
+      style: 'The All-Time Counter-Culture & Streetwear Legend'
+    },
+    reviews: [
+      { author: 'Julian M.', rating: 5, date: 'Yesterday', title: 'Way better than standard Chucks', text: 'Thicker canvas, cushioned insole, and the vintage off-white sole looks so clean.' },
+      { author: 'Maya K.', rating: 5, date: '4 days ago', title: 'My daily staple', text: 'Goes with literally everything in my wardrobe. Super durable.' }
+    ]
+  },
+  {
+    id: 'converse-weapon-cx',
+    sku: 'CV-WPN-050',
+    brand: 'Converse',
+    brandBadge: 'Converse Hardwood Legend',
+    brandColor: 'purple',
+    name: 'Converse Weapon CX "Showtime Heritage"',
+    subtitle: '1986 Hardwood Rivalry Icon Revamped with CX Foam',
+    price: 120.00,
+    originalPrice: 120.00,
+    rating: 4.8,
+    reviewsCount: 215,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Vintage White / Court Purple / Gold Foil',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 18,
+    badge: 'Showtime Drop',
+    image: 'assets/converse_weapon_cx.jpg',
+    video: 'assets/converse_weapon_cx.webm',
+    description: 'The sneaker that ruled 1980s basketball courts on the feet of all-time hardwood rivals. Reimagined with innovative CX foam midsole and exaggerated collar proportions, delivering modern court comfort wrapped in authentic Showtime nostalgia.',
+    specs: {
+      cushioning: 'High-Rebound CX Foam Drop-In Midsole',
+      materials: 'Premium Genuine Leather & Suede Layered Panels',
+      collar: 'Exaggerated Y-Bar Ankle Lockout Stability Collar',
+      outsole: 'Multidirectional Hardwood Traction Herringbone Tread',
+      position: 'Hardwood Guards, Wings & 80s Streetwear Enthusiasts'
+    },
+    reviews: [
+      { author: 'Magic Fan 32', rating: 5, date: '2 days ago', title: '80s hardwood perfection', text: 'CX foam makes this 10x more comfortable than vintage retros. Leather is soft and thick.' }
+    ]
+  },
+  {
+    id: 'converse-bb-prototype',
+    sku: 'CV-BB-051',
+    brand: 'Converse',
+    brandBadge: 'Converse Hoops Innovation',
+    brandColor: 'cyan',
+    name: 'Converse All Star BB Prototype CX',
+    subtitle: 'Forefoot Nike Zoom Air + Full CX Foam Basketball Shoe',
+    price: 120.00,
+    originalPrice: 120.00,
+    rating: 4.8,
+    reviewsCount: 175,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Cyber White / Court Purple / Mystic Teal',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 20,
+    badge: 'Hoops Innovation',
+    image: 'assets/converse_bb_prototype.jpg',
+    video: 'assets/converse_bb_prototype.webm',
+    description: 'Designed for fluid positionless players who create on the fly. Pairs responsive Nike Air Zoom cushioning under the forefoot with high-rebound CX foam for explosive first steps and plush court landing absorption.',
+    specs: {
+      cushioning: 'Forefoot Nike Air Zoom Pod + Full CX Foam Core',
+      lacing: 'Hidden Webbed Dynamic Lacing System for Full Containment',
+      outsole: 'Radial Multi-Zone Hardwood Floor Grip Rubber',
+      upper: 'Engineered High-Tensile Mesh & Suede Forefoot Rand',
+      position: 'Positionless Playmakers & Dynamic Slicers'
+    },
+    reviews: [
+      { author: 'Kobe R.', rating: 5, date: '3 days ago', title: 'Zoom Air in a Converse is insane!', text: 'Court feel and bounce are top notch. Squeaky traction on hardwood.' }
+    ]
+  },
+  {
+    id: 'converse-run-star-motion',
+    sku: 'CV-RSM-052',
+    brand: 'Converse',
+    brandBadge: 'Converse CX Innovation',
+    brandColor: 'purple',
+    name: 'Converse Run Star Motion CX Platform',
+    subtitle: 'Sculpted Wave Lug High Fashion Streetwear Platform',
+    price: 125.00,
+    originalPrice: 125.00,
+    rating: 4.9,
+    reviewsCount: 340,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Black / Egret / Gum Honey / Electric Cyan',
+    sizes: [6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 12],
+    inStock: true,
+    stockCount: 24,
+    badge: 'Futuristic Platform',
+    image: 'assets/converse_run_star_motion.jpg',
+    video: 'assets/converse_run_star_motion.webm',
+    description: 'Taking classic Chuck Taylor DNA and pairing it with an ultra-modern, exaggerated wavy lug platform. Features next-gen CX foam cushioning that absorbs shock with every step and dramatic sculpted saw-tooth rubber tread.',
+    specs: {
+      cushioning: 'Ultra-Comfortable CX Foam Midsole + Drop-in Sockliner',
+      outsole: 'Exaggerated Sculpted Wavy Lug Saw-Tooth Rubber',
+      upper: '100% Organic Heavyweight Cotton Canvas',
+      details: 'Reflective Pull Loop & High-Gloss Star Heel Patch',
+      style: 'Avant-Garde Futuristic Streetwear Platform'
+    },
+    reviews: [
+      { author: 'Sienna V.', rating: 5, date: '1 day ago', title: 'Most comfortable platform shoe ever created', text: 'The CX foam feels like walking on marshmallows. Turns heads everywhere I go.' }
+    ]
+  },
+  {
+    id: 'converse-cruise-skate',
+    sku: 'CV-CRZ-053',
+    brand: 'Converse',
+    brandBadge: 'Converse Skate & Street',
+    brandColor: 'amber',
+    name: 'Converse Chuck Taylor All Star Cruise',
+    subtitle: '90s Skate Culture Suede & Canvas Lightweight Midsole',
+    price: 75.00,
+    originalPrice: 75.00,
+    rating: 4.8,
+    reviewsCount: 190,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Black / Egret / Classic White / Gum',
+    sizes: [6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+    inStock: true,
+    stockCount: 30,
+    badge: '90s Skate Heat',
+    image: 'assets/converse_cruise_skate.jpg',
+    video: 'assets/converse_cruise_skate.webm',
+    description: 'Paying homage to 90s skate fashion and counter-culture streetwear. Blends heavy-duty canvas and suede overlay panels with a lightweight EVA-injected midsole for all-day skatepark and sidewalk cruising.',
+    specs: {
+      cushioning: 'Injected EVA Midsole for Ultra-Lightweight Cushioning',
+      materials: '12oz Heavy Canvas Upper + Suede Eyestay Overlays',
+      lacing: 'Fat 90s Skate Poly Laces + Extra Classic Laces Included',
+      outsole: 'Diamond Lug Skate Traction Rubber',
+      style: '90s Grunge & Skateboarding Lifestyle'
+    },
+    reviews: [
+      { author: 'Leo X.', rating: 5, date: '5 days ago', title: 'Super lightweight and stylish', text: 'Way lighter than regular Chucks with that chunky 90s skate shoe look.' }
+    ]
+  },
+  {
+    id: 'converse-deluxe-squared',
+    sku: 'CV-DLX-054',
+    brand: 'Converse',
+    brandBadge: 'Converse Avant-Garde',
+    brandColor: 'white',
+    name: 'Converse Chuck 70 De Luxe Squared',
+    subtitle: 'Architectural Angular Toecap Haute Couture Silhouette',
+    price: 110.00,
+    originalPrice: 110.00,
+    rating: 4.9,
+    reviewsCount: 165,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Black / Egret / Geometric Monolith',
+    sizes: [6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 12],
+    inStock: true,
+    stockCount: 15,
+    badge: 'High Fashion Drop',
+    image: 'assets/converse_deluxe_square.jpg',
+    video: 'assets/converse_deluxe_square.webm',
+    description: 'Transforming the timeless Chuck 70 into a sharp architectural runway statement. Features an angular square rubber toecap, faceted eyelets, premium twill canvas, and CX foam comfort.',
+    specs: {
+      cushioning: 'OrthoLite & CX Foam Dual Comfort Cushioning',
+      toecap: 'Sculpted Geometric Square Rubber Toecap',
+      materials: 'Premium Heavyweight Diagonal Twill Canvas',
+      details: 'Angular Eyestay & Faceted Chuck Taylor Patch',
+      style: 'High-Fashion Runway & Avant-Garde Modernism'
+    },
+    reviews: [
+      { author: 'Camille D.', rating: 5, date: '2 days ago', title: 'Architectural masterpiece', text: 'The square toe box looks incredible with wide-leg tailored trousers.' }
+    ]
+  },
+  {
+    id: 'converse-weapon-retro-magic',
+    sku: 'CV-WPN-055',
+    brand: 'Converse',
+    brandBadge: 'Converse Hardwood Legend',
+    brandColor: 'purple',
+    name: 'Converse Weapon Retro "Lakers Showtime"',
+    subtitle: 'Classic 1986 Hardwood Championship Vintage Edition',
+    price: 130.00,
+    originalPrice: 130.00,
+    rating: 4.9,
+    reviewsCount: 280,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Forum Gold / Purple Rain / Vintage Sail',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 16,
+    badge: 'Championship Vault',
+    image: 'assets/converse_weapon_cx.jpg',
+    video: 'assets/converse_weapon_cx.webm',
+    description: 'Celebrating the golden era of basketball rivalry in Los Angeles. Premium leather construction, vintage aged midsole, padded high-top collar, and original Star Chevron logos evoke the swagger of 80s hardwood royalty.',
+    specs: {
+      cushioning: 'Vintage Molded Rubber Cupsole with CX Cushioning',
+      materials: 'Butter-Soft Genuine Leather Upper & Collar',
+      details: 'Padded Ankle Collar & Support Y-Bar Architecture',
+      tongue: 'Original 1986 Converse Basketball Woven Tongue Label',
+      style: '80s Hardwood Nostalgia & Vintage Streetwear'
+    },
+    reviews: [
+      { author: 'Darren P.', rating: 5, date: '3 days ago', title: 'The real 80s vibe', text: 'Colors are spot on. Super comfortable padded ankle support.' }
+    ]
+  },
+  {
+    id: 'converse-run-star-cyber',
+    sku: 'CV-RSM-056',
+    brand: 'Converse',
+    brandBadge: 'Converse CX Innovation',
+    brandColor: 'cyan',
+    name: 'Converse Run Star Motion "Cyber Matrix"',
+    subtitle: 'Futuristic High-Top Platform with Ultra-Bouncy CX Foam',
+    price: 130.00,
+    originalPrice: 130.00,
+    rating: 4.9,
+    reviewsCount: 210,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Cyber White / Acid Aqua / Black Waves',
+    sizes: [6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 12],
+    inStock: true,
+    stockCount: 19,
+    badge: 'Cyberpunk Edition',
+    image: 'assets/converse_run_star_motion.jpg',
+    video: 'assets/converse_run_star_motion.webm',
+    description: 'A fearless futuristic evolution of canvas sneakers. Massive sculpted wavy foam midsole gives unbelievable step-in rebound, while lugged traction outsoles provide unshakeable street grip.',
+    specs: {
+      cushioning: 'High-Energy CX Super-Plush Midsole Carrier',
+      outsole: 'Chunky Wavy Lugged Rubber Traction Pods',
+      upper: 'Durable Heavyweight Organic Canvas',
+      pullTab: 'Webbed Heel Pull Tab for Instant Slip-On Entry',
+      style: 'Cyberpunk & Future-Forward Street Culture'
+    },
+    reviews: [
+      { author: 'Nova Z.', rating: 5, date: '1 day ago', title: 'Crazy design and absurdly comfortable', text: 'You bounce with every stride. Best avant-garde sneaker in my collection.' }
+    ]
+  },
+  {
+    id: 'nike-speedform-zoomx-prototype',
+    sku: 'NK-SFX-057',
+    brand: 'Nike',
+    brandBadge: 'Nike Innovation Lab',
+    brandColor: 'cyan',
+    name: 'Nike ZoomX SpeedForm Concept',
+    subtitle: 'Split-Sole Bionic Carbon Marathon Racing Prototype',
+    price: 290.00,
+    originalPrice: 290.00,
+    rating: 5.0,
+    reviewsCount: 145,
+    category: 'running',
+    categoryName: 'Marathon / Racing',
+    colorway: 'Electroluminescent Cyan / Carbon Black / Volt Glow',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 12],
+    inStock: true,
+    stockCount: 7,
+    badge: 'Concept Lab Drop',
+    image: 'assets/ecom_sneaker_motion.jpg',
+    video: 'assets/ecom_sneaker_motion.webm',
+    description: 'Straight from the Nike Innovation Kitchen in Beaverton. Featuring an aerodynamic split-sole decoupled chassis, full-length curved carbon Flyplate, exposed hyper-rebound ZoomX supercritical foam, and electroluminescent fiber weave.',
+    specs: {
+      cushioning: 'Decoupled Split-Sole Dual ZoomX Superfoam (+88% Energy Return)',
+      plate: '3D Curved Bionic Carbon Fiber Flyplate',
+      weight: '6.4 oz / 181 g (Extreme Ultralight)',
+      upper: 'Electroluminescent High-Tensile AtomKnit Mesh',
+      terrain: 'World Record Marathon & 10K Road Attempts'
+    },
+    reviews: [
+      { author: 'Eliud Fan', rating: 5, date: 'Yesterday', title: 'The future of running technology', text: 'Energy return feels like cheating. The split sole and carbon plate launch you forward effortlessly.' }
+    ]
+  },
+  {
+    id: 'nike-kobe-6-og-grinch',
+    sku: 'NK-KB6-058',
+    brand: 'Nike',
+    brandBadge: 'Nike Mamba Legacy',
+    brandColor: 'emerald',
+    name: 'Nike Kobe 6 Protro "OG Grinch"',
+    subtitle: 'The Legendary 2010 Christmas Day Kobe Bryant Grail',
+    price: 190.00,
+    originalPrice: 190.00,
+    rating: 5.0,
+    reviewsCount: 980,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Green Apple / Volt / Crimson Red / Black',
+    sizes: [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 5,
+    badge: 'The Holy Grail',
+    image: 'assets/nike_kobe_6_grinch.jpg',
+    video: 'assets/nike_kobe_6_grinch.webm',
+    description: 'The most recognizable basketball sneaker of the 21st century. Originally worn by Kobe on Christmas Day 2010 against Miami, updated with snappy forefoot Air Zoom Turbo and refined snakeskin scale upper.',
+    specs: {
+      cushioning: 'Large Flexible Forefoot Zoom Turbo Unit + Cushlon Midsole',
+      upper: 'Polyurethane Snakeskin Scale Molded Island Shell',
+      plate: 'Carbon Fiber Arch Support & Torsion Shank',
+      outsole: 'Mamba Micro-Tread High-Friction Court Rubber',
+      position: 'Precision Guards & Kobe Collectors Worldwide'
+    },
+    reviews: [
+      { author: 'Mamba Forever', rating: 5, date: '1 day ago', title: 'Greatest basketball shoe ever designed', text: 'Court traction is sticky like glue. The green apple scale glow is iconic. RIP Kobe 🐍' }
+    ]
+  },
+  {
+    id: 'nike-kobe-5-bruce-lee',
+    sku: 'NK-KB5-059',
+    brand: 'Nike',
+    brandBadge: 'Nike Mamba Legacy',
+    brandColor: 'amber',
+    name: 'Nike Kobe 5 Protro "Bruce Lee"',
+    subtitle: 'Jeet Kune Do Game of Death Yellow & Red Scratch Grail',
+    price: 190.00,
+    originalPrice: 190.00,
+    rating: 5.0,
+    reviewsCount: 760,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Del Sol Yellow / Metallic Silver / Comet Red / Black',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+    inStock: true,
+    stockCount: 6,
+    badge: 'Bruce Lee Grail',
+    image: 'assets/nike_kobe_4_black.jpg',
+    video: 'assets/nike_kobe_4_black.webm',
+    description: 'Inspired by Bruce Lee\'s iconic yellow jumpsuit and claw scratches from Enter the Dragon. Low-profile Flywire lockdown, forefoot Zoom Turbo, and tuned Mamba hardwood agility.',
+    specs: {
+      cushioning: 'Forefoot Nike Air Zoom Turbo + Cushlon Heel Foam',
+      containment: 'Flywire 2.0 High-Tensile Tensile Cables',
+      details: 'Embroidered Lateral Claw Scratch Marks & Sheath Heel Tab',
+      outsole: 'Heartbeat Hardwood Multidirectional Tread',
+      position: 'Elite Playmakers & Mamba Disciples'
+    },
+    reviews: [
+      { author: 'Brandon K.', rating: 5, date: '3 days ago', title: 'Flawless execution', text: 'The yellow and red claw scratch details are insane in person. Unmatched court feel.' }
+    ]
+  },
+  {
+    id: 'nike-vaporfly-3-eliud',
+    sku: 'NK-VF3-060',
+    brand: 'Nike',
+    brandBadge: 'Nike Marathon Elite',
+    brandColor: 'red',
+    name: 'Nike ZoomX Vaporfly 3 "Kipchoge EK"',
+    subtitle: 'Eliud Kipchoge 1:59:40 Marathon Tribute Edition',
+    price: 260.00,
+    originalPrice: 260.00,
+    rating: 5.0,
+    reviewsCount: 310,
+    category: 'running',
+    categoryName: 'Marathon / Racing',
+    colorway: 'White / Chile Red / Coconut Milk / EK Gold',
+    sizes: [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 11,
+    badge: 'Kipchoge Signature',
+    image: 'assets/nike_zoomx_vaporfly.jpg',
+    video: 'assets/nike_zoomx_vaporfly.webm',
+    description: 'Celebrating the greatest marathoner in human history. Features Eliud Kipchoge\'s personal motto "No Human Is Limited" stamped on the midsole, full carbon Flyplate, and ultra-light ZoomX foam.',
+    specs: {
+      cushioning: 'Full-Stack ZoomX Superfoam + Full-Length Carbon Flyplate',
+      details: 'Custom "No Human Is Limited" Insole & Midsole Graphics',
+      weight: '6.8 oz / 192 g',
+      offset: '8 mm heel-to-toe drop',
+      terrain: 'Elite Marathon Racing & PR Breaking'
+    },
+    reviews: [
+      { author: 'Marathoner Dan', rating: 5, date: '2 days ago', title: 'Broke 2:50 marathon in these!', text: 'Propulsion off the toe is effortless. The Kipchoge signature details make it extra special.' }
+    ]
+  },
+  {
+    id: 'nike-alphafly-3-volt',
+    sku: 'NK-AF3-061',
+    brand: 'Nike',
+    brandBadge: 'Nike World Record',
+    brandColor: 'emerald',
+    name: 'Nike Alphafly 3 "Volt Record Breaker"',
+    subtitle: 'Dual Air Zoom Pods + Continuous ZoomX Foam Super-Shoe',
+    price: 285.00,
+    originalPrice: 285.00,
+    rating: 5.0,
+    reviewsCount: 420,
+    category: 'running',
+    categoryName: 'Marathon / Racing',
+    colorway: 'Electric Volt / Dusty Cactus / Total Orange',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 12],
+    inStock: true,
+    stockCount: 8,
+    badge: 'World Major Weapon',
+    image: 'assets/nike_alphafly_3.jpg',
+    video: 'assets/nike_alphafly_3.webm',
+    description: 'The pinnacle of marathon propulsion. Two forefoot Air Zoom pods paired with a full-length carbon Flyplate and uninterrupted ZoomX foam heel-to-toe transition.',
+    specs: {
+      cushioning: 'Dual Forefoot Air Zoom Units + Continuous ZoomX Midsole',
+      plate: 'Wider Full Carbon Fiber Flyplate for Maximum Stability',
+      upper: 'AtomKnit 3.0 Ultra-Breathable Featherweight Matrix',
+      weight: '7.6 oz / 215 g',
+      terrain: 'World Marathon Majors & Championship Road Racing'
+    },
+    reviews: [
+      { author: 'Kevin L.', rating: 5, date: '1 week ago', title: 'Unbeatable bounce', text: 'Dual Zoom pods give a spring-like feeling every stride. Best running shoe ever engineered.' }
+    ]
+  },
+  {
+    id: 'nike-gt-cut-3-infrared',
+    sku: 'NK-GTC3-062',
+    brand: 'Nike',
+    brandBadge: 'Nike Greater Than',
+    brandColor: 'cyan',
+    name: 'Nike GT Cut 3 "Infrared Spark"',
+    subtitle: 'Full-Length ZoomX Speed & Separation Basketball Shoe',
+    price: 190.00,
+    originalPrice: 190.00,
+    rating: 4.9,
+    reviewsCount: 210,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Black / Infrared 23 / Clear Jade / Metallic Silver',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+    inStock: true,
+    stockCount: 14,
+    badge: 'Separation Weapon',
+    image: 'assets/nike_gt_cut_3.jpg',
+    video: 'assets/nike_gt_cut_3.webm',
+    description: 'Engineered to generate instant space on perimeter step-backs and explosive drives. Packed with exposed ZoomX foam and reinforced lateral TPU stability walls.',
+    specs: {
+      cushioning: 'Full-Length Exposed Nike ZoomX Foam Midsole',
+      containment: 'Lateral Flywire Reinforcement Cables & TPU Outrigger',
+      outsole: 'Modified Herringbone Floor Suction Traction',
+      position: 'Fast Separation Guards & Ball-Handlers'
+    },
+    reviews: [
+      { author: 'Jordan R.', rating: 5, date: '4 days ago', title: 'Infrared colorway goes crazy', text: 'The ZoomX bounce on court is unreal. Instant stop and go.' }
+    ]
+  },
+  {
+    id: 'nike-acg-mountain-black',
+    sku: 'NK-ACG-063',
+    brand: 'Nike',
+    brandBadge: 'Nike ACG All-Conditions',
+    brandColor: 'emerald',
+    name: 'Nike ACG Mountain Fly 2 Low GORE-TEX',
+    subtitle: 'Stealth Weatherproof Trail & Mountain Beast',
+    price: 210.00,
+    originalPrice: 210.00,
+    rating: 4.9,
+    reviewsCount: 195,
+    category: 'outdoor',
+    categoryName: 'Outdoor / Trail ACG',
+    colorway: 'Triple Black / Dark Anthracite / Reflective ACG',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+    inStock: true,
+    stockCount: 13,
+    badge: 'Weatherproof Tank',
+    image: 'assets/nike_acg_mountain_fly.jpg',
+    video: 'assets/nike_acg_mountain_fly.webm',
+    description: 'Built to conquer rocky mountain peaks, torrential downpours, and urban blizzards. Features a full GORE-TEX waterproof liner, responsive React foam, and sticky mountain bike tire-inspired chevron lugs.',
+    specs: {
+      weatherproofing: 'GORE-TEX Waterproof Invisible-Fit Bootie',
+      cushioning: 'Full React Foam Midsole + Semi-Rigid Trail Flyplate',
+      outsole: 'Mountain-Climbing High-Traction Rubber Lugs',
+      lacing: 'Quick-Lace Bungee Toggle System',
+      terrain: 'Mountain Trails, Mud, Rain & Snow'
+    },
+    reviews: [
+      { author: 'Gabe T.', rating: 5, date: '3 days ago', title: 'Best all-weather sneaker I have ever owned', text: 'Hiked through rain and mud in the Rockies, feet stayed 100% dry and comfortable.' }
+    ]
+  },
+  {
+    id: 'nike-air-force-1-utility',
+    sku: 'NK-AF1-064',
+    brand: 'Nike',
+    brandBadge: 'Nike Air Force 1',
+    brandColor: 'white',
+    name: 'Nike Air Force 1 \'07 LV8 "Double Swoosh"',
+    subtitle: 'Layered Leather & Reflective Chrome Dubrae Streetwear',
+    price: 125.00,
+    originalPrice: 125.00,
+    rating: 4.8,
+    reviewsCount: 510,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Summit White / Industrial Blue / Black / Metallic Silver',
+    sizes: [6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 32,
+    badge: 'Streetwear LV8',
+    image: 'assets/nike_air_force_1_white.jpg',
+    video: 'assets/nike_air_force_1_white.webm',
+    description: 'A bold, layered evolution of the iconic 1982 hardwood silhouette. Double-stacked leather Swooshes, miniature embroidered toe check, encapsulated Air cushioning, and premium tumbled leather.',
+    specs: {
+      cushioning: 'Encapsulated Nike Air-Sole Cushioning Unit',
+      details: 'Layered Dual Leather Swoosh Overlays & Metallic Dubrae',
+      materials: 'Tumbled Genuine Full-Grain Leather Upper',
+      outsole: 'Non-Marking Rubber Pivot Cupsole',
+      style: 'Timeless Streetwear Statement'
+    },
+    reviews: [
+      { author: 'Chris M.', rating: 5, date: '2 days ago', title: 'Clean details and comfortable', text: 'The double swoosh adds just the right amount of spice to the classic AF1.' }
+    ]
+  },
+  {
+    id: 'jordan-1-retro-high-bred',
+    sku: 'JB-AJ1-065',
+    brand: 'Jordan',
+    brandBadge: 'Jordan Heritage',
+    brandColor: 'red',
+    name: 'Air Jordan 1 High OG "Bred Banned"',
+    subtitle: 'The Legendary 1985 NBA Banned Black & Red Icon',
+    price: 180.00,
+    originalPrice: 180.00,
+    rating: 5.0,
+    reviewsCount: 920,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Black / Varsity Red / Summit White',
+    sizes: [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 8,
+    badge: 'Banned 1985 Grail',
+    image: 'assets/nike_jordan_1_chicago.jpg',
+    video: 'assets/nike_jordan_1_chicago.webm',
+    description: 'The shoe that changed footwear culture forever. Recreated in exact 1985 high-cut specifications with premium varsity red and black full-grain leather, encapsulated Air cushioning, and Wings logo.',
+    specs: {
+      cushioning: 'Encapsulated Nike Air Heel Unit',
+      materials: 'Premium Heavyweight Full-Grain Leather',
+      details: 'Original 1985 High-Top Ankle Cut & Wings Emblem',
+      outsole: 'Solid Rubber Pivot Outsole',
+      style: 'The Most Famous Sneaker in History'
+    },
+    reviews: [
+      { author: 'Marcus B.', rating: 5, date: 'Yesterday', title: 'The ultimate grail', text: 'Black and red leather quality is buttery soft. Absolute perfection.' }
+    ]
+  },
+  {
+    id: 'jordan-4-military-black',
+    sku: 'JB-AJ4-066',
+    brand: 'Jordan',
+    brandBadge: 'Jordan Flight Series',
+    brandColor: 'white',
+    name: 'Air Jordan 4 Retro "Military Black"',
+    subtitle: 'Smooth White Leather & Neutral Grey Suede Hardwood Grail',
+    price: 210.00,
+    originalPrice: 210.00,
+    rating: 5.0,
+    reviewsCount: 830,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'White / Black / Neutral Grey / Fire Red',
+    sizes: [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 11,
+    badge: 'Modern Classic',
+    image: 'assets/jordan_4_bred.jpg',
+    video: 'assets/jordan_4_bred.webm',
+    description: 'One of the most universally acclaimed modern Jordan colorways. Clean white leather base with grey suede mudguard, black molded eyelet wings, side quarter mesh netting, and visible heel Air unit.',
+    specs: {
+      cushioning: 'Visible Heel Air-Sole + Encapsulated Forefoot Air Unit',
+      materials: 'Smooth Full-Grain Leather with Suede Toe Overlay',
+      details: 'Molded TPU Eyelet Wings & Flight Tongue Logo',
+      outsole: 'Multi-Directional Herringbone Tread',
+      style: 'Modern Grail & Streetwear Staple'
+    },
+    reviews: [
+      { author: 'Julian S.', rating: 5, date: '2 days ago', title: 'Cleanest Jordan 4 ever made', text: 'Goes with every single fit. Leather is super supple and comfortable.' }
+    ]
+  },
+  {
+    id: 'jordan-11-concord',
+    sku: 'JB-AJ11-067',
+    brand: 'Jordan',
+    brandBadge: 'Jordan Championship',
+    brandColor: 'purple',
+    name: 'Air Jordan 11 Retro "Concord 1995"',
+    subtitle: 'Michael Jordan\'s 72-10 Championship Patent Leather Grail',
+    price: 225.00,
+    originalPrice: 225.00,
+    rating: 5.0,
+    reviewsCount: 890,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'White / Black Patent Leather / Dark Concord / Icy Blue',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 7,
+    badge: '72-10 Championship',
+    image: 'assets/jordan_11_gratitude.jpg',
+    video: 'assets/jordan_11_gratitude.webm',
+    description: 'Tinker Hatfield\'s masterpiece that broke all boundaries between performance and tuxedo luxury. High-cut gleaming black patent leather, ballistic mesh upper, full-length carbon fiber shank, and icy translucent outsole.',
+    specs: {
+      cushioning: 'Full-Length Encapsulated Nike Air-Sole Cushioning',
+      plate: 'Real Carbon Fiber Midfoot Arch Shank Plate',
+      materials: 'High-Cut Glossy Black Patent Leather Mudguard',
+      outsole: 'Translucent Icy Blue Outsole with Dark Concord Pods',
+      style: '72-10 Championship Legend'
+    },
+    reviews: [
+      { author: 'Anthony T.', rating: 5, date: '1 day ago', title: 'The greatest sneaker in existence', text: 'Concord 11s are pure royalty. Patent leather shine and icy blue soles are unbeatable.' }
+    ]
+  },
+  {
+    id: 'jordan-3-retro-black-cement',
+    sku: 'JB-AJ3-068',
+    brand: 'Jordan',
+    brandBadge: 'Jordan Heritage',
+    brandColor: 'red',
+    name: 'Air Jordan 3 Retro OG "Black Cement"',
+    subtitle: '1988 All-Star Game MVP Elephant Print Masterpiece',
+    price: 210.00,
+    originalPrice: 210.00,
+    rating: 5.0,
+    reviewsCount: 780,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Black / Fire Red / Cement Grey / White',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 9,
+    badge: '1988 MVP Grail',
+    image: 'assets/jordan_3_white_cement.jpg',
+    video: 'assets/jordan_3_white_cement.webm',
+    description: 'Worn by Michael Jordan during his historic 1988 MVP All-Star Game performance. Premium black tumbled leather, authentic elephant print overlays, fire red accents, visible heel Air, and Nike Air heel tab.',
+    specs: {
+      cushioning: 'Visible Heel Air-Sole + Encapsulated Forefoot Air Unit',
+      materials: 'Premium Soft Tumbled Black Leather Upper',
+      details: 'Original 1988 Cut Elephant Print Mudguards & Nike Air Heel Tab',
+      outsole: 'Solid Rubber with Concentric Pivot Pods',
+      style: 'Hardwood MVP History & Streetwear Icon'
+    },
+    reviews: [
+      { author: 'Derek H.', rating: 5, date: '3 days ago', title: 'Timeless masterpiece', text: 'Nike Air branding on the heel is the cherry on top. Super comfortable leather.' }
+    ]
+  },
+  {
+    id: 'anta-kai-1-triple-white',
+    sku: 'AN-KAI1-069',
+    brand: 'ANTA',
+    brandBadge: 'ANTA Kyrie Signature',
+    brandColor: 'cyan',
+    name: 'ANTA KAI 1 "Talisman White Gold"',
+    subtitle: 'Kyrie Irving Pristine Hieroglyphics Championship Shoe',
+    price: 125.00,
+    originalPrice: 125.00,
+    rating: 5.0,
+    reviewsCount: 310,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Pure White / Metallic Gold / Ice Clear',
+    sizes: [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 17,
+    badge: 'White Gold Drop',
+    image: 'assets/anta_kai_1_warrior.jpg',
+    video: 'assets/anta_kai_1_warrior.webm',
+    description: 'Kyrie Irving\'s angelic white and gold edition celebrating court enlightenment and creative transcendence. Full-length supercritical NitroEdge nitrogen foam, gold-threaded talisman embroidery, and lockdown strap.',
+    specs: {
+      cushioning: 'Full-Length Supercritical NitroEdge Nitrogen Foam',
+      plate: 'Carbon Fiber Midfoot Torsion Plate',
+      lockdown: 'Gold-Threaded Talisman Midfoot Strap',
+      outsole: 'Translucent Ice Radial Traction Rubber',
+      position: 'Creative Guards & Ball-Handling Wizards'
+    },
+    reviews: [
+      { author: 'Kyrie Fanatic', rating: 5, date: 'Yesterday', title: 'Most beautiful KAI 1 colorway', text: 'White with gold hieroglyphics is stunning. Court grip stops on a dime.' }
+    ]
+  },
+  {
+    id: 'anta-kt8-gold-blooded',
+    sku: 'AN-KT8-070',
+    brand: 'ANTA',
+    brandBadge: 'ANTA Klay Signature',
+    brandColor: 'amber',
+    name: 'ANTA KT8 "Gold Blooded"',
+    subtitle: 'Klay Thompson 4x NBA Champion 3D FLOW Hardwood Shoe',
+    price: 135.00,
+    originalPrice: 135.00,
+    rating: 4.9,
+    reviewsCount: 240,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Golden State White / Championship Gold / Royal Blue',
+    sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 14,
+    badge: 'Championship Ring',
+    image: 'assets/anta_kt9.jpg',
+    video: 'assets/anta_kt9.webm',
+    description: 'Engineered for Klay Thompson\'s fourth championship ring. Features dual-density NitroEdge supercritical foam, full-length 3D FLOW carbon stability frame, and SMART S.A.M shock-absorbing heel puck.',
+    specs: {
+      cushioning: 'Dual NitroEdge Nitrogen Foam + SMART S.A.M Heel Module',
+      stability: 'Full-Length 3D FLOW Wrap-Around Carbon Frame',
+      collar: 'Foldable High-to-Low Ankle Collar System',
+      outsole: 'High-Grip Ripple Hardwood Outsole',
+      position: 'Elite Sharpshooters & Wing Defenders'
+    },
+    reviews: [
+      { author: 'Warriors Fan 11', rating: 5, date: '2 days ago', title: 'Championship gold details are glorious', text: 'Landing is super cushioned. Pure shooter shoe.' }
+    ]
+  },
+  {
+    id: 'anta-shockwave-5-pro-cement',
+    sku: 'AN-SW5-071',
+    brand: 'ANTA',
+    brandBadge: 'ANTA Cyber Hoops',
+    brandColor: 'purple',
+    name: 'ANTA Shock Wave 5 Pro "Toxic Neon"',
+    subtitle: 'High-Abrasion Outdoor Blacktop Nitrogen Beast',
+    price: 140.00,
+    originalPrice: 140.00,
+    rating: 4.9,
+    reviewsCount: 210,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Toxic Electric Volt / Cyber Black / Neon Violet',
+    sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 18,
+    badge: 'Outdoor Destroyer',
+    image: 'assets/anta_shockwave_5.jpg',
+    video: 'assets/anta_shockwave_5.webm',
+    description: 'Built specifically for brutal asphalt and concrete streetball battles. High-rebound drop-in NitroEdge supercritical foam, 360-degree TPU outrigger armor, and indestructible cement-killer rubber.',
+    specs: {
+      cushioning: 'Drop-In Supercritical Nitrogen NitroEdge Core',
+      armor: 'Wrap-Around Lateral Cyber TPU Armor Shield',
+      outsole: 'Extra-Deep Cement-Killer Outdoor Rubber Tread',
+      upper: 'High-Tensile Ripstop Breathable Upper',
+      court: 'Outdoor Blacktop, Concrete & Rough Hardwood'
+    },
+    reviews: [
+      { author: 'Streetball Legend', rating: 5, date: '3 days ago', title: 'Rubber does not wear down', text: 'Played on rough asphalt courts all month, zero wear. Super bouncy nitrogen cushioning.' }
+    ]
+  },
+  {
+    id: 'nike-dunk-low-retro-grey-fog',
+    sku: 'NK-DNK-072',
+    brand: 'Nike',
+    brandBadge: 'Nike Streetwear',
+    brandColor: 'white',
+    name: 'Nike Dunk Low "Grey Fog"',
+    subtitle: 'Clean Minimalist Two-Tone Vintage Hardwood Classic',
+    price: 115.00,
+    originalPrice: 115.00,
+    rating: 4.9,
+    reviewsCount: 610,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'White / Grey Fog / Vintage Sail',
+    sizes: [6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 28,
+    badge: 'Clean Aesthetic',
+    image: 'assets/nike_dunk_low.jpg',
+    video: 'assets/nike_dunk_low.webm',
+    description: 'A minimalist masterpiece. Crisp white leather base with soft grey fog overlays and vintage sail midsole delivers effortlessly clean styling for any wardrobe rotation.',
+    specs: {
+      cushioning: 'Lightweight Cushioning Foam Midsole',
+      materials: 'Pristine Genuine Full-Grain Leather Overlays',
+      collar: 'Padded Low-Cut Ankle Collar',
+      outsole: 'Classic Rubber Pivot Traction Circle',
+      style: 'Essential Everyday Streetwear'
+    },
+    reviews: [
+      { author: 'Liam S.', rating: 5, date: 'Yesterday', title: 'Cleanest Dunk Low in existence', text: 'Grey fog is subtle and matches everything. Leather quality is great.' }
+    ]
   }
 ];
 
@@ -1611,6 +2403,7 @@ class StoreState {
     this.currencySymbols = { USD: '$', EUR: '€', GBP: '£', JPY: '¥', PHP: '₱' };
     this.promoDiscount = this.load('purpose_discount', 0);
     this.promoCode = this.load('purpose_promo', '');
+    this.shippingMethod = this.load('purpose_shipping_speed', 'standard');
     this.freeShippingThreshold = 150;
   }
 
@@ -1629,6 +2422,11 @@ class StoreState {
     } catch (e) {
       console.error('Storage error', e);
     }
+  }
+
+  setShippingSpeed(speed) {
+    this.shippingMethod = speed;
+    this.save('purpose_shipping_speed', speed);
   }
 
   addToCart(productId, size, quantity = 1) {
@@ -1709,14 +2507,14 @@ class StoreState {
 
   applyPromo(code) {
     const upper = code.trim().toUpperCase();
-    if (upper === 'PURPOSE10' || upper === 'NIKE10') {
+    if (upper === 'PURPOSE10' || upper === 'NIKE10' || upper === 'CONVERSE10' || upper === 'JORDAN10') {
       this.promoDiscount = 0.10; // 10% off
       this.promoCode = upper;
       this.save('purpose_discount', this.promoDiscount);
       this.save('purpose_promo', this.promoCode);
       this.notifyCartUpdated();
       return { success: true, message: '10% Promo Discount Applied!' };
-    } else if (upper === 'ANTA20' || upper === 'VIP20') {
+    } else if (upper === 'ANTA20' || upper === 'VIP20' || upper === 'VAULT20') {
       this.promoDiscount = 0.20; // 20% off
       this.promoCode = upper;
       this.save('purpose_discount', this.promoDiscount);
@@ -1724,7 +2522,7 @@ class StoreState {
       this.notifyCartUpdated();
       return { success: true, message: '20% VIP Vault Discount Applied!' };
     } else {
-      return { success: false, message: 'Invalid promo code. Try "PURPOSE10"' };
+      return { success: false, message: 'Invalid promo code. Try "PURPOSE10" or "ANTA20"' };
     }
   }
 
@@ -1740,11 +2538,22 @@ class StoreState {
     return this.cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
   }
 
-  getCartTotal() {
+  getCartTotal(overrideSpeed) {
     const subtotal = this.getCartSubtotal();
     const discountAmt = subtotal * this.promoDiscount;
     const discountedSubtotal = Math.max(0, subtotal - discountAmt);
-    const shipping = discountedSubtotal >= this.freeShippingThreshold || discountedSubtotal === 0 ? 0 : 15;
+    
+    const speed = overrideSpeed || this.shippingMethod || 'standard';
+    let shipping = 0;
+    if (speed === 'overnight') {
+      shipping = 25;
+    } else if (speed === 'priority') {
+      shipping = 15;
+    } else {
+      // standard: free over $150, else $10
+      shipping = (discountedSubtotal >= this.freeShippingThreshold || discountedSubtotal === 0) ? 0 : 10;
+    }
+
     const tax = discountedSubtotal * 0.08; // 8% estimated tax
     return {
       subtotal,
@@ -1819,8 +2628,9 @@ function getFilteredProducts() {
     // Brand filter
     if (currentBrandFilter !== 'all') {
       if (currentBrandFilter === 'jordan' && p.brand !== 'Jordan') return false;
-      if (currentBrandFilter === 'nike' && (p.brand !== 'Nike' && p.brand !== 'Jordan')) return false;
+      if (currentBrandFilter === 'nike' && p.brand !== 'Nike') return false;
       if (currentBrandFilter === 'anta' && p.brand !== 'ANTA') return false;
+      if (currentBrandFilter === 'converse' && p.brand !== 'Converse') return false;
     }
 
     // Category filter
@@ -2527,6 +3337,19 @@ function renderCheckoutSummary() {
       discountRow.style.display = 'none';
     }
   }
+
+  // Update Klarna 4x split in Step 3
+  const k1 = document.getElementById('klarna-due-1');
+  const k2 = document.getElementById('klarna-due-2');
+  const k3 = document.getElementById('klarna-due-3');
+  const k4 = document.getElementById('klarna-due-4');
+  if (k1 && totals.grandTotal) {
+    const q = Store.formatPrice(totals.grandTotal / 4);
+    k1.textContent = q;
+    if (k2) k2.textContent = q;
+    if (k3) k3.textContent = q;
+    if (k4) k4.textContent = q;
+  }
 }
 
 function executeOrderPlacement() {
@@ -2664,17 +3487,29 @@ function initCurrencySwitcher() {
 }
 
 // ==========================================================================
-// SEARCH & FILTER CONTROLS
 // ==========================================================================
+// SEARCH, BRAND & FILTER CONTROLS
+// ==========================================================================
+function setBrandFilter(brand, scroll = false) {
+  currentBrandFilter = brand;
+  document.querySelectorAll('.brand-tab-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-brand') === brand);
+  });
+  renderProductGrid();
+  if (scroll) {
+    document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+window.setBrandFilter = setBrandFilter;
+
 function initCatalogFilters() {
-  // Brand Tabs
+  // Brand Tabs everywhere (Desktop nav, mobile nav, catalog toolbar)
   const brandTabs = document.querySelectorAll('.brand-tab-btn');
   brandTabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      brandTabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      currentBrandFilter = tab.getAttribute('data-brand');
-      renderProductGrid();
+      const brand = tab.getAttribute('data-brand') || 'all';
+      const isHeaderOrMobile = tab.closest('.desktop-nav') || tab.closest('.mobile-nav-drawer');
+      setBrandFilter(brand, isHeaderOrMobile ? true : false);
     });
   });
 
@@ -2700,7 +3535,7 @@ function initCatalogFilters() {
     });
   });
 
-  // Search Input with Debounce
+  // Search Input with Live Filter
   const searchInput = document.getElementById('catalog-search-input');
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
@@ -2769,6 +3604,421 @@ function initHeroQuickBuy() {
 }
 
 // ==========================================================================
+// ANNOUNCEMENT PROMO COUPON CLICK
+// ==========================================================================
+function initAnnouncementCoupon() {
+  const couponEl = document.getElementById('top-coupon-code');
+  if (couponEl) {
+    couponEl.addEventListener('click', () => {
+      const code = 'PURPOSE10';
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(code).catch(() => {});
+      }
+      Store.applyPromo(code);
+      showStoreToast(`Promo Code <strong>${code}</strong> (10% OFF) copied & applied to your bag!`, 'tag', 'success');
+      renderCartDrawer();
+      renderCheckoutSummary();
+    });
+  }
+}
+
+// ==========================================================================
+// CUSTOMER CARE & GUARANTEE MODALS
+// ==========================================================================
+function initCustomerCareModals() {
+  const overlay = document.getElementById('info-modal-overlay');
+  const allModals = document.querySelectorAll('.info-modal');
+  const openTriggers = document.querySelectorAll('[data-open-modal]');
+  const closeTriggers = document.querySelectorAll('[data-close-modal]');
+  const modalSizeGuideBtn = document.getElementById('modal-open-size-guide-btn');
+
+  function openInfoModal(modalId) {
+    closeAllInfoModals();
+    const targetModal = document.getElementById(`${modalId}-modal`);
+    if (targetModal && overlay) {
+      targetModal.classList.add('active');
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      if (window.lucide) window.lucide.createIcons();
+    }
+  }
+
+  function closeAllInfoModals() {
+    allModals.forEach(m => m.classList.remove('active'));
+    if (overlay) overlay.classList.remove('active');
+    if (!document.getElementById('product-detail-modal')?.classList.contains('active') &&
+        !document.getElementById('checkout-modal')?.classList.contains('active')) {
+      document.body.style.overflow = '';
+    }
+  }
+
+  openTriggers.forEach(t => {
+    t.addEventListener('click', (e) => {
+      e.preventDefault();
+      const modalType = t.getAttribute('data-open-modal');
+      if (modalType) openInfoModal(modalType);
+    });
+  });
+
+  closeTriggers.forEach(c => c.addEventListener('click', closeAllInfoModals));
+  if (overlay) overlay.addEventListener('click', closeAllInfoModals);
+
+  if (modalSizeGuideBtn) {
+    modalSizeGuideBtn.addEventListener('click', () => {
+      openInfoModal('size-guide');
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeAllInfoModals();
+    }
+  });
+
+  window.openInfoModal = openInfoModal;
+  window.closeAllInfoModals = closeAllInfoModals;
+}
+
+// ==========================================================================
+// SIZE GUIDE & FIT ADVISOR CALCULATOR
+// ==========================================================================
+function initSizeGuideCalculator() {
+  const brandTabs = document.querySelectorAll('.size-tab-btn');
+  const lenInput = document.getElementById('calc-foot-len');
+  const unitSelect = document.getElementById('calc-unit');
+  const resultChip = document.getElementById('calc-result-chip');
+  const tableBody = document.getElementById('size-table-body');
+
+  const brandData = {
+    nike: {
+      rows: [
+        { usM: '7.0', usW: '8.5', uk: '6.0', eu: '40.0', cm: '25.0', in: '9.84' },
+        { usM: '7.5', usW: '9.0', uk: '6.5', eu: '40.5', cm: '25.5', in: '10.04' },
+        { usM: '8.0', usW: '9.5', uk: '7.0', eu: '41.0', cm: '26.0', in: '10.24' },
+        { usM: '8.5', usW: '10.0', uk: '7.5', eu: '42.0', cm: '26.5', in: '10.43' },
+        { usM: '9.0', usW: '10.5', uk: '8.0', eu: '42.5', cm: '27.0', in: '10.63' },
+        { usM: '9.5', usW: '11.0', uk: '8.5', eu: '43.0', cm: '27.5', in: '10.83' },
+        { usM: '10.0', usW: '11.5', uk: '9.0', eu: '44.0', cm: '28.0', in: '11.02' },
+        { usM: '10.5', usW: '12.0', uk: '9.5', eu: '44.5', cm: '28.5', in: '11.22' },
+        { usM: '11.0', usW: '12.5', uk: '10.0', eu: '45.0', cm: '29.0', in: '11.42' },
+        { usM: '11.5', usW: '13.0', uk: '10.5', eu: '45.5', cm: '29.5', in: '11.61' },
+        { usM: '12.0', usW: '13.5', uk: '11.0', eu: '46.0', cm: '30.0', in: '11.81' },
+        { usM: '13.0', usW: '14.5', uk: '12.0', eu: '47.5', cm: '31.0', in: '12.20' }
+      ]
+    },
+    anta: {
+      rows: [
+        { usM: '7.0', usW: '8.0', uk: '6.0', eu: '40.0', cm: '25.0', in: '9.84' },
+        { usM: '7.5', usW: '8.5', uk: '6.5', eu: '40.5', cm: '25.5', in: '10.04' },
+        { usM: '8.0', usW: '9.0', uk: '7.0', eu: '41.0', cm: '26.0', in: '10.24' },
+        { usM: '8.5', usW: '9.5', uk: '7.5', eu: '42.0', cm: '26.5', in: '10.43' },
+        { usM: '9.0', usW: '10.0', uk: '8.0', eu: '42.5', cm: '27.0', in: '10.63' },
+        { usM: '9.5', usW: '10.5', uk: '8.5', eu: '43.0', cm: '27.5', in: '10.83' },
+        { usM: '10.0', usW: '11.0', uk: '9.0', eu: '44.5', cm: '28.0', in: '11.02' },
+        { usM: '10.5', usW: '11.5', uk: '9.5', eu: '45.0', cm: '28.5', in: '11.22' },
+        { usM: '11.0', usW: '12.0', uk: '10.0', eu: '45.5', cm: '29.0', in: '11.42' },
+        { usM: '12.0', usW: '13.0', uk: '11.0', eu: '46.5', cm: '30.0', in: '11.81' },
+        { usM: '13.0', usW: '14.0', uk: '12.0', eu: '48.0', cm: '31.0', in: '12.20' }
+      ]
+    },
+    converse: {
+      rows: [
+        { usM: '7.0', usW: '9.0', uk: '7.0', eu: '40.0', cm: '25.5', in: '10.04' },
+        { usM: '7.5', usW: '9.5', uk: '7.5', eu: '41.0', cm: '26.0', in: '10.24' },
+        { usM: '8.0', usW: '10.0', uk: '8.0', eu: '41.5', cm: '26.5', in: '10.43' },
+        { usM: '8.5', usW: '10.5', uk: '8.5', eu: '42.0', cm: '27.0', in: '10.63' },
+        { usM: '9.0', usW: '11.0', uk: '9.0', eu: '42.5', cm: '27.5', in: '10.83' },
+        { usM: '9.5', usW: '11.5', uk: '9.5', eu: '43.0', cm: '28.0', in: '11.02' },
+        { usM: '10.0', usW: '12.0', uk: '10.0', eu: '44.0', cm: '28.5', in: '11.22' },
+        { usM: '10.5', usW: '12.5', uk: '10.5', eu: '44.5', cm: '29.0', in: '11.42' },
+        { usM: '11.0', usW: '13.0', uk: '11.0', eu: '45.0', cm: '29.5', in: '11.61' },
+        { usM: '12.0', usW: '14.0', uk: '12.0', eu: '46.5', cm: '30.5', in: '12.01' }
+      ]
+    }
+  };
+
+  brandTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      brandTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const brand = tab.getAttribute('data-guide-brand') || 'nike';
+      const data = brandData[brand] || brandData.nike;
+      if (tableBody) {
+        tableBody.innerHTML = data.rows.map(r => `
+          <tr>
+            <td>${r.usM}</td>
+            <td>${r.usW}</td>
+            <td>${r.uk}</td>
+            <td>${r.eu}</td>
+            <td>${r.cm} cm</td>
+            <td>${r.in} in</td>
+          </tr>
+        `).join('');
+      }
+      updateCalculator();
+    });
+  });
+
+  function updateCalculator() {
+    if (!lenInput || !resultChip) return;
+    let val = parseFloat(lenInput.value);
+    if (isNaN(val) || val <= 0) {
+      resultChip.textContent = 'Enter Foot Length';
+      return;
+    }
+    const unit = unitSelect ? unitSelect.value : 'cm';
+    const lengthInCm = unit === 'in' ? val * 2.54 : val;
+
+    let usSize = Math.round(((lengthInCm - 25.0) * 2 + 7.0) * 2) / 2;
+    if (usSize < 6) usSize = 6;
+    if (usSize > 14) usSize = 14;
+
+    const euSize = Math.round(33 + usSize * 1.05 + (usSize > 9 ? 1 : 0.5));
+    resultChip.textContent = `Recommended: US ${usSize.toFixed(1)} M / EU ${euSize}`;
+  }
+
+  if (lenInput) lenInput.addEventListener('input', updateCalculator);
+  if (unitSelect) unitSelect.addEventListener('change', updateCalculator);
+}
+
+// ==========================================================================
+// 24/7 SNEAKER CONCIERGE LIVE ASSISTANT
+// ==========================================================================
+function initConciergeChat() {
+  const form = document.getElementById('concierge-chat-form');
+  const input = document.getElementById('concierge-chat-input');
+  const list = document.getElementById('concierge-messages-list');
+  const suggestionChips = document.querySelectorAll('.chat-suggest-chip');
+
+  function appendMessage(text, isBot = false) {
+    if (!list) return;
+    const bubble = document.createElement('div');
+    bubble.className = `chat-bubble ${isBot ? 'chat-bubble-bot' : 'chat-bubble-user'}`;
+    bubble.innerHTML = text;
+    list.appendChild(bubble);
+    list.scrollTop = list.scrollHeight;
+    if (window.lucide) window.lucide.createIcons();
+  }
+
+  function handleUserQuery(query) {
+    const q = query.toLowerCase();
+    appendMessage(query, false);
+
+    const typingBubble = document.createElement('div');
+    typingBubble.className = 'chat-bubble chat-bubble-bot';
+    typingBubble.innerHTML = '<em><i data-lucide="loader-2" class="spin"></i> Alex is analyzing vault inventory...</em>';
+    list?.appendChild(typingBubble);
+    list.scrollTop = list.scrollHeight;
+    if (window.lucide) window.lucide.createIcons();
+
+    setTimeout(() => {
+      typingBubble.remove();
+      let reply = '';
+
+      if (q.includes('marathon') || q.includes('race') || q.includes('sub-3') || q.includes('running') || q.includes('alphafly') || q.includes('vaporfly')) {
+        reply = `🏃 For marathon race-day supremacy, our top two certified models are:
+        <br/><br/>
+        1. <strong>Nike Alphafly 3 World Record</strong> ($285) - Dual forefoot Zoom Air pods + full-length carbon Flyplate for maximum propulsion.
+        <br/>
+        2. <strong>ANTA C202 5 GT Pro Marathon</strong> ($220) - Supercritical nitrogen NitroEdge foam + 3D bionic carbon plate for ultra-stable pacing.
+        <br/><br/>
+        <button class="btn-primary btn-sm" onclick="closeAllInfoModals(); openProductModal('nike-alphafly-3');"><i data-lucide="eye"></i> View Alphafly 3</button>`;
+      } else if (q.includes('kai') || q.includes('kobe') || q.includes('basketball') || q.includes('hoop') || q.includes('grip') || q.includes('traction')) {
+        reply = `🏀 <strong>ANTA KAI 1 vs Kobe 8 Protro Comparison:</strong>
+        <br/><br/>
+        • <strong>ANTA KAI 1 "Artist on Court" ($125)</strong>: High-value performer. NitroEdge supercritical nitrogen foam + midfoot stability strap. Unbeatable lateral lock.
+        <br/>
+        • <strong>Nike Kobe 8 Protro Halo ($180)</strong>: Ultra-lightweight engineered mesh with full-length drop-in React foam. Squeaky indoor court bite.
+        <br/><br/>
+        <button class="btn-primary btn-sm" onclick="closeAllInfoModals(); openProductModal('anta-kai-1-artist');"><i data-lucide="eye"></i> View ANTA KAI 1</button>`;
+      } else if (q.includes('size') || q.includes('fit') || q.includes('wide')) {
+        reply = `📏 <strong>Fit & Sizing Specialist Advice:</strong>
+        <br/><br/>
+        • <strong>Nike ZoomX / Alphafly</strong>: Fits snug/true-to-size. For wide feet or 15+ mile swelling, go up <strong>half a size (0.5 US)</strong>.
+        <br/>
+        • <strong>ANTA KAI & KT9</strong>: Fits True to Size with generous forefoot flex and midfoot strap lockdown.
+        <br/>
+        • <strong>Converse Chuck 70</strong>: Runs <strong>half a size large</strong>. Size down 0.5 US.`;
+      } else if (q.includes('authentic') || q.includes('real') || q.includes('legit') || q.includes('fake') || q.includes('verify')) {
+        reply = `🛡️ <strong>100% Deadstock Authenticity Guarantee:</strong>
+        <br/><br/>
+        Every pair at Purpose Vault passes an 8-point physical verification including high-intensity UV blacklight, RFID serial scan against brand master databases, gram scale weight checks, and our tamper-evident NFC security zip-tie.`;
+      } else {
+        reply = `✨ Thanks for reaching out! We have 72 authentic Nike, Jordan, ANTA, and Converse models in stock with free worldwide express shipping over $150. Use code <strong>PURPOSE10</strong> for 10% off your entire order. Let me know if you need specific model recommendations!`;
+      }
+
+      appendMessage(reply, true);
+    }, 750);
+  }
+
+  if (form && input) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const val = input.value.trim();
+      if (val) {
+        handleUserQuery(val);
+        input.value = '';
+      }
+    });
+  }
+
+  suggestionChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const prompt = chip.getAttribute('data-prompt');
+      if (prompt) {
+        handleUserQuery(prompt);
+      }
+    });
+  });
+}
+
+// ==========================================================================
+// 30-DAY RETURN PORTAL
+// ==========================================================================
+function initReturnPortal() {
+  const form = document.getElementById('returns-portal-form');
+  const formStep = document.getElementById('returns-form-step');
+  const successStep = document.getElementById('returns-success-step');
+  const rmaEl = document.getElementById('label-rma-number');
+  const trackingEl = document.getElementById('label-tracking-number');
+  const startAnotherBtn = document.getElementById('start-another-return-btn');
+
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const orderId = document.getElementById('return-order-id')?.value || 'PV-892104';
+      const rmaNum = `RMA #${orderId.toUpperCase()}-RET-${Math.floor(1000 + Math.random() * 9000)}`;
+      const trackingCode = `1Z${Math.random().toString(36).substring(2, 10).toUpperCase()}${Math.floor(10000000 + Math.random() * 90000000)}`;
+
+      if (rmaEl) rmaEl.textContent = rmaNum;
+      if (trackingEl) trackingEl.textContent = trackingCode;
+
+      if (formStep) formStep.style.display = 'none';
+      if (successStep) successStep.style.display = 'flex';
+
+      showStoreToast(`Prepaid Return Label generated for <strong>${rmaNum}</strong>!`, 'printer', 'success');
+      if (window.lucide) window.lucide.createIcons();
+    });
+  }
+
+  if (startAnotherBtn) {
+    startAnotherBtn.addEventListener('click', () => {
+      if (formStep) formStep.style.display = 'flex';
+      if (successStep) successStep.style.display = 'none';
+      if (form) form.reset();
+    });
+  }
+}
+
+// ==========================================================================
+// VERIFIED CUSTOMER REVIEW SUBMISSION
+// ==========================================================================
+function initReviewSubmission() {
+  const openBtn = document.getElementById('open-write-review-btn');
+  const form = document.getElementById('write-review-form');
+  const starPicker = document.getElementById('star-rating-picker');
+  let selectedRating = 5;
+
+  if (openBtn) {
+    openBtn.addEventListener('click', () => {
+      if (window.openInfoModal) window.openInfoModal('write-review');
+    });
+  }
+
+  if (starPicker) {
+    const stars = starPicker.querySelectorAll('.star');
+    stars.forEach(s => {
+      s.addEventListener('click', () => {
+        selectedRating = parseInt(s.getAttribute('data-star') || '5', 10);
+        stars.forEach(st => {
+          const val = parseInt(st.getAttribute('data-star') || '0', 10);
+          st.classList.toggle('active', val <= selectedRating);
+        });
+      });
+    });
+  }
+
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const product = document.getElementById('review-product-select')?.value || 'Nike Alphafly 3';
+      const name = document.getElementById('review-author-name')?.value || 'Athlete';
+      const location = document.getElementById('review-location')?.value || 'USA';
+      const headline = document.getElementById('review-headline')?.value || 'Outstanding Performance';
+      const body = document.getElementById('review-body')?.value || '';
+
+      const reviewsGrid = document.querySelector('.reviews-grid');
+      if (reviewsGrid) {
+        const newCard = document.createElement('div');
+        newCard.className = 'review-card';
+        newCard.style.animation = 'fadeIn 0.5s ease';
+        newCard.innerHTML = `
+          <div class="review-header">
+            <div class="review-stars">${'★'.repeat(selectedRating)}</div>
+            <span class="review-badge"><i data-lucide="check-circle-2"></i> Verified Buyer</span>
+          </div>
+          <h4>"${headline}"</h4>
+          <p>"${body}"</p>
+          <div class="review-user">
+            <div class="user-avatar">${name.slice(0, 2).toUpperCase()}</div>
+            <div>
+              <strong>${name}</strong>
+              <span>${location} • Purchased ${product}</span>
+            </div>
+          </div>
+        `;
+        reviewsGrid.prepend(newCard);
+        if (window.lucide) window.lucide.createIcons();
+      }
+
+      if (window.closeAllInfoModals) window.closeAllInfoModals();
+      showStoreToast(`Thank you, <strong>${name}</strong>! Your verified review has been published.`, 'star', 'success');
+      form.reset();
+    });
+  }
+}
+
+// ==========================================================================
+// CHECKOUT PAYMENT TABS & SHIPPING SELECTOR
+// ==========================================================================
+function initCheckoutPaymentAndShipping() {
+  const shippingRadios = document.querySelectorAll('input[name="shipping-speed"]');
+  shippingRadios.forEach(radio => {
+    radio.addEventListener('change', (e) => {
+      Store.setShippingSpeed(e.target.value);
+      renderCheckoutSummary();
+    });
+  });
+
+  const payMethodBtns = document.querySelectorAll('.pay-method-btn');
+  const payPanels = {
+    card: document.getElementById('pay-panel-card'),
+    applepay: document.getElementById('pay-panel-applepay'),
+    klarna: document.getElementById('pay-panel-klarna')
+  };
+
+  payMethodBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      payMethodBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const method = btn.getAttribute('data-pay-method') || 'card';
+
+      Object.values(payPanels).forEach(p => p?.classList.remove('active'));
+      if (payPanels[method]) {
+        payPanels[method].classList.add('active');
+      }
+    });
+  });
+
+  const applePayBtn = document.getElementById('apple-pay-trigger-btn');
+  if (applePayBtn) {
+    applePayBtn.addEventListener('click', () => {
+      executeOrderPlacement();
+    });
+  }
+}
+
+// ==========================================================================
 // NEWSLETTER SIGNUP
 // ==========================================================================
 function initNewsletter() {
@@ -2779,8 +4029,10 @@ function initNewsletter() {
       e.preventDefault();
       const val = input.value.trim();
       if (val) {
-        showStoreToast(`Welcome to the Vault! Use code <strong>PURPOSE10</strong> for 10% off.`, 'tag', 'success');
+        Store.applyPromo('PURPOSE10');
+        showStoreToast(`Welcome to the Vault! Code <strong>PURPOSE10</strong> (10% off) applied to your bag.`, 'tag', 'success');
         input.value = '';
+        renderCartDrawer();
       }
     });
   }
@@ -2848,6 +4100,13 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroQuickBuy();
   initNewsletter();
   initMobileMenu();
+  initAnnouncementCoupon();
+  initCustomerCareModals();
+  initSizeGuideCalculator();
+  initConciergeChat();
+  initReturnPortal();
+  initReviewSubmission();
+  initCheckoutPaymentAndShipping();
 
   if (window.lucide) {
     window.lucide.createIcons();

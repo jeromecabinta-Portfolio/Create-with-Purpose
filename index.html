@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PURPOSE VAULT | Official Nike & ANTA Footwear & Streetwear Store</title>
-  <meta name="description" content="Shop 100% authentic deadstock Nike and ANTA athletic performance and signature basketball shoes. Free worldwide express shipping, carbon marathon super-shoes, and limited drops." />
+  <title>PURPOSE VAULT | Official Nike, Jordan, ANTA & Converse Footwear Archive</title>
+  <meta name="description" content="Shop 72 verified authentic deadstock Nike, Jordan, ANTA and Converse performance and signature footwear. Free worldwide express shipping, marathon super-shoes, and limited drops." />
   
   <!-- Fonts: Syne (Display), Outfit (Body), Space Mono (Tech) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,7 +28,7 @@
       <span class="announcement-divider">•</span>
       <span>100% VERIFIED AUTHENTIC DEADSTOCK</span>
       <span class="announcement-divider">•</span>
-      <span>USE CODE <strong class="code-highlight">PURPOSE10</strong> FOR 10% OFF</span>
+      <span>USE CODE <strong class="code-highlight" id="top-coupon-code" title="Click to copy and apply 10% coupon">PURPOSE10 <i data-lucide="copy" style="width:12px;height:12px;display:inline-block;vertical-align:middle;"></i></strong> FOR 10% OFF</span>
     </div>
   </div>
 
@@ -50,6 +50,7 @@
         <button class="nav-link brand-tab-btn" data-brand="nike">Nike Performance</button>
         <button class="nav-link brand-tab-btn" data-brand="anta">ANTA Lineup</button>
         <button class="nav-link brand-tab-btn" data-brand="jordan">Jordan Brand</button>
+        <button class="nav-link brand-tab-btn" data-brand="converse">Converse Archive</button>
         <a href="#guarantee" class="nav-link">Authenticity</a>
         <a href="#reviews" class="nav-link">Reviews</a>
       </nav>
@@ -110,10 +111,11 @@
     </div>
 
     <div class="mobile-nav-links">
-      <button class="mobile-nav-link brand-tab-btn" data-brand="all"><i data-lucide="grid"></i> All Footwear (48)</button>
-      <button class="mobile-nav-link brand-tab-btn" data-brand="nike"><i data-lucide="check"></i> Nike Performance</button>
-      <button class="mobile-nav-link brand-tab-btn" data-brand="anta"><i data-lucide="flame"></i> ANTA Signature Hoops</button>
-      <button class="mobile-nav-link brand-tab-btn" data-brand="jordan"><i data-lucide="award"></i> Jordan Brand</button>
+      <button class="mobile-nav-link brand-tab-btn" data-brand="all"><i data-lucide="grid"></i> All Footwear (72)</button>
+      <button class="mobile-nav-link brand-tab-btn" data-brand="nike"><i data-lucide="check"></i> Nike Performance (38)</button>
+      <button class="mobile-nav-link brand-tab-btn" data-brand="anta"><i data-lucide="flame"></i> ANTA Hoops & Racing (16)</button>
+      <button class="mobile-nav-link brand-tab-btn" data-brand="jordan"><i data-lucide="award"></i> Jordan Brand (10)</button>
+      <button class="mobile-nav-link brand-tab-btn" data-brand="converse"><i data-lucide="star"></i> Converse Archive (8)</button>
       <a href="#guarantee" class="mobile-nav-link"><i data-lucide="shield-check"></i> Authenticity Guarantee</a>
       <a href="#reviews" class="mobile-nav-link"><i data-lucide="star"></i> Customer Reviews</a>
     </div>
@@ -183,7 +185,7 @@
           <div class="hero-actions">
             <a href="#catalog" class="btn-primary btn-lg">
               <i data-lucide="shopping-bag"></i>
-              <span>Shop All 48 Footwear Drops</span>
+              <span>Shop All 72 Footwear Drops</span>
             </a>
             <button class="btn-secondary btn-lg" onclick="currentBrandFilter='anta'; renderProductGrid(); document.getElementById('catalog').scrollIntoView({behavior:'smooth'});">
               <i data-lucide="flame"></i>
@@ -248,9 +250,9 @@
             <div class="spotlight-overlay"></div>
             <div class="spotlight-content">
               <span class="spotlight-tag">NIKE PERFORMANCE LAB</span>
-              <h3>ZoomX, Air Max Dn & Mamba Legacy</h3>
-              <p>Cutting-edge propulsion, pressurized 4-tube dynamic air, and iconic hardwood silhouettes.</p>
-              <span class="spotlight-btn">Shop Nike Vault <i data-lucide="arrow-right"></i></span>
+              <h3>ZoomX & Mamba Legacy</h3>
+              <p>Marathon super-shoes, Dynamic Air & Mamba Mentality.</p>
+              <span class="spotlight-btn">Shop Nike (38) <i data-lucide="arrow-right"></i></span>
             </div>
           </div>
 
@@ -259,9 +261,31 @@
             <div class="spotlight-overlay"></div>
             <div class="spotlight-content">
               <span class="spotlight-tag">ANTA HOOPS & NITROEDGE</span>
-              <h3>Kyrie KAI 1 & Klay Thompson KT9</h3>
-              <p>Supercritical nitrogen foam and championship-proven stability engineered for master playmakers.</p>
-              <span class="spotlight-btn">Shop ANTA Lineup <i data-lucide="arrow-right"></i></span>
+              <h3>Kyrie KAI & KT9 Gold</h3>
+              <p>Supercritical nitrogen foam & championship stability.</p>
+              <span class="spotlight-btn">Shop ANTA (16) <i data-lucide="arrow-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Jordan Brand Banner -->
+          <div class="spotlight-card spotlight-jordan" onclick="currentBrandFilter='jordan'; renderProductGrid(); document.getElementById('catalog').scrollIntoView({behavior:'smooth'});">
+            <div class="spotlight-overlay"></div>
+            <div class="spotlight-content">
+              <span class="spotlight-tag">JORDAN BRAND RETRO</span>
+              <h3>Bred, Concord & 1985 Grails</h3>
+              <p>Historic hardwood grails & premium leather icons.</p>
+              <span class="spotlight-btn">Shop Jordan (10) <i data-lucide="arrow-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Converse Archive Banner -->
+          <div class="spotlight-card spotlight-converse" onclick="currentBrandFilter='converse'; renderProductGrid(); document.getElementById('catalog').scrollIntoView({behavior:'smooth'});">
+            <div class="spotlight-overlay"></div>
+            <div class="spotlight-content">
+              <span class="spotlight-tag">CONVERSE ARCHIVE & CX</span>
+              <h3>Chuck 70 & Weapon CX</h3>
+              <p>Vintage 12oz duck canvas, CX foam & 80s hardwood.</p>
+              <span class="spotlight-btn">Shop Converse (8) <i data-lucide="arrow-right"></i></span>
             </div>
           </div>
 
@@ -283,22 +307,25 @@
               <span>Live Inventory & Drops</span>
             </div>
             <h2 class="section-title">The Complete Footwear Catalog</h2>
-            <p class="section-desc" id="products-count">48 Authentic Footwear Drops Available</p>
+            <p class="section-desc" id="products-count">72 Authentic Footwear Drops Available</p>
           </div>
 
           <!-- Brand Switcher Tabs -->
           <div class="brand-filter-tabs">
             <button class="brand-tab-btn active" data-brand="all">
-              <i data-lucide="grid"></i> All Brands (48)
+              <i data-lucide="grid"></i> All Brands (72)
             </button>
             <button class="brand-tab-btn" data-brand="nike">
-              <i data-lucide="check"></i> Nike Performance (31)
+              <i data-lucide="check"></i> Nike Performance (38)
             </button>
             <button class="brand-tab-btn" data-brand="anta">
-              <i data-lucide="flame"></i> ANTA Hoops & Racing (12)
+              <i data-lucide="flame"></i> ANTA Hoops & Racing (16)
             </button>
             <button class="brand-tab-btn" data-brand="jordan">
-              <i data-lucide="award"></i> Jordan Brand (5)
+              <i data-lucide="award"></i> Jordan Brand (10)
+            </button>
+            <button class="brand-tab-btn" data-brand="converse">
+              <i data-lucide="star"></i> Converse Archive (8)
             </button>
           </div>
         </div>
@@ -399,28 +426,32 @@
 
         <div class="guarantee-cards-grid">
           
-          <div class="guarantee-card">
+          <div class="guarantee-card" data-open-modal="authenticity" tabindex="0" role="button" aria-label="Open Multi-Point Authentication details">
             <div class="guarantee-icon"><i data-lucide="fingerprint"></i></div>
             <h3>Multi-Point Authentication</h3>
             <p>Every pair undergoes high-intensity UV light inspection, serial code verification, and RFID verification against brand master databases.</p>
+            <span class="guarantee-card-action">Learn 8-Point Standard <i data-lucide="arrow-right"></i></span>
           </div>
 
-          <div class="guarantee-card">
+          <div class="guarantee-card" data-open-modal="shipping" tabindex="0" role="button" aria-label="Open Double-Box Shipping details">
             <div class="guarantee-icon"><i data-lucide="package-check"></i></div>
             <h3>Reinforced Double-Box Shipping</h3>
             <p>Your authentic footwear arrives in pristine condition with factory packaging, extra laces, and official vault authenticity certificates.</p>
+            <span class="guarantee-card-action">View Dispatch Rates <i data-lucide="arrow-right"></i></span>
           </div>
 
-          <div class="guarantee-card">
+          <div class="guarantee-card" data-open-modal="returns" tabindex="0" role="button" aria-label="Open 30-Day Return Portal">
             <div class="guarantee-icon"><i data-lucide="refresh-ccw"></i></div>
             <h3>30-Day Hassle-Free Returns</h3>
             <p>Enjoy complete peace of mind with complimentary prepaid return labels and instant refunds or size exchanges on all unworn pairs.</p>
+            <span class="guarantee-card-action">Start Return or Exchange <i data-lucide="arrow-right"></i></span>
           </div>
 
-          <div class="guarantee-card">
+          <div class="guarantee-card" data-open-modal="concierge" tabindex="0" role="button" aria-label="Open 24/7 Sneaker Concierge">
             <div class="guarantee-icon"><i data-lucide="headphones"></i></div>
             <h3>24/7 Sneaker Concierge</h3>
             <p>Connect with our expert footwear specialists for personalized sizing advice, marathon race-day recommendations, and VIP drop access.</p>
+            <span class="guarantee-card-action">Chat with Sneaker Specialist <i data-lucide="arrow-right"></i></span>
           </div>
 
         </div>
@@ -441,6 +472,12 @@
           </div>
           <h2 class="section-title">Rated 4.9/5 by 3,400+ Athletes Worldwide</h2>
           <p class="section-desc">Read firsthand experiences from marathon finishers, collegiate athletes, and collectors.</p>
+          <div class="reviews-action-bar">
+            <button class="btn-primary" id="open-write-review-btn">
+              <i data-lucide="edit-3"></i>
+              <span>Write a Verified Customer Review</span>
+            </button>
+          </div>
         </div>
 
         <div class="reviews-grid">
@@ -701,6 +738,9 @@
         <div class="modal-size-section">
           <div class="size-section-header">
             <span class="size-title">Select US Men's Size:</span>
+            <button type="button" class="modal-size-guide-link" id="modal-open-size-guide-btn">
+              <i data-lucide="ruler"></i> Size Guide & Fit Tips
+            </button>
             <span class="in-stock-notice"><i data-lucide="check"></i> In Stock & Ready to Ship</span>
           </div>
           <div class="modal-sizes-grid" id="modal-sizes-grid">
@@ -874,29 +914,56 @@
           <h3>Payment Details</h3>
           
           <div class="payment-method-selector">
-            <button class="pay-method-btn active"><i data-lucide="credit-card"></i> Credit / Debit Card</button>
-            <button class="pay-method-btn"><i data-lucide="smartphone"></i> Apple Pay</button>
-            <button class="pay-method-btn"><i data-lucide="zap"></i> Klarna 4x</button>
+            <button type="button" class="pay-method-btn active" data-pay-method="card"><i data-lucide="credit-card"></i> Credit / Debit Card</button>
+            <button type="button" class="pay-method-btn" data-pay-method="applepay"><i data-lucide="smartphone"></i> Apple Pay</button>
+            <button type="button" class="pay-method-btn" data-pay-method="klarna"><i data-lucide="zap"></i> Klarna 4x</button>
           </div>
 
-          <div class="credit-card-form">
-            <div class="form-group">
-              <label>Cardholder Full Name</label>
-              <input type="text" value="Jerome Cabinta" required />
-            </div>
-            <div class="form-group">
-              <label>Card Number</label>
-              <input type="text" value="4532 •••• •••• 8892" required />
-            </div>
-            <div class="form-row-2">
+          <!-- Credit Card Panel -->
+          <div class="pay-method-panel active" id="pay-panel-card">
+            <div class="credit-card-form">
               <div class="form-group">
-                <label>Expiration</label>
-                <input type="text" placeholder="MM/YY" value="08/28" required />
+                <label>Cardholder Full Name</label>
+                <input type="text" value="Jerome Cabinta" required />
               </div>
               <div class="form-group">
-                <label>CVV / CVC</label>
-                <input type="password" placeholder="CVC" value="384" required />
+                <label>Card Number</label>
+                <input type="text" value="4532 •••• •••• 8892" required />
               </div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label>Expiration</label>
+                  <input type="text" placeholder="MM/YY" value="08/28" required />
+                </div>
+                <div class="form-group">
+                  <label>CVV / CVC</label>
+                  <input type="password" placeholder="CVC" value="384" required />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Apple Pay Panel -->
+          <div class="pay-method-panel" id="pay-panel-applepay">
+            <div style="padding: 1.25rem 0; text-align: center;">
+              <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 1.25rem;">Authorize instant express checkout securely using Apple Touch ID or Face ID.</p>
+              <button type="button" class="apple-pay-btn" id="apple-pay-trigger-btn">
+                <i data-lucide="smartphone"></i> Pay with Apple Pay
+              </button>
+            </div>
+          </div>
+
+          <!-- Klarna 4x Panel -->
+          <div class="pay-method-panel" id="pay-panel-klarna">
+            <div class="klarna-schedule-box mt-2 mb-2">
+              <h5 style="font-weight: 800; margin-bottom: 0.4rem; color: #ffb3c6;">Klarna 4 Interest-Free Payments</h5>
+              <p style="font-size: 0.8rem; margin-bottom: 0.6rem;">Split your order into 4 equal bi-weekly payments. Zero fees when paid on time.</p>
+              <ul style="font-size: 0.78rem; list-style: disc; margin-left: 1.2rem; color: var(--text-secondary); display:flex; flex-direction:column; gap:0.25rem;">
+                <li>1st payment due today: <strong id="klarna-due-1" style="color:#fff;">$0.00</strong></li>
+                <li>2nd payment (in 2 weeks): <strong id="klarna-due-2" style="color:#fff;">$0.00</strong></li>
+                <li>3rd payment (in 4 weeks): <strong id="klarna-due-3" style="color:#fff;">$0.00</strong></li>
+                <li>4th payment (in 6 weeks): <strong id="klarna-due-4" style="color:#fff;">$0.00</strong></li>
+              </ul>
             </div>
           </div>
 
@@ -993,34 +1060,34 @@
       <div class="footer-links-col">
         <h4>Nike Performance</h4>
         <ul>
-          <li><a href="#catalog" onclick="currentBrandFilter='nike'; renderProductGrid();">Nike ZoomX Vaporfly 3</a></li>
-          <li><a href="#catalog" onclick="currentBrandFilter='nike'; renderProductGrid();">Nike Alphafly 3 World Record</a></li>
-          <li><a href="#catalog" onclick="currentBrandFilter='nike'; renderProductGrid();">Nike Kobe 8 Protro Halo</a></li>
-          <li><a href="#catalog" onclick="currentBrandFilter='nike'; renderProductGrid();">Nike LeBron 20 Trinity</a></li>
-          <li><a href="#catalog" onclick="currentBrandFilter='nike'; renderProductGrid();">Nike Air Max Dn Dynamic Air</a></li>
-          <li><a href="#catalog" onclick="currentBrandFilter='nike'; renderProductGrid();">Nike Zoom Vomero 5</a></li>
+          <li><a href="javascript:void(0)" onclick="openProductModal('nike-vaporfly-3')">Nike ZoomX Vaporfly 3</a></li>
+          <li><a href="javascript:void(0)" onclick="openProductModal('nike-alphafly-3')">Nike Alphafly 3 World Record</a></li>
+          <li><a href="javascript:void(0)" onclick="openProductModal('nike-kobe-8-halo')">Nike Kobe 8 Protro Halo</a></li>
+          <li><a href="javascript:void(0)" onclick="openProductModal('nike-lebron-20')">Nike LeBron 20 Trinity</a></li>
+          <li><a href="javascript:void(0)" onclick="openProductModal('nike-air-max-dn')">Nike Air Max Dn Dynamic Air</a></li>
+          <li><a href="javascript:void(0)" onclick="openProductModal('nike-vomero-5')">Nike Zoom Vomero 5</a></li>
         </ul>
       </div>
 
       <div class="footer-links-col">
         <h4>ANTA Lineup</h4>
         <ul>
-          <li><a href="#catalog" onclick="currentBrandFilter='anta'; renderProductGrid();">ANTA KAI 1 "Artist on Court"</a></li>
-          <li><a href="#catalog" onclick="currentBrandFilter='anta'; renderProductGrid();">ANTA KAI 1 "Enlightened Warrior"</a></li>
-          <li><a href="#catalog" onclick="currentBrandFilter='anta'; renderProductGrid();">ANTA KT9 "Captain Klay"</a></li>
-          <li><a href="#catalog" onclick="currentBrandFilter='anta'; renderProductGrid();">ANTA Shock Wave 5 Pro</a></li>
-          <li><a href="#catalog" onclick="currentBrandFilter='anta'; renderProductGrid();">ANTA C202 5 GT Pro Marathon</a></li>
+          <li><a href="javascript:void(0)" onclick="openProductModal('anta-kai-1-artist')">ANTA KAI 1 "Artist on Court"</a></li>
+          <li><a href="javascript:void(0)" onclick="openProductModal('anta-kai-1-warrior')">ANTA KAI 1 "Enlightened Warrior"</a></li>
+          <li><a href="javascript:void(0)" onclick="openProductModal('anta-kt9-captain')">ANTA KT9 "Captain Klay"</a></li>
+          <li><a href="javascript:void(0)" onclick="openProductModal('anta-shockwave-5-pro')">ANTA Shock Wave 5 Pro</a></li>
+          <li><a href="javascript:void(0)" onclick="openProductModal('anta-c202-gt-pro')">ANTA C202 5 GT Pro Marathon</a></li>
         </ul>
       </div>
 
       <div class="footer-links-col">
         <h4>Customer Care</h4>
         <ul>
-          <li><a href="#guarantee">Authenticity Verification</a></li>
-          <li><a href="#guarantee">Shipping & Delivery Rates</a></li>
-          <li><a href="#guarantee">30-Day Return Portal</a></li>
-          <li><a href="#hero">Size Guide & Fit Advisor</a></li>
-          <li><a href="#hero">Contact Sneaker Concierge</a></li>
+          <li><a href="javascript:void(0)" data-open-modal="authenticity">Authenticity Verification</a></li>
+          <li><a href="javascript:void(0)" data-open-modal="shipping">Shipping & Delivery Rates</a></li>
+          <li><a href="javascript:void(0)" data-open-modal="returns">30-Day Return Portal</a></li>
+          <li><a href="javascript:void(0)" data-open-modal="size-guide">Size Guide & Fit Advisor</a></li>
+          <li><a href="javascript:void(0)" data-open-modal="concierge">Contact Sneaker Concierge</a></li>
         </ul>
       </div>
 
@@ -1040,6 +1107,384 @@
       </div>
     </div>
   </footer>
+
+  <!-- ==========================================================================
+       Universal Info Modals System (Size Guide, Concierge, Returns, Guarantee, Reviews)
+       ========================================================================== -->
+  <div class="info-modal-overlay" id="info-modal-overlay"></div>
+
+  <!-- Size Guide & Fit Advisor Modal -->
+  <div class="info-modal" id="size-guide-modal" role="dialog" aria-modal="true" aria-labelledby="size-guide-title">
+    <div class="info-modal-header">
+      <h3 id="size-guide-title"><i data-lucide="ruler"></i> Official Footwear Size Guide & Fit Advisor</h3>
+      <button class="info-modal-close" data-close-modal aria-label="Close size guide"><i data-lucide="x"></i></button>
+    </div>
+    <div class="info-modal-body">
+      
+      <!-- Brand Tabs -->
+      <div class="size-guide-tabs">
+        <button type="button" class="size-tab-btn active" data-guide-brand="nike">Nike & Jordan</button>
+        <button type="button" class="size-tab-btn" data-guide-brand="anta">ANTA Hoops & Racing</button>
+        <button type="button" class="size-tab-btn" data-guide-brand="converse">Converse Archive</button>
+      </div>
+
+      <!-- Foot Measurement Interactive Calculator -->
+      <div class="size-calculator-box">
+        <h4><i data-lucide="calculator"></i> Interactive Precision Fit Calculator</h4>
+        <p style="font-size:0.75rem; color:var(--text-secondary); margin-bottom:0.75rem;">
+          Measure your foot length from heel to longest toe against a flat wall, enter below to get your exact recommended sizing.
+        </p>
+        <div class="size-calc-inputs">
+          <div>
+            <label for="calc-foot-len">Foot Length:</label>
+            <input type="number" id="calc-foot-len" value="27.0" step="0.1" min="20" max="35" placeholder="e.g. 27.0" />
+          </div>
+          <div>
+            <label for="calc-unit">Measurement Unit:</label>
+            <select id="calc-unit">
+              <option value="cm">Centimeters (cm)</option>
+              <option value="in">Inches (in)</option>
+            </select>
+          </div>
+          <div>
+            <label>Recommended Size:</label>
+            <div class="calc-result-chip" id="calc-result-chip">US 9.5 M / EU 43</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Size Table -->
+      <div class="size-table-container">
+        <table class="size-table" id="size-guide-table">
+          <thead>
+            <tr>
+              <th>US Men</th>
+              <th>US Women</th>
+              <th>UK</th>
+              <th>EU</th>
+              <th>Foot (CM)</th>
+              <th>Foot (IN)</th>
+            </tr>
+          </thead>
+          <tbody id="size-table-body">
+            <tr><td>7.0</td><td>8.5</td><td>6.0</td><td>40.0</td><td>25.0 cm</td><td>9.84 in</td></tr>
+            <tr><td>7.5</td><td>9.0</td><td>6.5</td><td>40.5</td><td>25.5 cm</td><td>10.04 in</td></tr>
+            <tr><td>8.0</td><td>9.5</td><td>7.0</td><td>41.0</td><td>26.0 cm</td><td>10.24 in</td></tr>
+            <tr><td>8.5</td><td>10.0</td><td>7.5</td><td>42.0</td><td>26.5 cm</td><td>10.43 in</td></tr>
+            <tr><td>9.0</td><td>10.5</td><td>8.0</td><td>42.5</td><td>27.0 cm</td><td>10.63 in</td></tr>
+            <tr><td>9.5</td><td>11.0</td><td>8.5</td><td>43.0</td><td>27.5 cm</td><td>10.83 in</td></tr>
+            <tr><td>10.0</td><td>11.5</td><td>9.0</td><td>44.0</td><td>28.0 cm</td><td>11.02 in</td></tr>
+            <tr><td>10.5</td><td>12.0</td><td>9.5</td><td>44.5</td><td>28.5 cm</td><td>11.22 in</td></tr>
+            <tr><td>11.0</td><td>12.5</td><td>10.0</td><td>45.0</td><td>29.0 cm</td><td>11.42 in</td></tr>
+            <tr><td>11.5</td><td>13.0</td><td>10.5</td><td>45.5</td><td>29.5 cm</td><td>11.61 in</td></tr>
+            <tr><td>12.0</td><td>13.5</td><td>11.0</td><td>46.0</td><td>30.0 cm</td><td>11.81 in</td></tr>
+            <tr><td>13.0</td><td>14.5</td><td>12.0</td><td>47.5</td><td>31.0 cm</td><td>12.20 in</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Fit Tips Grid -->
+      <div class="fit-tips-grid">
+        <div class="fit-tip-card">
+          <h5><i data-lucide="info"></i> Nike ZoomX & Alphafly Fit</h5>
+          <p>Nike marathon racers feature a performance track fit. For wider feet or long-distance swelling over 15 miles, go up <strong>half a size (0.5 US)</strong>.</p>
+        </div>
+        <div class="fit-tip-card">
+          <h5><i data-lucide="info"></i> ANTA KAI & Hoops Fit</h5>
+          <p>ANTA basketball shoes fit <strong>True to Size</strong> with exceptional midfoot lockdown. Wide footers can comfortably stay true to size thanks to generous forefoot flex zones.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 24/7 Sneaker Concierge Live Assistant Modal -->
+  <div class="info-modal" id="concierge-modal" role="dialog" aria-modal="true" aria-labelledby="concierge-title">
+    <div class="info-modal-header">
+      <h3 id="concierge-title"><i data-lucide="headphones"></i> 24/7 Sneaker Concierge Live Assistant</h3>
+      <button class="info-modal-close" data-close-modal aria-label="Close concierge"><i data-lucide="x"></i></button>
+    </div>
+    <div class="info-modal-body">
+      <div class="concierge-chat-box">
+        <div class="concierge-messages-list" id="concierge-messages-list">
+          <div class="chat-bubble chat-bubble-bot">
+            👋 Welcome to <strong>Purpose Vault Concierge</strong>! I'm Alex, your footwear master specialist. How can I help you today? Ask me about marathon race-day shoes, basketball grip, drop dates, or size recommendations!
+          </div>
+        </div>
+
+        <div class="chat-quick-suggestions">
+          <button type="button" class="chat-suggest-chip" data-prompt="Best shoe for a sub-3 hour marathon?">🏃 Best Sub-3hr Marathon Shoe?</button>
+          <button type="button" class="chat-suggest-chip" data-prompt="How does ANTA KAI 1 compare to Kobe 8?">🏀 ANTA KAI 1 vs Kobe 8?</button>
+          <button type="button" class="chat-suggest-chip" data-prompt="What size should I get for Nike Vaporfly 3?">📏 Vaporfly 3 Sizing Advice?</button>
+          <button type="button" class="chat-suggest-chip" data-prompt="How do you authenticate deadstock sneakers?">🛡️ How is Authenticity Verified?</button>
+        </div>
+
+        <form class="chat-input-row" id="concierge-chat-form">
+          <input type="text" id="concierge-chat-input" placeholder="Type your sneaker question..." autocomplete="off" required />
+          <button type="submit">
+            <span>Send</span>
+            <i data-lucide="send"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 30-Day Hassle-Free Returns & Exchanges Modal -->
+  <div class="info-modal" id="returns-modal" role="dialog" aria-modal="true" aria-labelledby="returns-title">
+    <div class="info-modal-header">
+      <h3 id="returns-title"><i data-lucide="refresh-ccw"></i> 30-Day Hassle-Free Returns & Exchanges</h3>
+      <button class="info-modal-close" data-close-modal aria-label="Close returns portal"><i data-lucide="x"></i></button>
+    </div>
+    <div class="info-modal-body">
+      
+      <div class="returns-flow-step" id="returns-form-step">
+        <p style="font-size:0.85rem; color:var(--text-secondary);">
+          We offer complimentary prepaid returns and size exchanges within 30 days of delivery for any unworn footwear with original vault tags attached.
+        </p>
+
+        <form id="returns-portal-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="return-order-id">Order Reference #</label>
+              <input type="text" id="return-order-id" placeholder="PV-892104" value="PV-892104" required />
+            </div>
+            <div class="form-group">
+              <label for="return-email">Email Address on Order</label>
+              <input type="email" id="return-email" placeholder="athlete@example.com" value="customer@example.com" required />
+            </div>
+            <div class="form-group span-2">
+              <label for="return-reason">Reason for Return / Exchange</label>
+              <select id="return-reason" required>
+                <option value="size-small">Need a Larger Size (Size Exchange)</option>
+                <option value="size-large">Need a Smaller Size (Size Exchange)</option>
+                <option value="fit-preference">Style / Cushioning Preference</option>
+                <option value="changed-mind">Changed Mind / Store Credit</option>
+                <option value="gift">Gift Return</option>
+              </select>
+            </div>
+            <div class="form-group span-2">
+              <label for="return-resolution">Preferred Resolution</label>
+              <select id="return-resolution" required>
+                <option value="credit">Instant Store Credit (+10% Bonus Credit)</option>
+                <option value="exchange">Exchange for Different US Size</option>
+                <option value="refund">Original Payment Method Refund</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary btn-full mt-3" id="generate-return-label-btn">
+            <i data-lucide="printer"></i>
+            <span>Generate Free Prepaid Return Label</span>
+          </button>
+        </form>
+      </div>
+
+      <div class="returns-flow-step" id="returns-success-step" style="display:none;">
+        <div class="return-label-preview">
+          <div class="return-label-header">
+            <div>
+              <strong>PURPOSE VAULT RETURNS DEPT</strong><br/>
+              <span style="font-size:0.7rem; font-weight:normal;">Facility #04 - 100 Vault Way, San Francisco, CA 94103</span>
+            </div>
+            <div style="text-align:right;">
+              <strong>PREPAID PRIORITY 2-DAY</strong><br/>
+              <span id="label-rma-number">RMA #PV-RET-89210</span>
+            </div>
+          </div>
+          <div class="return-barcode"></div>
+          <div style="display:flex; justify-content:space-between; font-size:0.75rem;">
+            <span>TRACKING: <strong id="label-tracking-number">1Z9999999999999999</strong></span>
+            <span>CARRIER: <strong>UPS / FEDEX EXPRESS</strong></span>
+          </div>
+        </div>
+
+        <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:0.5rem;">
+          ✓ Printable return label has been emailed to your address. Drop off at any authorized UPS/FedEx drop box or counter. Once scanned, your exchange/refund is instantly queued!
+        </p>
+
+        <button type="button" class="btn-secondary btn-full" id="start-another-return-btn">
+          <i data-lucide="arrow-left"></i> Start Another Return
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Global Shipping & Delivery Rates Modal -->
+  <div class="info-modal" id="shipping-modal" role="dialog" aria-modal="true" aria-labelledby="shipping-title">
+    <div class="info-modal-header">
+      <h3 id="shipping-title"><i data-lucide="truck"></i> Global Express Shipping & Delivery Rates</h3>
+      <button class="info-modal-close" data-close-modal aria-label="Close shipping rates"><i data-lucide="x"></i></button>
+    </div>
+    <div class="info-modal-body">
+      
+      <p style="font-size:0.85rem; color:var(--text-secondary);">
+        Every pair of sneakers from Purpose Vault is double-boxed with reinforced corrugated walls, tamper-evident tape, and 100% full declared value transit insurance.
+      </p>
+
+      <div class="size-table-container">
+        <table class="size-table">
+          <thead>
+            <tr>
+              <th>Destination Region</th>
+              <th>Carrier & Speed</th>
+              <th>Cost (Orders > $150)</th>
+              <th>Cost (Under $150)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>United States (Domestic)</strong></td>
+              <td>FedEx / UPS Express (2-3 Days)</td>
+              <td><span style="color:#10b981; font-weight:800;">FREE</span></td>
+              <td>$10.00 Flat</td>
+            </tr>
+            <tr>
+              <td><strong>Overnight Priority (USA)</strong></td>
+              <td>Next Morning 10:30 AM</td>
+              <td>$25.00</td>
+              <td>$25.00</td>
+            </tr>
+            <tr>
+              <td><strong>Canada & Mexico</strong></td>
+              <td>DHL Express Air (2-4 Days)</td>
+              <td><span style="color:#10b981; font-weight:800;">FREE</span></td>
+              <td>$15.00 Flat</td>
+            </tr>
+            <tr>
+              <td><strong>Europe & United Kingdom</strong></td>
+              <td>DHL Express Tracked (3-5 Days)</td>
+              <td><span style="color:#10b981; font-weight:800;">FREE</span></td>
+              <td>$15.00 Flat</td>
+            </tr>
+            <tr>
+              <td><strong>Asia-Pacific (PH, JP, AU, SG)</strong></td>
+              <td>FedEx International (3-5 Days)</td>
+              <td><span style="color:#10b981; font-weight:800;">FREE</span></td>
+              <td>$18.00 Flat</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="fit-tips-grid">
+        <div class="fit-tip-card">
+          <h5><i data-lucide="package-check"></i> Double-Box Guarantee</h5>
+          <p>We never ship shoes in plastic polybags. Original shoe boxes are wrapped in protective bubble lining and placed inside high-durability outer shipping cartons.</p>
+        </div>
+        <div class="fit-tip-card">
+          <h5><i data-lucide="shield-check"></i> 100% Insured Delivery</h5>
+          <p>Every shipment is backed by our full loss, damage, and transit guarantee. Live GPS tracking links are sent via SMS & Email within 24 hours of order placement.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Authenticity Guarantee Modal -->
+  <div class="info-modal" id="authenticity-modal" role="dialog" aria-modal="true" aria-labelledby="authenticity-title">
+    <div class="info-modal-header">
+      <h3 id="authenticity-title"><i data-lucide="shield-check"></i> The Purpose Vault 8-Point Deadstock Guarantee</h3>
+      <button class="info-modal-close" data-close-modal aria-label="Close authenticity guarantee"><i data-lucide="x"></i></button>
+    </div>
+    <div class="info-modal-body">
+      <p style="font-size:0.85rem; color:var(--text-secondary);">
+        Purpose Vault operates an authorized, temperature-controlled archival facility. Our authenticators have inspected over 500,000+ pairs of Nike, Jordan, ANTA, and Converse footwear.
+      </p>
+
+      <div class="fit-tips-grid">
+        <div class="fit-tip-card">
+          <h5><i data-lucide="fingerprint"></i> 1. High-Intensity UV Blacklight Inspection</h5>
+          <p>We illuminate upper stitching, soles, and footbeds to inspect invisible factory production stamps, glue bleed tolerances, and dye luminescence.</p>
+        </div>
+        <div class="fit-tip-card">
+          <h5><i data-lucide="cpu"></i> 2. RFID & Serial Microchip Scan</h5>
+          <p>Box barcodes and inner shoe tongue tags are cross-referenced directly against Nike SNKRS and ANTA official production batch databases.</p>
+        </div>
+        <div class="fit-tip-card">
+          <h5><i data-lucide="scale"></i> 3. Gram-Level Precision Scale Check</h5>
+          <p>Each shoe is weighed to within 0.1g tolerance to verify carbon fiber Flyplates, ZoomX foam compound density, and NitroEdge supercritical foam purity.</p>
+        </div>
+        <div class="fit-tip-card">
+          <h5><i data-lucide="check-circle-2"></i> 4. Stitch Density & Font Geometry</h5>
+          <p>Swoosh placement, Jumpman embroidery, KAI glyph runes, and heel tabs are inspected under high magnification for exact thread count.</p>
+        </div>
+      </div>
+
+      <div class="size-calculator-box" style="background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.3);">
+        <h4 style="color: #34d399;"><i data-lucide="shield"></i> Tamper-Proof NFC Purpose Vault Tag Attached</h4>
+        <p style="font-size:0.78rem; color:var(--text-secondary);">
+          Each pair ships with a custom serialized NFC vault security zip-tie. Tap your smartphone to the tag to view the digital Certificate of Authenticity and inspector timestamp.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Verified Customer Review Modal -->
+  <div class="info-modal" id="write-review-modal" role="dialog" aria-modal="true" aria-labelledby="write-review-title">
+    <div class="info-modal-header">
+      <h3 id="write-review-title"><i data-lucide="edit-3"></i> Submit a Verified Customer Review</h3>
+      <button class="info-modal-close" data-close-modal aria-label="Close review form"><i data-lucide="x"></i></button>
+    </div>
+    <div class="info-modal-body">
+      <form id="write-review-form">
+        <div class="form-grid">
+          
+          <div class="form-group span-2">
+            <label>Select Star Rating:</label>
+            <div class="star-rating-picker" id="star-rating-picker">
+              <span class="star active" data-star="1">★</span>
+              <span class="star active" data-star="2">★</span>
+              <span class="star active" data-star="3">★</span>
+              <span class="star active" data-star="4">★</span>
+              <span class="star active" data-star="5">★</span>
+            </div>
+          </div>
+
+          <div class="form-group span-2">
+            <label for="review-product-select">Sneaker Model Purchased</label>
+            <select id="review-product-select" required>
+              <option value="Nike Alphafly 3 World Record">Nike Alphafly 3 World Record</option>
+              <option value="Nike ZoomX Vaporfly 3">Nike ZoomX Vaporfly 3</option>
+              <option value="Nike Kobe 8 Protro Halo">Nike Kobe 8 Protro Halo</option>
+              <option value="ANTA KAI 1 Artist on Court">ANTA KAI 1 "Artist on Court"</option>
+              <option value="ANTA KT9 Captain Klay">ANTA KT9 "Captain Klay"</option>
+              <option value="Air Jordan 4 Retro Bred Reimagined">Air Jordan 4 Retro "Bred Reimagined"</option>
+              <option value="Converse Chuck 70 Vintage Canvas">Converse Chuck 70 Vintage Canvas</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="review-author-name">Your Full Name / Nickname</label>
+            <input type="text" id="review-author-name" placeholder="e.g. Marcus K." required />
+          </div>
+
+          <div class="form-group">
+            <label for="review-location">City, State / Country</label>
+            <input type="text" id="review-location" placeholder="e.g. Chicago, IL" required />
+          </div>
+
+          <div class="form-group span-2">
+            <label for="review-headline">Review Headline</label>
+            <input type="text" id="review-headline" placeholder="e.g. Unbelievable comfort and lightning fast shipping!" required />
+          </div>
+
+          <div class="form-group span-2">
+            <label for="review-body">Detailed Review & Performance Feedback</label>
+            <textarea id="review-body" rows="4" style="width:100%; background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-sm); padding:0.65rem; color:#fff; font-family:var(--font-body); font-size:0.85rem;" placeholder="Tell athletes about fit, traction, cushioning, and race-day performance..." required></textarea>
+          </div>
+
+        </div>
+
+        <button type="submit" class="btn-primary btn-full mt-3" id="submit-review-btn">
+          <i data-lucide="check-circle"></i>
+          <span>Publish Verified Review</span>
+        </button>
+      </form>
+    </div>
+  </div>
 
   <!-- Application Logic -->
   <script src="app.js"></script>

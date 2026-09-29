@@ -4171,7 +4171,7 @@ class StoreState {
     const subtotal = this.getCartSubtotal();
     const discountAmt = subtotal * this.promoDiscount;
     const discountedSubtotal = Math.max(0, subtotal - discountAmt);
-    
+
     const speed = overrideSpeed || this.shippingMethod || 'standard';
     let shipping = 0;
     if (speed === 'overnight') {
@@ -4285,10 +4285,10 @@ function getFilteredProducts() {
     if (currentSearchQuery.trim() !== '') {
       const q = currentSearchQuery.toLowerCase();
       const match = p.name.toLowerCase().includes(q) ||
-                    p.brand.toLowerCase().includes(q) ||
-                    p.subtitle.toLowerCase().includes(q) ||
-                    p.colorway.toLowerCase().includes(q) ||
-                    p.categoryName.toLowerCase().includes(q);
+        p.brand.toLowerCase().includes(q) ||
+        p.subtitle.toLowerCase().includes(q) ||
+        p.colorway.toLowerCase().includes(q) ||
+        p.categoryName.toLowerCase().includes(q);
       if (!match) return false;
     }
 
@@ -4328,9 +4328,9 @@ function renderProductGrid() {
   gridEl.innerHTML = products.map(product => {
     const isWished = Store.isInWishlist(product.id);
     const starHtml = '★'.repeat(Math.floor(product.rating)) + (product.rating % 1 !== 0 ? '½' : '');
-    
+
     // Quick sizes selector buttons (first 6 available sizes)
-    const quickSizesHtml = product.sizes.slice(0, 6).map(sz => 
+    const quickSizesHtml = product.sizes.slice(0, 6).map(sz =>
       `<button class="card-quick-size-btn" data-product-id="${product.id}" data-size="${sz}" title="Select US ${sz}">US ${sz}</button>`
     ).join('');
 
@@ -4451,7 +4451,7 @@ function attachProductCardEvents() {
     if (video) {
       card.addEventListener('mouseenter', () => {
         video.muted = true;
-        video.play().catch(() => {});
+        video.play().catch(() => { });
       });
       card.addEventListener('mouseleave', () => {
         video.pause();
@@ -4503,7 +4503,7 @@ function attachProductCardEvents() {
         e.stopPropagation();
         const numSize = selectedSize ? parseFloat(selectedSize) : 9.5;
         const p = PRODUCTS_DATA.find(item => item.id === productId);
-        
+
         // Button animation feedback
         addCartBtn.classList.add('adding');
         addCartBtn.innerHTML = `<i data-lucide="check"></i> <span>Added US ${numSize}!</span>`;
@@ -4716,7 +4716,7 @@ function initProductModal() {
         if (imgEl) imgEl.style.display = 'none';
         if (videoEl) {
           videoEl.style.display = 'block';
-          videoEl.play().catch(() => {});
+          videoEl.play().catch(() => { });
         }
       } else {
         if (videoEl) {
@@ -4734,7 +4734,7 @@ function initProductModal() {
       if (!activeModalProduct) return;
       const sizeToUse = activeModalSize || activeModalProduct.sizes[2] || activeModalProduct.sizes[0];
       const qty = parseInt(document.getElementById('modal-qty-input')?.value || '1', 10);
-      
+
       Store.addToCart(activeModalProduct.id, sizeToUse, qty);
       showStoreToast(`Added <strong>${activeModalProduct.name}</strong> (US ${sizeToUse}) to Cart!`, 'shopping-bag');
       closeProductModal();
@@ -4748,7 +4748,7 @@ function initProductModal() {
       if (!activeModalProduct) return;
       const sizeToUse = activeModalSize || activeModalProduct.sizes[2] || activeModalProduct.sizes[0];
       const qty = parseInt(document.getElementById('modal-qty-input')?.value || '1', 10);
-      
+
       Store.addToCart(activeModalProduct.id, sizeToUse, qty);
       closeProductModal();
       openCheckoutModal();
@@ -5129,32 +5129,32 @@ function updateBrandCounts() {
   // Catalog brand tabs
   const tabAll = document.querySelector('.brand-filter-tabs .brand-tab-btn[data-brand="all"]');
   if (tabAll) tabAll.innerHTML = `<i data-lucide="grid"></i> All Brands (${allCount})`;
-  
+
   const tabNike = document.querySelector('.brand-filter-tabs .brand-tab-btn[data-brand="nike"]');
   if (tabNike) tabNike.innerHTML = `<i data-lucide="check"></i> Nike Performance (${nikeCount})`;
-  
+
   const tabAnta = document.querySelector('.brand-filter-tabs .brand-tab-btn[data-brand="anta"]');
   if (tabAnta) tabAnta.innerHTML = `<i data-lucide="flame"></i> ANTA Hoops & Racing (${antaCount})`;
-  
+
   const tabJordan = document.querySelector('.brand-filter-tabs .brand-tab-btn[data-brand="jordan"]');
   if (tabJordan) tabJordan.innerHTML = `<i data-lucide="award"></i> Jordan Brand (${jordanCount})`;
-  
+
   const tabConverse = document.querySelector('.brand-filter-tabs .brand-tab-btn[data-brand="converse"]');
   if (tabConverse) tabConverse.innerHTML = `<i data-lucide="star"></i> Converse Archive (${converseCount})`;
 
   // Mobile drawer tabs
   const mTabAll = document.querySelector('.mobile-nav-links .brand-tab-btn[data-brand="all"]');
   if (mTabAll) mTabAll.innerHTML = `<i data-lucide="grid"></i> All Footwear (${allCount})`;
-  
+
   const mTabNike = document.querySelector('.mobile-nav-links .brand-tab-btn[data-brand="nike"]');
   if (mTabNike) mTabNike.innerHTML = `<i data-lucide="check"></i> Nike Performance (${nikeCount})`;
-  
+
   const mTabAnta = document.querySelector('.mobile-nav-links .brand-tab-btn[data-brand="anta"]');
   if (mTabAnta) mTabAnta.innerHTML = `<i data-lucide="flame"></i> ANTA Hoops & Racing (${antaCount})`;
-  
+
   const mTabJordan = document.querySelector('.mobile-nav-links .brand-tab-btn[data-brand="jordan"]');
   if (mTabJordan) mTabJordan.innerHTML = `<i data-lucide="award"></i> Jordan Brand (${jordanCount})`;
-  
+
   const mTabConverse = document.querySelector('.mobile-nav-links .brand-tab-btn[data-brand="converse"]');
   if (mTabConverse) mTabConverse.innerHTML = `<i data-lucide="star"></i> Converse Archive (${converseCount})`;
 
@@ -5287,7 +5287,7 @@ function initAnnouncementCoupon() {
     couponEl.addEventListener('click', () => {
       const code = 'PURPOSE10';
       if (navigator.clipboard) {
-        navigator.clipboard.writeText(code).catch(() => {});
+        navigator.clipboard.writeText(code).catch(() => { });
       }
       Store.applyPromo(code);
       showStoreToast(`Promo Code <strong>${code}</strong> (10% OFF) copied & applied to your bag!`, 'tag', 'success');
@@ -5322,7 +5322,7 @@ function initCustomerCareModals() {
     allModals.forEach(m => m.classList.remove('active'));
     if (overlay) overlay.classList.remove('active');
     if (!document.getElementById('product-detail-modal')?.classList.contains('active') &&
-        !document.getElementById('checkout-modal')?.classList.contains('active')) {
+      !document.getElementById('checkout-modal')?.classList.contains('active')) {
       document.body.style.overflow = '';
     }
   }
@@ -5762,6 +5762,23 @@ function initMobileMenu() {
 }
 
 // ==========================================================================
+// FROZEN / STICKY NAVBAR SCROLL HANDLER
+// ==========================================================================
+function initStickyNavbar() {
+  const headerWrapper = document.getElementById('header-frozen-wrapper');
+  const siteHeader = document.getElementById('header');
+  
+  const handleScroll = () => {
+    const isScrolled = window.scrollY > 20;
+    headerWrapper?.classList.toggle('scrolled', isScrolled);
+    siteHeader?.classList.toggle('scrolled', isScrolled);
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+}
+
+// ==========================================================================
 // MOBILE BOTTOM APP BAR
 // ==========================================================================
 function initMobileBottomBar() {
@@ -5788,6 +5805,7 @@ function initMobileBottomBar() {
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', () => {
   renderProductGrid();
+  initStickyNavbar();
   initCartDrawer();
   initProductModal();
   initCheckoutModal();
@@ -5810,4 +5828,5 @@ document.addEventListener('DOMContentLoaded', () => {
     window.lucide.createIcons();
   }
 });
+
 

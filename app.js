@@ -2388,6 +2388,1635 @@ const PRODUCTS_DATA = [
     reviews: [
       { author: 'Liam S.', rating: 5, date: 'Yesterday', title: 'Cleanest Dunk Low in existence', text: 'Grey fog is subtle and matches everything. Leather quality is great.' }
     ]
+  },
+  {
+    id: 'nike-gt-hustle-3',
+    sku: 'NK-GTH3-073',
+    brand: 'Nike',
+    brandBadge: 'Nike Greater Than',
+    brandColor: 'cyan',
+    name: 'Nike GT Hustle 3 "Blueprint"',
+    subtitle: 'Double-Stacked Forefoot Air Zoom + ZoomX Hoops Shoe',
+    price: 190.00,
+    originalPrice: 190.00,
+    rating: 4.9,
+    reviewsCount: 175,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'White / Racer Blue / Total Orange / Sail',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 14,
+    badge: 'Double Zoom Air',
+    image: 'assets/nike_gt_cut_3.jpg',
+    video: 'assets/nike_gt_cut_3.webm',
+    description: 'Built for relentless workhorses who outlast everyone down the stretch. Features a full-length ZoomX foam drop-in combined with dual-stacked forefoot Air Zoom units to maximize energy return and prevent late-game fatigue.',
+    specs: {
+      cushioning: 'Full-Length ZoomX Foam + Dual Forefoot Zoom Air Pods',
+      upper: 'Radial Knit with Targeted Breathability Zones',
+      containment: 'Reinforced Midfoot Arch Band System',
+      outsole: 'Generative Multi-Directional Floor Grip',
+      position: 'Relentless Guards, Cutters & Hustle Wings'
+    },
+    reviews: [
+      { author: 'Marcus T.', rating: 5, date: '2 days ago', title: 'Double Zoom Air is explosive', text: 'The double Air Zoom in the forefoot gives unmatched bounce on every drive.' },
+      { author: 'Kevin D.', rating: 5, date: '5 days ago', title: 'Softest & most responsive', text: 'ZoomX and Air Zoom together make your legs feel fresh through all 4 quarters.' }
+    ]
+  },
+  {
+    id: 'nike-air-flightposite',
+    sku: 'NK-FLTP-074',
+    brand: 'Nike',
+    brandBadge: 'Nike Alpha Project',
+    brandColor: 'amber',
+    name: 'Nike Air Flightposite One "Metallic Gold"',
+    subtitle: 'Zipper Shroud Molded Foamposite Y2K Legend',
+    price: 240.00,
+    originalPrice: 240.00,
+    rating: 4.9,
+    reviewsCount: 310,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Metallic Gold / Black / Metallic Silver / Icy Clear',
+    sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 9,
+    badge: 'Alpha Project Grail',
+    image: 'assets/nike_foamposite_red.jpg',
+    video: 'assets/nike_foamposite_red.webm',
+    description: 'The pinnacle of futuristic Alpha Project footwear. Seamless liquid-molded Foamposite shell with zippered neoprene shroud, encapsulated full-length Zoom Air cushioning, and 5-dot Alpha Project insignia.',
+    specs: {
+      cushioning: 'Full-Length Zoom Air Cushioning',
+      shroud: 'Zipper Neoprene Full Foot Lockout Shroud',
+      shell: 'Aerodynamic Liquid-Molded Polyurethane Foamposite',
+      plate: 'Carbon Fiber Midfoot Torsion Plate',
+      style: 'Iconic Y2K Hardwood & Sci-Fi Streetwear'
+    },
+    reviews: [
+      { author: 'Jason K.', rating: 5, date: '1 day ago', title: 'Metallic Gold finish is breathtaking', text: 'Zipper shroud gives it that unmatched sleek aerodynamic look.' },
+      { author: 'Chris L.', rating: 5, date: '4 days ago', title: 'Legendary silhouette', text: 'Molds directly to your foot shape over time. Pure nostalgia.' }
+    ]
+  },
+  {
+    id: 'nike-air-max-plus-sunset',
+    sku: 'NK-TN-075',
+    brand: 'Nike',
+    brandBadge: 'Nike Tuned Air',
+    brandColor: 'amber',
+    name: 'Nike Air Max Plus OG "Sunset / Tiger"',
+    subtitle: '1998 Sean McDowell Tuned Air Palm Tree Icon',
+    price: 180.00,
+    originalPrice: 180.00,
+    rating: 5.0,
+    reviewsCount: 640,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Black / Pimento Orange / Bright Ceramic / Resin Yellow',
+    sizes: [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 21,
+    badge: 'Tuned Air Legend',
+    image: 'assets/nike_air_max_95_neon.jpg',
+    video: 'assets/nike_air_max_95_neon.webm',
+    description: 'Designed by Sean McDowell inspired by Florida sunsets and swaying palm tree shadows. Features distinctive TPU exo-cage ribbing, whale-tail arch shank, and legendary dual Tuned Air hemispherical cushioning pods.',
+    specs: {
+      cushioning: 'Tuned Air Dual-Hemisphere Cushioning System',
+      upper: 'Sunset Gradient Sublimated Mesh with TPU Ribbed Cage',
+      shank: 'Whale-Tail Inspired TPU Midfoot Arch Support',
+      outsole: 'High-Traction Waffle Lug Rubber with TN Heel Badge',
+      style: 'The UK & European Streetwear Phenomenon'
+    },
+    reviews: [
+      { author: 'Liam G.', rating: 5, date: 'Yesterday', title: 'The OG Sunset colorway is undefeated', text: 'The orange to yellow fade is vibrant and classic.' },
+      { author: 'Nathan R.', rating: 5, date: '3 days ago', title: 'Tuned Air arch support is great', text: 'Comfortable for long city walks. Essential silhouette.' }
+    ]
+  },
+  {
+    id: 'nike-kobe-9-elite-halo',
+    sku: 'NK-KB9-076',
+    brand: 'Nike',
+    brandBadge: 'Nike Mamba Legacy',
+    brandColor: 'white',
+    name: 'Nike Kobe 9 Elite Protro "Halo"',
+    subtitle: 'High-Cut Flyknit Ankle Armor & Nike React Cushioning',
+    price: 210.00,
+    originalPrice: 210.00,
+    rating: 5.0,
+    reviewsCount: 520,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Triple White / Metallic Silver Sheath / Clear Ice',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 6,
+    badge: 'Mamba Halo High',
+    image: 'assets/nike_kobe_8_halo.jpg',
+    video: 'assets/nike_kobe_8_halo.webm',
+    description: 'The monumental high-top masterpiece returns. Engineered with ultra-high Flyknit ankle armor, lightweight carbon fiber lateral stabilization wings, and updated full-length Nike React foam drop-in midsole.',
+    specs: {
+      cushioning: 'Drop-In Full-Length Nike React Foam Midsole',
+      upper: 'Seamless Single-Piece Engineered High-Cut Flyknit',
+      stability: 'Genuine Carbon Fiber Heel Counter & Outrigger Fins',
+      outsole: 'Pressure-Mapped Footprint Geometric Traction Rubber',
+      position: 'High-Impact Guards, Wings & Mamba Collectors'
+    },
+    reviews: [
+      { author: 'Jordan M.', rating: 5, date: '2 days ago', title: 'High-cut Flyknit is pure art', text: 'Feels like a compression sock with carbon armor. Incredible court feel.' },
+      { author: 'Eric V.', rating: 5, date: '4 days ago', title: 'React drop-in is a massive win', text: '10/10 masterpiece. Mamba Forever 🐍' }
+    ]
+  },
+  {
+    id: 'nike-ja-1-scratch',
+    sku: 'NK-JA1-077',
+    brand: 'Nike',
+    brandBadge: 'Nike Ja Morant Signature',
+    brandColor: 'cyan',
+    name: 'Nike Ja 1 "Scratch / Grizzly Teal"',
+    subtitle: 'Vancouver Throwback Claw-Marked Guard Shoe',
+    price: 110.00,
+    originalPrice: 110.00,
+    rating: 4.9,
+    reviewsCount: 340,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Rapid Teal / White / University Red / Black',
+    sizes: [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 18,
+    badge: 'Grizzly Scratch',
+    image: 'assets/nike_ja_2.jpg',
+    video: 'assets/nike_ja_2.webm',
+    description: 'Paying tribute to 1990s Vancouver Grizzlies heritage and Ja Morant\'s explosive high-flying dunks. Features claw scratch graphic overlays across the Swoosh, responsive forefoot Air Zoom, and reinforced heel lockdown.',
+    specs: {
+      cushioning: 'Forefoot Air Zoom Unit + Resilient Phylon Midsole',
+      upper: 'Engineered Mesh with Claw-Marked Leather Overlays',
+      outsole: 'High-Bite Multi-Directional Court Tread',
+      collar: 'Padded Ankle Collar with Ja Morant Signature Logo',
+      position: 'Explosive Guards & Slashers'
+    },
+    reviews: [
+      { author: 'Tyler W.', rating: 5, date: '1 day ago', title: 'Best guard shoe for the price', text: 'Forefoot Zoom is snappy and the teal color is electric on court.' },
+      { author: 'Devon S.', rating: 5, date: '3 days ago', title: 'Grips clean courts like glue', text: 'Super lightweight, supportive and quick on transitions.' }
+    ]
+  },
+  {
+    id: 'nike-giannis-freak-6',
+    sku: 'NK-FRK6-078',
+    brand: 'Nike',
+    brandBadge: 'Nike Greek Freak',
+    brandColor: 'emerald',
+    name: 'Nike Giannis Freak 6 "Roses & Gold"',
+    subtitle: 'Giannis Antetokounmpo Euro-Step High-Traction Shoe',
+    price: 140.00,
+    originalPrice: 140.00,
+    rating: 4.8,
+    reviewsCount: 180,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Vintage White / Metallic Gold / University Red / Soft Rose',
+    sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 15,
+    badge: 'Greek Freak Drop',
+    image: 'assets/nike_lebron_21.jpg',
+    video: 'assets/nike_lebron_21.webm',
+    description: 'Crafted to harness Giannis Antetokounmpo\'s unstoppable momentum and powerful Euro-steps. Features dual-density Cushlon foam, responsive forefoot Air Zoom, and rose flower outsole traction inspired by Giannis\' late father.',
+    specs: {
+      cushioning: 'Forefoot Nike Air Zoom + Cushlon 3.0 Dual-Density Midsole',
+      outsole: 'Generative Rose-Tread Multi-Directional Floor Grip',
+      upper: 'Breathable Mono-Mesh with Internal Lockout Strap',
+      details: 'Embroidered Rose & Greek Key Gold Accents',
+      position: 'Power Forwards & Slashing Playmakers'
+    },
+    reviews: [
+      { author: 'Anthony G.', rating: 5, date: '2 days ago', title: 'Euro-step containment is top notch', text: 'Love the rose details honoring his father. Huge lateral stability.' },
+      { author: 'Darius P.', rating: 5, date: '5 days ago', title: 'Bouncy and locked in', text: 'Comfortable forefoot bounce for rim attacks.' }
+    ]
+  },
+  {
+    id: 'nike-dunk-low-sb-chicago',
+    sku: 'NK-SB-079',
+    brand: 'Nike',
+    brandBadge: 'Nike SB Skateboard',
+    brandColor: 'red',
+    name: 'Nike SB Dunk Low Pro "Chicago J-Pack"',
+    subtitle: 'Fat Padded Tongue & Zoom Air Streetwear Grail',
+    price: 120.00,
+    originalPrice: 120.00,
+    rating: 5.0,
+    reviewsCount: 790,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Varsity Red / White / Black Classic SB',
+    sizes: [6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 12,
+    badge: 'SB Grail',
+    image: 'assets/nike_dunk_low.jpg',
+    video: 'assets/nike_dunk_low.webm',
+    description: 'Blending iconic 1985 Chicago hardwood heritage with pro-spec skateboarding performance. Plush padded mesh tongue, heel Zoom Air sockliner, premium leather overlays, and grippy skate cupsole.',
+    specs: {
+      cushioning: 'Drop-In Sockliner Heel Nike Zoom Air Unit',
+      tongue: 'Fat Padded Mesh Tongue for Impact Protection',
+      materials: 'Premium Heavyweight Full-Grain Leather',
+      outsole: 'Flexible Skate Rubber Cupsole with Pivot Circle',
+      style: 'Grail-Level Skate Culture & Streetwear Classic'
+    },
+    reviews: [
+      { author: 'Brandon S.', rating: 5, date: 'Yesterday', title: 'The fat tongue makes it 10x better', text: 'Chicago colorway is timeless. Leather quality is top notch.' },
+      { author: 'Julian C.', rating: 5, date: '3 days ago', title: 'Zoom Air in the heel feels great', text: 'Doesn\'t crease easily and looks fresh with anything.' }
+    ]
+  },
+  {
+    id: 'nike-air-structure-triax',
+    sku: 'NK-TRX-080',
+    brand: 'Nike',
+    brandBadge: 'Nike Vintage 90s',
+    brandColor: 'cyan',
+    name: 'Nike Air Structure Triax 91 "Infrared Heritage"',
+    subtitle: 'Geometric 1991 Visible Air Classic Retro Runner',
+    price: 130.00,
+    originalPrice: 130.00,
+    rating: 4.8,
+    reviewsCount: 220,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Metallic Summit White / Neo Teal / Infrared 23 / Black',
+    sizes: [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 12],
+    inStock: true,
+    stockCount: 17,
+    badge: '1991 Archival',
+    image: 'assets/nike_air_max_1_86.jpg',
+    video: 'assets/nike_air_max_1_86.webm',
+    description: 'First released in 1991 as Nike\'s groundbreaking asymmetric stability runner. Features sharp geometric paneling, visible heel Air-Sole unit, contrasting Infrared and Neo Teal accents, and plush padded ankle collar.',
+    specs: {
+      cushioning: 'Visible Heel Nike Air-Sole Cushioning Unit',
+      upper: 'Retro Nylon Mesh with Suede & Leather Angular Overlays',
+      outsole: 'Classic 1991 Waffle Multi-Lug Hard Rubber',
+      style: 'Early 90s Vintage Runner & Lifestyle Essential'
+    },
+    reviews: [
+      { author: 'Ross M.', rating: 5, date: '2 days ago', title: 'Underrated 90s classic', text: 'The asymmetric teal and infrared color pops look so fresh.' },
+      { author: 'Peter K.', rating: 5, date: '6 days ago', title: 'Great everyday walking shoe', text: 'True vintage silhouette with comfortable Air cushioning.' }
+    ]
+  },
+  {
+    id: 'jordan-5-retro-black-metallic',
+    sku: 'JB-AJ5-081',
+    brand: 'Jordan',
+    brandBadge: 'Jordan Heritage',
+    brandColor: 'red',
+    name: 'Air Jordan 5 Retro "Black Metallic 1990"',
+    subtitle: 'WWII Mustang Fighter Jet Teeth & Reflective 3M Tongue',
+    price: 210.00,
+    originalPrice: 210.00,
+    rating: 5.0,
+    reviewsCount: 710,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Black / Metallic Silver / Fire Red / Translucent Ice',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 9,
+    badge: '1990 WWII Grail',
+    image: 'assets/jordan_4_bred.jpg',
+    video: 'assets/jordan_4_bred.webm',
+    description: 'Tinker Hatfield\'s 1990 masterpiece inspired by WWII P-51 Mustang fighter planes. Features shark-tooth midsole graphics, full reflective 3M silver tongue, lace toggle locks, clear side quarter mesh, and translucent icy outsole.',
+    specs: {
+      cushioning: 'Visible Heel Air-Sole + Encapsulated Forefoot Air Unit',
+      tongue: 'High-Visibility Reflective 3M Metallic Silver Tongue',
+      details: 'Mustang Shark Teeth Midsole & Clear Lace Lock Toggle',
+      outsole: 'Translucent Icy Blue Rubber with Herringbone Pods',
+      style: 'Hardwood History & Global Streetwear Grail'
+    },
+    reviews: [
+      { author: 'Malik T.', rating: 5, date: 'Yesterday', title: 'The 3M tongue glowing is unbeatable', text: 'Durabuck is soft and shape is 100% OG.' },
+      { author: 'Chris B.', rating: 5, date: '3 days ago', title: 'Top 3 Jordan of all time', text: 'Shark teeth design and icy soles are timeless.' }
+    ]
+  },
+  {
+    id: 'jordan-1-low-travis-olive',
+    sku: 'JB-AJ1L-082',
+    brand: 'Jordan',
+    brandBadge: 'Jordan Collab Grail',
+    brandColor: 'amber',
+    name: 'Air Jordan 1 Low OG "Travis Scott Medium Olive"',
+    subtitle: 'Reverse Olive Swoosh & Aged Sail Suede Grail',
+    price: 150.00,
+    originalPrice: 150.00,
+    rating: 5.0,
+    reviewsCount: 880,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Medium Olive / Black / Sail / Muslin',
+    sizes: [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+    inStock: true,
+    stockCount: 6,
+    badge: 'Cactus Jack Olive',
+    image: 'assets/jordan_1_low_reverse_mocha.jpg',
+    video: 'assets/jordan_1_low_reverse_mocha.webm',
+    description: 'Travis Scott\'s earthy masterpiece combining rich medium olive nubuck underlays with crisp sail white leather and oversized reversed black leather lateral Swoosh. Embellished with red Cactus Jack face embroidery.',
+    specs: {
+      cushioning: 'Encapsulated Nike Air-Sole Heel Unit',
+      details: 'Oversized Reverse Lateral Leather Swoosh & Cactus Jack Emblems',
+      materials: 'Medium Olive Nubuck + Premium Tumbled Sail Leather',
+      outsole: 'Vintage Muslin Rubber Cupsole',
+      style: 'Hyped Modern Streetwear & Sneaker Grail'
+    },
+    reviews: [
+      { author: 'Julian M.', rating: 5, date: '2 days ago', title: 'Color combination is perfection', text: 'Olive nubuck texture is buttery soft. Looks great with earth tones.' },
+      { author: 'Marcus F.', rating: 5, date: '4 days ago', title: 'Incredible details', text: 'Cactus Jack embroidery and reversed check are iconic.' }
+    ]
+  },
+  {
+    id: 'jordan-12-retro-flu-game',
+    sku: 'JB-AJ12-083',
+    brand: 'Jordan',
+    brandBadge: 'Jordan Championship',
+    brandColor: 'red',
+    name: 'Air Jordan 12 Retro "Flu Game 1997"',
+    subtitle: 'Full-Grain Black Leather & Varsity Red 1997 Finals Icon',
+    price: 215.00,
+    originalPrice: 215.00,
+    rating: 5.0,
+    reviewsCount: 690,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Black / Varsity Red / Metallic Silver',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 8,
+    badge: '1997 Finals Legend',
+    image: 'assets/nike_jordan_1_chicago.jpg',
+    video: 'assets/nike_jordan_1_chicago.webm',
+    description: 'The immortal sneaker Michael Jordan wore during Game 5 of the 1997 NBA Finals while battling severe illness to score 38 points. Features Japanese rising sun quilted leather stitching, full-length Zoom Air, and carbon fiber shank.',
+    specs: {
+      cushioning: 'Full-Length Nike Zoom Air Unit (First in Jordan line)',
+      plate: 'Full Carbon Fiber Midfoot Arch Shank',
+      materials: 'Quilted Black Tumbled Leather + Lizard-Textured Red Mudguards',
+      outsole: 'Solid Rubber with Herringbone Pods',
+      style: 'Championship Grit & Hardwood Legend'
+    },
+    reviews: [
+      { author: 'Dominic W.', rating: 5, date: '1 day ago', title: 'Full-length Zoom Air is so plush', text: 'Most comfortable retro Jordan in existence. Leather is indestructible.' },
+      { author: 'Ray T.', rating: 5, date: '5 days ago', title: 'True championship heritage', text: 'Quilted leather details and silver eyelets look regal.' }
+    ]
+  },
+  {
+    id: 'jordan-6-retro-infrared',
+    sku: 'JB-AJ6-084',
+    brand: 'Jordan',
+    brandBadge: 'Jordan Championship',
+    brandColor: 'red',
+    name: 'Air Jordan 6 Retro OG "Black Infrared"',
+    subtitle: 'Michael Jordan\'s 1991 First NBA Championship Shoe',
+    price: 210.00,
+    originalPrice: 210.00,
+    rating: 5.0,
+    reviewsCount: 750,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Black Durabuck / Infrared 23 / Clear Ice',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 10,
+    badge: 'First Ring 1991',
+    image: 'assets/jordan_11_gratitude.jpg',
+    video: 'assets/jordan_11_gratitude.webm',
+    description: 'The sneaker MJ wore when he hoisted his very first Larry O\'Brien championship trophy in 1991. Crafted with black durabuck upper, Porsche-inspired rubber spoiler pull tab, visible heel Air, and authentic Nike Air heel branding.',
+    specs: {
+      cushioning: 'Visible Heel Air-Sole + Encapsulated Forefoot Air Unit',
+      details: 'Porsche 911 Turbo Spoiler Heel Pull Tab & Lace Toggle',
+      materials: 'Smooth Black Durabuck Synthetic Nubuck',
+      outsole: 'Translucent Icy Blue Outsole with Solid Rubber Pods',
+      style: 'The 1991 First Championship Masterpiece'
+    },
+    reviews: [
+      { author: 'Anthony H.', rating: 5, date: '2 days ago', title: 'Infrared pops with intense vibrancy', text: 'Spoiler heel tab makes it so easy to slip on. Authentic Nike Air on heel.' },
+      { author: 'Trevor B.', rating: 5, date: '3 days ago', title: 'Centerpiece of my Jordan collection', text: 'Iconic 1991 shape and deep black durabuck finish.' }
+    ]
+  },
+  {
+    id: 'jordan-1-retro-travis-mocha-high',
+    sku: 'JB-AJ1H-085',
+    brand: 'Jordan',
+    brandBadge: 'Jordan Collab Grail',
+    brandColor: 'amber',
+    name: 'Air Jordan 1 High OG "Travis Scott Dark Mocha"',
+    subtitle: 'Hidden Ankle Collar Stash Pocket & Inverted Swoosh',
+    price: 175.00,
+    originalPrice: 175.00,
+    rating: 5.0,
+    reviewsCount: 940,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Sail / Dark Mocha / University Red / Black',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 5,
+    badge: 'All-Time Hype Grail',
+    image: 'assets/nike_jordan_1_chicago.jpg',
+    video: 'assets/nike_jordan_1_chicago.webm',
+    description: 'The groundbreaking 2019 release that reshaped global sneaker collaboration culture. Features oversized backward black leather Swoosh, concealed Velcro stash pouch in the high ankle collar, dark mocha nubuck, and red Cactus Jack branding.',
+    specs: {
+      cushioning: 'Encapsulated Nike Air-Sole Heel Unit',
+      storage: 'Concealed Velcro Stash Pocket in Ankle Collar',
+      details: 'Inverted Backward Lateral Leather Swoosh',
+      materials: 'Dark Mocha Nubuck Suede + Sail Tumbled Leather',
+      style: 'The Ultimate Modern Footwear Grail'
+    },
+    reviews: [
+      { author: 'Jordan K.', rating: 5, date: 'Yesterday', title: 'The sneaker that redefined hype', text: 'Stash pocket is functional and the mocha suede is buttery soft.' },
+      { author: 'Brandon E.', rating: 5, date: '4 days ago', title: 'Timeless collab', text: 'Looks amazing with baggy cargo pants or vintage denim.' }
+    ]
+  },
+  {
+    id: 'anta-kai-1-speed-tribe',
+    sku: 'AN-KAI1S-086',
+    brand: 'ANTA',
+    brandBadge: 'ANTA Kyrie Signature',
+    brandColor: 'purple',
+    name: 'ANTA KAI 1 Speed "Tribe & Ancestors"',
+    subtitle: 'Kyrie Irving Indigenous Lineage Fast Break Low-Top',
+    price: 125.00,
+    originalPrice: 125.00,
+    rating: 5.0,
+    reviewsCount: 260,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Mystic Obsidian / Tribe Copper / Sunburst Orange',
+    sizes: [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 16,
+    badge: 'Kyrie Speed Tribe',
+    image: 'assets/anta_kai_1_speed.jpg',
+    video: 'assets/anta_kai_1_speed.webm',
+    description: 'Kyrie Irving\'s tribute to indigenous ancestral heritage engineered into a low-cut court speed demon. Features low center of gravity NitroEdge supercritical foam, copper talisman threading, and instantaneous court cut traction.',
+    specs: {
+      cushioning: 'Full-Length Supercritical NitroEdge Nitrogen Midsole',
+      plate: 'Carbon Fiber Midfoot Torsion Shank',
+      upper: 'Reinforced Jacquard Weave with Copper Talisman Runes',
+      outsole: 'Sticky Squeak Radial Court Grip',
+      position: 'Speed Guards & Hardwood Playmakers'
+    },
+    reviews: [
+      { author: 'Kyrie Disciple', rating: 5, date: '1 day ago', title: 'Low-cut court speed is insane', text: 'NitroEdge is plush and responsive. Crossover transitions are lightning fast.' },
+      { author: 'Tyler M.', rating: 5, date: '3 days ago', title: 'Copper embroidery details are immaculate', text: 'Super lightweight and the traction bites hardwood hard.' }
+    ]
+  },
+  {
+    id: 'anta-kt9-sailor-bay',
+    sku: 'AN-KT9-087',
+    brand: 'ANTA',
+    brandBadge: 'ANTA Klay Signature',
+    brandColor: 'cyan',
+    name: 'ANTA KT9 "Sailor Bay Wave"',
+    subtitle: 'Klay Thompson Ocean Mist Championship Sharpshooter',
+    price: 130.00,
+    originalPrice: 130.00,
+    rating: 4.9,
+    reviewsCount: 190,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Deep Sea Turquoise / Foam White / Sunset Coral',
+    sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 13,
+    badge: 'Ocean Sharpshooter',
+    image: 'assets/anta_kt9_splash.jpg',
+    video: 'assets/anta_kt9_splash.webm',
+    description: 'Inspired by Klay Thompson\'s love for boating on San Francisco Bay. Features 3D FLOW stability chassis, dual-density NitroEdge midsole, SMART S.A.M shock-absorbing heel puck, and wave-contoured court grip.',
+    specs: {
+      cushioning: 'Dual NitroEdge Nitrogen Foam + SMART S.A.M Heel Module',
+      stability: '3D FLOW Wrap-Around Carbon Frame',
+      outsole: 'Ocean Wave Multidirectional Hardwood Tread',
+      upper: 'High-Tensile Reinforced Breathable Weave',
+      position: 'Shooting Guards & Perimeter Defenders'
+    },
+    reviews: [
+      { author: 'Golden Shooter', rating: 5, date: '2 days ago', title: 'Landing on jumpers feels effortless', text: 'SMART S.A.M module protects knees during high-volume shooting sessions.' },
+      { author: 'Derrick C.', rating: 5, date: '5 days ago', title: 'Unmatched lateral support', text: 'Solid ankle lock when pulling up from deep range.' }
+    ]
+  },
+  {
+    id: 'anta-c10-pro-marathon',
+    sku: 'AN-C10P-088',
+    brand: 'ANTA',
+    brandBadge: 'ANTA Nitrogen Racing',
+    brandColor: 'red',
+    name: 'ANTA C10 Pro Carbon "Speed Master"',
+    subtitle: 'Ultra-Featherweight 5K / 10K / Half Marathon Super-Shoe',
+    price: 210.00,
+    originalPrice: 210.00,
+    rating: 4.9,
+    reviewsCount: 165,
+    category: 'running',
+    categoryName: 'Marathon / Racing',
+    colorway: 'Hyper Laser Crimson / Cyber Neon / Carbon Black',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 12],
+    inStock: true,
+    stockCount: 11,
+    badge: 'Sub-60 Half Racer',
+    image: 'assets/anta_c202_gt_pro.jpg',
+    video: 'assets/anta_c202_gt_pro.webm',
+    description: 'ANTA\'s sub-60 minute half marathon racing weapon. Features an ultra-responsive single-density supercritical nitrogen NitroEdge foam core, 3D spoon-shaped carbon propulsion plate, and 165g featherweight race mono-mesh.',
+    specs: {
+      cushioning: 'Supercritical Nitrogen NitroEdge High-Rebound Foam (88% Return)',
+      plate: '3D Spoon-Curved Carbon Fiber Flyplate',
+      weight: '5.8 oz / 165 g (Ultralight Racing Spec)',
+      outsole: 'Liquid Grip Space Rubber Road Traction',
+      terrain: 'Road 5K, 10K, Half-Marathon & Marathon PRs'
+    },
+    reviews: [
+      { author: 'Kenji T.', rating: 5, date: 'Yesterday', title: 'Feels lighter than air', text: 'Spoon-shaped carbon plate catapults your stride forward effortlessly.' },
+      { author: 'Sarah L.', rating: 5, date: '3 days ago', title: 'Smashed my 10K PR', text: 'Broke my PR by over a minute on first race. Incredible rebound.' }
+    ]
+  },
+  {
+    id: 'anta-shockwave-5-white-ice',
+    sku: 'AN-SW5-089',
+    brand: 'ANTA',
+    brandBadge: 'ANTA Outdoor Beast',
+    brandColor: 'cyan',
+    name: 'ANTA Shock Wave 5 Pro "Glacier Ice"',
+    subtitle: 'Cement-Killer Translucent Blue High-Abrasion Outdoor Shoe',
+    price: 140.00,
+    originalPrice: 140.00,
+    rating: 4.9,
+    reviewsCount: 220,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Glacier Pure White / Translucent Ice Blue / Silver Metallic',
+    sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 18,
+    badge: 'Glacier Armor',
+    image: 'assets/anta_shockwave_5.jpg',
+    video: 'assets/anta_shockwave_5.webm',
+    description: 'Built for relentless outdoor battles on sun-baked blacktop. Features a drop-in NitroEdge supercritical nitrogen midsole, full-wrap TPU cyber cage outriggers, and indestructible cement-killer icy blue rubber.',
+    specs: {
+      cushioning: 'Drop-In Full-Length Supercritical Nitrogen Midsole',
+      armor: 'Wrap-Around Lateral Cyber TPU Glacier Armor',
+      outsole: 'Cement-Killer Extra-Deep Grooved Outdoor Rubber',
+      upper: 'High-Density Breathable Jacquard Ripstop',
+      court: 'Outdoor Blacktop, Asphalt & High-Impact Hardwood'
+    },
+    reviews: [
+      { author: 'Streetballer Josh', rating: 5, date: '2 days ago', title: 'Cleanest Shockwave colorway yet', text: 'Soles are genuinely cement-proof. Translucent blue look is fire.' },
+      { author: 'Alan G.', rating: 5, date: '4 days ago', title: 'Super bouncy nitrogen cushioning', text: 'Great impact absorption on rough blacktop.' }
+    ]
+  },
+  {
+    id: 'anta-kai-1-dallas-maverick',
+    sku: 'AN-KAI1-090',
+    brand: 'ANTA',
+    brandBadge: 'ANTA Kyrie Signature',
+    brandColor: 'cyan',
+    name: 'ANTA KAI 1 "Deep Sea Navy"',
+    subtitle: 'Kyrie Irving Western Conference Championship Navy Edition',
+    price: 125.00,
+    originalPrice: 125.00,
+    rating: 5.0,
+    reviewsCount: 290,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Deep Navy Blue / Royal Cyan / Metallic Silver Runes',
+    sizes: [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 15,
+    badge: 'Playoffs Edition',
+    image: 'assets/anta_kai_1_playoffs.jpg',
+    video: 'assets/anta_kai_1_playoffs.webm',
+    description: 'Worn by Kyrie Irving during high-stakes Western Conference playoff showdowns. Features midnight deep navy and royal blue jacquard knit with silver hieroglyphic runes, full-length NitroEdge nitrogen foam, and lockdown strap.',
+    specs: {
+      cushioning: 'Full-Length Supercritical NitroEdge Nitrogen Foam',
+      plate: 'Carbon Fiber Midfoot Torsion Shank',
+      lockdown: 'Dynamic Forefoot & Midfoot Stabilizer Strap',
+      outsole: 'Radial Multi-Zone Hardwood Floor Grip',
+      position: 'Guards & Hardwood Magicians'
+    },
+    reviews: [
+      { author: 'Dallas Hoops', rating: 5, date: 'Yesterday', title: 'Deep navy colorway looks royal', text: 'Looks incredible on court. Best ankle-breaking traction on hardwood.' },
+      { author: 'Marcus P.', rating: 5, date: '3 days ago', title: 'Locked down completely', text: 'Midfoot strap ensures zero heel slippage during violent cuts.' }
+    ]
+  },
+  {
+    id: 'anta-c202-gt-pro-electric',
+    sku: 'AN-C202-091',
+    brand: 'ANTA',
+    brandBadge: 'ANTA Nitrogen Racing',
+    brandColor: 'amber',
+    name: 'ANTA C202 5 GT Pro "Hyper Volt"',
+    subtitle: 'Bionic Carbon 3D Curved Full-Foot Marathon Super-Shoe',
+    price: 220.00,
+    originalPrice: 220.00,
+    rating: 4.9,
+    reviewsCount: 175,
+    category: 'running',
+    categoryName: 'Marathon / Racing',
+    colorway: 'Electric Volt / Cyber Lime / Carbon Weave',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 12],
+    inStock: true,
+    stockCount: 10,
+    badge: 'Sub-2:20 Weapon',
+    image: 'assets/anta_c202_gt_olympic.jpg',
+    video: 'assets/anta_c202_gt_olympic.webm',
+    description: 'The world-record challenging marathon super-shoe in striking high-visibility Hyper Volt. Dual-layer nitrogen NitroEdge supercritical foam, 3D bionic full-palm curved carbon plate, and ultra-breathable race mono-mesh.',
+    specs: {
+      cushioning: 'Dual-Layer Supercritical Nitrogen NitroEdge Foam (86% Return)',
+      plate: '3D Bionic Curved Full-Foot Carbon Fiber Plate',
+      weight: '7.0 oz / 199 g',
+      outsole: 'Liquid Grip Space Rubber Road Traction',
+      terrain: 'World Marathon Majors & Elite PR Chasers'
+    },
+    reviews: [
+      { author: 'Liam W.', rating: 5, date: '2 days ago', title: 'Unreal energy return', text: 'The neon volt pop turns heads and the bounce on 20-mile runs is effortless.' },
+      { author: 'Victor Z.', rating: 5, date: '6 days ago', title: 'Extremely stable in corners', text: 'Wide carbon plate geometry prevents ankle roll during fast turns.' }
+    ]
+  },
+  {
+    id: 'converse-all-star-bb-shift-cx',
+    sku: 'CV-BBS-092',
+    brand: 'Converse',
+    brandBadge: 'Converse Hoops Innovation',
+    brandColor: 'cyan',
+    name: 'Converse All Star BB Shift CX',
+    subtitle: 'Forefoot Nike Air Zoom + CX Foam Agile Hoops Shoe',
+    price: 120.00,
+    originalPrice: 120.00,
+    rating: 4.8,
+    reviewsCount: 195,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Cyber White / Solar Orange / Hyper Cobalt / Black',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 17,
+    badge: 'Shift Innovation',
+    image: 'assets/converse_bb_prototype.jpg',
+    video: 'assets/converse_bb_prototype.webm',
+    description: 'Engineered for fluid, positionless basketball players who thrive on sudden shifts and crossover acceleration. Combines a snappy forefoot Nike Air Zoom unit with plush CX foam midsole and breathable mesh upper.',
+    specs: {
+      cushioning: 'Forefoot Nike Air Zoom Pod + Full CX Foam Core',
+      lacing: 'Dynamic Webbed Eyelet Cable Containment',
+      outsole: 'Radial Multi-Directional Floor Suction Rubber',
+      upper: 'Engineered High-Tensile Mesh with Synthetic Suede Rands',
+      position: 'Agile Guards, Slashers & Versatile Wings'
+    },
+    reviews: [
+      { author: 'Carlos N.', rating: 5, date: 'Yesterday', title: 'Zoom Air in a Converse is game-changing', text: 'Unbelievable comfort and bounce. Instant court response.' },
+      { author: 'Maya T.', rating: 5, date: '3 days ago', title: 'Best low-top Converse basketball shoe', text: 'Supportive, squeaky grip, and bold modern styling.' }
+    ]
+  },
+  {
+    id: 'converse-weapon-ox-low',
+    sku: 'CV-WPN-093',
+    brand: 'Converse',
+    brandBadge: 'Converse Hardwood Legend',
+    brandColor: 'purple',
+    name: 'Converse Weapon OX Low "Showtime Vintage"',
+    subtitle: '1986 Hardwood Rivalry Low-Cut Leather Icon',
+    price: 110.00,
+    originalPrice: 110.00,
+    rating: 4.9,
+    reviewsCount: 230,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Vintage White / Court Purple / Gold Foil / Egret',
+    sizes: [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 19,
+    badge: 'Showtime Low',
+    image: 'assets/converse_weapon_cx.jpg',
+    video: 'assets/converse_weapon_cx.webm',
+    description: 'The low-top cut of the most famous basketball sneaker of the 1980s. Premium full-grain leather, CX foam drop-in comfort, vintage aged egret midsole, and iconic Star Chevron leather overlays.',
+    specs: {
+      cushioning: 'Plush CX Foam Drop-In Cushioning',
+      materials: 'Heavyweight Full-Grain Supple Genuine Leather',
+      collar: 'Padded Low-Cut Hardwood Ankle Collar',
+      outsole: 'Vintage Molded Rubber Herringbone Pivot Outsole',
+      style: '80s Showtime Nostalgia & Low-Top Streetwear Staple'
+    },
+    reviews: [
+      { author: 'Darren K.', rating: 5, date: '2 days ago', title: 'Low-top Weapon is so versatile', text: 'Leather is thick and soft, and CX foam makes it wearable all day.' },
+      { author: 'Sam L.', rating: 5, date: '4 days ago', title: '80s Showtime vibes', text: 'Purple and gold colorway looks amazing with denim.' }
+    ]
+  },
+  {
+    id: 'converse-chuck-70-plus-deconstructed',
+    sku: 'CV-C70P-094',
+    brand: 'Converse',
+    brandBadge: 'Converse Avant-Garde',
+    brandColor: 'amber',
+    name: 'Converse Chuck 70 Plus "Asymmetrical Split"',
+    subtitle: 'Deconstructed Split-Sole 12oz Duck Canvas High Top',
+    price: 100.00,
+    originalPrice: 100.00,
+    rating: 4.9,
+    reviewsCount: 310,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Black / Egret / Distorted Canvas Monolith',
+    sizes: [6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 22,
+    badge: 'Distorted Canvas',
+    image: 'assets/converse_chuck_70.jpg',
+    video: 'assets/converse_chuck_70.webm',
+    description: 'An unexpected, distorted remix on the iconic Chuck 70. Features sliced and spliced asymmetrical canvas panels, stacked dual-height vulcanized foxing tape, fused Chuck Taylor ankle patch, and OrthoLite cushioning.',
+    specs: {
+      cushioning: 'Plush Dual-Density OrthoLite Insole Cushioning',
+      construction: 'Asymmetrical Spliced 12oz Heavyweight Organic Canvas',
+      midsole: 'Distorted Multi-Height Egret Vulcanized Rubber Tape',
+      details: 'Split Chuck Taylor All Star Ankle Patch',
+      style: 'Deconstructed High-Fashion & Modern Street Art'
+    },
+    reviews: [
+      { author: 'Camille D.', rating: 5, date: '1 day ago', title: 'Looks like a runway designer collab', text: 'The distorted cut lines and split sole look unbelievable on foot.' },
+      { author: 'Julian R.', rating: 5, date: '3 days ago', title: 'Super comfortable insole', text: 'Gets compliments everywhere I go. True head turner.' }
+    ]
+  },
+  {
+    id: 'converse-run-star-legacy-cx',
+    sku: 'CV-RSL-095',
+    brand: 'Converse',
+    brandBadge: 'Converse CX Innovation',
+    brandColor: 'purple',
+    name: 'Converse Run Star Legacy CX Platform',
+    subtitle: 'Sculpted Angular CX Foam Platform with Winged Tongue',
+    price: 120.00,
+    originalPrice: 120.00,
+    rating: 4.9,
+    reviewsCount: 275,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Egret White / Black / Cyber Violet Star',
+    sizes: [6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 12],
+    inStock: true,
+    stockCount: 20,
+    badge: 'Ultra-Light Platform',
+    image: 'assets/converse_run_star_motion.jpg',
+    video: 'assets/converse_run_star_motion.webm',
+    description: 'The latest iteration of the fan-favorite Run Star Hike, merging bold platform styling with lightweight CX foam cushioning. Winged tongue and heel bumper allow for easy on and off, while sculpted lines add futuristic poise.',
+    specs: {
+      cushioning: 'Lightweight Injected CX Foam Midsole & Sockliner',
+      upper: '100% Organic Heavyweight Cotton Canvas',
+      collar: 'Winged Tongue & Exaggerated Pinstripe Collar',
+      outsole: 'Sculpted Angular Saw-Tooth Rubber Traction',
+      style: 'Futuristic Fashion Platform & Daily Comfort'
+    },
+    reviews: [
+      { author: 'Sienna V.', rating: 5, date: 'Yesterday', title: 'Weighs half as much as regular platforms', text: 'CX foam is like walking on clouds. Flattering silhouette.' },
+      { author: 'Rachel P.', rating: 5, date: '5 days ago', title: 'Egret off-white tone is gorgeous', text: 'Super easy to slip on with the heel bumper and winged tongue.' }
+    ]
+  },
+  {
+    id: 'converse-cons-fastbreak-pro',
+    sku: 'CV-FBS-096',
+    brand: 'Converse',
+    brandBadge: 'Converse CONS Skate',
+    brandColor: 'white',
+    name: 'Converse CONS Fastbreak Pro "1983 Archival"',
+    subtitle: '80s Hardwood Heritage Revamped for Pro Skateboarding',
+    price: 85.00,
+    originalPrice: 85.00,
+    rating: 4.8,
+    reviewsCount: 180,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'White / Dark Obsidian / Vintage Gum / Red',
+    sizes: [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 25,
+    badge: 'CONS Skate Pro',
+    image: 'assets/converse_cruise_skate.jpg',
+    video: 'assets/converse_cruise_skate.webm',
+    description: 'Originally introduced on the hardwood in 1983, the Fastbreak was an immediate favorite of basketball champions and underground skateboarders alike. Re-engineered with CX foam impact cushioning, durable rubber-backed leather, and CONS traction gum rubber.',
+    specs: {
+      cushioning: 'Molded CX Foam Drop-In Sockliner for Impact Protection',
+      materials: 'Durable Rubber-Backed Genuine Leather & Nylon Upper',
+      outsole: 'CONS High-Grip Traction Gum Rubber Compound',
+      style: '1983 Archival Hardwood & Street Skateboarding'
+    },
+    reviews: [
+      { author: 'Leo X.', rating: 5, date: '2 days ago', title: 'Indestructible skate shoe', text: 'Board feel is precise and the 80s vintage look is unbeatable.' },
+      { author: 'Dave M.', rating: 5, date: '4 days ago', title: 'Clean retro silhouette', text: 'Gum sole gives awesome grip on boards or pavement.' }
+    ]
+  },
+  {
+    id: 'nike-kobe-8-venice-beach',
+    sku: 'NK-KB8-097',
+    brand: 'Nike',
+    brandBadge: 'Nike Mamba Legacy',
+    brandColor: 'cyan',
+    name: 'Nike Kobe 8 Protro "Venice Beach"',
+    subtitle: 'Graffiti Airbrush Multi-Color Venice Boardwalk Classic',
+    price: 190.00,
+    originalPrice: 190.00,
+    rating: 5.0,
+    reviewsCount: 460,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Stadium Grey / Metallic Silver / Tour Yellow / Signal Blue',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 8,
+    badge: 'Venice Beach Drop',
+    image: 'assets/nike_kobe_8_protro.jpg',
+    video: 'assets/nike_kobe_8_protro.webm',
+    description: 'Celebrating the street basketball culture and colorful graffiti murals of Venice Beach, California. Originally released for the 2013 Houston All-Star Game, modernized with a full-length drop-in Nike React foam midsole.',
+    specs: {
+      cushioning: 'Drop-In Full-Length Nike React Foam Midsole',
+      plate: 'Glass-Composite Midfoot Shank Plate',
+      upper: 'Seamless Engineered Mesh with Airbrushed Graffiti',
+      outsole: 'Herringbone Multidirectional Grip Rubber',
+      position: 'Speed Guards & Mamba Disciples'
+    },
+    reviews: [
+      { author: 'Kobe Fan 24', rating: 5, date: '1 day ago', title: 'Vibrant boardwalk vibes', text: 'Colors are rich and the React foam drop-in is a huge upgrade for court longevity.' },
+      { author: 'Marcus D.', rating: 5, date: '3 days ago', title: 'Ultra lightweight', text: 'Fastest shoe in my basketball bag. Unbeatable traction.' }
+    ]
+  },
+  {
+    id: 'nike-air-max-plus-drift',
+    sku: 'NK-TN-098',
+    brand: 'Nike',
+    brandBadge: 'Nike Tuned Air',
+    brandColor: 'emerald',
+    name: 'Nike Air Max Plus Drift "Neon Matrix"',
+    subtitle: 'Molded Exoskeleton Gradient Cage Streetwear',
+    price: 185.00,
+    originalPrice: 185.00,
+    rating: 4.9,
+    reviewsCount: 290,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Cyber Volt / Anthracite / Black / Bright Cactus',
+    sizes: [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 16,
+    badge: 'Tuned Drift',
+    image: 'assets/nike_air_max_95_neon.jpg',
+    video: 'assets/nike_air_max_95_neon.webm',
+    description: 'A futuristic armored evolution of the legendary Air Max Plus. Features an exaggerated molded TPU exoskeleton cage wrapping over a gradient mesh base, dual Tuned Air chambers, and whale-tail midfoot arch shank.',
+    specs: {
+      cushioning: 'Dual Tuned Air Cushioning Pods + Phylon Midsole',
+      cage: 'High-Relief Sculpted TPU Exoskeleton Armor',
+      shank: 'Graduated Whale-Tail Arch Stability Shank',
+      outsole: 'Lugged Waffle High-Abrasion Rubber',
+      style: 'Cyberpunk Techwear & Aggressive Streetwear'
+    },
+    reviews: [
+      { author: 'Leo X.', rating: 5, date: '2 days ago', title: 'Aggressive futuristic cage', text: 'Looks like armor on foot. Tuned Air cushioning feels sturdy and bouncy.' },
+      { author: 'Viktor N.', rating: 5, date: '5 days ago', title: 'Neon green pops hard', text: 'Turns heads in the city. Great arch support.' }
+    ]
+  },
+  {
+    id: 'nike-lebron-nxxt-gen-ampd',
+    sku: 'NK-NXXT-099',
+    brand: 'Nike',
+    brandBadge: 'Nike King Signature',
+    brandColor: 'cyan',
+    name: 'Nike LeBron NXXT Gen AMPD "I Promise"',
+    subtitle: 'Double-Layered Swoosh Hardwood Agility Weapon',
+    price: 170.00,
+    originalPrice: 170.00,
+    rating: 4.9,
+    reviewsCount: 310,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Multi-Color / Summit White / Metallic Gold / Cobalt',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 14,
+    badge: 'King Agility',
+    image: 'assets/nike_lebron_20_trinity.jpg',
+    video: 'assets/nike_lebron_20_trinity.webm',
+    description: 'Tailored specifically for the fast-paced, positionless modern basketball athlete. Top-loaded forefoot Zoom Turbo unit pairs with heel Zoom Air, multi-layered iridescent double Swooshes, and Akron map traction pattern.',
+    specs: {
+      cushioning: 'Forefoot Zoom Turbo + Heel Zoom Air + Cushlon Foam',
+      containment: 'Reinforced Lateral Outrigger with Double Swoosh Overlays',
+      outsole: 'Akron Suburb City Map Generative Hardwood Grip',
+      upper: 'Open-Hole High-Tensile Dimensional Knit',
+      position: 'Versatile Playmakers, Guards & Forward Slashers'
+    },
+    reviews: [
+      { author: 'Darius C.', rating: 5, date: 'Yesterday', title: 'Best LeBron low-top performer', text: 'Zoom Turbo under the forefoot gives instant pop on first steps.' },
+      { author: 'Tyler H.', rating: 5, date: '3 days ago', title: 'Double swoosh looks luxury', text: 'Fits true to size with snug ankle lockdown.' }
+    ]
+  },
+  {
+    id: 'nike-air-more-uptempo-og',
+    sku: 'NK-UPT-100',
+    brand: 'Nike',
+    brandBadge: 'Nike 90s Hardwood',
+    brandColor: 'red',
+    name: 'Nike Air More Uptempo \'96 OG "Scottie Pippen"',
+    subtitle: 'Graffiti AIR Bold Lettering Full Visible Air Classic',
+    price: 170.00,
+    originalPrice: 170.00,
+    rating: 5.0,
+    reviewsCount: 680,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Black / White / University Red',
+    sizes: [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 15,
+    badge: '1996 72-10 Icon',
+    image: 'assets/jordan_4_bred.jpg',
+    video: 'assets/jordan_4_bred.webm',
+    description: 'The monumental 1996 silhouette Scottie Pippen wore during the historic 72-10 championship season and Atlanta Olympic Games. Giant graffiti-inspired AIR lettering with reflective border and full-length visible Air-Sole bubbles.',
+    specs: {
+      cushioning: 'Full-Length Multi-Chamber Visible Air-Sole Cushioning',
+      upper: 'Heavyweight Black Nubuck with Molded AIR Overlays',
+      lacing: 'Elastic Speed-Lacing Retention Straps',
+      outsole: 'Solid Rubber with Herringbone Traction Circles',
+      style: 'All-Time 90s Hardwood Icon & Global Streetwear Giant'
+    },
+    reviews: [
+      { author: 'Pippen Fan 33', rating: 5, date: '2 days ago', title: 'The boldest sneaker ever made', text: 'The AIR lettering is timeless 90s swagger. Visible Air under the whole foot is super comfortable.' },
+      { author: 'Julian S.', rating: 5, date: '4 days ago', title: 'Pristine nubuck quality', text: 'Classic black and white goes with any streetwear fit.' }
+    ]
+  },
+  {
+    id: 'nike-acg-air-mowabb',
+    sku: 'NK-MOW-101',
+    brand: 'Nike',
+    brandBadge: 'Nike ACG All-Conditions',
+    brandColor: 'amber',
+    name: 'Nike ACG Air Mowabb OG "Rattan Birch"',
+    subtitle: '1991 Tinker Hatfield Neoprene Trail Huarache Legend',
+    price: 160.00,
+    originalPrice: 160.00,
+    rating: 4.9,
+    reviewsCount: 230,
+    category: 'outdoor',
+    categoryName: 'Outdoor / Trail ACG',
+    colorway: 'Rattan / Birch / Mandarin Orange / Royal Blue',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+    inStock: true,
+    stockCount: 11,
+    badge: '1991 ACG Origin',
+    image: 'assets/nike_acg_mountain_fly.jpg',
+    video: 'assets/nike_acg_mountain_fly.webm',
+    description: 'Designed by Tinker Hatfield in 1991 inspired by the red rocks and mountain trails of Moab, Utah. Features a flexible neoprene Huarache inner bootie, speckled midsole, encapsulated Air cushioning, and trail-ready rubber lugs.',
+    specs: {
+      cushioning: 'Encapsulated Nike Air Heel Cushioning Unit',
+      bootie: 'Dynamic Stretch Neoprene & Spandex Ankle Collar',
+      materials: 'Premium Nubuck Leather Overlays + ACG Heel Cage',
+      outsole: 'Speckled Trail Rubber Compound with Multi-Lug Grip',
+      terrain: 'Mountain Hiking, Trail Trekking & Retro Streetwear'
+    },
+    reviews: [
+      { author: 'Trekker Dave', rating: 5, date: '3 days ago', title: 'Huarache bootie fits like a glove', text: 'Keeps trail debris out of your shoe. The Rattan Birch colorway is 90s perfection.' },
+      { author: 'Gabe T.', rating: 5, date: '6 days ago', title: 'Comfortable all-day hiker', text: 'Air cushioning and soft neoprene make long walks effortless.' }
+    ]
+  },
+  {
+    id: 'nike-vomero-17-zoomx',
+    sku: 'NK-VOM17-102',
+    brand: 'Nike',
+    brandBadge: 'Nike Daily Runner',
+    brandColor: 'cyan',
+    name: 'Nike Vomero 17 "Dual Stack ZoomX"',
+    subtitle: 'Maximum Plush Everyday Distance Road Runner',
+    price: 160.00,
+    originalPrice: 160.00,
+    rating: 4.9,
+    reviewsCount: 215,
+    category: 'running',
+    categoryName: 'Marathon / Racing',
+    colorway: 'Pure Platinum / Hyper Crimson / Coconut Milk',
+    sizes: [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 20,
+    badge: 'Maximum Plush',
+    image: 'assets/nike_invincible_3.jpg',
+    video: 'assets/nike_invincible_3.webm',
+    description: 'The ultimate plush mileage collector. Combines a top layer of ultra-light, springy ZoomX superfoam with a supportive bottom carrier of Cushlon 3.0 foam for luxurious impact absorption on marathon training blocks.',
+    specs: {
+      cushioning: 'Dual-Stacked Midsole: Premium ZoomX Superfoam + Cushlon 3.0 Carrier',
+      offset: '10 mm heel-to-toe drop',
+      upper: 'Engineered High-Breathability Mono-Mesh',
+      outsole: 'Generative High-Abrasion Waffle Lug Rubber',
+      terrain: 'Daily Distance Training / Marathon Long Base Miles'
+    },
+    reviews: [
+      { author: 'Elena R.', rating: 5, date: 'Yesterday', title: 'Saves your knees on long runs', text: 'ZoomX on top of Cushlon gives bounce without feeling too unstable. Best daily trainer.' },
+      { author: 'Marcus K.', rating: 5, date: '4 days ago', title: 'Incredible step-in comfort', text: 'Like walking on pillows. Super smooth transition.' }
+    ]
+  },
+  {
+    id: 'nike-kobe-4-protro-philly',
+    sku: 'NK-KB4-103',
+    brand: 'Nike',
+    brandBadge: 'Nike Mamba Legacy',
+    brandColor: 'red',
+    name: 'Nike Kobe 4 Protro "Philly 2024"',
+    subtitle: 'Kobe Bryant Hometown Varsity Royal 1776 Tribute',
+    price: 190.00,
+    originalPrice: 190.00,
+    rating: 5.0,
+    reviewsCount: 390,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Varsity Royal / White / University Red / Metallic Silver',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 7,
+    badge: 'Philly Mamba',
+    image: 'assets/nike_kobe_4_black.jpg',
+    video: 'assets/nike_kobe_4_black.webm',
+    description: 'Honoring Kobe Bryant\'s birthplace of Philadelphia. Features patriotic varsity royal and red color blocking, 8-23-78 Kobe birthdate stamped on the insole, starry ankle collar pattern, responsive heel Zoom Air, and Flywire containment.',
+    specs: {
+      cushioning: 'Heel Nike Zoom Air + Full-Length Phylon Foam',
+      containment: 'Flywire High-Tensile Lateral Support Cables',
+      details: 'Patriotic Star Collar Pattern & 8-23-78 Insole Stamp',
+      outsole: 'Herringbone Modified High-Grip Court Rubber',
+      position: 'Hardwood Speed Guards & Mamba Disciples'
+    },
+    reviews: [
+      { author: 'Philly Hoops', rating: 5, date: '2 days ago', title: 'Royal blue and stars look magnificent', text: 'The tribute to Kobe’s hometown is heartfelt. Low-top mobility is unmatched.' },
+      { author: 'Brandon K.', rating: 5, date: '5 days ago', title: 'Heel Zoom Air is snappy', text: 'First step responsiveness is immediate. Classic Kobe silhouette.' }
+    ]
+  },
+  {
+    id: 'nike-air-max-1-sc-corduroy',
+    sku: 'NK-AM1-104',
+    brand: 'Nike',
+    brandBadge: 'Nike Air Max',
+    brandColor: 'cyan',
+    name: 'Nike Air Max 1 SC "Baltic Blue Corduroy"',
+    subtitle: 'Textured Ribbed Corduroy Suede Mudguard Icon',
+    price: 160.00,
+    originalPrice: 160.00,
+    rating: 4.8,
+    reviewsCount: 240,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Baltic Blue / Sesame / Gridiron / Sail',
+    sizes: [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+    inStock: true,
+    stockCount: 16,
+    badge: 'Corduroy Luxury',
+    image: 'assets/nike_air_max_1_86.jpg',
+    video: 'assets/nike_air_max_1_86.webm',
+    description: 'Swapping traditional mesh and leather for rich, tactile ribbed corduroy in vivid Baltic Blue. Paired with sesame tan Swooshes, sail vintage midsole, and visible Air-Sole heel unit.',
+    specs: {
+      cushioning: 'Visible Heel Nike Max Air Cushioning Chamber',
+      materials: 'Premium Heavyweight Ribbed Corduroy Textile & Suede',
+      midsole: 'Vintage Sail Polyurethane Midsole',
+      outsole: 'Original 1987 Waffle Tread Hard Rubber',
+      style: 'Textured Luxury Lifestyle & Streetwear Essential'
+    },
+    reviews: [
+      { author: 'Oliver W.', rating: 5, date: '1 day ago', title: 'Corduroy texture is insanely premium', text: 'The baltic blue color is rich in sunlight. Sesame swoosh contrasts beautifully.' },
+      { author: 'Nathan C.', rating: 5, date: '3 days ago', title: 'Super unique Air Max 1', text: 'Materials feel expensive and fit is true to size.' }
+    ]
+  },
+  {
+    id: 'jordan-4-retro-sb-pine-green',
+    sku: 'JB-AJ4-105',
+    brand: 'Jordan',
+    brandBadge: 'Jordan SB Collab',
+    brandColor: 'emerald',
+    name: 'Nike SB x Air Jordan 4 "Pine Green"',
+    subtitle: 'Flexible Skate Toebox & Gum Rubber Heel Puck Grail',
+    price: 225.00,
+    originalPrice: 225.00,
+    rating: 5.0,
+    reviewsCount: 920,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Summit White / Pine Green / Neutral Grey / Gum Light Brown',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 6,
+    badge: 'Nike SB Jordan Grail',
+    image: 'assets/jordan_4_bred.jpg',
+    video: 'assets/jordan_4_bred.webm',
+    description: 'The monumental collaboration between Nike SB and Jordan Brand. Re-engineered with flexible 1989 shape toebox, soft rubber eyelet wings that don\'t snap, Nike SB heel badge, and high-grip gum rubber outsole pods.',
+    specs: {
+      cushioning: 'Heel Air-Sole Unit with Softened Polyurethane Forefoot',
+      details: 'Molded Nike SB Heel Tab & Flexible Rubber Eyestay Wings',
+      materials: 'Supple White Leather Base with Neutral Grey Suede Mudguard',
+      outsole: 'Gum Light Brown Multi-Directional Skate Grip Rubber',
+      style: 'The Most Acclaimed Modern Jordan 4 Collab'
+    },
+    reviews: [
+      { author: 'Skater Julian', rating: 5, date: 'Yesterday', title: 'Best Jordan 4 ever engineered', text: 'So much more comfortable than regular 4s. The flexible wings and gum sole make this unmatched.' },
+      { author: 'Chris M.', rating: 5, date: '2 days ago', title: 'Pine green accents look royal', text: '10/10 quality. Leather is buttery soft.' }
+    ]
+  },
+  {
+    id: 'jordan-1-retro-high-lost-and-found',
+    sku: 'JB-AJ1-106',
+    brand: 'Jordan',
+    brandBadge: 'Jordan Heritage',
+    brandColor: 'red',
+    name: 'Air Jordan 1 High OG "Lost & Found Chicago"',
+    subtitle: '1985 Cracked Leather Vintage Receipt Box Grail',
+    price: 180.00,
+    originalPrice: 180.00,
+    rating: 5.0,
+    reviewsCount: 980,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Varsity Red / Black / Muslin / Bleached White',
+    sizes: [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 7,
+    badge: 'Lost & Found Chicago',
+    image: 'assets/nike_jordan_1_chicago.jpg',
+    video: 'assets/nike_jordan_1_chicago.webm',
+    description: 'Replicating an authentic deadstock 1985 Chicago Air Jordan 1 discovered in a mom-and-pop shoe store stockroom. Features cracked black leather collars, aged muslin midsole, retro sales receipt packaging, and pristine red leather overlays.',
+    specs: {
+      cushioning: 'Encapsulated Nike Air-Sole Heel Unit',
+      materials: 'Cracked Leather Ankle Collar + Full-Grain Varsity Red Leather',
+      details: 'Vintage Aged Muslin Midsole & Mismatched Box Lid Graphic',
+      outsole: 'Solid Rubber Concentric Pivot Outsole',
+      style: 'The Ultimate Chicago 1985 Time Capsule'
+    },
+    reviews: [
+      { author: 'Vintage Sneakerhead', rating: 5, date: '1 day ago', title: 'Feels like stepping out of 1985', text: 'Cracked leather collar and aged sole look museum-quality. Flawless execution.' },
+      { author: 'Anthony T.', rating: 5, date: '3 days ago', title: 'Greatest Jordan release of the decade', text: 'Shape is 1:1 identical to original 1985 cuts.' }
+    ]
+  },
+  {
+    id: 'jordan-11-retro-space-jam',
+    sku: 'JB-AJ11-107',
+    brand: 'Jordan',
+    brandBadge: 'Jordan Championship',
+    brandColor: 'purple',
+    name: 'Air Jordan 11 Retro "Space Jam 1996"',
+    subtitle: 'High-Cut Glossy Patent Leather & Concord Jumpman',
+    price: 230.00,
+    originalPrice: 230.00,
+    rating: 5.0,
+    reviewsCount: 860,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Black / Dark Concord / White / Icy Clear Outsole',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 8,
+    badge: 'Space Jam Grail',
+    image: 'assets/jordan_11_gratitude.jpg',
+    video: 'assets/jordan_11_gratitude.webm',
+    description: 'First debuted by Michael Jordan in the 1995 Eastern Conference Semifinals and made legendary in the 1996 movie Space Jam. Features high-cut pitch-black patent leather mudguard, dark concord Jumpman emblem, and full carbon fiber shank plate.',
+    specs: {
+      cushioning: 'Full-Length Encapsulated Nike Air-Sole Cushioning',
+      plate: 'Genuine Carbon Fiber Midfoot Arch Shank Plate',
+      materials: 'High-Cut Gleaming Black Patent Leather + Ballistic Mesh',
+      outsole: 'Icy Translucent Rubber with Concord Herringbone Traction',
+      style: 'Pop Culture Icon & Hardwood Legend'
+    },
+    reviews: [
+      { author: 'Malik J.', rating: 5, date: '2 days ago', title: 'Pure movie and hardwood royalty', text: 'The patent leather cut is high and shiny. Dark concord Jumpman is iconic.' },
+      { author: 'Derek W.', rating: 5, date: '4 days ago', title: 'Carbon plate arch support is unbeatable', text: 'Comfortable to hoop in or wear with a suit.' }
+    ]
+  },
+  {
+    id: 'jordan-3-retro-palomino',
+    sku: 'JB-AJ3-108',
+    brand: 'Jordan',
+    brandBadge: 'Jordan Heritage',
+    brandColor: 'amber',
+    name: 'Air Jordan 3 Retro "Palomino Earth"',
+    subtitle: 'Light Orewood Brown Suede & Metallic Gold Jumpman',
+    price: 200.00,
+    originalPrice: 200.00,
+    rating: 4.9,
+    reviewsCount: 340,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Light Orewood Brown / Palomino / Metallic Gold / British Tan',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 14,
+    badge: 'Earth Tone Luxury',
+    image: 'assets/jordan_3_white_cement.jpg',
+    video: 'assets/jordan_3_white_cement.webm',
+    description: 'A luxurious earth-tone interpretation of the 1988 Tinker Hatfield classic. Light Orewood Brown suede base complemented by rich Palomino brown elephant print overlays and metallic gold Jumpman tongue branding.',
+    specs: {
+      cushioning: 'Visible Heel Air-Sole + Encapsulated Forefoot Air Unit',
+      materials: 'Light Orewood Suede + Textured Palomino Elephant Print',
+      details: 'Embroidered Metallic Gold Jumpman Tongue Logo',
+      outsole: 'Solid Rubber with Circular Pivot Forefoot Pod',
+      style: 'Luxury Earth-Tone Streetwear & Hardwood Heritage'
+    },
+    reviews: [
+      { author: 'Julian M.', rating: 5, date: 'Yesterday', title: 'Suede quality is magnificent', text: 'Palomino brown elephant print gives it that high-end designer boot aesthetic.' },
+      { author: 'Marcus F.', rating: 5, date: '3 days ago', title: 'Super clean neutral colorway', text: 'Goes with cream, brown, and olive outfits effortlessly.' }
+    ]
+  },
+  {
+    id: 'jordan-13-retro-playoffs',
+    sku: 'JB-AJ13-109',
+    brand: 'Jordan',
+    brandBadge: 'Jordan Championship',
+    brandColor: 'red',
+    name: 'Air Jordan 13 Retro "Playoffs 1998"',
+    subtitle: 'Black Panther Paw Pods & Holographic Eye Jewel',
+    price: 210.00,
+    originalPrice: 210.00,
+    rating: 5.0,
+    reviewsCount: 480,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Black / True Red / White / Vibrant Yellow',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 10,
+    badge: '1998 Last Dance',
+    image: 'assets/jordan_4_bred.jpg',
+    video: 'assets/jordan_4_bred.webm',
+    description: 'Worn by Michael Jordan during his historic 1998 championship playoff run and 1998 All-Star Game. Inspired by the predatory instincts of a black panther, featuring dimpled leather side panels, holographic eye jewel, and paw-like outsole pods.',
+    specs: {
+      cushioning: 'Dual Zoom Air Units (Forefoot & Heel High-Volume)',
+      plate: 'Full Carbon Fiber Midfoot Arch Shank',
+      details: 'Signature 3D Holographic 23 Panther Eye Jewel',
+      outsole: 'Panther Paw Sculpted Pods with Herringbone Traction',
+      style: 'The 1998 Championship Last Dance Icon'
+    },
+    reviews: [
+      { author: 'Dominic W.', rating: 5, date: '2 days ago', title: 'The panther paw sole is genius', text: 'Zoom Air cushioning is so springy. Hologram jewel shines brightly.' },
+      { author: 'Ray T.', rating: 5, date: '5 days ago', title: 'True 1998 nostalgic masterpiece', text: 'Dimpled leather and suede mudguard feel top tier.' }
+    ]
+  },
+  {
+    id: 'jordan-1-low-og-shadow',
+    sku: 'JB-AJ1L-110',
+    brand: 'Jordan',
+    brandBadge: 'Jordan Heritage',
+    brandColor: 'white',
+    name: 'Air Jordan 1 Low OG "Shadow Retro"',
+    subtitle: 'Medium Grey & Black Full-Grain Leather Everyday Classic',
+    price: 140.00,
+    originalPrice: 140.00,
+    rating: 4.9,
+    reviewsCount: 420,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Black / Medium Grey / Summit White',
+    sizes: [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 22,
+    badge: 'OG Shadow Low',
+    image: 'assets/jordan_1_low_reverse_mocha.jpg',
+    video: 'assets/jordan_1_low_reverse_mocha.webm',
+    description: 'The iconic 1985 Shadow colorway rendered in low-top OG specifications. Premium medium grey and black full-grain leather, encapsulated heel Air-Sole unit, embroidered Wings heel logo, and Nike Air tongue tag.',
+    specs: {
+      cushioning: 'Encapsulated Nike Air-Sole Heel Unit',
+      materials: 'Premium Soft Genuine Full-Grain Leather',
+      details: 'Embroidered Wings Heel Emblem & Nike Air Woven Tongue',
+      outsole: 'Solid Rubber Pivot Outsole',
+      style: 'Understated Everyday Streetwear Classic'
+    },
+    reviews: [
+      { author: 'Liam S.', rating: 5, date: 'Yesterday', title: 'The ultimate daily sneaker', text: 'Shadow colorway matches every outfit. Leather is soft and comfortable.' },
+      { author: 'Kevin K.', rating: 5, date: '3 days ago', title: 'OG shape is so clean', text: 'Low cut makes it easy to slip on and go.' }
+    ]
+  },
+  {
+    id: 'anta-kai-1-speed-mother-nature',
+    sku: 'AN-KAI1S-111',
+    brand: 'ANTA',
+    brandBadge: 'ANTA Kyrie Signature',
+    brandColor: 'emerald',
+    name: 'ANTA KAI 1 Speed "Mother Nature Green"',
+    subtitle: 'Kyrie Irving Earth Energy Supercritical Low-Top',
+    price: 125.00,
+    originalPrice: 125.00,
+    rating: 5.0,
+    reviewsCount: 240,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Sage Jade / Earth Green / Solar Citron Gold',
+    sizes: [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 16,
+    badge: 'Earth Energy',
+    image: 'assets/anta_kai_1_speed.jpg',
+    video: 'assets/anta_kai_1_speed.webm',
+    description: 'Inspired by Kyrie Irving\'s deep reverence for the natural world and spiritual groundedness. Low-profile supercritical NitroEdge nitrogen foam chassis, sage jade jacquard knit with leaf rune embroidery, and squeaky radial court traction.',
+    specs: {
+      cushioning: 'Full-Length Supercritical NitroEdge Nitrogen Foam',
+      plate: 'Carbon Fiber Midfoot Torsion Shank',
+      upper: 'Reinforced Jacquard Weave with Gold Leaf Runes',
+      outsole: 'High-Contact Radial Squeak Hardwood Grip',
+      position: 'Agile Speed Guards & Isolation Playmakers'
+    },
+    reviews: [
+      { author: 'Kyrie Disciple', rating: 5, date: '1 day ago', title: 'Jade green colorway is stunning', text: 'Court feel is hyper-responsive. Super sticky traction.' },
+      { author: 'Desmond K.', rating: 5, date: '4 days ago', title: 'Bouncy and fast', text: 'NitroEdge nitrogen foam protects joints on hard landings.' }
+    ]
+  },
+  {
+    id: 'anta-kt9-bruce-lee',
+    sku: 'AN-KT9-112',
+    brand: 'ANTA',
+    brandBadge: 'ANTA Klay Signature',
+    brandColor: 'amber',
+    name: 'ANTA KT9 "Dragon Martial Arts"',
+    subtitle: 'Klay Thompson Game of Death Yellow & Black Edition',
+    price: 135.00,
+    originalPrice: 135.00,
+    rating: 4.9,
+    reviewsCount: 210,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Martial Yellow / Black Dragon / Solar Red Slash',
+    sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 12,
+    badge: 'Dragon Martial Arts',
+    image: 'assets/anta_kt9.jpg',
+    video: 'assets/anta_kt9.webm',
+    description: 'Honoring Bruce Lee\'s martial philosophy and Klay Thompson\'s lethal championship focus. Packed with 3D FLOW stability chassis, dual-density NitroEdge midsole, SMART S.A.M shock-absorbing heel module, and dragon scratch accents.',
+    specs: {
+      cushioning: 'Dual NitroEdge Nitrogen Foam + SMART S.A.M Heel Module',
+      stability: '3D FLOW Wrap-Around Carbon Frame',
+      details: 'Dragon Claw Red Slash Marks & Martial Ribbon',
+      outsole: 'High-Traction Ripple Hardwood Grip',
+      position: 'Shooting Guards & Perimeter Marksmen'
+    },
+    reviews: [
+      { author: 'Klay Thompson Fan', rating: 5, date: '2 days ago', title: 'Yellow and black pop like crazy', text: 'Landing is super cushioned. Pure shooter shoe with incredible ankle stability.' },
+      { author: 'Brandon S.', rating: 5, date: '5 days ago', title: 'Top notch court bite', text: 'Stops on a dime when pulling up from three.' }
+    ]
+  },
+  {
+    id: 'anta-shockwave-6-pro-cyber',
+    sku: 'AN-SW6-113',
+    brand: 'ANTA',
+    brandBadge: 'ANTA Cyber Hoops',
+    brandColor: 'purple',
+    name: 'ANTA Shock Wave 6 Pro "Cyberpunk Mecha"',
+    subtitle: 'Next-Gen Lateral Carbon Claws & Nitrogen Armor',
+    price: 145.00,
+    originalPrice: 145.00,
+    rating: 5.0,
+    reviewsCount: 180,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Mecha Cyber Purple / Acid Green / Carbon Matrix',
+    sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 15,
+    badge: 'Shockwave 6 Pro',
+    image: 'assets/anta_shockwave_5.jpg',
+    video: 'assets/anta_shockwave_5.webm',
+    description: 'The next evolution of the indestructible Shockwave series. Upgraded with dual lateral carbon claw outriggers, drop-in nitrogen supercritical NitroEdge foam, and cement-killer high-abrasion rubber compound.',
+    specs: {
+      cushioning: 'Drop-In Nitrogen Supercritical NitroEdge Core',
+      claws: 'Dual Carbon Fiber Lateral Stability Claws',
+      outsole: 'Cement-Killer Multi-Directional Outdoor Compound',
+      upper: 'Reinforced Ripstop Jacquard Cyber Shield',
+      court: 'Concrete Blacktop, Outdoor Streetball & Hardwood'
+    },
+    reviews: [
+      { author: 'Blacktop King', rating: 5, date: 'Yesterday', title: 'The carbon claws are insane', text: 'Lateral containment is unbeatable. Outsole shows zero wear after weeks on rough asphalt.' },
+      { author: 'Devon W.', rating: 5, date: '3 days ago', title: 'Cyberpunk colorway is sick', text: 'Super bouncy nitrogen cushioning.' }
+    ]
+  },
+  {
+    id: 'anta-c202-gt-pro-carbon-dusk',
+    sku: 'AN-C202-114',
+    brand: 'ANTA',
+    brandBadge: 'ANTA Nitrogen Racing',
+    brandColor: 'purple',
+    name: 'ANTA C202 5 GT Pro "Midnight Sunset"',
+    subtitle: 'Sub-2:25 Dual NitroEdge Full Carbon Race Super-Shoe',
+    price: 220.00,
+    originalPrice: 220.00,
+    rating: 4.9,
+    reviewsCount: 155,
+    category: 'running',
+    categoryName: 'Marathon / Racing',
+    colorway: 'Twilight Obsidian / Sunset Magenta / Carbon Fiber',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 12],
+    inStock: true,
+    stockCount: 9,
+    badge: 'Midnight Marathoner',
+    image: 'assets/anta_c202_gt_pro.jpg',
+    video: 'assets/anta_c202_gt_pro.webm',
+    description: 'Engineered for twilight and early morning marathon majors. Dual-layer nitrogen NitroEdge supercritical foam (86% energy return), 3D bionic full-palm curved carbon plate, and featherweight race mono-mesh.',
+    specs: {
+      cushioning: 'Dual-Layer Supercritical Nitrogen NitroEdge Foam (86% Return)',
+      plate: '3D Bionic Curved Full-Foot Carbon Fiber Plate',
+      weight: '7.0 oz / 199 g',
+      outsole: 'Liquid Grip Space Rubber Road Traction',
+      terrain: 'World Marathon Majors & Elite Road PRs'
+    },
+    reviews: [
+      { author: 'Victor Z.', rating: 5, date: '2 days ago', title: 'Catapults you forward every stride', text: 'Ran a 1:18 half marathon in these effortlessly. Sunset magenta looks amazing.' },
+      { author: 'Sarah L.', rating: 5, date: '6 days ago', title: 'Super stable carbon platform', text: 'No ankle fatigue over 20+ miles.' }
+    ]
+  },
+  {
+    id: 'anta-kai-1-sacred-flame',
+    sku: 'AN-KAI1-115',
+    brand: 'ANTA',
+    brandBadge: 'ANTA Kyrie Signature',
+    brandColor: 'red',
+    name: 'ANTA KAI 1 "Sacred Flame"',
+    subtitle: 'Kyrie Irving Fire Hieroglyphics Championship Hardwood Shoe',
+    price: 125.00,
+    originalPrice: 125.00,
+    rating: 5.0,
+    reviewsCount: 310,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Crimson Ember / Obsidian / Sunburst Gold Thread',
+    sizes: [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 17,
+    badge: 'Sacred Flame Drop',
+    image: 'assets/anta_kai_1.jpg',
+    video: 'assets/anta_kai_1.webm',
+    description: 'Kyrie Irving\'s tribute to inner court passion and creative ignition. Features crimson flame jacquard knit with gold hieroglyphic stitching, full-length supercritical NitroEdge nitrogen foam, and lockdown midfoot strap.',
+    specs: {
+      cushioning: 'Full-Length Supercritical NitroEdge Nitrogen Foam',
+      plate: 'Carbon Fiber Midfoot Torsion Shank',
+      lockdown: 'Dynamic Forefoot & Midfoot Stabilizer Strap',
+      outsole: 'Multi-Directional Radial Court Grip Rubber',
+      position: 'Guards & Creative Ball-Handlers'
+    },
+    reviews: [
+      { author: 'Jordan M.', rating: 5, date: '1 day ago', title: 'Crimson flame colorway is ferocious', text: 'Strap locks your foot completely in place. NitroEdge gives supreme court feel.' },
+      { author: 'Tyler B.', rating: 5, date: '3 days ago', title: 'Incredible craftsmanship', text: 'Details and embroidery look like a $200 shoe.' }
+    ]
+  },
+  {
+    id: 'converse-all-star-bb-trilliant-cx',
+    sku: 'CV-TRL-116',
+    brand: 'Converse',
+    brandBadge: 'Converse Hoops Innovation',
+    brandColor: 'cyan',
+    name: 'Converse All Star BB Trilliant CX "Wolf Grey"',
+    subtitle: 'Removable Lace Shroud + Nike Air Zoom + CX Foam Hoops',
+    price: 120.00,
+    originalPrice: 120.00,
+    rating: 4.9,
+    reviewsCount: 220,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Wolf Grey / Cyber Jade / Black / Pure Silver',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 18,
+    badge: 'Removable Shroud',
+    image: 'assets/converse_bb_prototype.jpg',
+    video: 'assets/converse_bb_prototype.webm',
+    description: 'Engineered with a versatile removable lace shroud for dual styling options on hardwood. Features a high-rebound forefoot Nike Air Zoom unit, high-density CX foam midsole carrier, and aerodynamic TPU heel counter.',
+    specs: {
+      cushioning: 'Forefoot Nike Air Zoom Unit + High-Rebound CX Foam',
+      shroud: 'Detachable Magnetic Lace Shroud for Custom Styling',
+      stability: 'Aerodynamic Molded TPU Heel Counter & Outrigger',
+      outsole: 'Multi-Zone Diamond Radial Traction Rubber',
+      position: 'Playmakers, Slicing Guards & Wings'
+    },
+    reviews: [
+      { author: 'Carlos N.', rating: 5, date: 'Yesterday', title: 'Removable shroud is so sick', text: 'Looks futuristic with the shroud and plays with explosive Zoom Air bounce.' },
+      { author: 'Maya T.', rating: 5, date: '4 days ago', title: 'Super comfortable court feel', text: 'CX foam and Zoom Air work together smoothly.' }
+    ]
+  },
+  {
+    id: 'converse-chuck-70-at-cx-future',
+    sku: 'CV-ATCX-117',
+    brand: 'Converse',
+    brandBadge: 'Converse All-Terrain',
+    brandColor: 'amber',
+    name: 'Converse Chuck 70 AT-CX "Urban Utility"',
+    subtitle: 'Thick Trail Lug Outsole & High-Rebound CX Midsole',
+    price: 110.00,
+    originalPrice: 110.00,
+    rating: 4.8,
+    reviewsCount: 195,
+    category: 'outdoor',
+    categoryName: 'Outdoor / Trail ACG',
+    colorway: 'Sand Dune / Black / Egret / Safety Orange',
+    sizes: [6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 12],
+    inStock: true,
+    stockCount: 16,
+    badge: 'All-Terrain CX',
+    image: 'assets/converse_cruise_skate.jpg',
+    video: 'assets/converse_cruise_skate.webm',
+    description: 'Transforming the classic Chuck 70 into an all-terrain outdoor trailblazer. Thick exaggerated diamond lug saw-tooth outsole, ultra-plush CX foam cushioning midsole, TPU Bosey toe cap for trail protection, and water-repellent canvas.',
+    specs: {
+      cushioning: 'High-Rebound CX Foam Midsole & Drop-in Sockliner',
+      toecap: 'Reinforced TPU Bosey Trail Toecap Armor',
+      materials: 'Water-Repellent Heavyweight Cotton Canvas',
+      outsole: 'Exaggerated Diamond Saw-Tooth Lug Trail Rubber',
+      terrain: 'City Streets, Trail Paths & Rainy Weather'
+    },
+    reviews: [
+      { author: 'Trevor K.', rating: 5, date: '2 days ago', title: 'Awesome chunky trail boot look', text: 'Way lighter than hiking boots because of CX foam. Keeps feet dry.' },
+      { author: 'Sienna V.', rating: 5, date: '5 days ago', title: 'Sand Dune colorway is gorgeous', text: 'Comfortable right out of the box.' }
+    ]
+  },
+  {
+    id: 'converse-weapon-cx-celtics',
+    sku: 'CV-WPN-118',
+    brand: 'Converse',
+    brandBadge: 'Converse Hardwood Legend',
+    brandColor: 'emerald',
+    name: 'Converse Weapon CX "Celtics Dynasty"',
+    subtitle: '1986 Larry Bird Heritage High-Top CX Foam Hardwood Shoe',
+    price: 130.00,
+    originalPrice: 130.00,
+    rating: 5.0,
+    reviewsCount: 290,
+    category: 'basketball',
+    categoryName: 'Basketball / Hoops',
+    colorway: 'Vintage White / Clover Green / Black / Sail',
+    sizes: [7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 14,
+    badge: 'Celtics Dynasty',
+    image: 'assets/converse_weapon_cx.jpg',
+    video: 'assets/converse_weapon_cx.webm',
+    description: 'The sneaker that defined 1980s basketball championship greatness on Boston Garden hardwood. Premium white and clover green full-grain leather, CX foam drop-in cushioning, and Y-Bar ankle lockout system.',
+    specs: {
+      cushioning: 'Modern CX Foam High-Rebound Drop-In Midsole',
+      collar: 'High-Top Padded Ankle Collar with Y-Bar Lockout Arch',
+      materials: 'Heavyweight Full-Grain Supple Genuine Leather',
+      outsole: 'Original 1986 Hardwood Herringbone Traction Tread',
+      style: '80s Boston Championship Royalty & Retro Streetwear'
+    },
+    reviews: [
+      { author: 'Bird Fan 33', rating: 5, date: '1 day ago', title: 'True 80s Boston greatness', text: 'Clover green and white leather quality is superb. CX foam makes it so comfortable.' },
+      { author: 'Chris B.', rating: 5, date: '4 days ago', title: 'Unbeatable high-top ankle support', text: 'Padded collar feels luxurious. Classic Converse basketball.' }
+    ]
+  },
+  {
+    id: 'converse-chuck-70-flame-embroidery',
+    sku: 'CV-C70F-119',
+    brand: 'Converse',
+    brandBadge: 'Converse Heritage',
+    brandColor: 'red',
+    name: 'Converse Chuck 70 "Hot Rod Flames"',
+    subtitle: 'Archival 1990s Sublimated Flame Graphic 12oz Duck Canvas',
+    price: 95.00,
+    originalPrice: 95.00,
+    rating: 4.9,
+    reviewsCount: 360,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Black / Enamel Red / Butter Yellow / Egret',
+    sizes: [6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+    inStock: true,
+    stockCount: 24,
+    badge: 'Hot Rod Flames',
+    image: 'assets/converse_chuck_70.jpg',
+    video: 'assets/converse_chuck_70.webm',
+    description: 'Bringing back the beloved archival 1990s hot-rod flame print on premium 12oz organic duck canvas. Finished with varnished vintage egret foxing, winged tongue stitching, and OrthoLite cushioning for all-day rock-and-roll comfort.',
+    specs: {
+      cushioning: 'Plush OrthoLite Insole Cushioning',
+      materials: '12oz Heavyweight Organic Duck Canvas with Flame Screen Print',
+      midsole: 'Glossy 1970s Egret Vulcanized Rubber Tape',
+      details: 'Winged Tongue Stitching & Vintage All Star Heel Badge',
+      style: '90s Skate, Grunge & Hot Rod Counter-Culture'
+    },
+    reviews: [
+      { author: 'Julian R.', rating: 5, date: '2 days ago', title: 'The flames look incredible on foot', text: 'Vintage off-white sole and vibrant red flames match with baggy jeans.' },
+      { author: 'Maya K.', rating: 5, date: '5 days ago', title: 'Chuck 70 comfort is unmatched', text: 'Much thicker canvas and insole than basic Chucks.' }
+    ]
+  },
+  {
+    id: 'converse-run-star-motion-low',
+    sku: 'CV-RSML-120',
+    brand: 'Converse',
+    brandBadge: 'Converse CX Innovation',
+    brandColor: 'purple',
+    name: 'Converse Run Star Motion CX Low "Triple Black"',
+    subtitle: 'Low-Cut Exaggerated Wavy Lug Platform with CX Foam',
+    price: 115.00,
+    originalPrice: 115.00,
+    rating: 4.9,
+    reviewsCount: 265,
+    category: 'streetwear',
+    categoryName: 'Streetwear Classics',
+    colorway: 'Monochrome Stealth Black / Dark Charcoal / Black Waves',
+    sizes: [6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 12],
+    inStock: true,
+    stockCount: 20,
+    badge: 'Monochrome Waves',
+    image: 'assets/converse_run_star_motion.jpg',
+    video: 'assets/converse_run_star_motion.webm',
+    description: 'The low-top cut of the internet-famous Run Star Motion platform in aggressive monochrome stealth black. Features ultra-bouncy sculpted CX foam midsole that absorbs impact with every step and saw-tooth wave traction lugs.',
+    specs: {
+      cushioning: 'Ultra-Plush Sculpted CX Foam Midsole Carrier',
+      upper: '100% Organic Heavyweight Cotton Canvas',
+      outsole: 'Exaggerated Saw-Tooth Wavy Lug Rubber Compound',
+      style: 'Futuristic Avant-Garde Low Platform'
+    },
+    reviews: [
+      { author: 'Nova Z.', rating: 5, date: 'Yesterday', title: 'Bounciest low-top sneaker ever', text: 'You literally feel the bounce on every step. All-black look goes with everything.' },
+      { author: 'Sienna V.', rating: 5, date: '3 days ago', title: 'Sculpted waves look like modern art', text: 'Gets compliments everywhere I go. 10/10 comfort.' }
+    ]
   }
 ];
 
@@ -3490,6 +5119,51 @@ function initCurrencySwitcher() {
 // ==========================================================================
 // SEARCH, BRAND & FILTER CONTROLS
 // ==========================================================================
+function updateBrandCounts() {
+  const allCount = PRODUCTS_DATA.length;
+  const nikeCount = PRODUCTS_DATA.filter(p => p.brand === 'Nike').length;
+  const antaCount = PRODUCTS_DATA.filter(p => p.brand === 'ANTA').length;
+  const jordanCount = PRODUCTS_DATA.filter(p => p.brand === 'Jordan').length;
+  const converseCount = PRODUCTS_DATA.filter(p => p.brand === 'Converse').length;
+
+  // Catalog brand tabs
+  const tabAll = document.querySelector('.brand-filter-tabs .brand-tab-btn[data-brand="all"]');
+  if (tabAll) tabAll.innerHTML = `<i data-lucide="grid"></i> All Brands (${allCount})`;
+  
+  const tabNike = document.querySelector('.brand-filter-tabs .brand-tab-btn[data-brand="nike"]');
+  if (tabNike) tabNike.innerHTML = `<i data-lucide="check"></i> Nike Performance (${nikeCount})`;
+  
+  const tabAnta = document.querySelector('.brand-filter-tabs .brand-tab-btn[data-brand="anta"]');
+  if (tabAnta) tabAnta.innerHTML = `<i data-lucide="flame"></i> ANTA Hoops & Racing (${antaCount})`;
+  
+  const tabJordan = document.querySelector('.brand-filter-tabs .brand-tab-btn[data-brand="jordan"]');
+  if (tabJordan) tabJordan.innerHTML = `<i data-lucide="award"></i> Jordan Brand (${jordanCount})`;
+  
+  const tabConverse = document.querySelector('.brand-filter-tabs .brand-tab-btn[data-brand="converse"]');
+  if (tabConverse) tabConverse.innerHTML = `<i data-lucide="star"></i> Converse Archive (${converseCount})`;
+
+  // Mobile drawer tabs
+  const mTabAll = document.querySelector('.mobile-nav-links .brand-tab-btn[data-brand="all"]');
+  if (mTabAll) mTabAll.innerHTML = `<i data-lucide="grid"></i> All Footwear (${allCount})`;
+  
+  const mTabNike = document.querySelector('.mobile-nav-links .brand-tab-btn[data-brand="nike"]');
+  if (mTabNike) mTabNike.innerHTML = `<i data-lucide="check"></i> Nike Performance (${nikeCount})`;
+  
+  const mTabAnta = document.querySelector('.mobile-nav-links .brand-tab-btn[data-brand="anta"]');
+  if (mTabAnta) mTabAnta.innerHTML = `<i data-lucide="flame"></i> ANTA Hoops & Racing (${antaCount})`;
+  
+  const mTabJordan = document.querySelector('.mobile-nav-links .brand-tab-btn[data-brand="jordan"]');
+  if (mTabJordan) mTabJordan.innerHTML = `<i data-lucide="award"></i> Jordan Brand (${jordanCount})`;
+  
+  const mTabConverse = document.querySelector('.mobile-nav-links .brand-tab-btn[data-brand="converse"]');
+  if (mTabConverse) mTabConverse.innerHTML = `<i data-lucide="star"></i> Converse Archive (${converseCount})`;
+
+  const heroBtnText = document.querySelector('.hero-actions .btn-primary span');
+  if (heroBtnText) heroBtnText.textContent = `Shop All ${allCount} Footwear Drops`;
+
+  if (window.lucide) window.lucide.createIcons();
+}
+
 function setBrandFilter(brand, scroll = false) {
   currentBrandFilter = brand;
   document.querySelectorAll('.brand-tab-btn').forEach(btn => {
@@ -3503,6 +5177,7 @@ function setBrandFilter(brand, scroll = false) {
 window.setBrandFilter = setBrandFilter;
 
 function initCatalogFilters() {
+  updateBrandCounts();
   // Brand Tabs everywhere (Desktop nav, mobile nav, catalog toolbar)
   const brandTabs = document.querySelectorAll('.brand-tab-btn');
   brandTabs.forEach(tab => {
@@ -3844,7 +5519,7 @@ function initConciergeChat() {
         <br/><br/>
         Every pair at Purpose Vault passes an 8-point physical verification including high-intensity UV blacklight, RFID serial scan against brand master databases, gram scale weight checks, and our tamper-evident NFC security zip-tie.`;
       } else {
-        reply = `✨ Thanks for reaching out! We have 72 authentic Nike, Jordan, ANTA, and Converse models in stock with free worldwide express shipping over $150. Use code <strong>PURPOSE10</strong> for 10% off your entire order. Let me know if you need specific model recommendations!`;
+        reply = `✨ Thanks for reaching out! We have ${PRODUCTS_DATA.length} authentic Nike, Jordan, ANTA, and Converse models in stock with free worldwide express shipping over $150. Use code <strong>PURPOSE10</strong> for 10% off your entire order. Let me know if you need specific model recommendations!`;
       }
 
       appendMessage(reply, true);
@@ -4087,6 +5762,28 @@ function initMobileMenu() {
 }
 
 // ==========================================================================
+// MOBILE BOTTOM APP BAR
+// ==========================================================================
+function initMobileBottomBar() {
+  const homeBtn = document.getElementById('mob-nav-home');
+  const catalogBtn = document.getElementById('mob-nav-catalog');
+  const items = document.querySelectorAll('.mobile-bottom-item');
+
+  window.addEventListener('scroll', () => {
+    const catalogEl = document.getElementById('catalog');
+    if (!catalogEl) return;
+    const rect = catalogEl.getBoundingClientRect();
+    if (rect.top <= 200 && rect.bottom >= 200) {
+      items.forEach(i => i.classList.remove('active'));
+      catalogBtn?.classList.add('active');
+    } else if (window.scrollY < 300) {
+      items.forEach(i => i.classList.remove('active'));
+      homeBtn?.classList.add('active');
+    }
+  }, { passive: true });
+}
+
+// ==========================================================================
 // DOM READY INITIALIZATION
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -4100,6 +5797,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroQuickBuy();
   initNewsletter();
   initMobileMenu();
+  initMobileBottomBar();
   initAnnouncementCoupon();
   initCustomerCareModals();
   initSizeGuideCalculator();
@@ -4112,3 +5810,4 @@ document.addEventListener('DOMContentLoaded', () => {
     window.lucide.createIcons();
   }
 });
+

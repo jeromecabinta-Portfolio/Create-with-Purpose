@@ -1,0 +1,48 @@
+[
+  {
+    "orderId": "#PS-998811",
+    "customer": {
+      "fullName": "Marcus Vance",
+      "email": "marcus@purpose.studio",
+      "phone": "+1 555-890-4421",
+      "address": "104 Crosby St",
+      "city": "New York",
+      "zip": "10012",
+      "country": "United States"
+    },
+    "items": [
+      {
+        "title": "The Archive Pullover — Vintage Washed Black",
+        "size": "L",
+        "quantity": 1,
+        "totalPrice": 145
+      }
+    ],
+    "paymentMethod": "Apple Pay Express",
+    "shippingTier": "priority",
+    "subtotal": 145,
+    "discount": 0,
+    "shipping": 12,
+    "grandTotal": 157,
+    "createdAt": "2026-10-06T15:23:42.686Z",
+    "status": "Confirmed (Batch #004 Allocated)"
+  },
+  {
+    "customer": {
+      "fullName": "Marcus Vance",
+      "email": "marcus@purpose.studio"
+    },
+    "items": [
+      {
+        "title": "The Archive Pullover - Concrete Grey",
+        "size": "L",
+        "quantity": 1,
+        "totalPrice": 145
+      }
+    ],
+    "grandTotal": 145,
+    "orderId": "#PS-277730",
+    "createdAt": "2026-10-06T14:49:14.448Z",
+    "status": "Confirmed (Batch #004 Allocated)"
+  }
+]

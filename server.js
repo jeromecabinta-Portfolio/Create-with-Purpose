@@ -56,6 +56,70 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  // API Endpoint: Orders Handling
+  if (req.url.startsWith('/api/orders')) {
+    const ordersFile = path.join(ROOT, 'orders.json');
+
+    if (req.method === 'POST') {
+      let body = '';
+      req.on('data', chunk => body += chunk);
+      req.on('end', () => {
+        try {
+          const orderData = JSON.parse(body);
+          orderData.orderId = orderData.orderId || ('#PS-' + Math.floor(100000 + Math.random() * 900000));
+          orderData.createdAt = new Date().toISOString();
+          orderData.status = 'Confirmed (Batch #004 Allocated)';
+
+          let orders = [];
+          if (fs.existsSync(ordersFile)) {
+            try {
+              orders = JSON.parse(fs.readFileSync(ordersFile, 'utf8'));
+            } catch (err) {
+              orders = [];
+            }
+          }
+          orders.unshift(orderData);
+          fs.writeFileSync(ordersFile, JSON.stringify(orders, null, 2), 'utf8');
+
+          console.log(`[ORDER] Created new order ${orderData.orderId} for ${orderData.customer?.fullName || 'Customer'}`);
+          res.writeHead(201, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ success: true, order: orderData }));
+        } catch (e) {
+          res.writeHead(400, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ success: false, error: 'Invalid order JSON payload' }));
+        }
+      });
+      return;
+    }
+
+    if (req.method === 'GET') {
+      let orders = [];
+      if (fs.existsSync(ordersFile)) {
+        try {
+          orders = JSON.parse(fs.readFileSync(ordersFile, 'utf8'));
+        } catch (err) {
+          orders = [];
+        }
+      }
+      const urlParams = new URL(req.url, `http://${req.headers.host}`);
+      const queryId = urlParams.searchParams.get('id');
+      if (queryId) {
+        const found = orders.find(o => o.orderId.toLowerCase() === queryId.toLowerCase());
+        if (found) {
+          res.writeHead(200, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ success: true, order: found }));
+        } else {
+          res.writeHead(404, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ success: false, error: 'Order not found' }));
+        }
+      } else {
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ success: true, orders: orders }));
+      }
+      return;
+    }
+  }
+
   // Normal static file serving with range support for video streaming
   let reqUrl = req.url.split('?')[0];
   if (reqUrl === '/') reqUrl = '/index.html';

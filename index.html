@@ -4,15 +4,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PURPOSE VAULT | Official Nike, Jordan, ANTA & Converse Footwear Archive</title>
+  <title>PURPOSE / STUDIO™ — 500 GSM Heavyweight Streetwear Hoodies</title>
   <meta name="description"
-    content="Shop 120 verified authentic deadstock Nike, Jordan, ANTA and Converse performance and signature footwear. Free worldwide express shipping, marathon super-shoes, and limited drops." />
+    content="PURPOSE / STUDIO presents Drop 04: The 500 GSM Luxury French Terry Hoodies. Custom milled organic cotton, rigid double-layered hood without cords, boxy dropped shoulder drape. Crafted with zero compromises." />
+  <meta name="keywords"
+    content="Purpose Studio, Create With Purpose, 500 GSM hoodie, heavyweight streetwear hoodie, boxy hoodie, french terry hoodie, luxury blank hoodie, dropped shoulder hoodie, oversized hoodie, vintage wash hoodie" />
 
-  <!-- Fonts: Syne (Display), Outfit (Body), Space Mono (Tech) -->
+  <!-- Google Fonts: Syne (Display Avant-Garde), Plus Jakarta Sans (Modern Body), Space Grotesk (Tech Monospace) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
     rel="stylesheet" />
 
   <!-- Lucide Icons -->
@@ -21,1685 +23,2200 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="dark-theme">
 
   <!-- ==========================================================================
-       Persistent Frozen / Sticky Header Container
+       1. Top Live Drop & VIP Announcement Bar
        ========================================================================== -->
-  <div class="header-frozen-wrapper" id="header-frozen-wrapper">
-
-    <!-- Top Announcement Ticker -->
-    <div class="top-announcement-bar">
+  <aside class="top-announcement-bar" id="announcement-bar" aria-label="Drop Announcement">
+    <div class="announcement-track">
       <div class="announcement-content">
-        <span class="announcement-pill"><i data-lucide="zap"></i> SPRING 2026 DROP</span>
-        <span>⚡ <strong>FREE WORLDWIDE EXPRESS SHIPPING</strong> ON ALL ORDERS OVER $150</span>
-        <span class="announcement-divider">•</span>
-        <span>100% VERIFIED AUTHENTIC DEADSTOCK</span>
-        <span class="announcement-divider">•</span>
-        <span>USE CODE <strong class="code-highlight" id="top-coupon-code"
-            title="Click to copy and apply 10% coupon">PURPOSE10 <i data-lucide="copy"
-              style="width:12px;height:12px;display:inline-block;vertical-align:middle;"></i></strong> FOR 10% OFF</span>
+        <span class="pulse-indicator"></span>
+        <strong class="drop-status">DROP 04 IS LIVE</strong>
+        <span class="announcement-sep">•</span>
+        <span>BATCH #004: 500 GSM HEAVYWEIGHT FRENCH TERRY</span>
+        <span class="announcement-sep">•</span>
+        <span>COMPLIMENTARY WORLDWIDE EXPRESS OVER $150</span>
+        <span class="announcement-sep">•</span>
+        <span class="highlight-pill">CODE: PURPOSE10 FOR 10% OFF</span>
+        <span class="announcement-sep">•</span>
+        <span>LIMITED RUN OF 300 PIECES PER COLORWAY</span>
+      </div>
+      <!-- Duplicate track for seamless marquee loop -->
+      <div class="announcement-content" aria-hidden="true">
+        <span class="pulse-indicator"></span>
+        <strong class="drop-status">DROP 04 IS LIVE</strong>
+        <span class="announcement-sep">•</span>
+        <span>BATCH #004: 500 GSM HEAVYWEIGHT FRENCH TERRY</span>
+        <span class="announcement-sep">•</span>
+        <span>COMPLIMENTARY WORLDWIDE EXPRESS OVER $150</span>
+        <span class="announcement-sep">•</span>
+        <span class="highlight-pill">CODE: PURPOSE10 FOR 10% OFF</span>
+        <span class="announcement-sep">•</span>
+        <span>LIMITED RUN OF 300 PIECES PER COLORWAY</span>
       </div>
     </div>
-
-    <!-- Main E-Commerce Navigation Bar -->
-    <header class="site-header" id="header">
-      <div class="container header-container">
-
-        <!-- Brand Logo -->
-        <a href="#hero" class="brand-logo">
-          <span class="logo-text">PURPOSE<span class="logo-accent">VAULT</span></span>
-          <span class="logo-subline">NIKE & ANTA OFFICIAL ARCHIVE</span>
-        </a>
-
-        <!-- Desktop Nav Categories -->
-        <nav class="desktop-nav">
-          <button class="nav-link brand-tab-btn active" data-brand="all">All Footwear</button>
-          <button class="nav-link brand-tab-btn" data-brand="nike">Nike Performance</button>
-          <button class="nav-link brand-tab-btn" data-brand="anta">ANTA Lineup</button>
-          <button class="nav-link brand-tab-btn" data-brand="jordan">Jordan Brand</button>
-          <button class="nav-link brand-tab-btn" data-brand="converse">Converse Archive</button>
-          <a href="#guarantee" class="nav-link">Authenticity</a>
-          <a href="#reviews" class="nav-link">Reviews</a>
-        </nav>
-
-        <!-- Global Search & Header Actions -->
-        <div class="header-actions">
-          <!-- Live Search Bar -->
-          <div class="header-search-wrapper">
-            <i data-lucide="search" class="search-icon"></i>
-            <input type="text" id="header-search-input" placeholder="Search Nike, ANTA, Kyrie, Kobe..."
-              autocomplete="off" />
-          </div>
-
-          <!-- Currency Selector -->
-          <div class="currency-selector-wrap">
-            <select class="currency-selector-select" aria-label="Select Currency">
-              <option value="USD">USD ($)</option>
-              <option value="EUR">EUR (€)</option>
-              <option value="GBP">GBP (£)</option>
-              <option value="JPY">JPY (¥)</option>
-              <option value="PHP">PHP (₱)</option>
-            </select>
-          </div>
-
-          <!-- Wishlist Button -->
-          <button class="header-action-btn" data-action="open-wishlist" aria-label="View Wishlist" title="Your Wishlist">
-            <i data-lucide="heart"></i>
-            <span class="badge-count wishlist-badge-count" style="display:none;">0</span>
-          </button>
-
-          <!-- Cart Drawer Button -->
-          <button class="header-action-btn cart-btn-highlight" data-action="open-cart" aria-label="View Shopping Bag"
-            title="Your Shopping Bag">
-            <i data-lucide="shopping-bag"></i>
-            <span class="badge-count cart-badge-count" style="display:none;">0</span>
-            <span class="cart-btn-label">Bag</span>
-          </button>
-
-          <!-- Mobile Menu Toggle -->
-          <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open Mobile Menu">
-            <i data-lucide="menu"></i>
-          </button>
-        </div>
-
-      </div>
-    </header>
-
-  </div>
-
-  <!-- Mobile Drawer Menu -->
-  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
-  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
-    <div class="mobile-nav-header">
-      <span class="mobile-logo">PURPOSE<span class="logo-accent">VAULT</span></span>
-      <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close Navigation"><i
-          data-lucide="x"></i></button>
-    </div>
-
-    <!-- Mobile Search -->
-    <div class="mobile-search-box">
-      <i data-lucide="search"></i>
-      <input type="text" id="mobile-search-input" placeholder="Search Nike, ANTA, Kyrie..." />
-    </div>
-
-    <div class="mobile-nav-links">
-      <button class="mobile-nav-link brand-tab-btn" data-brand="all"><i data-lucide="grid"></i> All Footwear
-        (120)</button>
-      <button class="mobile-nav-link brand-tab-btn" data-brand="nike"><i data-lucide="check"></i> Nike Performance
-        (54)</button>
-      <button class="mobile-nav-link brand-tab-btn" data-brand="anta"><i data-lucide="flame"></i> ANTA Hoops & Racing
-        (27)</button>
-      <button class="mobile-nav-link brand-tab-btn" data-brand="jordan"><i data-lucide="award"></i> Jordan Brand
-        (21)</button>
-      <button class="mobile-nav-link brand-tab-btn" data-brand="converse"><i data-lucide="star"></i> Converse Archive
-        (18)</button>
-      <a href="#guarantee" class="mobile-nav-link"><i data-lucide="shield-check"></i> Authenticity Guarantee</a>
-      <a href="#reviews" class="mobile-nav-link"><i data-lucide="star"></i> Customer Reviews</a>
-    </div>
-
-    <div class="mobile-nav-footer">
-      <div class="mobile-currency-row">
-        <span>Currency:</span>
-        <select class="currency-selector-select" aria-label="Mobile Currency Selector">
+    <div class="announcement-actions">
+      <div class="currency-picker">
+        <label for="currency-select" class="sr-only">Currency</label>
+        <select id="currency-select" aria-label="Select Currency">
           <option value="USD">USD ($)</option>
           <option value="EUR">EUR (€)</option>
           <option value="GBP">GBP (£)</option>
-          <option value="JPY">JPY (¥)</option>
           <option value="PHP">PHP (₱)</option>
+          <option value="CAD">CAD ($)</option>
         </select>
       </div>
-      <div class="mobile-nav-quick-actions">
-        <button class="btn-secondary btn-full" data-action="open-wishlist"><i data-lucide="heart"></i> Wishlist (<span
-            class="wishlist-badge-count">0</span>)</button>
-        <button class="btn-primary btn-full" data-action="open-cart"><i data-lucide="shopping-bag"></i> Shopping Bag
-          (<span class="cart-badge-count">0</span>)</button>
-      </div>
-    </div>
-  </div>
-
-  <main>
-
-    <!-- ==========================================================================
-         Hero Showcase Banner
-         ========================================================================== -->
-    <section class="hero-section" id="hero">
-      <div class="hero-bg-glow"></div>
-
-      <div class="container hero-container">
-
-        <!-- Left Hero Content -->
-        <div class="hero-content">
-          <div class="hero-tag">
-            <span class="tag-pulse"></span>
-            <i data-lucide="sparkles"></i>
-            <span>SPRING 2026 OFFICIAL DROP ARCHIVE</span>
-          </div>
-
-          <h1 class="hero-title">
-            ENGINEERED FOR SUPREMACY.
-            <span class="gradient-text">NIKE & ANTA OFFICIAL DROPS.</span>
-          </h1>
-
-          <p class="hero-desc">
-            Explore world-record marathon super-shoes, championship signature basketball models, and verified deadstock
-            streetwear classics. 100% authentic, double-boxed, and shipped worldwide within 24 hours.
-          </p>
-
-          <!-- Trust Badges Strip -->
-          <div class="hero-trust-grid">
-            <div class="trust-item">
-              <i data-lucide="shield-check"></i>
-              <span>100% Deadstock Verified</span>
-            </div>
-            <div class="trust-item">
-              <i data-lucide="truck"></i>
-              <span>Free Express Over $150</span>
-            </div>
-            <div class="trust-item">
-              <i data-lucide="refresh-cw"></i>
-              <span>30-Day Hassle-Free Returns</span>
-            </div>
-          </div>
-
-          <!-- Hero CTAs -->
-          <div class="hero-actions">
-            <a href="#catalog" class="btn-primary btn-lg">
-              <i data-lucide="shopping-bag"></i>
-              <span>Shop All 120 Footwear Drops</span>
-            </a>
-            <button class="btn-secondary btn-lg"
-              onclick="currentBrandFilter='anta'; renderProductGrid(); document.getElementById('catalog').scrollIntoView({behavior:'smooth'});">
-              <i data-lucide="flame"></i>
-              <span>Explore ANTA KAI & KT9</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Right Hero Featured Quick-Buy Card -->
-        <div class="hero-featured-card">
-          <div class="featured-card-badge">
-            <span class="badge-dot"></span>
-            <span>FEATURED MARATHON SUPER-SHOE</span>
-          </div>
-
-          <div class="featured-media-box">
-            <video src="assets/nike_zoomx_vaporfly.webm" autoplay loop muted playsinline
-              poster="assets/nike_zoomx_vaporfly.jpg" class="featured-hero-video"></video>
-            <div class="featured-price-tag">$260.00 USD</div>
-          </div>
-
-          <div class="featured-card-info">
-            <div class="featured-card-header">
-              <span class="featured-brand-pill">Nike Performance</span>
-              <span class="featured-rating">★ 4.9 (184 reviews)</span>
-            </div>
-            <h3 class="featured-card-title">Nike ZoomX Vaporfly 3</h3>
-            <p class="featured-card-sub">Full-Length Carbon Fiber Flyplate • 85% Energy Return ZoomX</p>
-
-            <!-- Quick Size Buttons -->
-            <div class="hero-quick-sizes">
-              <span class="size-label">Select US Size:</span>
-              <div class="hero-size-buttons">
-                <button class="hero-quick-size-btn" data-size="8.5">US 8.5</button>
-                <button class="hero-quick-size-btn" data-size="9">US 9</button>
-                <button class="hero-quick-size-btn" data-size="9.5">US 9.5</button>
-                <button class="hero-quick-size-btn active" data-size="10">US 10</button>
-                <button class="hero-quick-size-btn" data-size="10.5">US 10.5</button>
-                <button class="hero-quick-size-btn" data-size="11">US 11</button>
-              </div>
-            </div>
-
-            <!-- Instant Quick Buy Button -->
-            <button class="btn-primary btn-full" id="hero-quick-add-btn" data-product-id="nike-vaporfly-3">
-              <i data-lucide="shopping-bag"></i>
-              <span>Quick Add to Bag • $260.00</span>
-            </button>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         Brand Spotlight & Innovation Strip
-         ========================================================================== -->
-    <section class="brand-spotlight-section">
-      <div class="container">
-        <div class="spotlight-grid">
-
-          <!-- Nike Innovation Banner -->
-          <div class="spotlight-card spotlight-nike"
-            onclick="currentBrandFilter='nike'; renderProductGrid(); document.getElementById('catalog').scrollIntoView({behavior:'smooth'});">
-            <div class="spotlight-overlay"></div>
-            <div class="spotlight-content">
-              <span class="spotlight-tag">NIKE PERFORMANCE LAB</span>
-              <h3>ZoomX & Mamba Legacy</h3>
-              <p>Marathon super-shoes, Dynamic Air & Mamba Mentality.</p>
-              <span class="spotlight-btn">Shop Nike (54) <i data-lucide="arrow-right"></i></span>
-            </div>
-          </div>
-
-          <!-- ANTA NitroEdge Banner -->
-          <div class="spotlight-card spotlight-anta"
-            onclick="currentBrandFilter='anta'; renderProductGrid(); document.getElementById('catalog').scrollIntoView({behavior:'smooth'});">
-            <div class="spotlight-overlay"></div>
-            <div class="spotlight-content">
-              <span class="spotlight-tag">ANTA HOOPS & NITROEDGE</span>
-              <h3>Kyrie KAI & KT9 Gold</h3>
-              <p>Supercritical nitrogen foam & championship stability.</p>
-              <span class="spotlight-btn">Shop ANTA (27) <i data-lucide="arrow-right"></i></span>
-            </div>
-          </div>
-
-          <!-- Jordan Brand Banner -->
-          <div class="spotlight-card spotlight-jordan"
-            onclick="currentBrandFilter='jordan'; renderProductGrid(); document.getElementById('catalog').scrollIntoView({behavior:'smooth'});">
-            <div class="spotlight-overlay"></div>
-            <div class="spotlight-content">
-              <span class="spotlight-tag">JORDAN BRAND RETRO</span>
-              <h3>Bred, Concord & 1985 Grails</h3>
-              <p>Historic hardwood grails & premium leather icons.</p>
-              <span class="spotlight-btn">Shop Jordan (21) <i data-lucide="arrow-right"></i></span>
-            </div>
-          </div>
-
-          <!-- Converse Archive Banner -->
-          <div class="spotlight-card spotlight-converse"
-            onclick="currentBrandFilter='converse'; renderProductGrid(); document.getElementById('catalog').scrollIntoView({behavior:'smooth'});">
-            <div class="spotlight-overlay"></div>
-            <div class="spotlight-content">
-              <span class="spotlight-tag">CONVERSE ARCHIVE & CX</span>
-              <h3>Chuck 70 & Weapon CX</h3>
-              <p>Vintage 12oz duck canvas, CX foam & 80s hardwood.</p>
-              <span class="spotlight-btn">Shop Converse (18) <i data-lucide="arrow-right"></i></span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         Interactive E-Commerce Product Catalog
-         ========================================================================== -->
-    <section class="catalog-section" id="catalog">
-      <div class="container">
-
-        <!-- Section Header -->
-        <div class="catalog-header">
-          <div>
-            <div class="section-tag">
-              <i data-lucide="layers"></i>
-              <span>Live Inventory & Drops</span>
-            </div>
-            <h2 class="section-title">The Complete Footwear Catalog</h2>
-            <p class="section-desc" id="products-count">120 Authentic Footwear Drops Available</p>
-          </div>
-
-          <!-- Brand Switcher Tabs -->
-          <div class="brand-filter-tabs">
-            <button class="brand-tab-btn active" data-brand="all">
-              <i data-lucide="grid"></i> All Brands (120)
-            </button>
-            <button class="brand-tab-btn" data-brand="nike">
-              <i data-lucide="check"></i> Nike Performance (54)
-            </button>
-            <button class="brand-tab-btn" data-brand="anta">
-              <i data-lucide="flame"></i> ANTA Hoops & Racing (27)
-            </button>
-            <button class="brand-tab-btn" data-brand="jordan">
-              <i data-lucide="award"></i> Jordan Brand (21)
-            </button>
-            <button class="brand-tab-btn" data-brand="converse">
-              <i data-lucide="star"></i> Converse Archive (18)
-            </button>
-          </div>
-        </div>
-
-        <!-- Filter & Control Toolbar -->
-        <div class="catalog-toolbar">
-
-          <!-- Category Filter Pills -->
-          <div class="category-pills-row">
-            <button class="category-filter-btn active" data-category="all">All Categories</button>
-            <button class="category-filter-btn" data-category="basketball">Basketball / Hoops</button>
-            <button class="category-filter-btn" data-category="running">Marathon / Racing</button>
-            <button class="category-filter-btn" data-category="streetwear">Streetwear Classics</button>
-            <button class="category-filter-btn" data-category="outdoor">Outdoor / Trail ACG</button>
-          </div>
-
-          <!-- Secondary Filter Controls (Search, Price, Size, Sort) -->
-          <div class="toolbar-controls-grid">
-
-            <!-- Catalog Search -->
-            <div class="catalog-search-wrap">
-              <i data-lucide="search"></i>
-              <input type="text" id="catalog-search-input" placeholder="Search model or colorway..." />
-            </div>
-
-            <!-- Price Range Filter -->
-            <div class="control-select-wrap">
-              <label for="catalog-price-select" class="sr-only">Price Range</label>
-              <select id="catalog-price-select" aria-label="Filter by Price">
-                <option value="all">All Price Ranges</option>
-                <option value="under-130">Under $130</option>
-                <option value="130-180">$130 - $180</option>
-                <option value="180-220">$180 - $220</option>
-                <option value="220-plus">$220 and above</option>
-              </select>
-            </div>
-
-            <!-- Sort By -->
-            <div class="control-select-wrap">
-              <label for="catalog-sort-select" class="sr-only">Sort By</label>
-              <select id="catalog-sort-select" aria-label="Sort Footwear">
-                <option value="featured">Featured Drops</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-                <option value="rating">Highest Customer Rating</option>
-                <option value="newest">Most Reviews</option>
-              </select>
-            </div>
-
-          </div>
-
-          <!-- Size Filter Strip -->
-          <div class="size-filter-strip">
-            <span class="size-filter-label"><i data-lucide="ruler"></i> Filter by US Size:</span>
-            <div class="size-chips-list">
-              <button class="size-filter-chip active" data-size="all">All Sizes</button>
-              <button class="size-filter-chip" data-size="7">7</button>
-              <button class="size-filter-chip" data-size="7.5">7.5</button>
-              <button class="size-filter-chip" data-size="8">8</button>
-              <button class="size-filter-chip" data-size="8.5">8.5</button>
-              <button class="size-filter-chip" data-size="9">9</button>
-              <button class="size-filter-chip" data-size="9.5">9.5</button>
-              <button class="size-filter-chip" data-size="10">10</button>
-              <button class="size-filter-chip" data-size="10.5">10.5</button>
-              <button class="size-filter-chip" data-size="11">11</button>
-              <button class="size-filter-chip" data-size="11.5">11.5</button>
-              <button class="size-filter-chip" data-size="12">12</button>
-              <button class="size-filter-chip" data-size="13">13</button>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Dynamic Product Cards Grid -->
-        <div class="products-grid" id="products-grid">
-          <!-- Populated dynamically by app.js -->
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         Trust & Authenticity Guarantee Section
-         ========================================================================== -->
-    <section class="guarantee-section" id="guarantee">
-      <div class="container">
-
-        <div class="section-header text-center">
-          <div class="section-tag">
-            <i data-lucide="shield-check"></i>
-            <span>The Purpose Vault Standard</span>
-          </div>
-          <h2 class="section-title">100% Authenticity & Performance Guaranteed</h2>
-          <p class="section-desc">
-            We operate a temperature-controlled deadstock facility with certified sneaker authenticators inspecting
-            every stitch, code, and compound before dispatch.
-          </p>
-        </div>
-
-        <div class="guarantee-cards-grid">
-
-          <div class="guarantee-card" data-open-modal="authenticity" tabindex="0" role="button"
-            aria-label="Open Multi-Point Authentication details">
-            <div class="guarantee-icon"><i data-lucide="fingerprint"></i></div>
-            <h3>Multi-Point Authentication</h3>
-            <p>Every pair undergoes high-intensity UV light inspection, serial code verification, and RFID verification
-              against brand master databases.</p>
-            <span class="guarantee-card-action">Learn 8-Point Standard <i data-lucide="arrow-right"></i></span>
-          </div>
-
-          <div class="guarantee-card" data-open-modal="shipping" tabindex="0" role="button"
-            aria-label="Open Double-Box Shipping details">
-            <div class="guarantee-icon"><i data-lucide="package-check"></i></div>
-            <h3>Reinforced Double-Box Shipping</h3>
-            <p>Your authentic footwear arrives in pristine condition with factory packaging, extra laces, and official
-              vault authenticity certificates.</p>
-            <span class="guarantee-card-action">View Dispatch Rates <i data-lucide="arrow-right"></i></span>
-          </div>
-
-          <div class="guarantee-card" data-open-modal="returns" tabindex="0" role="button"
-            aria-label="Open 30-Day Return Portal">
-            <div class="guarantee-icon"><i data-lucide="refresh-ccw"></i></div>
-            <h3>30-Day Hassle-Free Returns</h3>
-            <p>Enjoy complete peace of mind with complimentary prepaid return labels and instant refunds or size
-              exchanges on all unworn pairs.</p>
-            <span class="guarantee-card-action">Start Return or Exchange <i data-lucide="arrow-right"></i></span>
-          </div>
-
-          <div class="guarantee-card" data-open-modal="concierge" tabindex="0" role="button"
-            aria-label="Open 24/7 Sneaker Concierge">
-            <div class="guarantee-icon"><i data-lucide="headphones"></i></div>
-            <h3>24/7 Sneaker Concierge</h3>
-            <p>Connect with our expert footwear specialists for personalized sizing advice, marathon race-day
-              recommendations, and VIP drop access.</p>
-            <span class="guarantee-card-action">Chat with Sneaker Specialist <i data-lucide="arrow-right"></i></span>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         Verified Customer Reviews & Ratings
-         ========================================================================== -->
-    <section class="reviews-section" id="reviews">
-      <div class="container">
-
-        <div class="section-header text-center">
-          <div class="section-tag">
-            <i data-lucide="star"></i>
-            <span>Verified Customer Feedback</span>
-          </div>
-          <h2 class="section-title">Rated 4.9/5 by 3,400+ Athletes Worldwide</h2>
-          <p class="section-desc">Read firsthand experiences from marathon finishers, collegiate athletes, and
-            collectors.</p>
-          <div class="reviews-action-bar">
-            <button class="btn-primary" id="open-write-review-btn">
-              <i data-lucide="edit-3"></i>
-              <span>Write a Verified Customer Review</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="reviews-grid">
-
-          <div class="review-card">
-            <div class="review-header">
-              <div class="review-stars">★★★★★</div>
-              <span class="review-badge"><i data-lucide="check-circle-2"></i> Verified Buyer</span>
-            </div>
-            <h4>"The Alphafly 3 got me a Boston Qualifying time!"</h4>
-            <p>"Ordered on Tuesday, arrived on Thursday in double-boxed perfection. The bounce and propulsion on these
-              shoes helped me shave 8 minutes off my marathon time."</p>
-            <div class="review-user">
-              <div class="user-avatar">MK</div>
-              <div>
-                <strong>Marcus K.</strong>
-                <span>Chicago, IL • Purchased Nike Alphafly 3</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="review-card">
-            <div class="review-header">
-              <div class="review-stars">★★★★★</div>
-              <span class="review-badge"><i data-lucide="check-circle-2"></i> Verified Buyer</span>
-            </div>
-            <h4>"ANTA KAI 1 is the best basketball shoe of 2026."</h4>
-            <p>"The materials and cushion for $125 are unreal. The NitroEdge foam stops on a dime and the court feel is
-              elite. Super fast shipping from Purpose Vault!"</p>
-            <div class="review-user">
-              <div class="user-avatar">JL</div>
-              <div>
-                <strong>Justin L.</strong>
-                <span>Dallas, TX • Purchased ANTA KAI 1</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="review-card">
-            <div class="review-header">
-              <div class="review-stars">★★★★★</div>
-              <span class="review-badge"><i data-lucide="check-circle-2"></i> Verified Buyer</span>
-            </div>
-            <h4>"Kobe 8 Protro with React drop-in is perfection."</h4>
-            <p>"Been looking for a deadstock Kobe 8 for months without insane resale prices. Authenticity tag checked
-              out perfectly. Will definitely buy again."</p>
-            <div class="review-user">
-              <div class="user-avatar">DR</div>
-              <div>
-                <strong>Darnell R.</strong>
-                <span>Los Angeles, CA • Purchased Nike Kobe 8 Protro</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         VIP Drop Alert / Newsletter
-         ========================================================================== -->
-    <section class="newsletter-section">
-      <div class="container">
-        <div class="newsletter-card">
-          <div class="newsletter-content">
-            <span class="newsletter-pill"><i data-lucide="bell"></i> VIP VAULT MEMBERSHIP</span>
-            <h3>Get Early Access to Limited Nike SNKRS & ANTA Drops</h3>
-            <p>Subscribe to receive SMS & email drop notifications 15 minutes before public release + instant
-              <strong>10% off</strong> coupon code.</p>
-          </div>
-          <form class="newsletter-form" id="newsletter-form">
-            <input type="email" id="newsletter-email" placeholder="Enter your email address..." required />
-            <button type="submit" class="btn-primary">
-              <span>Claim 10% Off</span>
-              <i data-lucide="arrow-right"></i>
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ==========================================================================
-       Interactive Slide-Over Shopping Cart Drawer
-       ========================================================================== -->
-  <div class="cart-overlay" id="cart-overlay"></div>
-  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Bag">
-
-    <div class="cart-drawer-header">
-      <div class="cart-title-row">
-        <i data-lucide="shopping-bag"></i>
-        <h3>Your Shopping Bag (<span class="cart-badge-count">0</span>)</h3>
-      </div>
-      <button class="cart-close-btn" id="cart-drawer-close" aria-label="Close Shopping Bag">
+      <button class="announcement-close" id="close-announcement-btn" aria-label="Dismiss banner">
         <i data-lucide="x"></i>
       </button>
-    </div>
-
-    <!-- Free Shipping Progress Tracker -->
-    <div class="shipping-progress-container">
-      <p id="shipping-progress-text">Add <strong>$150.00</strong> more to unlock <strong>FREE Express Shipping!</strong>
-      </p>
-      <div class="progress-bar-track">
-        <div class="progress-bar-fill" id="shipping-progress-bar" style="width: 0%;"></div>
-      </div>
-    </div>
-
-    <!-- Empty Cart State -->
-    <div class="cart-empty-state" id="cart-empty-state">
-      <div class="empty-cart-icon"><i data-lucide="shopping-bag"></i></div>
-      <h4>Your Shopping Bag is Empty</h4>
-      <p>Discover our lineup of authentic Nike marathon shoes and ANTA signature basketball sneakers.</p>
-      <button class="btn-primary btn-sm"
-        onclick="closeCartDrawer(); document.getElementById('catalog').scrollIntoView({behavior:'smooth'});">
-        <span>Explore All Footwear</span>
-      </button>
-    </div>
-
-    <!-- Cart Items Container -->
-    <div class="cart-items-list" id="cart-items-list">
-      <!-- Populated dynamically by app.js -->
-    </div>
-
-    <!-- Cart Drawer Footer & Checkout Action -->
-    <div class="cart-drawer-footer" id="cart-drawer-footer">
-
-      <!-- Promo Code Section -->
-      <div class="cart-promo-section">
-        <div class="promo-input-wrap">
-          <input type="text" id="cart-promo-input" placeholder="Promo code (e.g. PURPOSE10)" />
-          <button id="cart-promo-apply-btn" class="btn-ghost-sm">Apply</button>
-        </div>
-      </div>
-
-      <!-- Price Breakdown -->
-      <div class="cart-summary-rows">
-        <div class="summary-row">
-          <span>Subtotal</span>
-          <span id="cart-subtotal-val">$0.00</span>
-        </div>
-        <div class="summary-row discount-row" id="cart-discount-row" style="display:none;">
-          <span>Promo Discount</span>
-          <span id="cart-discount-val" style="color: #10b981;">-$0.00</span>
-        </div>
-        <div class="summary-row">
-          <span>Estimated Shipping</span>
-          <span id="cart-shipping-val">Calculated at checkout</span>
-        </div>
-        <div class="summary-row">
-          <span>Estimated Tax</span>
-          <span id="cart-tax-val">$0.00</span>
-        </div>
-        <div class="summary-row total-row">
-          <span>Estimated Total</span>
-          <span id="cart-total-val">$0.00</span>
-        </div>
-      </div>
-
-      <!-- Checkout Trigger Button -->
-      <button class="btn-primary btn-full btn-checkout-action" id="cart-checkout-btn">
-        <i data-lucide="lock"></i>
-        <span>Proceed to Secure Checkout</span>
-      </button>
-
-      <!-- Trust Badges & Accepted Payments -->
-      <div class="cart-trust-strip">
-        <span class="trust-pill"><i data-lucide="shield-check"></i> 256-Bit SSL Encrypted</span>
-        <span class="trust-pill"><i data-lucide="zap"></i> Instant Dispatch</span>
-      </div>
-    </div>
-
-  </aside>
-
-  <!-- ==========================================================================
-       Interactive Slide-Over Wishlist Drawer
-       ========================================================================== -->
-  <div class="wishlist-overlay" id="wishlist-overlay"></div>
-  <aside class="wishlist-drawer" id="wishlist-drawer" aria-label="Your Saved Wishlist">
-    <div class="cart-drawer-header">
-      <div class="cart-title-row">
-        <i data-lucide="heart"></i>
-        <h3>Saved Wishlist (<span class="wishlist-badge-count">0</span>)</h3>
-      </div>
-      <button class="cart-close-btn" id="wishlist-drawer-close" aria-label="Close Wishlist">
-        <i data-lucide="x"></i>
-      </button>
-    </div>
-
-    <div class="cart-empty-state" id="wishlist-empty-state">
-      <div class="empty-cart-icon"><i data-lucide="heart"></i></div>
-      <h4>Your Wishlist is Empty</h4>
-      <p>Save your favorite Nike and ANTA sneakers to track drops and price updates.</p>
-    </div>
-
-    <div class="wishlist-items-list" id="wishlist-items-list">
-      <!-- Populated dynamically by app.js -->
     </div>
   </aside>
 
   <!-- ==========================================================================
-       Product Detail & Quick View Modal
+       2. Sticky Luxury Navigation Header
        ========================================================================== -->
-  <div class="product-modal-overlay" id="product-modal-overlay"></div>
-  <div class="product-detail-modal" id="product-detail-modal" role="dialog" aria-modal="true"
-    aria-labelledby="modal-product-title">
-    <button class="product-modal-close" id="product-modal-close" aria-label="Close details modal">
-      <i data-lucide="x"></i>
-    </button>
+  <header class="site-header" id="site-header">
+    <div class="header-container">
 
-    <div class="product-modal-grid">
-
-      <!-- Left: Media Viewer with Photo vs 4K Motion Video tabs -->
-      <div class="modal-media-column">
-
-        <div class="modal-media-viewport">
-          <img src="" alt="" id="modal-product-img" class="modal-media-img" />
-          <video src="" id="modal-product-video" class="modal-media-video" loop muted playsinline
-            style="display:none;"></video>
+      <!-- Brand Logotype -->
+      <a href="#hero" class="brand-logo" aria-label="PURPOSE STUDIO Home">
+        <div class="brand-mark">
+          <span class="mark-p">P</span>
+          <span class="mark-slash">/</span>
+          <span class="mark-s">S</span>
         </div>
-
-        <div class="modal-media-tabs">
-          <button class="modal-media-tab active" data-mode="photo">
-            <i data-lucide="image"></i> High-Res Shoot
-          </button>
-          <button class="modal-media-tab" data-mode="video">
-            <i data-lucide="play-circle"></i> 4K Commercial Motion
-          </button>
+        <div class="brand-names">
+          <span class="brand-main">PURPOSE / STUDIO</span>
+          <span class="brand-sub">CREATE WITH PURPOSE • HEAVYWEIGHT LAB</span>
         </div>
+      </a>
 
-        <div class="modal-authenticity-badge">
-          <i data-lucide="shield-check"></i>
-          <div>
-            <strong>100% Deadstock Verified</strong>
-            <span>Inspected with UV & RFID authentication before shipment</span>
-          </div>
-        </div>
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#collection" class="nav-link">The Drop</a>
+        <a href="#fabric-lab" class="nav-link">Fabric Lab</a>
+        <a href="#bundle-builder" class="nav-link">Capsule Set</a>
+        <a href="#size-finder" class="nav-link">Size Finder</a>
+        <a href="#lookbook" class="nav-link">Lookbook</a>
+        <a href="#reviews" class="nav-link">Reviews <span class="nav-badge">4.9★</span></a>
+      </nav>
 
-      </div>
+      <!-- Utility Actions -->
+      <div class="header-actions">
+        <!-- Express Checkout Fastlane CTA -->
+        <a href="#order" class="btn-header-express" id="header-express-btn">
+          <i data-lucide="zap"></i>
+          <span>Express Checkout</span>
+        </a>
 
-      <!-- Right: Detailed Info, Sizes & Buy Actions -->
-      <div class="modal-info-column">
+        <!-- Search Trigger -->
+        <button class="action-btn" id="search-trigger-btn" aria-label="Search Collection" title="Search hoodies">
+          <i data-lucide="search"></i>
+        </button>
 
-        <div class="modal-brand-row">
-          <span class="modal-brand-tag" id="modal-product-brand">Nike Performance</span>
-          <div class="modal-rating-box">
-            <span class="stars" id="modal-rating-stars">★★★★★</span>
-            <span class="val" id="modal-rating-val">4.9 (184 reviews)</span>
-          </div>
-        </div>
+        <!-- Wishlist Trigger -->
+        <button class="action-btn" id="wishlist-trigger-btn" aria-label="Wishlist" title="View wishlist">
+          <i data-lucide="heart"></i>
+          <span class="action-badge" id="wishlist-count">0</span>
+        </button>
 
-        <h2 class="modal-title" id="modal-product-title">Nike ZoomX Vaporfly 3</h2>
-        <p class="modal-colorway" id="modal-product-colorway">Electric Mint / White / Black</p>
-
-        <!-- Price Display & Klarna installments -->
-        <div class="modal-price-box">
-          <span class="modal-price" id="modal-product-price">$260.00</span>
-          <span class="modal-klarna">or 4 interest-free payments of <strong id="modal-klarna-price">$65.00</strong> with
-            Klarna</span>
-        </div>
-
-        <p class="modal-desc" id="modal-product-desc"></p>
-
-        <!-- Size Selector Grid -->
-        <div class="modal-size-section">
-          <div class="size-section-header">
-            <span class="size-title">Select US Men's Size:</span>
-            <button type="button" class="modal-size-guide-link" id="modal-open-size-guide-btn">
-              <i data-lucide="ruler"></i> Size Guide & Fit Tips
-            </button>
-            <span class="in-stock-notice"><i data-lucide="check"></i> In Stock & Ready to Ship</span>
-          </div>
-          <div class="modal-sizes-grid" id="modal-sizes-grid">
-            <!-- Populated dynamically -->
-          </div>
-        </div>
-
-        <!-- Quantity & Primary Action Buttons -->
-        <div class="modal-actions-row">
-          <div class="modal-qty-box">
-            <label for="modal-qty-input" class="sr-only">Quantity</label>
-            <input type="number" id="modal-qty-input" value="1" min="1" max="10" />
-          </div>
-          <button class="btn-primary btn-lg" id="modal-add-to-bag-btn">
+        <!-- Cart Drawer Trigger -->
+        <button class="cart-trigger-btn" id="cart-drawer-btn" aria-label="Shopping Bag">
+          <div class="cart-icon-wrap">
             <i data-lucide="shopping-bag"></i>
-            <span>Add to Bag</span>
-          </button>
-          <button class="btn-secondary btn-lg" id="modal-buy-now-btn">
-            <i data-lucide="zap"></i>
-            <span>1-Click Buy Now</span>
-          </button>
+            <span class="cart-count-badge" id="cart-badge-count">0</span>
+          </div>
+          <span class="cart-label">Bag</span>
+          <span class="cart-subtotal" id="header-cart-total">$0.00</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle-btn" id="mobile-toggle-btn" aria-label="Toggle navigation menu">
+          <i data-lucide="menu" id="menu-icon-open"></i>
+          <i data-lucide="x" id="menu-icon-close" style="display: none;"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+  <aside class="mobile-menu-drawer" id="mobile-menu-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-mark small">P/S</div>
+      <span class="mobile-menu-title">PURPOSE / STUDIO</span>
+      <button class="mobile-drawer-close" id="mobile-close-btn" aria-label="Close menu">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="#collection" class="mobile-nav-link"><span>01</span> The Drop (All Silhouettes)</a>
+      <a href="#fabric-lab" class="mobile-nav-link"><span>02</span> 500 GSM Fabric Technology</a>
+      <a href="#bundle-builder" class="mobile-nav-link"><span>03</span> Capsule Bundle & Save</a>
+      <a href="#size-finder" class="mobile-nav-link"><span>04</span> Smart Size Finder</a>
+      <a href="#lookbook" class="mobile-nav-link"><span>05</span> Drop 04 Campaign Lookbook</a>
+      <a href="#order" class="mobile-nav-link highlight-link"><span>06</span> Express Checkout Station <i data-lucide="zap"></i></a>
+      <a href="#reviews" class="mobile-nav-link"><span>07</span> Customer Feedback</a>
+      <a href="#faq" class="mobile-nav-link"><span>08</span> Care & Wash Guidelines</a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <div class="drop-pill">BATCH #004 • 84% ALLOCATED</div>
+      <p class="drawer-manifesto">Engineered for timeless drape, extreme density, and lifetime durability.</p>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       3. Hero Section: The Archive Hoodie Campaign
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-container">
+
+      <!-- Left Column: Editorial Copy & Specs -->
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="badge-tag live"><span class="pulse-dot"></span> BATCH #004 IS LIVE</span>
+          <span class="badge-tag mono">LIMITED TO 300 PIECES</span>
         </div>
 
-        <!-- Performance Specs Key-Value Table -->
-        <div class="modal-specs-section">
-          <h4><i data-lucide="cpu"></i> Engineering & Performance Specifications</h4>
-          <div class="modal-specs-list" id="modal-specs-list">
-            <!-- Populated dynamically -->
+        <h1 class="hero-title">
+          THE 500 GSM<br />
+          <span class="gradient-text">ARCHIVE HOODIE</span><br />
+          ZERO COMPROMISES.
+        </h1>
+
+        <p class="hero-lead">
+          Milled from custom 100% combed organic cotton French Terry. Featuring an engineered double-layer hood that stands upright without flimsy strings, a raw 4-inch dropped shoulder, and an architectural boxy drape.
+        </p>
+
+        <!-- Technical Spec Grid -->
+        <div class="hero-specs-grid">
+          <div class="spec-card">
+            <span class="spec-value">500</span>
+            <span class="spec-unit">GSM</span>
+            <span class="spec-desc">Ultra-dense loopback French Terry knit</span>
+          </div>
+          <div class="spec-card">
+            <span class="spec-value">2-PLY</span>
+            <span class="spec-unit">HOOD</span>
+            <span class="spec-desc">Rigid double-layered structure (zero cords)</span>
+          </div>
+          <div class="spec-card">
+            <span class="spec-value">100%</span>
+            <span class="spec-unit">PRE-SHRUNK</span>
+            <span class="spec-desc">Garment pigment dyed & silicone washed</span>
           </div>
         </div>
 
-        <!-- Verified Reviews Section inside Modal -->
-        <div class="modal-reviews-section">
-          <h4><i data-lucide="message-square"></i> Verified Customer Reviews</h4>
-          <div class="modal-reviews-list" id="modal-reviews-list">
-            <!-- Populated dynamically -->
+        <!-- Hero Colorway Selector & CTAs -->
+        <div class="hero-interactive-row">
+          <div class="hero-color-picker">
+            <span class="color-picker-label">Selected Colorway: <strong id="hero-color-name">Vintage Washed Black</strong></span>
+            <div class="color-dots" id="hero-color-dots">
+              <button class="color-dot active" data-id="hoodie-black" data-title="The Archive Pullover — Vintage Washed Black" data-color="Vintage Washed Black" data-img="assets/hoodie_black.jpg" data-price="145" title="Vintage Washed Black" style="--swatch: #1e1e20;"></button>
+              <button class="color-dot" data-id="hoodie-grey" data-title="The Archive Pullover — Concrete Heather Grey" data-color="Concrete Heather Grey" data-img="assets/hoodie_grey.jpg" data-price="145" title="Concrete Heather Grey" style="--swatch: #a6a7aa;"></button>
+              <button class="color-dot" data-id="hoodie-mocha" data-title="The Archive Pullover — Raw Earth Mocha" data-color="Raw Earth Mocha" data-img="assets/hoodie_mocha.jpg" data-price="145" title="Raw Earth Mocha" style="--swatch: #583e2e;"></button>
+              <button class="color-dot" data-id="hoodie-olive" data-title="The Archive Pullover — Vintage Sage Olive" data-color="Vintage Sage Olive" data-img="assets/hoodie_olive.jpg" data-price="145" title="Vintage Sage Olive" style="--swatch: #5f6b55;"></button>
+              <button class="color-dot" data-id="hoodie-zip" data-title="The Archive Two-Way Zip — Dark Asphalt" data-color="Two-Way Zip Dark Asphalt" data-img="assets/hoodie_zip_asphalt.jpg" data-price="165" title="Two-Way Zip Dark Asphalt" style="--swatch: #2b2c30;"></button>
+              <button class="color-dot" data-id="hoodie-bone" data-title="The Archive Pullover — Chalk Bone Alabaster" data-color="Chalk Bone Alabaster" data-img="assets/hoodie_bone.jpg" data-price="145" title="Chalk Bone Alabaster" style="--swatch: #ece7db;"></button>
+              <button class="color-dot" data-id="hoodie-navy" data-title="The Archive Heavy Pullover — Obsidian Midnight Navy" data-color="Obsidian Midnight Navy" data-img="assets/hoodie_navy.jpg" data-price="155" title="Obsidian Midnight Navy" style="--swatch: #1a2233;"></button>
+              <button class="color-dot" data-id="hoodie-charcoal" data-title="The Archive Quarter-Zip Mock Collar — Washed Charcoal Steel" data-color="Quarter-Zip Washed Charcoal" data-img="assets/hoodie_charcoal.jpg" data-price="155" title="Quarter-Zip Washed Charcoal" style="--swatch: #424348;"></button>
+              <button class="color-dot" data-id="hoodie-camel" data-title="The Archive Two-Way Zip — Desert Dune Camel" data-color="Two-Way Zip Desert Camel" data-img="assets/hoodie_camel.jpg" data-price="165" title="Two-Way Zip Desert Camel" style="--swatch: #b58d58;"></button>
+            </div>
+          </div>
+
+          <div class="hero-cta-group">
+            <button class="btn-primary" id="hero-quick-add-btn">
+              <i data-lucide="shopping-bag"></i>
+              <span>Claim In Bag — $<span id="hero-price-display">145</span></span>
+            </button>
+            <a href="#collection" class="btn-secondary">
+              <span>Explore All Silhouettes</span>
+              <i data-lucide="arrow-down-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Inventory Meter -->
+        <div class="hero-inventory-status">
+          <div class="inventory-bar-wrap">
+            <div class="inventory-bar-fill" style="width: 86%;"></div>
+          </div>
+          <div class="inventory-text">
+            <span><strong>258 of 300</strong> pieces claimed in Batch #004</span>
+            <span class="hurry-text">Only 42 remaining</span>
           </div>
         </div>
 
       </div>
 
+      <!-- Right Column: Visual Showcase -->
+      <div class="hero-showcase">
+        <div class="showcase-card">
+          <div class="showcase-badges">
+            <span class="badge-pill-black"><i data-lucide="shield-check"></i> LIFETIME SEAM WARRANTY</span>
+            <span class="badge-pill-glow">GARMENT DYED</span>
+          </div>
+
+          <div class="showcase-image-wrapper">
+            <img src="assets/hoodie_black.jpg" alt="PURPOSE STUDIO 500 GSM Heavyweight Hoodie" id="hero-hoodie-img" class="showcase-img" />
+          </div>
+
+          <div class="showcase-caption">
+            <div class="caption-left">
+              <span class="caption-title" id="showcase-title">THE ARCHIVE PULLOVER</span>
+              <span class="caption-fit">Boxy Dropped Shoulder Silhouette</span>
+            </div>
+            <div class="caption-right">
+              <span class="caption-price" id="showcase-price">$145.00</span>
+              <span class="caption-duty">Taxes & Duties Included</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
+  </section>
 
   <!-- ==========================================================================
-       3-Step Interactive Checkout Modal
+       4. Streetwear Manifesto Marquee
        ========================================================================== -->
-  <div class="checkout-overlay" id="checkout-overlay"></div>
-  <div class="checkout-modal" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
-    <button class="checkout-close-btn" id="checkout-modal-close" aria-label="Close checkout">
-      <i data-lucide="x"></i>
-    </button>
+  <section class="brand-marquee-section" aria-label="Brand Pillars">
+    <div class="marquee-wrapper">
+      <div class="marquee-track">
+        <span>500 GSM FRENCH TERRY</span>
+        <span class="star-icon">✦</span>
+        <span>DOUBLE-LAYERED STRUCTURED HOOD</span>
+        <span class="star-icon">✦</span>
+        <span>ZERO DRAWSTRINGS</span>
+        <span class="star-icon">✦</span>
+        <span>BOXIEST RELAXED FIT</span>
+        <span class="star-icon">✦</span>
+        <span>100% COMBED ORGANIC COTTON</span>
+        <span class="star-icon">✦</span>
+        <span>CUSTOM 2X2 REINFORCED RIBBING</span>
+        <span class="star-icon">✦</span>
+        <span>PRE-SHRUNK GARMENT DYE</span>
+        <span class="star-icon">✦</span>
+      </div>
+      <div class="marquee-track" aria-hidden="true">
+        <span>500 GSM FRENCH TERRY</span>
+        <span class="star-icon">✦</span>
+        <span>DOUBLE-LAYERED STRUCTURED HOOD</span>
+        <span class="star-icon">✦</span>
+        <span>ZERO DRAWSTRINGS</span>
+        <span class="star-icon">✦</span>
+        <span>BOXIEST RELAXED FIT</span>
+        <span class="star-icon">✦</span>
+        <span>100% COMBED ORGANIC COTTON</span>
+        <span class="star-icon">✦</span>
+        <span>CUSTOM 2X2 REINFORCED RIBBING</span>
+        <span class="star-icon">✦</span>
+        <span>PRE-SHRUNK GARMENT DYE</span>
+        <span class="star-icon">✦</span>
+      </div>
+    </div>
+  </section>
 
-    <div class="checkout-wrapper" id="checkout-main-flow">
+  <!-- ==========================================================================
+       5. The Hoodies Collection Showcase
+       ========================================================================== -->
+  <section class="collection-section" id="collection">
+    <div class="section-container">
 
-      <!-- Left: 3-Step Checkout Panels -->
-      <div class="checkout-form-container">
+      <div class="section-header">
+        <div class="header-pre">DROP 04 ARCHIVE CATALOG</div>
+        <h2 class="section-title">THE ARCHIVE SILHOUETTES</h2>
+        <p class="section-subtitle">
+          Constructed with our bespoke 500 GSM French Terry loopback cotton. Each piece is garment-dyed and individually hand-finished to achieve an authentic vintage patina.
+        </p>
 
-        <div class="checkout-header">
-          <span class="checkout-tag"><i data-lucide="lock"></i> 256-BIT SSL ENCRYPTED VAULT</span>
-          <h2 id="checkout-title">Secure Express Checkout</h2>
+        <!-- Silhouette Category Filter Pills -->
+        <div class="collection-filters">
+          <button class="filter-pill active" data-filter="all">All Silhouettes (9)</button>
+          <button class="filter-pill" data-filter="pullover">Pullovers (6)</button>
+          <button class="filter-pill" data-filter="zip">Two-Way & Qtr Zips (3)</button>
+          <button class="filter-pill" data-filter="heavy">500 GSM French Terry (9)</button>
         </div>
+      </div>
 
-        <!-- Step Indicators -->
-        <div class="checkout-steps-bar">
-          <div class="checkout-step-indicator active" data-step="1">
-            <span class="step-num">1</span>
-            <span class="step-txt">Shipping Address</span>
-          </div>
-          <div class="checkout-step-indicator" data-step="2">
-            <span class="step-num">2</span>
-            <span class="step-txt">Delivery Speed</span>
-          </div>
-          <div class="checkout-step-indicator" data-step="3">
-            <span class="step-num">3</span>
-            <span class="step-txt">Payment Method</span>
-          </div>
-        </div>
+      <!-- Product Grid -->
+      <div class="products-grid" id="products-grid">
 
-        <!-- Step 1: Shipping Address -->
-        <div class="checkout-step-panel active" id="checkout-step-1">
-          <h3>Customer & Delivery Information</h3>
-          <div class="form-grid">
-            <div class="form-group span-2">
-              <label>Email Address for Order Tracking</label>
-              <input type="email" placeholder="athlete@example.com" value="customer@example.com" required />
-            </div>
-            <div class="form-group">
-              <label>First Name</label>
-              <input type="text" placeholder="John" value="Jerome" required />
-            </div>
-            <div class="form-group">
-              <label>Last Name</label>
-              <input type="text" placeholder="Doe" value="Cabinta" required />
-            </div>
-            <div class="form-group span-2">
-              <label>Street Address</label>
-              <input type="text" placeholder="123 Sneakerhead Blvd, Apt 4B" value="742 Evergreen Terrace" required />
-            </div>
-            <div class="form-group">
-              <label>City</label>
-              <input type="text" placeholder="New York" value="San Francisco" required />
-            </div>
-            <div class="form-group">
-              <label>State / Province</label>
-              <input type="text" placeholder="NY" value="CA" required />
-            </div>
-            <div class="form-group">
-              <label>Postal Code</label>
-              <input type="text" placeholder="10001" value="94103" required />
-            </div>
-            <div class="form-group">
-              <label>Country</label>
-              <select>
-                <option value="US">United States</option>
-                <option value="CA">Canada</option>
-                <option value="UK">United Kingdom</option>
-                <option value="AU">Australia</option>
-                <option value="PH">Philippines</option>
-                <option value="JP">Japan</option>
-                <option value="DE">Germany</option>
-              </select>
-            </div>
-          </div>
-          <button class="btn-primary btn-full mt-4" id="checkout-to-step-2">
-            <span>Continue to Delivery Options</span>
-            <i data-lucide="arrow-right"></i>
-          </button>
-        </div>
-
-        <!-- Step 2: Delivery Speed -->
-        <div class="checkout-step-panel" id="checkout-step-2">
-          <h3>Select Shipping Speed</h3>
-          <div class="shipping-options-list">
-            <label class="shipping-option-card">
-              <input type="radio" name="shipping-speed" value="standard" checked />
-              <div class="option-details">
-                <strong>Standard Double-Box Express (3-5 Business Days)</strong>
-                <span>Complimentary on orders over $150</span>
-              </div>
-              <span class="option-price">FREE</span>
-            </label>
-
-            <label class="shipping-option-card">
-              <input type="radio" name="shipping-speed" value="priority" />
-              <div class="option-details">
-                <strong>Priority Air Dispatch (2 Business Days)</strong>
-                <span>Guaranteed priority courier delivery with signature required</span>
-              </div>
-              <span class="option-price">+$15.00</span>
-            </label>
-
-            <label class="shipping-option-card">
-              <input type="radio" name="shipping-speed" value="overnight" />
-              <div class="option-details">
-                <strong>Vault Overnight Priority (Next Morning by 10:30 AM)</strong>
-                <span>Immediate warehouse dispatch with GPS tracking</span>
-              </div>
-              <span class="option-price">+$25.00</span>
-            </label>
-          </div>
-
-          <div class="checkout-nav-row mt-4">
-            <button class="btn-secondary" id="checkout-back-to-step-1"><i data-lucide="arrow-left"></i> Back</button>
-            <button class="btn-primary" id="checkout-to-step-3"><span>Continue to Payment</span> <i
-                data-lucide="arrow-right"></i></button>
-          </div>
-        </div>
-
-        <!-- Step 3: Payment Method -->
-        <div class="checkout-step-panel" id="checkout-step-3">
-          <h3>Payment Details</h3>
-
-          <div class="payment-method-selector">
-            <button type="button" class="pay-method-btn active" data-pay-method="card"><i data-lucide="credit-card"></i>
-              Credit / Debit Card</button>
-            <button type="button" class="pay-method-btn" data-pay-method="applepay"><i data-lucide="smartphone"></i>
-              Apple Pay</button>
-            <button type="button" class="pay-method-btn" data-pay-method="klarna"><i data-lucide="zap"></i> Klarna
-              4x</button>
-          </div>
-
-          <!-- Credit Card Panel -->
-          <div class="pay-method-panel active" id="pay-panel-card">
-            <div class="credit-card-form">
-              <div class="form-group">
-                <label>Cardholder Full Name</label>
-                <input type="text" value="Jerome Cabinta" required />
-              </div>
-              <div class="form-group">
-                <label>Card Number</label>
-                <input type="text" value="4532 •••• •••• 8892" required />
-              </div>
-              <div class="form-row-2">
-                <div class="form-group">
-                  <label>Expiration</label>
-                  <input type="text" placeholder="MM/YY" value="08/28" required />
-                </div>
-                <div class="form-group">
-                  <label>CVV / CVC</label>
-                  <input type="password" placeholder="CVC" value="384" required />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Apple Pay Panel -->
-          <div class="pay-method-panel" id="pay-panel-applepay">
-            <div style="padding: 1.25rem 0; text-align: center;">
-              <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 1.25rem;">Authorize instant
-                express checkout securely using Apple Touch ID or Face ID.</p>
-              <button type="button" class="apple-pay-btn" id="apple-pay-trigger-btn">
-                <i data-lucide="smartphone"></i> Pay with Apple Pay
+        <!-- Product Card 1: Vintage Washed Black -->
+        <article class="product-card" data-category="pullover heavy" data-id="hoodie-black">
+          <div class="product-media">
+            <span class="product-tag best">BESTSELLER</span>
+            <button class="wishlist-btn" data-id="hoodie-black" aria-label="Add to wishlist">
+              <i data-lucide="heart"></i>
+            </button>
+            <img src="assets/hoodie_black.jpg" alt="The Archive Hoodie in Vintage Washed Black" class="product-img" loading="lazy" />
+            <div class="quick-view-overlay">
+              <button class="btn-quick-view" data-id="hoodie-black">
+                <i data-lucide="eye"></i> Quick View Details
               </button>
             </div>
           </div>
 
-          <!-- Klarna 4x Panel -->
-          <div class="pay-method-panel" id="pay-panel-klarna">
-            <div class="klarna-schedule-box mt-2 mb-2">
-              <h5 style="font-weight: 800; margin-bottom: 0.4rem; color: #ffb3c6;">Klarna 4 Interest-Free Payments</h5>
-              <p style="font-size: 0.8rem; margin-bottom: 0.6rem;">Split your order into 4 equal bi-weekly payments.
-                Zero fees when paid on time.</p>
-              <ul
-                style="font-size: 0.78rem; list-style: disc; margin-left: 1.2rem; color: var(--text-secondary); display:flex; flex-direction:column; gap:0.25rem;">
-                <li>1st payment due today: <strong id="klarna-due-1" style="color:#fff;">$0.00</strong></li>
-                <li>2nd payment (in 2 weeks): <strong id="klarna-due-2" style="color:#fff;">$0.00</strong></li>
-                <li>3rd payment (in 4 weeks): <strong id="klarna-due-3" style="color:#fff;">$0.00</strong></li>
-                <li>4th payment (in 6 weeks): <strong id="klarna-due-4" style="color:#fff;">$0.00</strong></li>
-              </ul>
+          <div class="product-info">
+            <div class="product-header-line">
+              <span class="product-gsm">500 GSM • 100% COTTON</span>
+              <div class="product-rating">
+                <i data-lucide="star" class="star-fill"></i>
+                <span>4.9 (428)</span>
+              </div>
+            </div>
+
+            <h3 class="product-name">The Archive Pullover — Vintage Washed Black</h3>
+            <p class="product-cut">Boxy cropped silhouette, rigid double hood, seamless pouch</p>
+
+            <div class="product-pricing">
+              <span class="product-price">$145.00</span>
+              <span class="product-compare">$180.00</span>
+              <span class="product-save-badge">SAVE $35</span>
+            </div>
+
+            <!-- Size Selector Pills -->
+            <div class="size-selector-group">
+              <span class="size-label">Select Size:</span>
+              <div class="size-options">
+                <button class="size-btn" data-size="S">S</button>
+                <button class="size-btn active" data-size="M">M</button>
+                <button class="size-btn" data-size="L">L</button>
+                <button class="size-btn" data-size="XL">XL</button>
+                <button class="size-btn" data-size="XXL">XXL</button>
+              </div>
+            </div>
+
+            <!-- Action Button -->
+            <button class="btn-add-to-cart" data-id="hoodie-black" data-title="Archive Pullover - Washed Black" data-price="145" data-color="Washed Black" data-img="assets/hoodie_black.jpg">
+              <i data-lucide="shopping-bag"></i>
+              <span>Add to Bag</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Product Card 2: Concrete Heather Grey -->
+        <article class="product-card" data-category="pullover heavy" data-id="hoodie-grey">
+          <div class="product-media">
+            <span class="product-tag highlight">CORE ESSENTIAL</span>
+            <button class="wishlist-btn" data-id="hoodie-grey" aria-label="Add to wishlist">
+              <i data-lucide="heart"></i>
+            </button>
+            <img src="assets/hoodie_grey.jpg" alt="The Archive Hoodie in Concrete Heather Grey" class="product-img" loading="lazy" />
+            <div class="quick-view-overlay">
+              <button class="btn-quick-view" data-id="hoodie-grey">
+                <i data-lucide="eye"></i> Quick View Details
+              </button>
             </div>
           </div>
 
-          <div class="checkout-nav-row mt-4">
-            <button class="btn-secondary" id="checkout-back-to-step-2"><i data-lucide="arrow-left"></i> Back</button>
-            <button class="btn-primary btn-place-order" id="checkout-place-order-btn">
-              <i data-lucide="shield-check"></i>
-              <span>Authorize & Place Order</span>
+          <div class="product-info">
+            <div class="product-header-line">
+              <span class="product-gsm">500 GSM • 100% COTTON</span>
+              <div class="product-rating">
+                <i data-lucide="star" class="star-fill"></i>
+                <span>5.0 (312)</span>
+              </div>
+            </div>
+
+            <h3 class="product-name">The Archive Pullover — Concrete Heather Grey</h3>
+            <p class="product-cut">Custom marled loopback knit, standing architectural collar</p>
+
+            <div class="product-pricing">
+              <span class="product-price">$145.00</span>
+              <span class="product-compare">$180.00</span>
+              <span class="product-save-badge">SAVE $35</span>
+            </div>
+
+            <!-- Size Selector Pills -->
+            <div class="size-selector-group">
+              <span class="size-label">Select Size:</span>
+              <div class="size-options">
+                <button class="size-btn" data-size="S">S</button>
+                <button class="size-btn" data-size="M">M</button>
+                <button class="size-btn active" data-size="L">L</button>
+                <button class="size-btn" data-size="XL">XL</button>
+                <button class="size-btn" data-size="XXL">XXL</button>
+              </div>
+            </div>
+
+            <!-- Action Button -->
+            <button class="btn-add-to-cart" data-id="hoodie-grey" data-title="Archive Pullover - Concrete Grey" data-price="145" data-color="Concrete Grey" data-img="assets/hoodie_grey.jpg">
+              <i data-lucide="shopping-bag"></i>
+              <span>Add to Bag</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Product Card 3: Raw Earth Mocha -->
+        <article class="product-card" data-category="pullover heavy" data-id="hoodie-mocha">
+          <div class="product-media">
+            <span class="product-tag limited">LIMITED RUN</span>
+            <button class="wishlist-btn" data-id="hoodie-mocha" aria-label="Add to wishlist">
+              <i data-lucide="heart"></i>
+            </button>
+            <img src="assets/hoodie_mocha.jpg" alt="The Archive Hoodie in Raw Earth Mocha" class="product-img" loading="lazy" />
+            <div class="quick-view-overlay">
+              <button class="btn-quick-view" data-id="hoodie-mocha">
+                <i data-lucide="eye"></i> Quick View Details
+              </button>
+            </div>
+          </div>
+
+          <div class="product-info">
+            <div class="product-header-line">
+              <span class="product-gsm">500 GSM • 100% COTTON</span>
+              <div class="product-rating">
+                <i data-lucide="star" class="star-fill"></i>
+                <span>4.9 (289)</span>
+              </div>
+            </div>
+
+            <h3 class="product-name">The Archive Pullover — Raw Earth Mocha</h3>
+            <p class="product-cut">Warm botanical mineral dye, heavy 2x2 elastane ribbing</p>
+
+            <div class="product-pricing">
+              <span class="product-price">$145.00</span>
+              <span class="product-compare">$180.00</span>
+              <span class="product-save-badge">SAVE $35</span>
+            </div>
+
+            <!-- Size Selector Pills -->
+            <div class="size-selector-group">
+              <span class="size-label">Select Size:</span>
+              <div class="size-options">
+                <button class="size-btn" data-size="S">S</button>
+                <button class="size-btn" data-size="M">M</button>
+                <button class="size-btn active" data-size="L">L</button>
+                <button class="size-btn" data-size="XL">XL</button>
+                <button class="size-btn" data-size="XXL">XXL</button>
+              </div>
+            </div>
+
+            <!-- Action Button -->
+            <button class="btn-add-to-cart" data-id="hoodie-mocha" data-title="Archive Pullover - Raw Mocha" data-price="145" data-color="Raw Mocha" data-img="assets/hoodie_mocha.jpg">
+              <i data-lucide="shopping-bag"></i>
+              <span>Add to Bag</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Product Card 4: Vintage Sage Olive -->
+        <article class="product-card" data-category="pullover heavy" data-id="hoodie-olive">
+          <div class="product-media">
+            <span class="product-tag">SEASONAL DROP</span>
+            <button class="wishlist-btn" data-id="hoodie-olive" aria-label="Add to wishlist">
+              <i data-lucide="heart"></i>
+            </button>
+            <img src="assets/hoodie_olive.jpg" alt="The Archive Hoodie in Vintage Sage Olive" class="product-img" loading="lazy" />
+            <div class="quick-view-overlay">
+              <button class="btn-quick-view" data-id="hoodie-olive">
+                <i data-lucide="eye"></i> Quick View Details
+              </button>
+            </div>
+          </div>
+
+          <div class="product-info">
+            <div class="product-header-line">
+              <span class="product-gsm">500 GSM • 100% COTTON</span>
+              <div class="product-rating">
+                <i data-lucide="star" class="star-fill"></i>
+                <span>4.8 (194)</span>
+              </div>
+            </div>
+
+            <h3 class="product-name">The Archive Pullover — Vintage Sage Olive</h3>
+            <p class="product-cut">Washed stone patina, relaxed drop shoulder, zero shrinkage</p>
+
+            <div class="product-pricing">
+              <span class="product-price">$145.00</span>
+              <span class="product-compare">$180.00</span>
+              <span class="product-save-badge">SAVE $35</span>
+            </div>
+
+            <!-- Size Selector Pills -->
+            <div class="size-selector-group">
+              <span class="size-label">Select Size:</span>
+              <div class="size-options">
+                <button class="size-btn" data-size="S">S</button>
+                <button class="size-btn active" data-size="M">M</button>
+                <button class="size-btn" data-size="L">L</button>
+                <button class="size-btn" data-size="XL">XL</button>
+                <button class="size-btn" data-size="XXL">XXL</button>
+              </div>
+            </div>
+
+            <!-- Action Button -->
+            <button class="btn-add-to-cart" data-id="hoodie-olive" data-title="Archive Pullover - Sage Olive" data-price="145" data-color="Sage Olive" data-img="assets/hoodie_olive.jpg">
+              <i data-lucide="shopping-bag"></i>
+              <span>Add to Bag</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Product Card 5: Two-Way Zip Dark Asphalt -->
+        <article class="product-card" data-category="zip heavy" data-id="hoodie-zip">
+          <div class="product-media">
+            <span class="product-tag highlight">DUAL ZIP HARDWARE</span>
+            <button class="wishlist-btn" data-id="hoodie-zip" aria-label="Add to wishlist">
+              <i data-lucide="heart"></i>
+            </button>
+            <img src="assets/hoodie_zip_asphalt.jpg" alt="The Archive Two-Way Zip Hoodie in Dark Asphalt" class="product-img" loading="lazy" />
+            <div class="quick-view-overlay">
+              <button class="btn-quick-view" data-id="hoodie-zip">
+                <i data-lucide="eye"></i> Quick View Details
+              </button>
+            </div>
+          </div>
+
+          <div class="product-info">
+            <div class="product-header-line">
+              <span class="product-gsm">500 GSM • TWO-WAY ZIP</span>
+              <div class="product-rating">
+                <i data-lucide="star" class="star-fill"></i>
+                <span>5.0 (201)</span>
+              </div>
+            </div>
+
+            <h3 class="product-name">The Archive Two-Way Zip — Dark Asphalt</h3>
+            <p class="product-cut">Matte silver two-way zipper, split front pouch, heavy collar</p>
+
+            <div class="product-pricing">
+              <span class="product-price">$165.00</span>
+              <span class="product-compare">$205.00</span>
+              <span class="product-save-badge">SAVE $40</span>
+            </div>
+
+            <!-- Size Selector Pills -->
+            <div class="size-selector-group">
+              <span class="size-label">Select Size:</span>
+              <div class="size-options">
+                <button class="size-btn" data-size="S">S</button>
+                <button class="size-btn" data-size="M">M</button>
+                <button class="size-btn" data-size="L">L</button>
+                <button class="size-btn active" data-size="XL">XL</button>
+                <button class="size-btn" data-size="XXL">XXL</button>
+              </div>
+            </div>
+
+            <!-- Action Button -->
+            <button class="btn-add-to-cart" data-id="hoodie-zip" data-title="Archive Two-Way Zip - Dark Asphalt" data-price="165" data-color="Dark Asphalt" data-img="assets/hoodie_zip_asphalt.jpg">
+              <i data-lucide="shopping-bag"></i>
+              <span>Add to Bag</span>
+            </button>
+          </div>
+        <!-- Product Card 6: Chalk Bone Alabaster -->
+        <article class="product-card" data-category="pullover heavy" data-id="hoodie-bone">
+          <div class="product-media">
+            <span class="product-tag highlight">NEW DROP</span>
+            <button class="wishlist-btn" data-id="hoodie-bone" aria-label="Add to wishlist">
+              <i data-lucide="heart"></i>
+            </button>
+            <img src="assets/hoodie_bone.jpg" alt="The Archive Pullover in Chalk Bone Alabaster" class="product-img" loading="lazy" />
+            <div class="quick-view-overlay">
+              <button class="btn-quick-view" data-id="hoodie-bone">
+                <i data-lucide="eye"></i> Quick View Details
+              </button>
+            </div>
+          </div>
+
+          <div class="product-info">
+            <div class="product-header-line">
+              <span class="product-gsm">500 GSM • UNBLEACHED ORGANIC</span>
+              <div class="product-rating">
+                <i data-lucide="star" class="star-fill"></i>
+                <span>5.0 (186)</span>
+              </div>
+            </div>
+
+            <h3 class="product-name">The Archive Pullover — Chalk Bone Alabaster</h3>
+            <p class="product-cut">Unbleached raw French Terry, standing hood, boxy cropped waist</p>
+
+            <div class="product-pricing">
+              <span class="product-price">$145.00</span>
+              <span class="product-compare">$180.00</span>
+              <span class="product-save-badge">SAVE $35</span>
+            </div>
+
+            <!-- Size Selector Pills -->
+            <div class="size-selector-group">
+              <span class="size-label">Select Size:</span>
+              <div class="size-options">
+                <button class="size-btn" data-size="S">S</button>
+                <button class="size-btn" data-size="M">M</button>
+                <button class="size-btn active" data-size="L">L</button>
+                <button class="size-btn" data-size="XL">XL</button>
+                <button class="size-btn" data-size="XXL">XXL</button>
+              </div>
+            </div>
+
+            <!-- Action Button -->
+            <button class="btn-add-to-cart" data-id="hoodie-bone" data-title="Archive Pullover - Chalk Bone" data-price="145" data-color="Chalk Bone Alabaster" data-img="assets/hoodie_bone.jpg">
+              <i data-lucide="shopping-bag"></i>
+              <span>Add to Bag</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Product Card 7: Obsidian Midnight Navy -->
+        <article class="product-card" data-category="pullover heavy" data-id="hoodie-navy">
+          <div class="product-media">
+            <span class="product-tag best">WINTER WEIGHT</span>
+            <button class="wishlist-btn" data-id="hoodie-navy" aria-label="Add to wishlist">
+              <i data-lucide="heart"></i>
+            </button>
+            <img src="assets/hoodie_navy.jpg" alt="The Archive Heavy Pullover in Obsidian Midnight Navy" class="product-img" loading="lazy" />
+            <div class="quick-view-overlay">
+              <button class="btn-quick-view" data-id="hoodie-navy">
+                <i data-lucide="eye"></i> Quick View Details
+              </button>
+            </div>
+          </div>
+
+          <div class="product-info">
+            <div class="product-header-line">
+              <span class="product-gsm">500 GSM • DEEP INDIGO DYE</span>
+              <div class="product-rating">
+                <i data-lucide="star" class="star-fill"></i>
+                <span>4.9 (142)</span>
+              </div>
+            </div>
+
+            <h3 class="product-name">The Archive Heavy Pullover — Obsidian Midnight Navy</h3>
+            <p class="product-cut">Cross-front structured collar, dense loopback weave, storm cuffs</p>
+
+            <div class="product-pricing">
+              <span class="product-price">$155.00</span>
+              <span class="product-compare">$195.00</span>
+              <span class="product-save-badge">SAVE $40</span>
+            </div>
+
+            <!-- Size Selector Pills -->
+            <div class="size-selector-group">
+              <span class="size-label">Select Size:</span>
+              <div class="size-options">
+                <button class="size-btn" data-size="S">S</button>
+                <button class="size-btn" data-size="M">M</button>
+                <button class="size-btn active" data-size="L">L</button>
+                <button class="size-btn" data-size="XL">XL</button>
+                <button class="size-btn" data-size="XXL">XXL</button>
+              </div>
+            </div>
+
+            <!-- Action Button -->
+            <button class="btn-add-to-cart" data-id="hoodie-navy" data-title="Archive Pullover - Midnight Navy" data-price="155" data-color="Obsidian Midnight Navy" data-img="assets/hoodie_navy.jpg">
+              <i data-lucide="shopping-bag"></i>
+              <span>Add to Bag</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Product Card 8: Washed Charcoal Quarter-Zip -->
+        <article class="product-card" data-category="zip heavy" data-id="hoodie-charcoal">
+          <div class="product-media">
+            <span class="product-tag highlight">QUARTER-ZIP HARDWARE</span>
+            <button class="wishlist-btn" data-id="hoodie-charcoal" aria-label="Add to wishlist">
+              <i data-lucide="heart"></i>
+            </button>
+            <img src="assets/hoodie_charcoal.jpg" alt="The Archive Quarter-Zip Mock Collar in Washed Charcoal" class="product-img" loading="lazy" />
+            <div class="quick-view-overlay">
+              <button class="btn-quick-view" data-id="hoodie-charcoal">
+                <i data-lucide="eye"></i> Quick View Details
+              </button>
+            </div>
+          </div>
+
+          <div class="product-info">
+            <div class="product-header-line">
+              <span class="product-gsm">500 GSM • INDUSTRIAL ZIP</span>
+              <div class="product-rating">
+                <i data-lucide="star" class="star-fill"></i>
+                <span>5.0 (118)</span>
+              </div>
+            </div>
+
+            <h3 class="product-name">The Archive Quarter-Zip Mock Collar — Washed Charcoal Steel</h3>
+            <p class="product-cut">Heavy-gauge brushed silver zipper, architectural mock neck, welt pockets</p>
+
+            <div class="product-pricing">
+              <span class="product-price">$155.00</span>
+              <span class="product-compare">$195.00</span>
+              <span class="product-save-badge">SAVE $40</span>
+            </div>
+
+            <!-- Size Selector Pills -->
+            <div class="size-selector-group">
+              <span class="size-label">Select Size:</span>
+              <div class="size-options">
+                <button class="size-btn" data-size="S">S</button>
+                <button class="size-btn" data-size="M">M</button>
+                <button class="size-btn active" data-size="L">L</button>
+                <button class="size-btn" data-size="XL">XL</button>
+                <button class="size-btn" data-size="XXL">XXL</button>
+              </div>
+            </div>
+
+            <!-- Action Button -->
+            <button class="btn-add-to-cart" data-id="hoodie-charcoal" data-title="Archive Quarter-Zip - Washed Charcoal" data-price="155" data-color="Washed Charcoal Steel" data-img="assets/hoodie_charcoal.jpg">
+              <i data-lucide="shopping-bag"></i>
+              <span>Add to Bag</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Product Card 9: Desert Dune Camel Two-Way Zip -->
+        <article class="product-card" data-category="zip heavy" data-id="hoodie-camel">
+          <div class="product-media">
+            <span class="product-tag limited">LIMITED ARCHIVE</span>
+            <button class="wishlist-btn" data-id="hoodie-camel" aria-label="Add to wishlist">
+              <i data-lucide="heart"></i>
+            </button>
+            <img src="assets/hoodie_camel.jpg" alt="The Archive Two-Way Zip in Desert Dune Camel" class="product-img" loading="lazy" />
+            <div class="quick-view-overlay">
+              <button class="btn-quick-view" data-id="hoodie-camel">
+                <i data-lucide="eye"></i> Quick View Details
+              </button>
+            </div>
+          </div>
+
+          <div class="product-info">
+            <div class="product-header-line">
+              <span class="product-gsm">500 GSM • TWO-WAY DUAL ZIP</span>
+              <div class="product-rating">
+                <i data-lucide="star" class="star-fill"></i>
+                <span>4.9 (157)</span>
+              </div>
+            </div>
+
+            <h3 class="product-name">The Archive Two-Way Zip — Desert Dune Camel</h3>
+            <p class="product-cut">Full-length dual metal zippers, sand dune pigment wash, split pouch</p>
+
+            <div class="product-pricing">
+              <span class="product-price">$165.00</span>
+              <span class="product-compare">$205.00</span>
+              <span class="product-save-badge">SAVE $40</span>
+            </div>
+
+            <!-- Size Selector Pills -->
+            <div class="size-selector-group">
+              <span class="size-label">Select Size:</span>
+              <div class="size-options">
+                <button class="size-btn" data-size="S">S</button>
+                <button class="size-btn" data-size="M">M</button>
+                <button class="size-btn active" data-size="L">L</button>
+                <button class="size-btn" data-size="XL">XL</button>
+                <button class="size-btn" data-size="XXL">XXL</button>
+              </div>
+            </div>
+
+            <!-- Action Button -->
+            <button class="btn-add-to-cart" data-id="hoodie-camel" data-title="Archive Two-Way Zip - Desert Camel" data-price="165" data-color="Desert Dune Camel" data-img="assets/hoodie_camel.jpg">
+              <i data-lucide="shopping-bag"></i>
+              <span>Add to Bag</span>
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. The Capsule Set Builder: Bundle & Save 20%
+       ========================================================================== -->
+  <section class="bundle-section" id="bundle-builder">
+    <div class="section-container">
+      <div class="bundle-card">
+        <div class="bundle-badge">LIMITED CAPSULE OFFER</div>
+        <div class="bundle-layout">
+          <div class="bundle-copy">
+            <h2 class="bundle-title">THE DOUBLE HOODIE CAPSULE SET</h2>
+            <p class="bundle-desc">
+              Select any two 500 GSM hoodies and unlock an instant 20% discount ($58 off) plus a complimentary PURPOSE STUDIO Heavyweight Canvas Tote ($45 value).
+            </p>
+            <ul class="bundle-perks">
+              <li><i data-lucide="check"></i> 2x 500 GSM Luxury French Terry Hoodies</li>
+              <li><i data-lucide="check"></i> Complimentary Purpose Studio Heavy Tote</li>
+              <li><i data-lucide="check"></i> Priority Worldwide Express Shipping Included</li>
+              <li><i data-lucide="check"></i> 30-Day Hassle-Free Exchange & Return Guarantee</li>
+            </ul>
+
+            <div class="bundle-price-box">
+              <div class="bundle-price-row">
+                <span class="bundle-price-label">Capsule Bundle Price:</span>
+                <span class="bundle-price-val">$232.00</span>
+                <span class="bundle-price-orig">$290.00</span>
+              </div>
+              <span class="bundle-savings-note">You save $58.00 immediately at checkout.</span>
+            </div>
+
+            <button class="btn-primary bundle-btn" id="add-bundle-to-cart">
+              <i data-lucide="sparkles"></i>
+              <span>Claim Capsule Set to Bag ($232.00)</span>
+            </button>
+          </div>
+
+          <div class="bundle-visual">
+            <div class="bundle-overlap">
+              <img src="assets/hoodie_black.jpg" alt="Hoodie 1" class="bundle-img img-front" />
+              <img src="assets/hoodie_grey.jpg" alt="Hoodie 2" class="bundle-img img-back" />
+            </div>
+            <div class="tote-callout">
+              <i data-lucide="gift"></i> Free Heavyweight Tote Included
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. Fabric & Craftsmanship Lab (500 GSM Deep Dive)
+       ========================================================================== -->
+  <section class="fabric-lab-section" id="fabric-lab">
+    <div class="section-container">
+
+      <div class="section-header">
+        <div class="header-pre">ENGINEERING & TEXTILE SCIENCE</div>
+        <h2 class="section-title">THE 500 GSM ANATOMY</h2>
+        <p class="section-subtitle">
+          Most commercial hoodies use 280–350 GSM polyester blends that pill, lose their shape, and collapse. We designed our custom 500 GSM loopback French Terry from the fiber up.
+        </p>
+      </div>
+
+      <div class="fabric-lab-grid">
+
+        <!-- Fabric Visual with Hotspots -->
+        <div class="fabric-visual-wrap">
+          <img src="assets/hoodie_fabric.jpg" alt="Extreme Macro of 500 GSM French Terry Weave" class="fabric-macro-img" />
+          <div class="fabric-overlay-badge">
+            <span class="macro-tag">EXTREME MACRO • 500 GSM DENSITY</span>
+          </div>
+
+          <!-- Interactive Hotspot 1 -->
+          <div class="hotspot" style="top: 30%; left: 35%;" data-title="Dense Rib Stitching" data-text="Elastane-reinforced 2x2 ribbing designed to retain recovery even after 200+ wear cycles.">
+            <span class="hotspot-pulse"></span>
+            <span class="hotspot-num">1</span>
+          </div>
+          <!-- Interactive Hotspot 2 -->
+          <div class="hotspot" style="top: 65%; left: 60%;" data-title="French Terry Loopback" data-text="Unbrushed breathable loops that regulate core body temperature without synthetic fleece lint.">
+            <span class="hotspot-pulse"></span>
+            <span class="hotspot-num">2</span>
+          </div>
+        </div>
+
+        <!-- Technical Pillars -->
+        <div class="fabric-details-list">
+
+          <div class="detail-item active">
+            <div class="detail-num">01</div>
+            <div class="detail-body">
+              <h3 class="detail-title">500 GSM 100% Combed Organic Cotton</h3>
+              <p class="detail-desc">
+                Custom-milled heavyweight French Terry with a dense exterior face and tactile loopback interior. Weighs over 2.4 lbs per finished garment for an unmatched luxury drape.
+              </p>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-num">02</div>
+            <div class="detail-body">
+              <h3 class="detail-title">Rigid Double-Layered Collar & Hood</h3>
+              <p class="detail-desc">
+                We eradicated cheap, dangling drawstrings. The hood is constructed from two thick layers of matching 500 GSM cotton so it stands upright around the neck like an architectural collar.
+              </p>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-num">03</div>
+            <div class="detail-body">
+              <h3 class="detail-title">The Boxy Dropped Shoulder Cut</h3>
+              <p class="detail-desc">
+                Features a 4-inch dropped shoulder seam with relaxed chest volume and a subtly cropped waist rib. Sits cleanly right above the hip line without ballooning.
+              </p>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-num">04</div>
+            <div class="detail-body">
+              <h3 class="detail-title">Mineral Pigment Wash & Zero Shrinkage</h3>
+              <p class="detail-desc">
+                Every garment undergoes a high-temperature 90°C pre-shrink washing cycle followed by custom stone pigment dyeing and organic silicone softening. Will never shrink in your wash.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. Smart Size & Fit Calculator
+       ========================================================================== -->
+  <section class="size-finder-section" id="size-finder">
+    <div class="section-container">
+
+      <div class="size-finder-card">
+        <div class="finder-header">
+          <div class="header-pre">PRECISION FIT LAB</div>
+          <h2 class="finder-title">FIND YOUR EXACT HOODIE SIZE</h2>
+          <p class="finder-sub">
+            Dial in your height, weight, and preferred streetwear drape to determine your optimal size across our 500 GSM range.
+          </p>
+        </div>
+
+        <div class="finder-grid">
+
+          <!-- Sliders and Inputs -->
+          <div class="finder-controls">
+
+            <!-- Height Slider -->
+            <div class="control-group">
+              <div class="control-label-row">
+                <label for="height-slider">Your Height</label>
+                <span class="control-value" id="height-val-display">5'10" (178 cm)</span>
+              </div>
+              <input type="range" id="height-slider" min="150" max="205" value="178" step="1" class="custom-range" />
+              <div class="range-markers">
+                <span>5'0" (152cm)</span>
+                <span>5'10" (178cm)</span>
+                <span>6'6" (200cm)</span>
+              </div>
+            </div>
+
+            <!-- Weight Slider -->
+            <div class="control-group">
+              <div class="control-label-row">
+                <label for="weight-slider">Your Weight</label>
+                <span class="control-value" id="weight-val-display">175 lbs (79 kg)</span>
+              </div>
+              <input type="range" id="weight-slider" min="110" max="260" value="175" step="1" class="custom-range" />
+              <div class="range-markers">
+                <span>110 lbs</span>
+                <span>175 lbs</span>
+                <span>260 lbs</span>
+              </div>
+            </div>
+
+            <!-- Fit Style Choice -->
+            <div class="control-group">
+              <span class="control-label">Preferred Streetwear Silhouette</span>
+              <div class="fit-style-options">
+                <button class="fit-btn" data-fit="cropped">
+                  <strong>Boxy & Cropped</strong>
+                  <span>Sits high at waist, clean drape</span>
+                </button>
+                <button class="fit-btn active" data-fit="relaxed">
+                  <strong>Classic Relaxed (Recommended)</strong>
+                  <span>Signature dropped shoulder</span>
+                </button>
+                <button class="fit-btn" data-fit="oversized">
+                  <strong>Super Oversized</strong>
+                  <span>Heavy wrist stacking & baggier body</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Calculated Recommendation Result -->
+          <div class="finder-result-box">
+            <div class="result-badge">ALGORITHMIC FIT MATCH</div>
+            <div class="result-size-display">
+              <span class="result-label">Recommended Size:</span>
+              <span class="result-size" id="recommended-size-letter">L</span>
+              <span class="result-subtitle">Large (Chest 44"–46" • Length 27.5")</span>
+            </div>
+
+            <div class="result-fit-breakdown">
+              <div class="breakdown-row">
+                <span>Shoulder Drop:</span>
+                <strong>4.0 Inches (Relaxed)</strong>
+              </div>
+              <div class="breakdown-row">
+                <span>Waist Rib Break:</span>
+                <strong>Sits at Top Hip</strong>
+              </div>
+              <div class="breakdown-row">
+                <span>Sleeve Volume:</span>
+                <strong>Subtle Architectural Stacking</strong>
+              </div>
+            </div>
+
+            <p class="result-note" id="result-note-text">
+              Based on your measurements, size <strong>Large</strong> will deliver our intended signature silhouette: wide through the chest with an upright structured hood.
+            </p>
+
+            <button class="btn-primary" id="apply-size-to-collection">
+              <i data-lucide="check-circle-2"></i>
+              <span>Select Size Large Across Store</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. Drop 04 Editorial Lookbook & Campaign
+       ========================================================================== -->
+  <section class="lookbook-section" id="lookbook">
+    <div class="section-container">
+
+      <div class="section-header">
+        <div class="header-pre">STREETWEAR ARCHIVE CAMPAIGN</div>
+        <h2 class="section-title">DROP 04 / BRUTALIST ROOTS</h2>
+        <p class="section-subtitle">
+          Shot on 35mm film on location against raw brutalist concrete architecture. Designed for everyday elevation.
+        </p>
+      </div>
+
+      <div class="lookbook-hero-card">
+        <img src="assets/hoodie_editorial.jpg" alt="Purpose Studio Lookbook Models in Heavyweight Hoodies" class="lookbook-main-img" />
+
+        <!-- Lookbook Interactive Pin 1 -->
+        <div class="lookbook-pin" style="top: 32%; left: 38%;" data-id="hoodie-black" data-title="Archive Pullover — Washed Black" data-price="$145.00">
+          <div class="pin-marker"><i data-lucide="plus"></i></div>
+          <div class="pin-popover">
+            <span class="pin-tag">ON MODEL (LEFT)</span>
+            <strong>The Archive Pullover — Washed Black</strong>
+            <span class="pin-price">$145.00</span>
+            <button class="pin-add-btn" data-id="hoodie-black">Add To Bag</button>
+          </div>
+        </div>
+
+        <!-- Lookbook Interactive Pin 2 -->
+        <div class="lookbook-pin" style="top: 35%; left: 66%;" data-id="hoodie-grey" data-title="Archive Pullover — Concrete Grey" data-price="$145.00">
+          <div class="pin-marker"><i data-lucide="plus"></i></div>
+          <div class="pin-popover">
+            <span class="pin-tag">ON MODEL (RIGHT)</span>
+            <strong>The Archive Pullover — Concrete Grey</strong>
+            <span class="pin-price">$145.00</span>
+            <button class="pin-add-btn" data-id="hoodie-grey">Add To Bag</button>
+          </div>
+        </div>
+
+        <div class="lookbook-caption-strip">
+          <span class="strip-left"><i data-lucide="camera"></i> CAMPAIGN 004 // TOKYO & BERLIN CONCRETE</span>
+          <span class="strip-right">TAP '+' PINS TO SHOP THE LOOK DIRECTLY</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. EXPRESS CHECKOUT & BATCH #004 ALLOCATION STATION
+       ========================================================================== -->
+  <section class="order-station-section" id="order">
+    <div class="section-container">
+
+      <div class="section-header">
+        <div class="header-pre"><i data-lucide="zap"></i> FASTLANE 1-CLICK ALLOCATION</div>
+        <h2 class="section-title">EXPRESS CHECKOUT & ORDER STATION</h2>
+        <p class="section-subtitle">
+          Guaranteed Batch #004 allocation. Bypass standard cart queues with 1-click Express Wallets (Apple Pay, Google Pay, Shop Pay, PayPal) or direct order customizer with same-day DHL Express air dispatch.
+        </p>
+
+        <!-- Order Station Mode Switcher -->
+        <div class="order-station-tabs">
+          <button type="button" class="order-tab-btn active" id="tab-btn-order" data-tab="order-form-panel">
+            <i data-lucide="zap"></i>
+            <span>01. Express Checkout Station</span>
+          </button>
+          <button type="button" class="order-tab-btn" id="tab-btn-track" data-tab="order-tracker-panel">
+            <i data-lucide="package-search"></i>
+            <span>02. Track Existing Order</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Live Dispatch Countdown & Inventory Ticker -->
+      <div class="express-dispatch-ticker">
+        <div class="ticker-left">
+          <span class="live-pulse-dot"></span>
+          <span class="ticker-label">SAME-DAY AIR DISPATCH ACTIVE</span>
+          <span class="ticker-countdown">Order within <strong id="express-countdown-timer">02:44:18</strong> for tonight's DHL flight</span>
+        </div>
+        <div class="ticker-right">
+          <span class="ticker-inventory"><i data-lucide="shield-check"></i> 48 / 300 PIECES REMAINING IN BATCH #004</span>
+        </div>
+      </div>
+
+      <!-- Tab Panel 1: Fast Order Form -->
+      <div class="order-tab-panel active" id="order-form-panel">
+
+        <!-- 1-Click Fastlane Wallets Express Card -->
+        <div class="express-fastlane-card">
+          <div class="fastlane-header">
+            <div class="fastlane-title">
+              <i data-lucide="zap"></i>
+              <span>1-CLICK EXPRESS FASTLANE</span>
+            </div>
+            <span class="fastlane-badge">INSTANT BIOMETRIC AUTHORIZATION • ZERO FORMS REQUIRED</span>
+          </div>
+          <div class="fastlane-wallets-grid">
+            <button type="button" class="btn-fastlane apple" id="fastlane-apple-btn" aria-label="1-Click checkout with Apple Pay">
+              <svg class="wallet-icon apple-icon" viewBox="0 0 170 170" fill="currentColor">
+                <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.04-7.67-7.85-11.96-14.41-6.19-9.57-11.09-20.73-14.71-33.48-3.62-12.75-5.43-24.69-5.43-35.81 0-14.35 3.58-26.24 10.74-35.68 7.16-9.44 16.03-14.28 26.63-14.53 4.47 0 9.77 1.25 15.9 3.75 6.13 2.5 10.15 3.8 12.06 3.9 1.63 0 5.86-1.4 12.71-4.19 6.84-2.79 12.44-4.04 16.79-3.75 14.56.88 25.59 6.24 33.11 16.07-12.83 7.82-19.12 18.57-18.88 32.25.25 10.66 4.19 19.53 11.81 26.62 7.62 7.09 16.71 11.14 27.27 12.15-2.22 6.74-4.85 13.68-7.9 20.82zM119.22 33.15c0-7.72 2.76-14.94 8.28-21.67 5.53-6.73 12.44-11.07 20.75-13.01.25 1.12.38 2.24.38 3.37 0 7.72-2.82 15.2-8.46 22.45-5.64 7.25-12.77 11.75-21.39 13.5-.13-1.5-.2-2.9-.2-4.22z"/>
+              </svg>
+              <span>Pay</span>
+            </button>
+            <button type="button" class="btn-fastlane google" id="fastlane-google-btn" aria-label="1-Click checkout with Google Pay">
+              <span class="gpay-text"><strong class="g-letter">G</strong>Pay</span>
+            </button>
+            <button type="button" class="btn-fastlane shop" id="fastlane-shop-btn" aria-label="1-Click checkout with Shop Pay">
+              <span>shop</span><span class="shop-pill">Pay</span>
+            </button>
+            <button type="button" class="btn-fastlane paypal" id="fastlane-paypal-btn" aria-label="1-Click checkout with PayPal Express">
+              <i data-lucide="shield"></i>
+              <span>PayPal</span>
+            </button>
+          </div>
+          <div class="fastlane-divider">
+            <span>OR CONFIGURE CUSTOM BATCH ORDER & ADDRESS BELOW</span>
+          </div>
+        </div>
+
+        <!-- Bag Sync Notification Bar -->
+        <div class="cart-sync-bar" id="cart-sync-bar" style="display: none;">
+          <div class="sync-left">
+            <div class="sync-badge"><i data-lucide="shopping-bag"></i></div>
+            <div class="sync-text">
+              <span class="sync-headline">BAG DETECTED: <strong id="sync-bag-count">0 ITEMS</strong> (<span id="sync-bag-total">$0.00</span>)</span>
+              <span class="sync-sub">You can instantly checkout everything in your shopping bag or configure a custom piece.</span>
+            </div>
+          </div>
+          <div class="sync-toggles">
+            <button type="button" class="sync-toggle-btn active" id="sync-mode-bag">
+              <i data-lucide="check"></i> Checkout Bag Items
+            </button>
+            <button type="button" class="sync-toggle-btn" id="sync-mode-single">
+              Configure Single Piece
             </button>
           </div>
         </div>
 
+        <form class="order-station-form" id="direct-order-form">
+          <div class="order-grid">
+
+            <!-- Left Column: Product Selection & Shipping Inputs -->
+            <div class="order-config-col">
+
+              <!-- Step 1: Select Silhouette -->
+              <div class="order-block" id="order-block-step1">
+                <div class="order-block-header">
+                  <div class="block-title-wrap">
+                    <span class="step-num">STEP 1</span>
+                    <h3>CHOOSE YOUR SILHOUETTE & COLORWAY</h3>
+                  </div>
+                  <span class="step-status" id="step1-status">9 Colorways Available</span>
+                </div>
+                <div class="silhouette-picker-grid" id="order-silhouette-picker">
+                  <!-- Product 1 -->
+                  <div class="silhouette-card active" data-id="hoodie-black" data-title="The Archive Pullover — Vintage Washed Black" data-price="145" data-color="Vintage Washed Black" data-img="assets/hoodie_black.jpg">
+                    <img src="assets/hoodie_black.jpg" alt="Washed Black" class="sil-img" />
+                    <div class="sil-info">
+                      <span class="sil-badge">BESTSELLER</span>
+                      <strong class="sil-title">Washed Black</strong>
+                      <span class="sil-price">$145.00</span>
+                    </div>
+                  </div>
+                  <!-- Product 2 -->
+                  <div class="silhouette-card" data-id="hoodie-grey" data-title="The Archive Pullover — Concrete Heather Grey" data-price="145" data-color="Concrete Heather Grey" data-img="assets/hoodie_grey.jpg">
+                    <img src="assets/hoodie_grey.jpg" alt="Concrete Grey" class="sil-img" />
+                    <div class="sil-info">
+                      <span class="sil-badge">CORE</span>
+                      <strong class="sil-title">Concrete Grey</strong>
+                      <span class="sil-price">$145.00</span>
+                    </div>
+                  </div>
+                  <!-- Product 3 -->
+                  <div class="silhouette-card" data-id="hoodie-mocha" data-title="The Archive Pullover — Raw Earth Mocha" data-price="145" data-color="Raw Earth Mocha" data-img="assets/hoodie_mocha.jpg">
+                    <img src="assets/hoodie_mocha.jpg" alt="Earth Mocha" class="sil-img" />
+                    <div class="sil-info">
+                      <span class="sil-badge">LIMITED</span>
+                      <strong class="sil-title">Earth Mocha</strong>
+                      <span class="sil-price">$145.00</span>
+                    </div>
+                  </div>
+                  <!-- Product 4 -->
+                  <div class="silhouette-card" data-id="hoodie-olive" data-title="The Archive Pullover — Vintage Sage Olive" data-price="145" data-color="Vintage Sage Olive" data-img="assets/hoodie_olive.jpg">
+                    <img src="assets/hoodie_olive.jpg" alt="Sage Olive" class="sil-img" />
+                    <div class="sil-info">
+                      <span class="sil-badge">SEASONAL</span>
+                      <strong class="sil-title">Sage Olive</strong>
+                      <span class="sil-price">$145.00</span>
+                    </div>
+                  </div>
+                  <!-- Product 5 -->
+                  <div class="silhouette-card" data-id="hoodie-zip" data-title="The Archive Two-Way Zip — Dark Asphalt" data-price="165" data-color="Dark Asphalt" data-img="assets/hoodie_zip_asphalt.jpg">
+                    <img src="assets/hoodie_zip_asphalt.jpg" alt="Dark Asphalt Zip" class="sil-img" />
+                    <div class="sil-info">
+                      <span class="sil-badge">TWO-WAY ZIP</span>
+                      <strong class="sil-title">Asphalt Zip</strong>
+                      <span class="sil-price">$165.00</span>
+                    </div>
+                  </div>
+                  <!-- Product 6 -->
+                  <div class="silhouette-card" data-id="hoodie-bone" data-title="The Archive Pullover — Chalk Bone Alabaster" data-price="145" data-color="Chalk Bone Alabaster" data-img="assets/hoodie_bone.jpg">
+                    <img src="assets/hoodie_bone.jpg" alt="Chalk Bone" class="sil-img" />
+                    <div class="sil-info">
+                      <span class="sil-badge">NEW DROP</span>
+                      <strong class="sil-title">Chalk Bone</strong>
+                      <span class="sil-price">$145.00</span>
+                    </div>
+                  </div>
+                  <!-- Product 7 -->
+                  <div class="silhouette-card" data-id="hoodie-navy" data-title="The Archive Heavy Pullover — Obsidian Midnight Navy" data-price="155" data-color="Obsidian Midnight Navy" data-img="assets/hoodie_navy.jpg">
+                    <img src="assets/hoodie_navy.jpg" alt="Midnight Navy" class="sil-img" />
+                    <div class="sil-info">
+                      <span class="sil-badge">INDIGO HEAVY</span>
+                      <strong class="sil-title">Midnight Navy</strong>
+                      <span class="sil-price">$155.00</span>
+                    </div>
+                  </div>
+                  <!-- Product 8 -->
+                  <div class="silhouette-card" data-id="hoodie-charcoal" data-title="The Archive Quarter-Zip Mock Collar — Washed Charcoal Steel" data-price="155" data-color="Washed Charcoal Steel" data-img="assets/hoodie_charcoal.jpg">
+                    <img src="assets/hoodie_charcoal.jpg" alt="Washed Charcoal Qtr-Zip" class="sil-img" />
+                    <div class="sil-info">
+                      <span class="sil-badge">QTR-ZIP</span>
+                      <strong class="sil-title">Charcoal Zip</strong>
+                      <span class="sil-price">$155.00</span>
+                    </div>
+                  </div>
+                  <!-- Product 9 -->
+                  <div class="silhouette-card" data-id="hoodie-camel" data-title="The Archive Two-Way Zip — Desert Dune Camel" data-price="165" data-color="Desert Dune Camel" data-img="assets/hoodie_camel.jpg">
+                    <img src="assets/hoodie_camel.jpg" alt="Desert Dune Camel Zip" class="sil-img" />
+                    <div class="sil-info">
+                      <span class="sil-badge">TWO-WAY ZIP</span>
+                      <strong class="sil-title">Desert Camel</strong>
+                      <span class="sil-price">$165.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 2: Size & Quantity -->
+              <div class="order-block">
+                <div class="order-block-header">
+                  <span class="step-num">STEP 2</span>
+                  <h3>SELECT SIZE & QUANTITY</h3>
+                </div>
+                <div class="size-qty-row">
+                  <div class="order-size-wrap">
+                    <span class="block-label">Select Size:</span>
+                    <div class="size-options order-sizes" id="order-size-options">
+                      <button type="button" class="size-btn" data-size="S">S</button>
+                      <button type="button" class="size-btn" data-size="M">M</button>
+                      <button type="button" class="size-btn active" data-size="L">L</button>
+                      <button type="button" class="size-btn" data-size="XL">XL</button>
+                      <button type="button" class="size-btn" data-size="XXL">XXL</button>
+                    </div>
+                  </div>
+                  <div class="order-qty-wrap">
+                    <span class="block-label">Quantity:</span>
+                    <div class="order-qty-stepper">
+                      <button type="button" class="order-qty-btn" id="order-qty-dec">−</button>
+                      <span class="order-qty-val" id="order-qty-val">1</span>
+                      <button type="button" class="order-qty-btn" id="order-qty-inc">+</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 3: Upgrades & Accessories -->
+              <div class="order-block">
+                <div class="order-block-header">
+                  <span class="step-num">STEP 3</span>
+                  <h3>OPTIONAL CAPSULE UPGRADES</h3>
+                </div>
+                <div class="addons-list">
+                  <label class="addon-item">
+                    <input type="checkbox" id="addon-tote" data-price="25" />
+                    <div class="addon-info">
+                      <strong>Heavyweight 20oz Canvas Tote Bag</strong>
+                      <span>Custom screen-printed archival tote ($25 value)</span>
+                    </div>
+                    <span class="addon-price">+$25.00</span>
+                  </label>
+                  <label class="addon-item">
+                    <input type="checkbox" id="addon-travel" data-price="15" />
+                    <div class="addon-info">
+                      <strong>Garment Dust Bag & Cedar Wood Hanger</strong>
+                      <span>Heavy breathable travel cover with logo hanger</span>
+                    </div>
+                    <span class="addon-price">+$15.00</span>
+                  </label>
+                  <label class="addon-item">
+                    <input type="checkbox" id="addon-rush" data-price="10" />
+                    <div class="addon-info">
+                      <strong>Priority Batch Rush Packing & Full Insurance</strong>
+                      <span>First in queue for DHL Express dispatch</span>
+                    </div>
+                    <span class="addon-price">+$10.00</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Step 4: Shipping Destination -->
+              <div class="order-block" id="order-block-step4">
+                <div class="order-block-header">
+                  <div class="block-title-wrap">
+                    <span class="step-num">STEP 4</span>
+                    <h3>SHIPPING & CONTACT INFORMATION</h3>
+                  </div>
+                  <button type="button" class="btn-autofill-demo" id="btn-autofill-demo" title="1-Click test data autofill">
+                    <i data-lucide="sparkles"></i> 1-Click Autofill Demo
+                  </button>
+                </div>
+
+                <!-- DHL Dispatch Speed Tiers -->
+                <div class="shipping-tiers-group">
+                  <span class="block-label">Select DHL Express Dispatch Speed:</span>
+                  <div class="shipping-tiers-grid">
+                    <label class="shipping-tier-card active" id="tier-label-std">
+                      <input type="radio" name="shipping-speed-tier" value="standard" checked />
+                      <div class="tier-card-body">
+                        <div class="tier-header">
+                          <strong>DHL Express Air Worldwide</strong>
+                          <span class="tier-badge-free">FREE ($150+)</span>
+                        </div>
+                        <p>3–5 business days • Direct tracking number • Carbon offset flight</p>
+                      </div>
+                    </label>
+                    <label class="shipping-tier-card" id="tier-label-prio">
+                      <input type="radio" name="shipping-speed-tier" value="priority" />
+                      <div class="tier-card-body">
+                        <div class="tier-header">
+                          <strong>DHL Priority Next-Flight Courier</strong>
+                          <span class="tier-badge-addon">+$12.00</span>
+                        </div>
+                        <p>1–2 business days • Direct courier signature required • Priority vault packing</p>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="shipping-fields-grid">
+                  <div class="form-field full">
+                    <label for="ord-name">Full Name *</label>
+                    <input type="text" id="ord-name" placeholder="Marcus Vance" required value="Marcus Vance" />
+                  </div>
+                  <div class="form-field">
+                    <label for="ord-email">Email Address *</label>
+                    <input type="email" id="ord-email" placeholder="marcus@streetwear.com" required value="marcus@purpose.studio" />
+                  </div>
+                  <div class="form-field">
+                    <label for="ord-phone">Contact Phone (for DHL Delivery SMS) *</label>
+                    <input type="tel" id="ord-phone" placeholder="+1 (555) 234-5678" required value="+1 (555) 890-4421" />
+                  </div>
+                  <div class="form-field full">
+                    <label for="ord-address">Delivery Street Address *</label>
+                    <input type="text" id="ord-address" placeholder="104 Crosby St, Soho" required value="104 Crosby St, Soho" />
+                  </div>
+                  <div class="form-field">
+                    <label for="ord-city">City *</label>
+                    <input type="text" id="ord-city" placeholder="New York" required value="New York" />
+                  </div>
+                  <div class="form-field">
+                    <label for="ord-zip">Postal / Zip Code *</label>
+                    <input type="text" id="ord-zip" placeholder="10012" required value="10012" />
+                  </div>
+                  <div class="form-field full">
+                    <label for="ord-country">Country / Region *</label>
+                    <select id="ord-country" required>
+                      <option value="United States">United States</option>
+                      <option value="United Kingdom">United Kingdom</option>
+                      <option value="Canada">Canada</option>
+                      <option value="Germany">Germany</option>
+                      <option value="France">France</option>
+                      <option value="Philippines">Philippines</option>
+                      <option value="Australia">Australia</option>
+                      <option value="Japan">Japan</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 5: Payment Method -->
+              <div class="order-block">
+                <div class="order-block-header">
+                  <span class="step-num">STEP 5</span>
+                  <h3>PAYMENT METHOD</h3>
+                </div>
+                <div class="payment-methods-grid">
+                  <label class="pay-method-pill active">
+                    <input type="radio" name="order-pay-method" value="Card" checked />
+                    <i data-lucide="credit-card"></i>
+                    <span>Credit / Debit Card</span>
+                  </label>
+                  <label class="pay-method-pill">
+                    <input type="radio" name="order-pay-method" value="Apple Pay" />
+                    <i data-lucide="smartphone"></i>
+                    <span>Apple / Google Pay</span>
+                  </label>
+                  <label class="pay-method-pill">
+                    <input type="radio" name="order-pay-method" value="Cash on Delivery" />
+                    <i data-lucide="truck"></i>
+                    <span>Cash On Delivery (COD)</span>
+                  </label>
+                  <label class="pay-method-pill">
+                    <input type="radio" name="order-pay-method" value="PayPal" />
+                    <i data-lucide="shield"></i>
+                    <span>PayPal Express</span>
+                  </label>
+                </div>
+
+                <!-- Simulated Card Fields -->
+                <div class="card-details-box" id="order-card-inputs">
+                  <div class="form-field full">
+                    <label for="ord-card-num">Card Number</label>
+                    <input type="text" id="ord-card-num" placeholder="4242 •••• •••• 4242" value="4242 8888 7777 4242" />
+                  </div>
+                  <div class="card-exp-row">
+                    <div class="form-field">
+                      <label for="ord-card-exp">Expiry (MM/YY)</label>
+                      <input type="text" id="ord-card-exp" placeholder="12/28" value="10/28" />
+                    </div>
+                    <div class="form-field">
+                      <label for="ord-card-cvv">CVC</label>
+                      <input type="text" id="ord-card-cvv" placeholder="999" value="999" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right Column: Sticky Live Order Summary & Submit -->
+            <div class="order-summary-col">
+              <div class="order-summary-card">
+                <div class="summary-top">
+                  <span class="summary-badge">DROP 04 ALLOCATION</span>
+                  <h4 class="summary-title">LIVE ORDER SUMMARY</h4>
+                </div>
+
+                <!-- Selected Product Preview -->
+                <div class="summary-product-row">
+                  <img src="assets/hoodie_black.jpg" alt="Selected Hoodie" class="summary-thumb" id="summary-hoodie-img" />
+                  <div class="summary-prod-details">
+                    <strong id="summary-hoodie-title">The Archive Pullover — Washed Black</strong>
+                    <span id="summary-hoodie-variant">Size: L • Qty: 1</span>
+                    <span class="summary-prod-price" id="summary-hoodie-price">$145.00</span>
+                  </div>
+                </div>
+
+                <!-- Addons List in Summary -->
+                <div class="summary-addons-box" id="summary-addons-box" style="display: none;">
+                  <span class="addons-heading">Selected Upgrades:</span>
+                  <div id="summary-addons-list"></div>
+                </div>
+
+                <!-- Promo Code -->
+                <div class="summary-promo-row">
+                  <input type="text" id="order-promo-input" placeholder="Promo code (e.g. PURPOSE10)" />
+                  <button type="button" id="order-promo-btn" class="btn-summary-promo">Apply</button>
+                </div>
+                <div class="order-promo-badge" id="order-promo-badge" style="display: none;">
+                  <span>Code <strong>PURPOSE10</strong> applied (-10%)</span>
+                </div>
+
+                <!-- Price Breakdown -->
+                <div class="summary-totals-list">
+                  <div class="sum-row">
+                    <span>Base Subtotal</span>
+                    <span id="sum-subtotal">$145.00</span>
+                  </div>
+                  <div class="sum-row" id="sum-addons-row" style="display: none;">
+                    <span>Upgrades</span>
+                    <span id="sum-addons-val">+$0.00</span>
+                  </div>
+                  <div class="sum-row sum-discount" id="sum-discount-row" style="display: none;">
+                    <span>VIP 10% Discount</span>
+                    <span id="sum-discount-val">-$0.00</span>
+                  </div>
+                  <div class="sum-row">
+                    <span>Worldwide Express Shipping</span>
+                    <span id="sum-shipping-val">FREE</span>
+                  </div>
+                  <div class="sum-row sum-total">
+                    <span>Final Amount</span>
+                    <span id="sum-total-val">$145.00</span>
+                  </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn-primary btn-place-order" id="btn-place-order">
+                  <i data-lucide="lock"></i>
+                  <span>Confirm & Authorize Order</span>
+                  <span class="btn-order-price" id="btn-order-price-val">$145.00</span>
+                </button>
+
+                <div class="order-guarantees">
+                  <span><i data-lucide="shield-check"></i> 100% Guaranteed Batch Allocation</span>
+                  <span><i data-lucide="truck"></i> Ships within 24 Hours via DHL Express</span>
+                  <span><i data-lucide="refresh-cw"></i> 30-Day Hassle-Free Returns</span>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </form>
       </div>
 
-      <!-- Right: Live Order Summary Sidebar -->
-      <div class="checkout-summary-sidebar">
-        <h4>Order Summary</h4>
-        <div class="checkout-items-summary-list" id="checkout-items-summary-list">
-          <!-- Populated dynamically -->
-        </div>
+      <!-- Tab Panel 2: Track Existing Order -->
+      <div class="order-tab-panel" id="order-tracker-panel" style="display: none;">
+        <div class="order-tracker-card">
+          <div class="tracker-header">
+            <h3>CHECK BATCH #004 SHIPMENT STATUS</h3>
+            <p>Enter your 7-character order reference number (e.g., #PS-849204) to view your garment's live dispatch stage.</p>
+          </div>
 
-        <div class="checkout-totals-box">
-          <div class="summary-row">
-            <span>Subtotal</span>
-            <span id="checkout-subtotal">$0.00</span>
+          <div class="tracker-input-row">
+            <input type="text" id="track-order-input" placeholder="Enter Order Reference (e.g. #PS-849204)" />
+            <button type="button" class="btn-primary" id="btn-search-order">
+              <i data-lucide="search"></i>
+              <span>Locate Order</span>
+            </button>
           </div>
-          <div class="summary-row discount-row" id="checkout-discount-row" style="display:none;">
-            <span>Discount</span>
-            <span id="checkout-discount" style="color:#10b981;">-$0.00</span>
-          </div>
-          <div class="summary-row">
-            <span>Shipping</span>
-            <span id="checkout-shipping">FREE</span>
-          </div>
-          <div class="summary-row">
-            <span>Estimated Tax</span>
-            <span id="checkout-tax">$0.00</span>
-          </div>
-          <div class="summary-row total-row">
-            <span>Total</span>
-            <span id="checkout-grand-total">$0.00</span>
+
+          <div class="tracker-result" id="tracker-result-box" style="display: none;">
+            <!-- Populated dynamically via JS -->
           </div>
         </div>
       </div>
 
     </div>
-
-    <!-- Order Confirmed Success Screen -->
-    <div class="order-success-screen" id="checkout-success-screen" style="display:none;">
-      <div class="success-icon-box"><i data-lucide="check-circle-2"></i></div>
-      <h2>Order Confirmed & Authenticated!</h2>
-      <p>Thank you for purchasing from Purpose Vault. Your order has been securely allocated from our deadstock
-        warehouse.</p>
-
-      <div class="order-receipt-card">
-        <div class="receipt-row">
-          <span>Order Reference:</span>
-          <strong id="order-confirmed-number">PV-892104</strong>
-        </div>
-        <div class="receipt-row">
-          <span>Estimated Delivery:</span>
-          <strong>3 Business Days (Express Air)</strong>
-        </div>
-        <div class="receipt-row">
-          <span>Authenticity Certificate:</span>
-          <strong style="color: #10b981;">NFC-Verified Deadstock</strong>
-        </div>
-      </div>
-
-      <button class="btn-primary"
-        onclick="closeCheckoutModal(); document.getElementById('catalog').scrollIntoView({behavior:'smooth'});">
-        <i data-lucide="shopping-bag"></i>
-        <span>Continue Shopping</span>
-      </button>
-    </div>
-
-  </div>
+  </section>
 
   <!-- ==========================================================================
-       Store Footer
+       11. Verified Reviews & Community Feedback
+       ========================================================================== -->
+  <section class="reviews-section" id="reviews">
+    <div class="section-container">
+
+      <div class="section-header">
+        <div class="header-pre">CUSTOMER ARCHIVE</div>
+        <h2 class="section-title">TESTED BY 1,400+ STREETWEAR ENTHUSIASTS</h2>
+        <div class="rating-overview">
+          <div class="rating-score">4.9</div>
+          <div class="rating-stars">
+            <div class="stars-row">
+              <i data-lucide="star" class="star-fill"></i>
+              <i data-lucide="star" class="star-fill"></i>
+              <i data-lucide="star" class="star-fill"></i>
+              <i data-lucide="star" class="star-fill"></i>
+              <i data-lucide="star" class="star-fill"></i>
+            </div>
+            <span class="rating-count">Based on 1,428 verified drop orders</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review Cards Grid -->
+      <div class="reviews-grid">
+
+        <article class="review-card">
+          <div class="review-stars">
+            <i data-lucide="star" class="star-fill"></i>
+            <i data-lucide="star" class="star-fill"></i>
+            <i data-lucide="star" class="star-fill"></i>
+            <i data-lucide="star" class="star-fill"></i>
+            <i data-lucide="star" class="star-fill"></i>
+          </div>
+          <p class="review-quote">
+            "The hood standing upright on its own without drawstrings is a masterclass in construction. It feels like wearing armor, but butter soft. Blew my $300 designer blanks out of the water."
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">LK</div>
+            <div class="author-details">
+              <strong class="author-name">Liam K. <i data-lucide="badge-check" class="verified-icon"></i></strong>
+              <span class="author-meta">Verified Buyer • 6'1" (185 lbs) • Bought Size XL</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars">
+            <i data-lucide="star" class="star-fill"></i>
+            <i data-lucide="star" class="star-fill"></i>
+            <i data-lucide="star" class="star-fill"></i>
+            <i data-lucide="star" class="star-fill"></i>
+            <i data-lucide="star" class="star-fill"></i>
+          </div>
+          <p class="review-quote">
+            "500 GSM is no joke. You pick it up and you can immediately feel the heavy density. The vintage washed black has that perfect faded charcoal vibe right out of the box."
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">DA</div>
+            <div class="author-details">
+              <strong class="author-name">David A. <i data-lucide="badge-check" class="verified-icon"></i></strong>
+              <span class="author-meta">Verified Buyer • 5'9" (165 lbs) • Bought Size M</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars">
+            <i data-lucide="star" class="star-fill"></i>
+            <i data-lucide="star" class="star-fill"></i>
+            <i data-lucide="star" class="star-fill"></i>
+            <i data-lucide="star" class="star-fill"></i>
+            <i data-lucide="star" class="star-fill"></i>
+          </div>
+          <p class="review-quote">
+            "Got the Two-Way Zip in Asphalt. That dual metal zipper is ultra smooth and lets you style the silhouette unzipped from the bottom. Definitely grabbing the Mocha next."
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">MC</div>
+            <div class="author-details">
+              <strong class="author-name">Marcus C. <i data-lucide="badge-check" class="verified-icon"></i></strong>
+              <span class="author-meta">Verified Buyer • 6'0" (175 lbs) • Bought Size L</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       11. FAQ & Garment Care Accordion
+       ========================================================================== -->
+  <section class="faq-section" id="faq">
+    <div class="section-container">
+
+      <div class="section-header">
+        <div class="header-pre">FREQUENTLY ASKED QUESTIONS</div>
+        <h2 class="section-title">GARMENT CARE & ORDER POLICIES</h2>
+      </div>
+
+      <div class="faq-accordion">
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How should I wash and care for my 500 GSM hoodie?</span>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Machine wash cold (30°C / 86°F) inside out with mild detergent. Hang or lay flat to air dry. Do not tumble dry on high heat to preserve the dense French Terry loopback texture. Since our garments are pre-shrunk, shrinkage is virtually zero.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Why are there no drawstrings on the hood?</span>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Drawstrings are the first element to fray, dangle unevenly, or ruin clean lines. Our hood is constructed with a rigid 2-ply double layer of 500 GSM French Terry that naturally stands upright around your neck for a structured, architectural streetwear look.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What are your worldwide shipping times and return policies?</span>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>
+              We ship worldwide via DHL Express. Orders over $150 receive complimentary Express Shipping. Delivery takes 3–5 business days in North America & Europe, and 4–7 business days elsewhere. We offer a 30-day hassle-free return and exchange guarantee on unworn pieces.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Will sold out Batch #004 colorways be restocked?</span>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Each batch is limited to 300 pieces per colorway. Core shades (Washed Black and Concrete Grey) restock seasonally, but limited shades (Raw Mocha and Sage Olive) are retired once sold out. Join our VIP Early Access below to guarantee your size.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       12. VIP Early Access / Drop 05 Notification
+       ========================================================================== -->
+  <section class="vip-section" id="vip">
+    <div class="section-container">
+      <div class="vip-card">
+        <div class="vip-glow"></div>
+        <div class="vip-content">
+          <span class="badge-tag live"><span class="pulse-dot"></span> VIP ACCESS ONLY</span>
+          <h2 class="vip-title">NEVER MISS A CAPSULE DROP</h2>
+          <p class="vip-sub">
+            Subscribers receive 1-hour early access password to every batch drop before public release, plus an instant 10% discount code.
+          </p>
+
+          <form class="vip-form" id="vip-newsletter-form">
+            <input type="email" id="vip-email" placeholder="Enter your personal email address..." required aria-label="Email Address" />
+            <button type="submit" class="btn-primary">
+              <span>Unlock VIP Pass</span>
+              <i data-lucide="arrow-right"></i>
+            </button>
+          </form>
+          <span class="vip-privacy">No spam. Only high-caliber drops. Unsubscribe anytime.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       13. Luxury Streetwear Footer
        ========================================================================== -->
   <footer class="site-footer">
-    <div class="container footer-container">
+    <div class="footer-container">
 
       <div class="footer-brand-col">
-        <span class="logo-text">PURPOSE<span class="logo-accent">VAULT</span></span>
-        <p class="footer-about">
-          The premier authorized deadstock marketplace for authentic Nike and ANTA athletic performance footwear and
-          signature basketball editions.
+        <div class="brand-logo footer-logo">
+          <div class="brand-mark">P/S</div>
+          <div class="brand-names">
+            <span class="brand-main">PURPOSE / STUDIO™</span>
+            <span class="brand-sub">CREATE WITH PURPOSE • APPAREL LAB</span>
+          </div>
+        </div>
+        <p class="footer-manifesto">
+          Purveyors of ultra-heavyweight streetwear fundamentals. Built upon obsessive fabric weights, structured silhouettes, and lifetime garment durability.
         </p>
-        <div class="footer-badges">
-          <span class="footer-badge"><i data-lucide="shield-check"></i> 100% Authentic</span>
-          <span class="footer-badge"><i data-lucide="truck"></i> Worldwide Dispatch</span>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i data-lucide="video"></i></a>
+          <a href="#" aria-label="Twitter / X"><i data-lucide="twitter"></i></a>
+          <a href="#" aria-label="Discord"><i data-lucide="message-square"></i></a>
         </div>
       </div>
 
       <div class="footer-links-col">
-        <h4>Nike Performance</h4>
+        <h4 class="footer-heading">Collections</h4>
         <ul>
-          <li><a href="javascript:void(0)" onclick="openProductModal('nike-vaporfly-3')">Nike ZoomX Vaporfly 3</a></li>
-          <li><a href="javascript:void(0)" onclick="openProductModal('nike-alphafly-3')">Nike Alphafly 3 World
-              Record</a></li>
-          <li><a href="javascript:void(0)" onclick="openProductModal('nike-kobe-8-halo')">Nike Kobe 8 Protro Halo</a>
-          </li>
-          <li><a href="javascript:void(0)" onclick="openProductModal('nike-lebron-20')">Nike LeBron 20 Trinity</a></li>
-          <li><a href="javascript:void(0)" onclick="openProductModal('nike-air-max-dn')">Nike Air Max Dn Dynamic Air</a>
-          </li>
-          <li><a href="javascript:void(0)" onclick="openProductModal('nike-vomero-5')">Nike Zoom Vomero 5</a></li>
+          <li><a href="#collection">Batch 004 (Active)</a></li>
+          <li><a href="#collection">500 GSM Pullovers</a></li>
+          <li><a href="#collection">Two-Way Zip Hoodies</a></li>
+          <li><a href="#bundle-builder">Capsule Set (Save 20%)</a></li>
+          <li><a href="#lookbook">Archive Lookbook</a></li>
         </ul>
       </div>
 
       <div class="footer-links-col">
-        <h4>ANTA Lineup</h4>
+        <h4 class="footer-heading">Craft & Science</h4>
         <ul>
-          <li><a href="javascript:void(0)" onclick="openProductModal('anta-kai-1-artist')">ANTA KAI 1 "Artist on
-              Court"</a></li>
-          <li><a href="javascript:void(0)" onclick="openProductModal('anta-kai-1-warrior')">ANTA KAI 1 "Enlightened
-              Warrior"</a></li>
-          <li><a href="javascript:void(0)" onclick="openProductModal('anta-kt9-captain')">ANTA KT9 "Captain Klay"</a>
-          </li>
-          <li><a href="javascript:void(0)" onclick="openProductModal('anta-shockwave-5-pro')">ANTA Shock Wave 5 Pro</a>
-          </li>
-          <li><a href="javascript:void(0)" onclick="openProductModal('anta-c202-gt-pro')">ANTA C202 5 GT Pro
-              Marathon</a></li>
+          <li><a href="#fabric-lab">500 GSM French Terry</a></li>
+          <li><a href="#fabric-lab">The Architecture Hood</a></li>
+          <li><a href="#size-finder">Smart Size Finder</a></li>
+          <li><a href="#faq">Garment Wash Care</a></li>
+          <li><a href="#faq">Sustainability & Cotton Source</a></li>
         </ul>
       </div>
 
       <div class="footer-links-col">
-        <h4>Customer Care</h4>
+        <h4 class="footer-heading">Client Services</h4>
         <ul>
-          <li><a href="javascript:void(0)" data-open-modal="authenticity">Authenticity Verification</a></li>
-          <li><a href="javascript:void(0)" data-open-modal="shipping">Shipping & Delivery Rates</a></li>
-          <li><a href="javascript:void(0)" data-open-modal="returns">30-Day Return Portal</a></li>
-          <li><a href="javascript:void(0)" data-open-modal="size-guide">Size Guide & Fit Advisor</a></li>
-          <li><a href="javascript:void(0)" data-open-modal="concierge">Contact Sneaker Concierge</a></li>
+          <li><a href="#faq">Worldwide Express Shipping</a></li>
+          <li><a href="#faq">30-Day Hassle-Free Returns</a></li>
+          <li><a href="#faq">Order Tracking</a></li>
+          <li><a href="#vip">VIP Membership</a></li>
+          <li><a href="mailto:concierge@purposestudio.com">Direct Concierge Email</a></li>
         </ul>
       </div>
 
     </div>
 
     <div class="footer-bottom">
-      <div class="container footer-bottom-container">
-        <p>© 2026 Purpose Vault • All Nike & ANTA models shown are 100% authentic deadstock.</p>
-        <div class="payment-icons-strip">
+      <div class="footer-container bottom-flex">
+        <p>© 2026 PURPOSE STUDIO / CREATE WITH PURPOSE APPAREL LAB. ALL RIGHTS RESERVED.</p>
+        <div class="payment-badges">
+          <span>APPLE PAY</span>
+          <span>GOOGLE PAY</span>
           <span>VISA</span>
           <span>MASTERCARD</span>
           <span>AMEX</span>
-          <span>APPLE PAY</span>
-          <span>GOOGLE PAY</span>
-          <span>KLARNA</span>
         </div>
       </div>
     </div>
   </footer>
 
   <!-- ==========================================================================
-       Universal Info Modals System (Size Guide, Concierge, Returns, Guarantee, Reviews)
+       14. Interactive Slide-Out Cart Drawer
        ========================================================================== -->
-  <div class="info-modal-overlay" id="info-modal-overlay"></div>
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart">
 
-  <!-- Size Guide & Fit Advisor Modal -->
-  <div class="info-modal" id="size-guide-modal" role="dialog" aria-modal="true" aria-labelledby="size-guide-title">
-    <div class="info-modal-header">
-      <h3 id="size-guide-title"><i data-lucide="ruler"></i> Official Footwear Size Guide & Fit Advisor</h3>
-      <button class="info-modal-close" data-close-modal aria-label="Close size guide"><i data-lucide="x"></i></button>
-    </div>
-    <div class="info-modal-body">
-
-      <!-- Brand Tabs -->
-      <div class="size-guide-tabs">
-        <button type="button" class="size-tab-btn active" data-guide-brand="nike">Nike & Jordan</button>
-        <button type="button" class="size-tab-btn" data-guide-brand="anta">ANTA Hoops & Racing</button>
-        <button type="button" class="size-tab-btn" data-guide-brand="converse">Converse Archive</button>
-      </div>
-
-      <!-- Foot Measurement Interactive Calculator -->
-      <div class="size-calculator-box">
-        <h4><i data-lucide="calculator"></i> Interactive Precision Fit Calculator</h4>
-        <p style="font-size:0.75rem; color:var(--text-secondary); margin-bottom:0.75rem;">
-          Measure your foot length from heel to longest toe against a flat wall, enter below to get your exact
-          recommended sizing.
-        </p>
-        <div class="size-calc-inputs">
-          <div>
-            <label for="calc-foot-len">Foot Length:</label>
-            <input type="number" id="calc-foot-len" value="27.0" step="0.1" min="20" max="35" placeholder="e.g. 27.0" />
-          </div>
-          <div>
-            <label for="calc-unit">Measurement Unit:</label>
-            <select id="calc-unit">
-              <option value="cm">Centimeters (cm)</option>
-              <option value="in">Inches (in)</option>
-            </select>
-          </div>
-          <div>
-            <label>Recommended Size:</label>
-            <div class="calc-result-chip" id="calc-result-chip">US 9.5 M / EU 43</div>
-          </div>
+    <!-- Drawer Header -->
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title-row">
+        <div class="cart-icon-title">
+          <i data-lucide="shopping-bag"></i>
+          <h3>YOUR BAG</h3>
+          <span class="drawer-badge" id="drawer-item-count">0 items</span>
         </div>
-      </div>
-
-      <!-- Size Table -->
-      <div class="size-table-container">
-        <table class="size-table" id="size-guide-table">
-          <thead>
-            <tr>
-              <th>US Men</th>
-              <th>US Women</th>
-              <th>UK</th>
-              <th>EU</th>
-              <th>Foot (CM)</th>
-              <th>Foot (IN)</th>
-            </tr>
-          </thead>
-          <tbody id="size-table-body">
-            <tr>
-              <td>7.0</td>
-              <td>8.5</td>
-              <td>6.0</td>
-              <td>40.0</td>
-              <td>25.0 cm</td>
-              <td>9.84 in</td>
-            </tr>
-            <tr>
-              <td>7.5</td>
-              <td>9.0</td>
-              <td>6.5</td>
-              <td>40.5</td>
-              <td>25.5 cm</td>
-              <td>10.04 in</td>
-            </tr>
-            <tr>
-              <td>8.0</td>
-              <td>9.5</td>
-              <td>7.0</td>
-              <td>41.0</td>
-              <td>26.0 cm</td>
-              <td>10.24 in</td>
-            </tr>
-            <tr>
-              <td>8.5</td>
-              <td>10.0</td>
-              <td>7.5</td>
-              <td>42.0</td>
-              <td>26.5 cm</td>
-              <td>10.43 in</td>
-            </tr>
-            <tr>
-              <td>9.0</td>
-              <td>10.5</td>
-              <td>8.0</td>
-              <td>42.5</td>
-              <td>27.0 cm</td>
-              <td>10.63 in</td>
-            </tr>
-            <tr>
-              <td>9.5</td>
-              <td>11.0</td>
-              <td>8.5</td>
-              <td>43.0</td>
-              <td>27.5 cm</td>
-              <td>10.83 in</td>
-            </tr>
-            <tr>
-              <td>10.0</td>
-              <td>11.5</td>
-              <td>9.0</td>
-              <td>44.0</td>
-              <td>28.0 cm</td>
-              <td>11.02 in</td>
-            </tr>
-            <tr>
-              <td>10.5</td>
-              <td>12.0</td>
-              <td>9.5</td>
-              <td>44.5</td>
-              <td>28.5 cm</td>
-              <td>11.22 in</td>
-            </tr>
-            <tr>
-              <td>11.0</td>
-              <td>12.5</td>
-              <td>10.0</td>
-              <td>45.0</td>
-              <td>29.0 cm</td>
-              <td>11.42 in</td>
-            </tr>
-            <tr>
-              <td>11.5</td>
-              <td>13.0</td>
-              <td>10.5</td>
-              <td>45.5</td>
-              <td>29.5 cm</td>
-              <td>11.61 in</td>
-            </tr>
-            <tr>
-              <td>12.0</td>
-              <td>13.5</td>
-              <td>11.0</td>
-              <td>46.0</td>
-              <td>30.0 cm</td>
-              <td>11.81 in</td>
-            </tr>
-            <tr>
-              <td>13.0</td>
-              <td>14.5</td>
-              <td>12.0</td>
-              <td>47.5</td>
-              <td>31.0 cm</td>
-              <td>12.20 in</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- Fit Tips Grid -->
-      <div class="fit-tips-grid">
-        <div class="fit-tip-card">
-          <h5><i data-lucide="info"></i> Nike ZoomX & Alphafly Fit</h5>
-          <p>Nike marathon racers feature a performance track fit. For wider feet or long-distance swelling over 15
-            miles, go up <strong>half a size (0.5 US)</strong>.</p>
-        </div>
-        <div class="fit-tip-card">
-          <h5><i data-lucide="info"></i> ANTA KAI & Hoops Fit</h5>
-          <p>ANTA basketball shoes fit <strong>True to Size</strong> with exceptional midfoot lockdown. Wide footers can
-            comfortably stay true to size thanks to generous forefoot flex zones.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- 24/7 Sneaker Concierge Live Assistant Modal -->
-  <div class="info-modal" id="concierge-modal" role="dialog" aria-modal="true" aria-labelledby="concierge-title">
-    <div class="info-modal-header">
-      <h3 id="concierge-title"><i data-lucide="headphones"></i> 24/7 Sneaker Concierge Live Assistant</h3>
-      <button class="info-modal-close" data-close-modal aria-label="Close concierge"><i data-lucide="x"></i></button>
-    </div>
-    <div class="info-modal-body">
-      <div class="concierge-chat-box">
-        <div class="concierge-messages-list" id="concierge-messages-list">
-          <div class="chat-bubble chat-bubble-bot">
-            👋 Welcome to <strong>Purpose Vault Concierge</strong>! I'm Alex, your footwear master specialist. How can I
-            help you today? Ask me about marathon race-day shoes, basketball grip, drop dates, or size recommendations!
-          </div>
-        </div>
-
-        <div class="chat-quick-suggestions">
-          <button type="button" class="chat-suggest-chip" data-prompt="Best shoe for a sub-3 hour marathon?">🏃 Best
-            Sub-3hr Marathon Shoe?</button>
-          <button type="button" class="chat-suggest-chip" data-prompt="How does ANTA KAI 1 compare to Kobe 8?">🏀 ANTA
-            KAI 1 vs Kobe 8?</button>
-          <button type="button" class="chat-suggest-chip" data-prompt="What size should I get for Nike Vaporfly 3?">📏
-            Vaporfly 3 Sizing Advice?</button>
-          <button type="button" class="chat-suggest-chip" data-prompt="How do you authenticate deadstock sneakers?">🛡️
-            How is Authenticity Verified?</button>
-        </div>
-
-        <form class="chat-input-row" id="concierge-chat-form">
-          <input type="text" id="concierge-chat-input" placeholder="Type your sneaker question..." autocomplete="off"
-            required />
-          <button type="submit">
-            <span>Send</span>
-            <i data-lucide="send"></i>
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- 30-Day Hassle-Free Returns & Exchanges Modal -->
-  <div class="info-modal" id="returns-modal" role="dialog" aria-modal="true" aria-labelledby="returns-title">
-    <div class="info-modal-header">
-      <h3 id="returns-title"><i data-lucide="refresh-ccw"></i> 30-Day Hassle-Free Returns & Exchanges</h3>
-      <button class="info-modal-close" data-close-modal aria-label="Close returns portal"><i
-          data-lucide="x"></i></button>
-    </div>
-    <div class="info-modal-body">
-
-      <div class="returns-flow-step" id="returns-form-step">
-        <p style="font-size:0.85rem; color:var(--text-secondary);">
-          We offer complimentary prepaid returns and size exchanges within 30 days of delivery for any unworn footwear
-          with original vault tags attached.
-        </p>
-
-        <form id="returns-portal-form">
-          <div class="form-grid">
-            <div class="form-group">
-              <label for="return-order-id">Order Reference #</label>
-              <input type="text" id="return-order-id" placeholder="PV-892104" value="PV-892104" required />
-            </div>
-            <div class="form-group">
-              <label for="return-email">Email Address on Order</label>
-              <input type="email" id="return-email" placeholder="athlete@example.com" value="customer@example.com"
-                required />
-            </div>
-            <div class="form-group span-2">
-              <label for="return-reason">Reason for Return / Exchange</label>
-              <select id="return-reason" required>
-                <option value="size-small">Need a Larger Size (Size Exchange)</option>
-                <option value="size-large">Need a Smaller Size (Size Exchange)</option>
-                <option value="fit-preference">Style / Cushioning Preference</option>
-                <option value="changed-mind">Changed Mind / Store Credit</option>
-                <option value="gift">Gift Return</option>
-              </select>
-            </div>
-            <div class="form-group span-2">
-              <label for="return-resolution">Preferred Resolution</label>
-              <select id="return-resolution" required>
-                <option value="credit">Instant Store Credit (+10% Bonus Credit)</option>
-                <option value="exchange">Exchange for Different US Size</option>
-                <option value="refund">Original Payment Method Refund</option>
-              </select>
-            </div>
-          </div>
-
-          <button type="submit" class="btn-primary btn-full mt-3" id="generate-return-label-btn">
-            <i data-lucide="printer"></i>
-            <span>Generate Free Prepaid Return Label</span>
-          </button>
-        </form>
-      </div>
-
-      <div class="returns-flow-step" id="returns-success-step" style="display:none;">
-        <div class="return-label-preview">
-          <div class="return-label-header">
-            <div>
-              <strong>PURPOSE VAULT RETURNS DEPT</strong><br />
-              <span style="font-size:0.7rem; font-weight:normal;">Facility #04 - 100 Vault Way, San Francisco, CA
-                94103</span>
-            </div>
-            <div style="text-align:right;">
-              <strong>PREPAID PRIORITY 2-DAY</strong><br />
-              <span id="label-rma-number">RMA #PV-RET-89210</span>
-            </div>
-          </div>
-          <div class="return-barcode"></div>
-          <div style="display:flex; justify-content:space-between; font-size:0.75rem;">
-            <span>TRACKING: <strong id="label-tracking-number">1Z9999999999999999</strong></span>
-            <span>CARRIER: <strong>UPS / FEDEX EXPRESS</strong></span>
-          </div>
-        </div>
-
-        <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:0.5rem;">
-          ✓ Printable return label has been emailed to your address. Drop off at any authorized UPS/FedEx drop box or
-          counter. Once scanned, your exchange/refund is instantly queued!
-        </p>
-
-        <button type="button" class="btn-secondary btn-full" id="start-another-return-btn">
-          <i data-lucide="arrow-left"></i> Start Another Return
+        <button class="cart-drawer-close" id="cart-close-btn" aria-label="Close Bag">
+          <i data-lucide="x"></i>
         </button>
       </div>
 
-    </div>
-  </div>
-
-  <!-- Global Shipping & Delivery Rates Modal -->
-  <div class="info-modal" id="shipping-modal" role="dialog" aria-modal="true" aria-labelledby="shipping-title">
-    <div class="info-modal-header">
-      <h3 id="shipping-title"><i data-lucide="truck"></i> Global Express Shipping & Delivery Rates</h3>
-      <button class="info-modal-close" data-close-modal aria-label="Close shipping rates"><i
-          data-lucide="x"></i></button>
-    </div>
-    <div class="info-modal-body">
-
-      <p style="font-size:0.85rem; color:var(--text-secondary);">
-        Every pair of sneakers from Purpose Vault is double-boxed with reinforced corrugated walls, tamper-evident tape,
-        and 100% full declared value transit insurance.
-      </p>
-
-      <div class="size-table-container">
-        <table class="size-table">
-          <thead>
-            <tr>
-              <th>Destination Region</th>
-              <th>Carrier & Speed</th>
-              <th>Cost (Orders > $150)</th>
-              <th>Cost (Under $150)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>United States (Domestic)</strong></td>
-              <td>FedEx / UPS Express (2-3 Days)</td>
-              <td><span style="color:#10b981; font-weight:800;">FREE</span></td>
-              <td>$10.00 Flat</td>
-            </tr>
-            <tr>
-              <td><strong>Overnight Priority (USA)</strong></td>
-              <td>Next Morning 10:30 AM</td>
-              <td>$25.00</td>
-              <td>$25.00</td>
-            </tr>
-            <tr>
-              <td><strong>Canada & Mexico</strong></td>
-              <td>DHL Express Air (2-4 Days)</td>
-              <td><span style="color:#10b981; font-weight:800;">FREE</span></td>
-              <td>$15.00 Flat</td>
-            </tr>
-            <tr>
-              <td><strong>Europe & United Kingdom</strong></td>
-              <td>DHL Express Tracked (3-5 Days)</td>
-              <td><span style="color:#10b981; font-weight:800;">FREE</span></td>
-              <td>$15.00 Flat</td>
-            </tr>
-            <tr>
-              <td><strong>Asia-Pacific (PH, JP, AU, SG)</strong></td>
-              <td>FedEx International (3-5 Days)</td>
-              <td><span style="color:#10b981; font-weight:800;">FREE</span></td>
-              <td>$18.00 Flat</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="fit-tips-grid">
-        <div class="fit-tip-card">
-          <h5><i data-lucide="package-check"></i> Double-Box Guarantee</h5>
-          <p>We never ship shoes in plastic polybags. Original shoe boxes are wrapped in protective bubble lining and
-            placed inside high-durability outer shipping cartons.</p>
+      <!-- Free Shipping Meter -->
+      <div class="shipping-meter-wrap">
+        <div class="shipping-meter-text" id="shipping-meter-text">
+          Add <strong>$150.00</strong> more to unlock <strong>FREE WORLDWIDE EXPRESS</strong>
         </div>
-        <div class="fit-tip-card">
-          <h5><i data-lucide="shield-check"></i> 100% Insured Delivery</h5>
-          <p>Every shipment is backed by our full loss, damage, and transit guarantee. Live GPS tracking links are sent
-            via SMS & Email within 24 hours of order placement.</p>
+        <div class="shipping-meter-bar">
+          <div class="shipping-meter-fill" id="shipping-meter-fill" style="width: 0%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Drawer Body / Item List -->
+    <div class="cart-drawer-body" id="cart-items-container">
+      <!-- Empty state displayed by default -->
+      <div class="cart-empty-state" id="cart-empty-state">
+        <div class="empty-icon-box">
+          <i data-lucide="shopping-bag"></i>
+        </div>
+        <h4>YOUR BAG IS CURRENTLY EMPTY</h4>
+        <p>Explore Batch #004 and secure your 500 GSM heavyweight piece before the drop sells out.</p>
+        <a href="#collection" class="btn-primary" id="btn-empty-shop">
+          <span>Shop The Drop</span>
+          <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Drawer Footer -->
+    <div class="cart-drawer-footer" id="cart-drawer-footer">
+
+      <!-- Promo Code Accordion / Box -->
+      <div class="promo-box">
+        <div class="promo-input-row">
+          <input type="text" id="promo-code-input" placeholder="Promo code (e.g. PURPOSE10)" />
+          <button type="button" class="btn-promo-apply" id="apply-promo-btn">Apply</button>
+        </div>
+        <div class="promo-applied-badge" id="promo-applied-badge" style="display: none;">
+          <span>Code <strong>PURPOSE10</strong> applied (-10%)</span>
+          <button type="button" id="remove-promo-btn"><i data-lucide="x"></i></button>
         </div>
       </div>
 
-    </div>
-  </div>
-
-  <!-- Authenticity Guarantee Modal -->
-  <div class="info-modal" id="authenticity-modal" role="dialog" aria-modal="true" aria-labelledby="authenticity-title">
-    <div class="info-modal-header">
-      <h3 id="authenticity-title"><i data-lucide="shield-check"></i> The Purpose Vault 8-Point Deadstock Guarantee</h3>
-      <button class="info-modal-close" data-close-modal aria-label="Close authenticity guarantee"><i
-          data-lucide="x"></i></button>
-    </div>
-    <div class="info-modal-body">
-      <p style="font-size:0.85rem; color:var(--text-secondary);">
-        Purpose Vault operates an authorized, temperature-controlled archival facility. Our authenticators have
-        inspected over 500,000+ pairs of Nike, Jordan, ANTA, and Converse footwear.
-      </p>
-
-      <div class="fit-tips-grid">
-        <div class="fit-tip-card">
-          <h5><i data-lucide="fingerprint"></i> 1. High-Intensity UV Blacklight Inspection</h5>
-          <p>We illuminate upper stitching, soles, and footbeds to inspect invisible factory production stamps, glue
-            bleed tolerances, and dye luminescence.</p>
+      <!-- Financial Calculation -->
+      <div class="cart-totals">
+        <div class="total-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal-val">$0.00</span>
         </div>
-        <div class="fit-tip-card">
-          <h5><i data-lucide="cpu"></i> 2. RFID & Serial Microchip Scan</h5>
-          <p>Box barcodes and inner shoe tongue tags are cross-referenced directly against Nike SNKRS and ANTA official
-            production batch databases.</p>
+        <div class="total-row discount-row" id="discount-row" style="display: none;">
+          <span>VIP Discount</span>
+          <span id="cart-discount-val">-$0.00</span>
         </div>
-        <div class="fit-tip-card">
-          <h5><i data-lucide="scale"></i> 3. Gram-Level Precision Scale Check</h5>
-          <p>Each shoe is weighed to within 0.1g tolerance to verify carbon fiber Flyplates, ZoomX foam compound
-            density, and NitroEdge supercritical foam purity.</p>
+        <div class="total-row">
+          <span>Worldwide Shipping</span>
+          <span id="cart-shipping-val">Calculated at checkout</span>
         </div>
-        <div class="fit-tip-card">
-          <h5><i data-lucide="check-circle-2"></i> 4. Stitch Density & Font Geometry</h5>
-          <p>Swoosh placement, Jumpman embroidery, KAI glyph runes, and heel tabs are inspected under high magnification
-            for exact thread count.</p>
+        <div class="total-row final-total">
+          <span>Estimated Total</span>
+          <span id="cart-total-val">$0.00</span>
         </div>
       </div>
 
-      <div class="size-calculator-box"
-        style="background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.3);">
-        <h4 style="color: #34d399;"><i data-lucide="shield"></i> Tamper-Proof NFC Purpose Vault Tag Attached</h4>
-        <p style="font-size:0.78rem; color:var(--text-secondary);">
-          Each pair ships with a custom serialized NFC vault security zip-tie. Tap your smartphone to the tag to view
-          the digital Certificate of Authenticity and inspector timestamp.
+      <!-- Checkout Action Button -->
+      <button class="btn-checkout" id="btn-open-checkout">
+        <i data-lucide="lock"></i>
+        <span>Secure Checkout</span>
+        <span class="btn-checkout-total" id="checkout-btn-total">$0.00</span>
+      </button>
+
+      <div class="checkout-guarantees">
+        <span><i data-lucide="shield-check"></i> 256-Bit SSL Encrypted</span>
+        <span>•</span>
+        <span><i data-lucide="refresh-cw"></i> 30-Day Hassle-Free Returns</span>
+      </div>
+
+    </div>
+
+  </aside>
+
+  <!-- ==========================================================================
+       15. Interactive Quick View Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="quick-view-overlay"></div>
+  <div class="quick-view-modal" id="quick-view-modal" role="dialog" aria-modal="true" aria-labelledby="qv-title">
+    <button class="modal-close-btn" id="qv-close-btn" aria-label="Close modal">
+      <i data-lucide="x"></i>
+    </button>
+    <div class="qv-modal-grid">
+      <div class="qv-media">
+        <img src="assets/hoodie_black.jpg" alt="Quick View Hoodie" id="qv-img" />
+      </div>
+      <div class="qv-details">
+        <span class="badge-tag mono" id="qv-badge">500 GSM HEAVYWEIGHT</span>
+        <h3 class="qv-title" id="qv-title">The Archive Pullover</h3>
+        <div class="qv-price-row">
+          <span class="qv-price" id="qv-price">$145.00</span>
+          <span class="qv-tag-stock">In Stock — Ships Next Business Day</span>
+        </div>
+        <p class="qv-desc" id="qv-desc">
+          Milled from custom 100% combed organic cotton French Terry. Rigid standing hood without cords, boxy dropped shoulder, pre-shrunk garment dye.
         </p>
-      </div>
 
-    </div>
-  </div>
-
-  <!-- Verified Customer Review Modal -->
-  <div class="info-modal" id="write-review-modal" role="dialog" aria-modal="true" aria-labelledby="write-review-title">
-    <div class="info-modal-header">
-      <h3 id="write-review-title"><i data-lucide="edit-3"></i> Submit a Verified Customer Review</h3>
-      <button class="info-modal-close" data-close-modal aria-label="Close review form"><i data-lucide="x"></i></button>
-    </div>
-    <div class="info-modal-body">
-      <form id="write-review-form">
-        <div class="form-grid">
-
-          <div class="form-group span-2">
-            <label>Select Star Rating:</label>
-            <div class="star-rating-picker" id="star-rating-picker">
-              <span class="star active" data-star="1">★</span>
-              <span class="star active" data-star="2">★</span>
-              <span class="star active" data-star="3">★</span>
-              <span class="star active" data-star="4">★</span>
-              <span class="star active" data-star="5">★</span>
-            </div>
+        <!-- Quick View Color Select -->
+        <div class="qv-option-group">
+          <span class="option-title">Colorway: <strong id="qv-selected-color">Vintage Washed Black</strong></span>
+          <div class="qv-color-dots" id="qv-color-dots">
+            <!-- populated by JS -->
           </div>
-
-          <div class="form-group span-2">
-            <label for="review-product-select">Sneaker Model Purchased</label>
-            <select id="review-product-select" required>
-              <option value="Nike Alphafly 3 World Record">Nike Alphafly 3 World Record</option>
-              <option value="Nike ZoomX Vaporfly 3">Nike ZoomX Vaporfly 3</option>
-              <option value="Nike Kobe 8 Protro Halo">Nike Kobe 8 Protro Halo</option>
-              <option value="ANTA KAI 1 Artist on Court">ANTA KAI 1 "Artist on Court"</option>
-              <option value="ANTA KT9 Captain Klay">ANTA KT9 "Captain Klay"</option>
-              <option value="Air Jordan 4 Retro Bred Reimagined">Air Jordan 4 Retro "Bred Reimagined"</option>
-              <option value="Converse Chuck 70 Vintage Canvas">Converse Chuck 70 Vintage Canvas</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="review-author-name">Your Full Name / Nickname</label>
-            <input type="text" id="review-author-name" placeholder="e.g. Marcus K." required />
-          </div>
-
-          <div class="form-group">
-            <label for="review-location">City, State / Country</label>
-            <input type="text" id="review-location" placeholder="e.g. Chicago, IL" required />
-          </div>
-
-          <div class="form-group span-2">
-            <label for="review-headline">Review Headline</label>
-            <input type="text" id="review-headline" placeholder="e.g. Unbelievable comfort and lightning fast shipping!"
-              required />
-          </div>
-
-          <div class="form-group span-2">
-            <label for="review-body">Detailed Review & Performance Feedback</label>
-            <textarea id="review-body" rows="4"
-              style="width:100%; background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-sm); padding:0.65rem; color:#fff; font-family:var(--font-body); font-size:0.85rem;"
-              placeholder="Tell athletes about fit, traction, cushioning, and race-day performance..."
-              required></textarea>
-          </div>
-
         </div>
 
-        <button type="submit" class="btn-primary btn-full mt-3" id="submit-review-btn">
-          <i data-lucide="check-circle"></i>
-          <span>Publish Verified Review</span>
+        <!-- Quick View Size Select -->
+        <div class="qv-option-group">
+          <div class="option-header-row">
+            <span class="option-title">Size:</span>
+            <button class="link-size-guide" id="qv-size-guide-btn"><i data-lucide="ruler"></i> View Size Chart</button>
+          </div>
+          <div class="size-options qv-sizes" id="qv-sizes">
+            <button class="size-btn" data-size="S">S</button>
+            <button class="size-btn" data-size="M">M</button>
+            <button class="size-btn active" data-size="L">L</button>
+            <button class="size-btn" data-size="XL">XL</button>
+            <button class="size-btn" data-size="XXL">XXL</button>
+          </div>
+        </div>
+
+        <button class="btn-primary qv-add-btn" id="qv-add-to-bag-btn">
+          <i data-lucide="shopping-bag"></i>
+          <span>Add to Bag — <span id="qv-button-price">$145.00</span></span>
         </button>
-      </form>
+      </div>
     </div>
   </div>
 
   <!-- ==========================================================================
-       Mobile Floating App Bottom Navigation Bar
+       16. Interactive Checkout & Confirmation Simulation Modal
        ========================================================================== -->
-  <nav class="mobile-bottom-bar" id="mobile-bottom-bar" aria-label="Mobile Navigation">
-    <button class="mobile-bottom-item active" id="mob-nav-home" onclick="window.scrollTo({top:0,behavior:'smooth'})"
-      aria-label="Vault Home">
-      <i data-lucide="home"></i>
-      <span>Vault</span>
+  <div class="modal-overlay" id="checkout-modal-overlay"></div>
+  <div class="checkout-modal" id="checkout-modal" role="dialog" aria-modal="true">
+    <button class="modal-close-btn" id="checkout-close-btn" aria-label="Close Checkout">
+      <i data-lucide="x"></i>
     </button>
-    <button class="mobile-bottom-item" id="mob-nav-catalog"
-      onclick="document.getElementById('catalog').scrollIntoView({behavior:'smooth'})" aria-label="Footwear Catalog">
-      <i data-lucide="grid"></i>
-      <span>Drops</span>
-    </button>
-    <button class="mobile-bottom-item" id="mob-nav-wishlist" data-action="open-wishlist" aria-label="Saved Wishlist">
-      <div class="mob-icon-wrap">
-        <i data-lucide="heart"></i>
-        <span class="badge-count wishlist-badge-count" style="display:none;">0</span>
-      </div>
-      <span>Wishlist</span>
-    </button>
-    <button class="mobile-bottom-item" id="mob-nav-cart" data-action="open-cart" aria-label="Shopping Bag">
-      <div class="mob-icon-wrap">
-        <i data-lucide="shopping-bag"></i>
-        <span class="badge-count cart-badge-count" style="display:none;">0</span>
-      </div>
-      <span>Bag</span>
-    </button>
-    <button class="mobile-bottom-item" id="mob-nav-concierge" data-open-modal="concierge"
-      aria-label="24/7 Sneaker Concierge">
-      <i data-lucide="headphones"></i>
-      <span>Concierge</span>
-    </button>
-  </nav>
 
-  <!-- Application Logic -->
+    <div class="checkout-modal-inner" id="checkout-step-container">
+
+      <!-- Step 1: Payment & Shipping Input -->
+      <div class="checkout-step active" id="checkout-step-form">
+        <div class="checkout-header">
+          <div class="brand-mark small">P/S</div>
+          <h3>EXPRESS CHECKOUT</h3>
+          <p>Order Total: <strong id="checkout-step-total">$145.00</strong></p>
+        </div>
+
+        <!-- Express Apple / Google Pay simulated buttons -->
+        <div class="express-pay-buttons">
+          <button class="btn-express-pay apple" id="btn-apple-pay">
+            <i data-lucide="smartphone"></i> Pay with Apple Pay
+          </button>
+          <button class="btn-express-pay google" id="btn-google-pay">
+            <i data-lucide="credit-card"></i> Pay with Google Pay
+          </button>
+        </div>
+
+        <div class="checkout-or-sep"><span>OR PAY WITH CARD</span></div>
+
+        <form class="checkout-form" id="simulated-checkout-form">
+          <div class="form-row">
+            <div class="form-field full">
+              <label for="co-email">Email Address</label>
+              <input type="email" id="co-email" placeholder="you@streetwear.com" required value="collector@purpose.studio" />
+            </div>
+          </div>
+
+          <div class="form-row two-col">
+            <div class="form-field">
+              <label for="co-first">First Name</label>
+              <input type="text" id="co-first" placeholder="Marcus" required value="Alex" />
+            </div>
+            <div class="form-field">
+              <label for="co-last">Last Name</label>
+              <input type="text" id="co-last" placeholder="Vance" required value="Mercer" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field full">
+              <label for="co-address">Delivery Address</label>
+              <input type="text" id="co-address" placeholder="742 Evergreen Terrace, Apt 4" required value="450 Mercer St, Soho, NY 10013" />
+            </div>
+          </div>
+
+          <div class="form-row two-col">
+            <div class="form-field">
+              <label for="co-city">City</label>
+              <input type="text" id="co-city" required value="New York" />
+            </div>
+            <div class="form-field">
+              <label for="co-zip">Postal / Zip Code</label>
+              <input type="text" id="co-zip" required value="10013" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field full">
+              <label for="co-card">Credit Card Number</label>
+              <input type="text" id="co-card" placeholder="4242 •••• •••• 4242" required value="4242 8888 9999 1234" />
+            </div>
+          </div>
+
+          <div class="form-row two-col">
+            <div class="form-field">
+              <label for="co-exp">Expiry (MM/YY)</label>
+              <input type="text" id="co-exp" placeholder="12/28" required value="08/28" />
+            </div>
+            <div class="form-field">
+              <label for="co-cvv">CVC</label>
+              <input type="text" id="co-cvv" placeholder="888" required value="888" />
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary btn-submit-order" id="btn-submit-order">
+            <i data-lucide="lock"></i>
+            <span>Complete Order & Authorize Payment</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Step 2: Order Confirmation Receipt -->
+      <div class="checkout-step" id="checkout-step-success" style="display: none;">
+        <div class="confirmation-box">
+          <div class="conf-icon"><i data-lucide="check"></i></div>
+          <span class="conf-tag">ORDER CONFIRMED</span>
+          <h3 class="conf-title">THANK YOU FOR YOUR ORDER</h3>
+          <p class="conf-id">Order Reference: <strong id="order-ref-num">#PS-849204</strong></p>
+          <p class="conf-desc">
+            Your 500 GSM Heavyweight Hoodie order has been secured in Batch #004. A confirmation email with DHL Express tracking details has been sent.
+          </p>
+
+          <div class="conf-items-summary" id="conf-items-summary">
+            <!-- Populated dynamically -->
+          </div>
+
+          <div class="conf-action-btns" style="display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap;">
+            <button class="btn-primary" id="conf-track-order-btn" style="flex: 1;">
+              <i data-lucide="package-search"></i>
+              <span>Track Order Live</span>
+            </button>
+            <button class="btn-secondary" id="conf-continue-shopping" style="flex: 1;">
+              <span>Continue Exploring</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       16.5 Fastlane Biometric Wallet Authorization Sheet Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="fastlane-modal-overlay"></div>
+  <div class="fastlane-modal" id="fastlane-modal" role="dialog" aria-modal="true" aria-labelledby="fl-wallet-title">
+    <div class="fastlane-modal-sheet">
+      <div class="fl-sheet-handle"></div>
+      
+      <div class="fl-header">
+        <div class="fl-wallet-brand" id="fl-wallet-brand">
+          <i data-lucide="smartphone" id="fl-brand-icon"></i>
+          <span id="fl-wallet-title">Apple Pay Express</span>
+        </div>
+        <button class="fl-close-btn" id="fl-close-btn" aria-label="Cancel Express Pay"><i data-lucide="x"></i></button>
+      </div>
+
+      <div class="fl-body">
+        <div class="fl-merchant-card">
+          <div class="fl-merchant-logo">P/S</div>
+          <div class="fl-merchant-info">
+            <strong>PURPOSE / STUDIO™</strong>
+            <span>Batch #004 Heavyweight Allocation</span>
+          </div>
+          <div class="fl-total-amount" id="fl-total-amount">$145.00</div>
+        </div>
+
+        <div class="fl-details-list">
+          <div class="fl-row">
+            <span class="fl-label">Payment Card</span>
+            <span class="fl-val" id="fl-card-val"><i data-lucide="credit-card"></i> Apple Card (•••• 8492)</span>
+          </div>
+          <div class="fl-row">
+            <span class="fl-label">Express Shipping</span>
+            <span class="fl-val" id="fl-ship-val">DHL Express Air • 3-4 Days (FREE)</span>
+          </div>
+          <div class="fl-row">
+            <span class="fl-label">Deliver To</span>
+            <span class="fl-val" id="fl-dest-val">Marcus Vance • Soho, New York, NY</span>
+          </div>
+          <div class="fl-row">
+            <span class="fl-label">Items Secured</span>
+            <span class="fl-val" id="fl-items-val">The Archive Pullover (L)</span>
+          </div>
+        </div>
+
+        <!-- Biometric Simulator Action -->
+        <div class="fl-biometric-stage" id="fl-biometric-stage">
+          <div class="fl-faceid-icon-wrap" id="fl-faceid-wrap">
+            <i data-lucide="scan-face" id="fl-faceid-icon"></i>
+            <div class="fl-scan-line"></div>
+          </div>
+          <span class="fl-bio-hint" id="fl-bio-hint">Double Click Side Button or Tap Below to Pay</span>
+        </div>
+
+        <button type="button" class="btn-fastlane-confirm" id="btn-fastlane-confirm">
+          <i data-lucide="fingerprint"></i>
+          <span id="fl-btn-text">Authorize & Confirm Payment</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       17. Quick Search Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="search-modal-overlay"></div>
+  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true">
+    <div class="search-modal-header">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" id="search-input" placeholder="Search by colorway, GSM weight, or silhouette (e.g., Black, Zip, 500 GSM)..." autofocus />
+      <button class="search-close-btn" id="search-close-btn" aria-label="Close search"><i data-lucide="x"></i></button>
+    </div>
+    <div class="search-modal-results" id="search-results-container">
+      <div class="search-prompt">Type to search the Batch #004 Archive...</div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
   <script src="app.js"></script>
 </body>
 

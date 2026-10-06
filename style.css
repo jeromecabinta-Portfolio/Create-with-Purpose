@@ -5007,7 +5007,44 @@ ul {
    Ensures bulletproof layouts from 4K down to 320px mobile screens
    ========================================================================== */
 
-/* --- Breakpoint: Laptops & Narrow Desktops (<= 1280px) --- */
+/* --- Universal Viewport Armor & Horizontal Scroll Prevention --- */
+html,
+body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  position: relative !important;
+  box-sizing: border-box;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.section-container,
+.hero-container,
+.header-container {
+  box-sizing: border-box;
+}
+
+/* Ensure long brutalist headings never break out of viewport boundaries */
+.hero-title,
+.section-title,
+.bundle-title,
+.finder-title,
+.vip-title,
+.conf-title,
+.product-name {
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  hyphens: manual;
+}
+
+/* --- Breakpoint: Laptops & Medium Screens (<= 1280px) --- */
 @media (max-width: 1280px) {
   .header-container {
     padding: 0 24px;
@@ -5028,6 +5065,9 @@ ul {
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
   }
+  .products-grid {
+    gap: 22px;
+  }
 }
 
 /* --- Breakpoint: Small Laptops & Large Tablets (<= 1080px) --- */
@@ -5046,7 +5086,12 @@ ul {
   }
   .hero-container {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
+  }
+  .hero-showcase-card {
+    max-width: 680px;
+    margin: 0 auto;
+    width: 100%;
   }
   .bundle-layout {
     grid-template-columns: 1fr;
@@ -5069,6 +5114,7 @@ ul {
   }
   .qv-modal-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
   .fastlane-wallets-grid {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -5078,9 +5124,12 @@ ul {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 24px;
   }
+  .silhouette-picker-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
 }
 
-/* --- Breakpoint: Medium Tablets & Compact Screens (<= 900px) --- */
+/* --- Breakpoint: Medium Tablets & Small Laptops (<= 900px) --- */
 @media (max-width: 900px) {
   .order-grid {
     grid-template-columns: 1fr !important;
@@ -5104,13 +5153,18 @@ ul {
     margin-bottom: 0 !important;
     flex-shrink: 0;
   }
+  .reviews-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
 }
 
-/* --- Breakpoint: Tablets & Phablets (<= 768px) --- */
+/* --- Breakpoint: Tablets Portrait & Large Mobile (<= 768px) --- */
 @media (max-width: 768px) {
   :root {
-    --header-height: 68px;
+    --header-height: 66px;
   }
+
   .header-container {
     padding: 0 16px;
     gap: 12px;
@@ -5126,7 +5180,7 @@ ul {
     display: none !important;
   }
   .brand-main {
-    font-size: 1.05rem;
+    font-size: 1.02rem;
   }
   .brand-mark {
     width: 38px;
@@ -5160,32 +5214,62 @@ ul {
 
   /* Section Spacers */
   .hero-section {
-    padding: 36px 0 54px;
+    padding: 32px 0 48px;
   }
   .collection-section,
   .fabric-lab-section,
   .size-finder-section,
+  .lookbook-section,
+  .bundle-section,
   .order-station-section,
   .reviews-section,
   .faq-section {
-    padding: 60px 0 !important;
+    padding: 50px 0 !important;
   }
 
-  /* Hero Section Mobile Polish */
+  /* Responsive Brutalist Typography */
   .hero-title {
-    font-size: clamp(2.1rem, 7.5vw, 3.4rem);
-    line-height: 1.08;
+    font-size: clamp(1.65rem, 6.4vw, 2.7rem) !important;
+    line-height: 1.1 !important;
     margin-bottom: 18px;
+    letter-spacing: -0.02em !important;
+  }
+  .hero-title .gradient-text {
+    display: inline-block;
   }
   .hero-lead {
-    font-size: 0.96rem;
-    line-height: 1.6;
-    margin-bottom: 26px;
+    font-size: 0.94rem;
+    line-height: 1.58;
+    margin-bottom: 24px;
   }
   .hero-specs-grid {
     grid-template-columns: 1fr !important;
     gap: 12px;
     padding: 16px;
+  }
+  .section-title {
+    font-size: clamp(1.35rem, 5vw, 2.1rem) !important;
+    line-height: 1.15 !important;
+    margin-bottom: 14px;
+    letter-spacing: -0.02em !important;
+  }
+  .header-pre {
+    font-size: 0.7rem !important;
+    letter-spacing: 0.16em !important;
+    margin-bottom: 8px;
+  }
+  .section-subtitle {
+    font-size: 0.94rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 26px !important;
+  }
+
+  /* Swatches wrap safely */
+  .color-dots {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    max-width: 100% !important;
   }
 
   /* Collection Catalog */
@@ -5194,7 +5278,7 @@ ul {
     overflow-x: auto;
     flex-wrap: nowrap !important;
     padding-bottom: 8px;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
@@ -5209,7 +5293,33 @@ ul {
   }
   .products-grid {
     grid-template-columns: 1fr !important;
-    gap: 28px;
+    gap: 26px;
+  }
+  .product-card {
+    max-width: 100%;
+  }
+  .product-media {
+    aspect-ratio: 4 / 5 !important;
+    height: auto !important;
+    min-height: 380px !important;
+  }
+  .size-options {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    width: 100% !important;
+  }
+  .size-btn {
+    flex: 1 1 calc(20% - 6px) !important;
+    min-width: 38px !important;
+    height: 38px !important;
+    padding: 0 4px !important;
+    font-size: 0.78rem !important;
+  }
+  .btn-add-to-cart {
+    width: 100% !important;
+    height: 48px !important;
+    font-size: 0.84rem !important;
   }
 
   /* Bundle Capsule Card */
@@ -5217,16 +5327,48 @@ ul {
     padding: 26px 18px !important;
   }
   .bundle-title {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
+    line-height: 1.15;
   }
   .bundle-btn {
     width: 100%;
     justify-content: center;
   }
+  .bundle-overlap {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    height: 240px;
+    margin: 0 auto 20px;
+  }
+  .bundle-img {
+    width: 180px !important;
+    height: auto !important;
+  }
+
+  /* Fabric Lab & Hotspots */
+  .hotspot-popover {
+    max-width: calc(100vw - 40px) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  /* Lookbook Mobile Pins - Floating bottom sheet for readability */
+  .pin-popover {
+    position: fixed !important;
+    bottom: 24px !important;
+    top: auto !important;
+    left: 16px !important;
+    right: 16px !important;
+    transform: none !important;
+    width: auto !important;
+    max-width: calc(100vw - 32px) !important;
+    z-index: 1000 !important;
+  }
 
   /* Size Finder */
   .size-finder-card {
-    padding: 26px 18px !important;
+    padding: 24px 18px !important;
   }
   .fit-style-options {
     grid-template-columns: 1fr !important;
@@ -5274,14 +5416,25 @@ ul {
     flex: 1 !important;
     justify-content: center;
   }
+  .silhouette-picker-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+  .shipping-fields-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .shipping-fields-grid .full {
+    grid-column: span 1 !important;
+  }
+  .payment-methods-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
 
   /* Reviews & FAQ */
-  .reviews-grid {
-    grid-template-columns: 1fr !important;
-    gap: 20px;
-  }
   .review-card {
-    padding: 24px 18px;
+    padding: 22px 18px;
   }
   .footer-container {
     grid-template-columns: 1fr !important;
@@ -5323,23 +5476,12 @@ ul {
     padding: 12px 16px !important;
     font-size: 0.8rem !important;
   }
-  .shipping-fields-grid {
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-  }
-  .shipping-fields-grid .full {
-    grid-column: span 1 !important;
-  }
   .size-qty-row {
     grid-template-columns: 1fr !important;
-    gap: 18px !important;
+    gap: 16px !important;
   }
   .order-qty-stepper {
     width: fit-content;
-  }
-  .silhouette-picker-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px !important;
   }
   .tracker-input-row {
     flex-direction: column !important;
@@ -5354,15 +5496,19 @@ ul {
     height: 48px;
   }
   .order-tracker-card {
-    padding: 26px 16px !important;
+    padding: 24px 16px !important;
+  }
+  .top-announcement-bar .announcement-track {
+    padding-right: 110px;
   }
 }
 
 /* --- Breakpoint: Standard Smartphones (<= 480px) --- */
 @media (max-width: 480px) {
   :root {
-    --header-height: 62px;
+    --header-height: 60px;
   }
+
   .header-container {
     padding: 0 12px;
     gap: 8px;
@@ -5376,7 +5522,7 @@ ul {
     font-size: 0.78rem;
   }
   .brand-main {
-    font-size: 0.88rem;
+    font-size: 0.86rem;
   }
   .btn-header-express {
     display: none !important;
@@ -5399,9 +5545,32 @@ ul {
   #wishlist-trigger-btn {
     display: none !important;
   }
-  .announcement-bar {
-    font-size: 0.65rem;
-    padding: 6px 10px;
+
+  .section-container {
+    padding: 0 16px !important;
+  }
+  .hero-container {
+    padding: 0 16px !important;
+  }
+
+  /* Headline Scaling for Narrow Viewports */
+  .hero-title {
+    font-size: clamp(1.4rem, 6.8vw, 1.95rem) !important;
+    line-height: 1.14 !important;
+  }
+  .section-title {
+    font-size: clamp(1.18rem, 5.8vw, 1.55rem) !important;
+    line-height: 1.18 !important;
+  }
+  .section-subtitle {
+    font-size: 0.88rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 20px !important;
+  }
+  .bundle-title,
+  .finder-title,
+  .vip-title {
+    font-size: clamp(1.18rem, 5.5vw, 1.45rem) !important;
   }
 
   /* Full-width CTA Buttons for Thumb Usability */
@@ -5416,6 +5585,12 @@ ul {
     justify-content: center !important;
     text-align: center;
     padding: 14px 20px;
+  }
+
+  .stock-status-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
   }
 
   /* Fastlane 1-Click Wallets Stacked */
@@ -5471,11 +5646,12 @@ ul {
   }
   .mobile-nav-drawer {
     width: 100% !important;
+    max-width: 100% !important;
   }
   .fastlane-modal-sheet {
     padding: 22px 16px !important;
     max-width: 100% !important;
-    border-radius: var(--radius-md) !important;
+    border-radius: 14px 14px 0 0 !important;
   }
   .checkout-modal-inner {
     padding: 22px 14px !important;
@@ -5488,6 +5664,10 @@ ul {
 
 /* --- Breakpoint: Compact & Foldable Phones (<= 360px) --- */
 @media (max-width: 360px) {
+  .section-container,
+  .hero-container {
+    padding: 0 12px !important;
+  }
   .brand-main {
     font-size: 0.8rem;
   }
@@ -5495,6 +5675,12 @@ ul {
     width: 28px;
     height: 28px;
     font-size: 0.72rem;
+  }
+  .hero-title {
+    font-size: clamp(1.25rem, 6.2vw, 1.55rem) !important;
+  }
+  .section-title {
+    font-size: clamp(1.05rem, 5.2vw, 1.35rem) !important;
   }
   .silhouette-picker-grid {
     grid-template-columns: 1fr !important;
@@ -5510,5 +5696,10 @@ ul {
   .size-finder-card,
   .bundle-card {
     padding: 16px 12px !important;
+  }
+  .size-btn {
+    min-width: 32px !important;
+    height: 34px !important;
+    font-size: 0.72rem !important;
   }
 }

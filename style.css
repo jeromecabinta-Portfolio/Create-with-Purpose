@@ -1099,8 +1099,8 @@ ul {
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  gap: 36px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
 }
 
 .product-card {
@@ -5073,6 +5073,10 @@ ul {
   .fastlane-wallets-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 10px;
+  }
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px;
   }
 }
 

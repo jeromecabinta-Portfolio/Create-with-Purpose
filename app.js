@@ -602,13 +602,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuIconOpen = document.getElementById('menu-icon-open');
   const menuIconClose = document.getElementById('menu-icon-close');
 
+  const stickyNavWrapper = document.getElementById('tt-sticky-nav-wrapper');
+
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 30) {
-      siteHeader.classList.add('scrolled');
+    if (window.scrollY > 20) {
+      if (siteHeader) siteHeader.classList.add('scrolled');
+      if (stickyNavWrapper) stickyNavWrapper.classList.add('scrolled');
     } else {
-      siteHeader.classList.remove('scrolled');
+      if (siteHeader) siteHeader.classList.remove('scrolled');
+      if (stickyNavWrapper) stickyNavWrapper.classList.remove('scrolled');
     }
-  });
+  }, { passive: true });
 
   function openMobileMenu() {
     if (mobileDrawer) mobileDrawer.classList.add('open');
@@ -2422,6 +2426,615 @@ document.addEventListener('DOMContentLoaded', () => {
   updateWishlistBadge();
   updateCartUI();
   updateAllPricesOnPage();
+
+
+  /* ==========================================================================
+     TIKTOK SHOP INTERACTIVE ENGINE & UI LOGIC
+     ========================================================================== */
+  function initTikTokShopFeatures() {
+    // 1. TikTok Central Search Experience
+    const ttSearchInput = document.getElementById('tt-search-input');
+    const ttSearchForm = document.getElementById('tt-header-search-form');
+    const ttCamBtn = document.getElementById('tt-cam-search-btn');
+    const trendingTags = document.querySelectorAll('.tt-trending-tag');
+
+    const searchPlaceholders = [
+      "Search '500 GSM Archive Pullover'...",
+      "Search 'Flash Sale 25% OFF'...",
+      "Search 'Two-Way Zip Dark Asphalt'...",
+      "Search 'Chalk Bone Alabaster'...",
+      "Search 'Creator Live Try-On'...",
+      "Search '100% Combed French Terry'..."
+    ];
+    let placeholderIdx = 0;
+    if (ttSearchInput) {
+      setInterval(() => {
+        placeholderIdx = (placeholderIdx + 1) % searchPlaceholders.length;
+        ttSearchInput.setAttribute('placeholder', searchPlaceholders[placeholderIdx]);
+      }, 3500);
+
+      const performTTSearch = (query) => {
+        if (!query) return;
+        const q = query.toLowerCase().trim();
+        const cards = document.querySelectorAll('.product-card');
+        let matched = 0;
+        cards.forEach(card => {
+          const title = (card.querySelector('.product-name')?.textContent || '').toLowerCase();
+          const cut = (card.querySelector('.product-cut')?.textContent || '').toLowerCase();
+          const category = (card.getAttribute('data-category') || '').toLowerCase();
+          if (title.includes(q) || cut.includes(q) || category.includes(q) || q === 'flash' || q === 'voucher') {
+            card.style.display = '';
+            matched++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        showToast(`Archive Search: Found ${matched} hoodies for "${query}"`, 'search');
+        const collectionEl = document.getElementById('collection');
+        if (collectionEl) collectionEl.scrollIntoView({ behavior: 'smooth' });
+      };
+
+      if (ttSearchForm) {
+        ttSearchForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          performTTSearch(ttSearchInput.value);
+        });
+      }
+
+      trendingTags.forEach(tag => {
+        tag.addEventListener('click', () => {
+          const q = tag.getAttribute('data-query') || tag.textContent.trim();
+          ttSearchInput.value = q;
+          performTTSearch(q);
+        });
+      });
+    }
+
+    if (ttCamBtn) {
+      ttCamBtn.addEventListener('click', () => {
+        showToast('📷 AI Visual Lens: Scanning image... Matched 500 GSM French Terry!', 'camera');
+        const firstCard = document.querySelector('.product-card');
+        if (firstCard) {
+          firstCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          firstCard.style.outline = '3px solid var(--accent-volt)';
+          setTimeout(() => { firstCard.style.outline = 'none'; }, 3000);
+        }
+      });
+    }
+
+    // 2. TikTok Shop Category Ribbon Smooth Scroll & Active Indicator
+    const ribbonLinks = document.querySelectorAll('.tt-cat-item');
+    ribbonLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          ribbonLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+
+    // 3. TikTok Flash Deal Countdown Timer (Hours, Minutes, Seconds)
+    const hoursEl = document.getElementById('tt-timer-hours');
+    const minutesEl = document.getElementById('tt-timer-minutes');
+    const secondsEl = document.getElementById('tt-timer-seconds');
+    if (hoursEl && minutesEl && secondsEl) {
+      let totalSeconds = 2 * 3600 + 44 * 60 + 19;
+      setInterval(() => {
+        if (totalSeconds > 0) {
+          totalSeconds--;
+          const h = Math.floor(totalSeconds / 3600);
+          const m = Math.floor((totalSeconds % 3600) / 60);
+          const s = totalSeconds % 60;
+          hoursEl.textContent = String(h).padStart(2, '0');
+          minutesEl.textContent = String(m).padStart(2, '0');
+          secondsEl.textContent = String(s).padStart(2, '0');
+        }
+      }, 1000);
+    }
+
+    // 4. TikTok Mega Voucher Center "Claim" Interactivity
+    const claimAllBtn = document.getElementById('tt-claim-all-vouchers-btn');
+    const couponBtns = document.querySelectorAll('.tt-coupon-btn');
+
+    couponBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (btn.classList.contains('claimed')) {
+          showToast('Coupon already claimed and applied to your cart!', 'ticket');
+        } else {
+          btn.classList.add('claimed');
+          btn.textContent = 'Claimed ✓';
+          showToast('🎟️ Drop 04 Voucher claimed! Discount active.', 'ticket');
+        }
+      });
+    });
+
+    if (claimAllBtn) {
+      claimAllBtn.addEventListener('click', () => {
+        couponBtns.forEach(btn => {
+          btn.classList.add('claimed');
+          btn.textContent = 'Claimed ✓';
+        });
+        claimAllBtn.classList.add('claimed');
+        claimAllBtn.innerHTML = '<i data-lucide="check-circle"></i> <span>All 4 Vouchers Claimed ($55 Unlocked)</span>';
+        if (window.lucide) window.lucide.createIcons();
+        showToast('🎉 All 4 Drop 04 Vouchers Claimed! $55 discount unlocked!', 'gift');
+      });
+    }
+
+    // 5. TikTok LIVE Shopping Studio Simulation
+    const liveVideoWrap = document.getElementById('tt-live-video-wrap');
+    const heartsLayer = document.getElementById('tt-floating-hearts-layer');
+    const sendHeartBtn = document.getElementById('tt-send-heart-btn');
+    const chatInput = document.getElementById('tt-live-chat-input');
+    const chatMessagesWrap = document.getElementById('tt-live-chat-messages');
+
+    const spawnFloatingHeart = (emoji = '❤️') => {
+      if (!heartsLayer) return;
+      const heart = document.createElement('div');
+      heart.className = 'tt-floating-heart';
+      const emojis = ['❤️', '🔥', '✨', '💖', '⚡', '💯'];
+      heart.textContent = emoji === 'random' ? emojis[Math.floor(Math.random() * emojis.length)] : emoji;
+      heart.style.left = Math.floor(Math.random() * 50) + 'px';
+      heartsLayer.appendChild(heart);
+      setTimeout(() => heart.remove(), 2500);
+    };
+
+    if (liveVideoWrap) {
+      liveVideoWrap.addEventListener('click', (e) => {
+        if (!e.target.closest('#tt-yellow-basket-pin')) {
+          spawnFloatingHeart('random');
+        }
+      });
+    }
+
+    if (sendHeartBtn) {
+      sendHeartBtn.addEventListener('click', () => {
+        spawnFloatingHeart('❤️');
+        spawnFloatingHeart('🔥');
+      });
+    }
+
+    const liveChatStream = [
+      { user: '@toronto_fits', text: 'Does the 500 GSM stay structured after 50 washes?', vip: false },
+      { user: 'Host @purpose.official', text: 'Yes! Pre-shrunk with silicone wash, stays rock solid!', vip: true },
+      { user: '@alex_brooklyn', text: 'Copped the Dark Asphalt Two-Way Zip! That matte zipper is clean ✨', vip: false },
+      { user: '@copenhagen_drip', text: 'The hood stands straight up without drawstrings, exactly what I needed 💯', vip: false },
+      { user: '@hype_collector', text: 'Batch #004 is almost gone, just 42 pieces left!', vip: false },
+      { user: 'Host @purpose.official', text: 'Tap the yellow basket #1 below to lock in the $55 live voucher!', vip: true },
+      { user: '@chloe_vintage', text: 'Chalk Bone is unbleached organic cotton right? Ordering now 🤍', vip: false },
+      { user: '@streetwear_daily', text: 'Shipping to Europe took only 3 days for Drop 03, super fast! 🚀', vip: false }
+    ];
+    let chatIdx = 0;
+    if (chatMessagesWrap) {
+      setInterval(() => {
+        const item = liveChatStream[chatIdx];
+        chatIdx = (chatIdx + 1) % liveChatStream.length;
+        const bubble = document.createElement('div');
+        bubble.className = 'tt-chat-bubble';
+        bubble.innerHTML = `
+          <span class="tt-chat-user ${item.vip ? 'host' : ''}">${item.user}:</span>
+          <span class="tt-chat-text">${item.text}</span>
+        `;
+        chatMessagesWrap.appendChild(bubble);
+        chatMessagesWrap.scrollTop = chatMessagesWrap.scrollHeight;
+        if (chatMessagesWrap.children.length > 25) {
+          chatMessagesWrap.firstElementChild.remove();
+        }
+      }, 3200);
+
+      if (chatInput) {
+        chatInput.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' && chatInput.value.trim()) {
+            const userText = chatInput.value.trim();
+            chatInput.value = '';
+            const bubble = document.createElement('div');
+            bubble.className = 'tt-chat-bubble';
+            bubble.innerHTML = `
+              <span class="tt-chat-user vip">You:</span>
+              <span class="tt-chat-text">${userText}</span>
+            `;
+            chatMessagesWrap.appendChild(bubble);
+            chatMessagesWrap.scrollTop = chatMessagesWrap.scrollHeight;
+            spawnFloatingHeart('🔥');
+          }
+        });
+      }
+    }
+
+    // 6. Yellow Basket Pin #1 Click Action
+    const livePinBuyBtn = document.getElementById('tt-live-pin-buy-btn');
+    if (livePinBuyBtn) {
+      livePinBuyBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openTikTokBottomSheet({
+          id: 'hoodie-black',
+          title: 'The Archive Pullover — Vintage Washed Black (500 GSM)',
+          price: 125,
+          origPrice: 180,
+          color: 'Vintage Washed Black',
+          img: 'assets/hoodie_black.jpg'
+        });
+      });
+    }
+
+    // 6.5 Live Camera Switcher (Try-On, Pin #1 Studio, 500 GSM Weave)
+    const camSwitchBtns = document.querySelectorAll('.tt-cam-switch-btn');
+    const liveStreamImg = document.getElementById('tt-live-stream-img');
+    if (camSwitchBtns.length && liveStreamImg) {
+      camSwitchBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          camSwitchBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const targetImg = btn.getAttribute('data-img');
+          liveStreamImg.style.opacity = '0.3';
+          setTimeout(() => {
+            liveStreamImg.src = targetImg;
+            liveStreamImg.style.opacity = '1';
+          }, 150);
+          showToast(`📹 Switched to ${btn.textContent.trim()} camera!`, 'video');
+        });
+      });
+    }
+
+    // 7. Floating TikTok LIVE Mini-PIP Player
+    const livePipPlayer = document.getElementById('tt-live-pip-player');
+    const livePipCloseBtn = document.getElementById('tt-pip-close-btn');
+    const livePipShopBtn = document.getElementById('tt-pip-shop-btn');
+    const liveSection = document.getElementById('tiktok-live');
+
+    let pipDismissed = false;
+    if (livePipPlayer && liveSection) {
+      window.addEventListener('scroll', () => {
+        if (pipDismissed) return;
+        const rect = liveSection.getBoundingClientRect();
+        if (rect.bottom < -100) {
+          livePipPlayer.classList.add('active');
+        } else {
+          livePipPlayer.classList.remove('active');
+        }
+      }, { passive: true });
+
+      if (livePipCloseBtn) {
+        livePipCloseBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          pipDismissed = true;
+          livePipPlayer.classList.remove('active');
+        });
+      }
+
+      if (livePipShopBtn) {
+        livePipShopBtn.addEventListener('click', () => {
+          openTikTokBottomSheet({
+            id: 'hoodie-black',
+            title: 'The Archive Pullover — Vintage Washed Black (500 GSM)',
+            price: 125,
+            origPrice: 180,
+            color: 'Vintage Washed Black',
+            img: 'assets/hoodie_black.jpg'
+          });
+        });
+      }
+    }
+
+    // 8. TikTok "Shop The Feed" (Reels Carousel) Actions
+    const reelCards = document.querySelectorAll('.tt-reel-card');
+    reelCards.forEach(card => {
+      const video = card.querySelector('.tt-reel-video');
+      const likeBtn = card.querySelector('.tt-reel-action-btn[data-action="like"]');
+      const commentBtn = card.querySelector('.tt-reel-action-btn[data-action="comment"]');
+      const shareBtn = card.querySelector('.tt-reel-action-btn[data-action="share"]');
+      const shopWidget = card.querySelector('.tt-reel-shop-widget');
+
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('.tt-reel-actions-rail') || e.target.closest('.tt-reel-shop-widget')) return;
+        if (video) {
+          if (video.paused) {
+            video.play();
+          } else {
+            video.pause();
+          }
+        } else if (shopWidget) {
+          shopWidget.click();
+        }
+      });
+
+      if (likeBtn) {
+        likeBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const countEl = likeBtn.querySelector('.tt-reel-action-count');
+          if (!likeBtn.classList.contains('liked')) {
+            likeBtn.classList.add('liked');
+            likeBtn.querySelector('.tt-reel-action-icon').textContent = '❤️';
+            showToast('❤️ Saved to Liked Hoodies!', 'heart');
+            if (countEl) {
+              const current = parseFloat(countEl.textContent) || 40;
+              countEl.textContent = (current + 0.1).toFixed(1) + 'K';
+            }
+          } else {
+            likeBtn.classList.remove('liked');
+          }
+        });
+      }
+
+      if (commentBtn) {
+        commentBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          showToast('💬 Top Review: "500 GSM loopback cotton has unbeatable drape and hood structure!"', 'message-circle');
+        });
+      }
+
+      if (shareBtn) {
+        shareBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          navigator.clipboard?.writeText(window.location.href);
+          showToast('🔗 Hoodie link copied to clipboard!', 'share-2');
+        });
+      }
+
+      if (shopWidget) {
+        shopWidget.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const pId = shopWidget.getAttribute('data-id');
+          const pTitle = shopWidget.getAttribute('data-title');
+          const pPrice = parseFloat(shopWidget.getAttribute('data-price')) || 145;
+          const pImg = shopWidget.getAttribute('data-img');
+          openTikTokBottomSheet({
+            id: pId,
+            title: pTitle,
+            price: pPrice,
+            origPrice: pPrice + 35,
+            color: 'Selected Silhouette',
+            img: pImg
+          });
+        });
+      }
+    });
+
+    // 9. Enhance All 40 Product Cards with TikTok Badges & Red "Buy Now" CTA
+    const productCards = document.querySelectorAll('.product-card');
+    productCards.forEach((card, index) => {
+      const info = card.querySelector('.product-info');
+      const addCartBtn = card.querySelector('.btn-add-to-cart');
+      if (!info) return;
+
+      if (!info.querySelector('.tt-product-social-row')) {
+        const socialRow = document.createElement('div');
+        socialRow.className = 'tt-product-social-row';
+        const soldCount = (12.4 + (index % 8) * 0.9).toFixed(1);
+        socialRow.innerHTML = `
+          <span style="color:var(--accent-gold); font-size: 0.85rem;">★★★★★</span>
+          <span class="tt-sold-badge">${soldCount}k sold</span>
+          <span class="tt-shipping-pill">🚚 Free Express</span>
+        `;
+        const nameEl = info.querySelector('.product-name');
+        if (nameEl) nameEl.after(socialRow);
+      }
+
+      if (!info.querySelector('.tt-card-voucher-pill')) {
+        const voucherPill = document.createElement('div');
+        voucherPill.className = 'tt-card-voucher-pill';
+        voucherPill.innerHTML = `🎟️ Extra $20 off with voucher`;
+        const pricingEl = info.querySelector('.product-pricing');
+        if (pricingEl) pricingEl.after(voucherPill);
+      }
+
+      if (addCartBtn && !info.querySelector('.btn-tt-buy-now')) {
+        const pId = addCartBtn.getAttribute('data-id') || 'hoodie';
+        const pTitle = addCartBtn.getAttribute('data-title') || 'Archive Hoodie';
+        const pPrice = parseFloat(addCartBtn.getAttribute('data-price')) || 145;
+        const pImg = addCartBtn.getAttribute('data-img') || 'assets/hoodie_black.jpg';
+        const pColor = addCartBtn.getAttribute('data-color') || 'Vintage Black';
+
+        const buyNowBtn = document.createElement('button');
+        buyNowBtn.type = 'button';
+        buyNowBtn.className = 'btn-tt-buy-now';
+        buyNowBtn.innerHTML = `⚡ Buy Now`;
+        buyNowBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const activeSizeBtn = card.querySelector('.size-btn.active');
+          const size = activeSizeBtn ? activeSizeBtn.getAttribute('data-size') : 'L';
+          openTikTokBottomSheet({
+            id: pId,
+            title: pTitle,
+            price: pPrice,
+            origPrice: pPrice + 35,
+            color: pColor,
+            img: pImg,
+            size: size
+          });
+        });
+
+        const actionsRow = document.createElement('div');
+        actionsRow.className = 'tt-card-actions-row';
+        addCartBtn.parentNode.insertBefore(actionsRow, addCartBtn);
+        actionsRow.appendChild(addCartBtn);
+        actionsRow.appendChild(buyNowBtn);
+      }
+    });
+
+    // 10. TikTok Shop Signature Quick Buy Bottom Sheet Modal
+    const bottomSheetOverlay = document.getElementById('tt-bottom-sheet-overlay');
+    const sheetThumb = document.getElementById('tt-sheet-thumb');
+    const sheetTitle = document.getElementById('tt-sheet-title');
+    const sheetFinalPrice = document.getElementById('tt-sheet-final-price');
+    const sheetOrigPrice = document.getElementById('tt-sheet-orig-price');
+    const sheetCtaPrice = document.getElementById('tt-sheet-cta-price');
+    const sheetCloseBtn = document.getElementById('tt-sheet-close-btn');
+    const sheetCheckoutBtn = document.getElementById('tt-sheet-checkout-btn');
+    const sizePills = document.querySelectorAll('.tt-sheet-size-pill');
+    const qtyMinus = document.getElementById('tt-qty-minus');
+    const qtyPlus = document.getElementById('tt-qty-plus');
+    const qtyVal = document.getElementById('tt-qty-val');
+
+    let currentSheetItem = null;
+    let currentSheetQty = 1;
+    let currentSheetSize = 'L';
+
+    function openTikTokBottomSheet(itemData) {
+      currentSheetItem = itemData;
+      currentSheetQty = 1;
+      if (qtyVal) qtyVal.textContent = '1';
+
+      if (sheetThumb) sheetThumb.src = itemData.img || 'assets/hoodie_black.jpg';
+      if (sheetTitle) sheetTitle.textContent = itemData.title || 'The Archive Pullover — 500 GSM';
+      const finalPrice = itemData.price || 125;
+      const origPrice = itemData.origPrice || (finalPrice + 55);
+
+      if (sheetFinalPrice) sheetFinalPrice.textContent = `$${finalPrice.toFixed(2)}`;
+      if (sheetOrigPrice) sheetOrigPrice.textContent = `$${origPrice.toFixed(2)}`;
+      if (sheetCtaPrice) sheetCtaPrice.textContent = `$${finalPrice.toFixed(2)}`;
+
+      if (itemData.size) {
+        currentSheetSize = itemData.size;
+        sizePills.forEach(pill => {
+          pill.classList.toggle('active', pill.getAttribute('data-size') === itemData.size);
+        });
+      }
+
+      if (bottomSheetOverlay) bottomSheetOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      if (window.lucide) window.lucide.createIcons();
+    }
+
+    function closeTikTokBottomSheet() {
+      if (bottomSheetOverlay) bottomSheetOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    if (sheetCloseBtn) sheetCloseBtn.addEventListener('click', closeTikTokBottomSheet);
+    if (bottomSheetOverlay) {
+      bottomSheetOverlay.addEventListener('click', (e) => {
+        if (e.target === bottomSheetOverlay) closeTikTokBottomSheet();
+      });
+    }
+
+    sizePills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        sizePills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        currentSheetSize = pill.getAttribute('data-size');
+      });
+    });
+
+    if (qtyMinus && qtyPlus && qtyVal) {
+      qtyMinus.addEventListener('click', () => {
+        if (currentSheetQty > 1) {
+          currentSheetQty--;
+          qtyVal.textContent = currentSheetQty;
+          const base = (currentSheetItem?.price || 125) * currentSheetQty;
+          if (sheetFinalPrice) sheetFinalPrice.textContent = `$${base.toFixed(2)}`;
+          if (sheetCtaPrice) sheetCtaPrice.textContent = `$${base.toFixed(2)}`;
+        }
+      });
+      qtyPlus.addEventListener('click', () => {
+        if (currentSheetQty < 10) {
+          currentSheetQty++;
+          qtyVal.textContent = currentSheetQty;
+          const base = (currentSheetItem?.price || 125) * currentSheetQty;
+          if (sheetFinalPrice) sheetFinalPrice.textContent = `$${base.toFixed(2)}`;
+          if (sheetCtaPrice) sheetCtaPrice.textContent = `$${base.toFixed(2)}`;
+        }
+      });
+    }
+
+    if (sheetCheckoutBtn) {
+      sheetCheckoutBtn.addEventListener('click', async () => {
+        closeTikTokBottomSheet();
+        showToast('⚡ Processing 1-Click Fastlane Checkout...', 'lock');
+
+        const orderId = '#PS-' + Math.floor(100000 + Math.random() * 900000);
+        const orderData = {
+          orderId: orderId,
+          source: 'Batch #004 Fastlane Checkout',
+          customer: {
+            fullName: 'PURPOSE STUDIO Member',
+            email: 'member@purposestudio.lab',
+            address: '450 Mercer St, Soho, NY 10013',
+            city: 'New York',
+            zip: '10013'
+          },
+          items: [{
+            id: currentSheetItem?.id || 'hoodie-black',
+            title: currentSheetItem?.title || 'The Archive Pullover - 500 GSM',
+            price: currentSheetItem?.price || 125,
+            size: currentSheetSize,
+            color: currentSheetItem?.color || 'Vintage Washed Black',
+            img: currentSheetItem?.img || 'assets/hoodie_black.jpg',
+            quantity: currentSheetQty
+          }],
+          voucherApplied: 'PURPOSE_DROP04_VOUCHER',
+          total: (currentSheetItem?.price || 125) * currentSheetQty,
+          status: 'Confirmed (Batch #004 Heavyweight Allocation)'
+        };
+
+        try {
+          await fetch('/api/orders', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(orderData)
+          });
+        } catch (err) {
+          console.warn('Local storage order fallback', err);
+        }
+
+        // Show confirmation modal
+        const checkoutModal = document.getElementById('checkout-modal');
+        const checkoutOverlay = document.getElementById('checkout-modal-overlay');
+        const stepForm = document.getElementById('checkout-step-form');
+        const stepSuccess = document.getElementById('checkout-step-success');
+        const orderRefNum = document.getElementById('order-ref-num');
+        const confItemsSummary = document.getElementById('conf-items-summary');
+
+        if (orderRefNum) orderRefNum.textContent = orderId;
+        if (confItemsSummary) {
+          confItemsSummary.innerHTML = `
+            <div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(255,255,255,0.04);border-radius:10px;border:1px solid rgba(254,44,85,0.3);">
+              <img src="${currentSheetItem?.img || 'assets/hoodie_black.jpg'}" style="width:48px;height:48px;border-radius:6px;object-fit:cover;" />
+              <div style="flex:1;">
+                <div style="font-weight:700;font-size:0.85rem;color:#fff;">${currentSheetItem?.title}</div>
+                <div style="font-size:0.75rem;color:#a1a1aa;">Size ${currentSheetSize} • Qty ${currentSheetQty} • Drop 04 Voucher Applied</div>
+              </div>
+              <div style="font-weight:800;color:var(--accent-volt);font-size:1.1rem;">$${((currentSheetItem?.price || 125) * currentSheetQty).toFixed(2)}</div>
+            </div>
+          `;
+        }
+
+        if (stepForm) stepForm.style.display = 'none';
+        if (stepSuccess) stepSuccess.style.display = 'block';
+        if (checkoutModal) checkoutModal.classList.add('active');
+        if (checkoutOverlay) checkoutOverlay.classList.add('active');
+
+        showToast(`🎉 Order Placed Successfully! Reference: ${orderId}`, 'check-circle');
+      });
+    }
+
+    // 11. Sync Bottom Dock Cart Badge
+    const dockCartBadge = document.getElementById('tt-dock-cart-badge');
+    const dockCartBtn = document.getElementById('tt-dock-cart-btn');
+    if (dockCartBadge && typeof cart !== 'undefined') {
+      setInterval(() => {
+        dockCartBadge.textContent = cart.length;
+      }, 500);
+    }
+    if (dockCartBtn) {
+      dockCartBtn.addEventListener('click', () => {
+        openCartDrawer();
+      });
+    }
+
+    if (window.lucide) window.lucide.createIcons();
+  }
+
+  // Initialize TikTok Shop Features
+  initTikTokShopFeatures();
 
 });
 

@@ -32,28 +32,28 @@
     <div class="announcement-track">
       <div class="announcement-content">
         <span class="pulse-indicator"></span>
-        <strong class="drop-status">DROP 04 IS LIVE</strong>
+        <strong class="drop-status" style="color: var(--accent-volt);">⚡ DROP 04 FLASH SALE IS LIVE</strong>
         <span class="announcement-sep">•</span>
         <span>BATCH #004: 500 GSM HEAVYWEIGHT FRENCH TERRY</span>
         <span class="announcement-sep">•</span>
-        <span>COMPLIMENTARY WORLDWIDE EXPRESS OVER $150</span>
+        <span class="highlight-pill" style="background: var(--accent-volt); color: #000000; font-weight: 800;">🎟️ CLAIM $55 VOUCHER PACK</span>
         <span class="announcement-sep">•</span>
-        <span class="highlight-pill">CODE: PURPOSE10 FOR 10% OFF</span>
+        <span>🚚 COMPLIMENTARY WORLDWIDE EXPRESS DISPATCH</span>
         <span class="announcement-sep">•</span>
-        <span>LIMITED RUN OF 300 PIECES PER COLORWAY</span>
+        <span style="color: var(--accent-volt); font-weight: 700;">🔴 LIVE TRY-ON STREAMING NOW (18.2K WATCHING)</span>
       </div>
       <!-- Duplicate track for seamless marquee loop -->
       <div class="announcement-content" aria-hidden="true">
         <span class="pulse-indicator"></span>
-        <strong class="drop-status">DROP 04 IS LIVE</strong>
+        <strong class="drop-status" style="color: var(--accent-volt);">⚡ DROP 04 FLASH SALE IS LIVE</strong>
         <span class="announcement-sep">•</span>
         <span>BATCH #004: 500 GSM HEAVYWEIGHT FRENCH TERRY</span>
         <span class="announcement-sep">•</span>
-        <span>COMPLIMENTARY WORLDWIDE EXPRESS OVER $150</span>
+        <span class="highlight-pill" style="background: var(--accent-volt); color: #000000; font-weight: 800;">🎟️ CLAIM $55 VOUCHER PACK</span>
         <span class="announcement-sep">•</span>
-        <span class="highlight-pill">CODE: PURPOSE10 FOR 10% OFF</span>
+        <span>🚚 COMPLIMENTARY WORLDWIDE EXPRESS DISPATCH</span>
         <span class="announcement-sep">•</span>
-        <span>LIMITED RUN OF 300 PIECES PER COLORWAY</span>
+        <span style="color: var(--accent-volt); font-weight: 700;">🔴 LIVE TRY-ON STREAMING NOW (18.2K WATCHING)</span>
       </div>
     </div>
     <div class="announcement-actions">
@@ -74,72 +74,133 @@
   </aside>
 
   <!-- ==========================================================================
-       2. Sticky Luxury Navigation Header
+       2. Sticky Luxury Navigation Header & Category Ribbon (Frozen On Scroll)
        ========================================================================== -->
-  <header class="site-header" id="site-header">
-    <div class="header-container">
+  <div class="tt-sticky-nav-wrapper" id="tt-sticky-nav-wrapper">
+    <header class="site-header" id="site-header">
+      <div class="header-container">
 
-      <!-- Brand Logotype -->
-      <a href="#hero" class="brand-logo" aria-label="PURPOSE STUDIO Home">
-        <div class="brand-mark">
-          <span class="mark-p">P</span>
-          <span class="mark-slash">/</span>
-          <span class="mark-s">S</span>
-        </div>
-        <div class="brand-names">
-          <span class="brand-main">PURPOSE / STUDIO</span>
-          <span class="brand-sub">CREATE WITH PURPOSE • HEAVYWEIGHT LAB</span>
-        </div>
-      </a>
-
-      <!-- Desktop Navigation Menu -->
-      <nav class="desktop-nav" aria-label="Main Navigation">
-        <a href="#collection" class="nav-link">The Drop</a>
-        <a href="#fabric-lab" class="nav-link">Fabric Lab</a>
-        <a href="#bundle-builder" class="nav-link">Capsule Set</a>
-        <a href="#size-finder" class="nav-link">Size Finder</a>
-        <a href="#lookbook" class="nav-link">Lookbook</a>
-        <a href="#reviews" class="nav-link">Reviews <span class="nav-badge">4.9★</span></a>
-      </nav>
-
-      <!-- Utility Actions -->
-      <div class="header-actions">
-        <!-- Express Checkout Fastlane CTA -->
-        <a href="#order" class="btn-header-express" id="header-express-btn">
-          <i data-lucide="zap"></i>
-          <span>Express Checkout</span>
+        <!-- Brand Logotype: PURPOSE / STUDIO -->
+        <a href="#hero" class="tt-header-brand-wrap" aria-label="PURPOSE STUDIO Home">
+          <div class="brand-mark">
+            <span class="mark-p">P</span>
+            <span class="mark-slash">/</span>
+            <span class="mark-s">S</span>
+          </div>
+          <div class="brand-names">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span class="brand-main">PURPOSE / STUDIO</span>
+              <span class="tt-mall-badge"><i data-lucide="shield-check" style="width: 11px; height: 11px;"></i> VERIFIED LAB</span>
+            </div>
+            <span class="brand-sub">CREATE WITH PURPOSE • HEAVYWEIGHT LAB</span>
+          </div>
         </a>
 
-        <!-- Search Trigger -->
-        <button class="action-btn" id="search-trigger-btn" aria-label="Search Collection" title="Search hoodies">
-          <i data-lucide="search"></i>
-        </button>
-
-        <!-- Wishlist Trigger -->
-        <button class="action-btn" id="wishlist-trigger-btn" aria-label="Wishlist" title="View wishlist">
-          <i data-lucide="heart"></i>
-          <span class="action-badge" id="wishlist-count">0</span>
-        </button>
-
-        <!-- Cart Drawer Trigger -->
-        <button class="cart-trigger-btn" id="cart-drawer-btn" aria-label="Shopping Bag">
-          <div class="cart-icon-wrap">
-            <i data-lucide="shopping-bag"></i>
-            <span class="cart-count-badge" id="cart-badge-count">0</span>
+        <!-- Central Search Experience (TikTok Shop Layout in Brand Theme) -->
+        <div class="tt-header-search-wrap">
+          <form class="tt-search-bar" id="tt-header-search-form" onsubmit="event.preventDefault();">
+            <input type="text" class="tt-search-input" id="tt-search-input" placeholder="Search '500 GSM Archive Pullover'..." autocomplete="off" />
+            <button type="button" class="tt-cam-btn" id="tt-cam-search-btn" title="Visual Search" aria-label="Search with camera">
+              <i data-lucide="camera" style="width: 17px; height: 17px;"></i>
+            </button>
+            <button type="submit" class="tt-search-btn" id="tt-search-submit-btn" aria-label="Search">
+              <i data-lucide="search" style="width: 16px; height: 16px;"></i>
+            </button>
+          </form>
+          <div class="tt-trending-tags-row">
+            <span class="tt-trending-tag hot" data-query="flash"><i data-lucide="flame" style="width: 11px; height: 11px; display: inline;"></i> Flash Sale</span>
+            <span class="tt-trending-tag" data-query="500 gsm">500 GSM Hoodie</span>
+            <span class="tt-trending-tag" data-query="two-way">Two-Way Zip</span>
+            <span class="tt-trending-tag" data-query="bone">Chalk Bone</span>
+            <span class="tt-trending-tag" data-query="vintage black">Vintage Black</span>
+            <span class="tt-trending-tag hot" data-query="voucher">🎟️ $55 Voucher</span>
           </div>
-          <span class="cart-label">Bag</span>
-          <span class="cart-subtotal" id="header-cart-total">$0.00</span>
-        </button>
+        </div>
 
-        <!-- Mobile Menu Toggle -->
-        <button class="mobile-toggle-btn" id="mobile-toggle-btn" aria-label="Toggle navigation menu">
-          <i data-lucide="menu" id="menu-icon-open"></i>
-          <i data-lucide="x" id="menu-icon-close" style="display: none;"></i>
-        </button>
+        <!-- Header Right Utilities -->
+        <div class="header-actions">
+          <!-- Voucher Center Shortcut -->
+          <a href="#tiktok-vouchers" class="tt-voucher-header-btn" id="tt-header-voucher-btn">
+            <i data-lucide="ticket"></i>
+            <span>Vouchers ($55)</span>
+          </a>
+
+          <!-- Wishlist Trigger -->
+          <button class="action-btn" id="wishlist-trigger-btn" aria-label="Wishlist" title="View wishlist">
+            <i data-lucide="heart"></i>
+            <span class="action-badge" id="wishlist-count">0</span>
+          </button>
+
+          <!-- Cart Drawer Trigger (Bag) -->
+          <button class="cart-trigger-btn" id="cart-drawer-btn" aria-label="Shopping Bag">
+            <div class="cart-icon-wrap">
+              <i data-lucide="shopping-bag"></i>
+              <span class="cart-count-badge" id="cart-badge-count">0</span>
+            </div>
+            <span class="cart-label">Bag</span>
+            <span class="cart-subtotal" id="header-cart-total">$0.00</span>
+          </button>
+
+          <!-- Express Checkout Fastlane CTA -->
+          <a href="#order" class="btn-header-express" id="header-express-btn">
+            <i data-lucide="zap"></i>
+            <span>Express Checkout</span>
+          </a>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="mobile-toggle-btn" id="mobile-toggle-btn" aria-label="Toggle navigation menu">
+            <i data-lucide="menu" id="menu-icon-open"></i>
+            <i data-lucide="x" id="menu-icon-close" style="display: none;"></i>
+          </button>
+        </div>
+
       </div>
+    </header>
 
-    </div>
-  </header>
+    <!-- Sub-Navigation Category Ribbon (TikTok Shop Layout) -->
+    <nav class="tt-category-ribbon" id="tt-category-ribbon" aria-label="Catalog Navigation">
+      <div class="tt-category-container">
+        <a href="#collection" class="tt-cat-item active" data-tab="for-you">
+          <i data-lucide="sparkles" style="width: 14px; height: 14px; color: var(--accent-volt);"></i>
+          <span>For You</span>
+        </a>
+        <a href="#tiktok-vouchers" class="tt-cat-item" data-tab="deals">
+          <i data-lucide="zap" style="width: 14px; height: 14px; color: var(--accent-gold);"></i>
+          <span>Flash Deals</span>
+          <span class="tt-cat-pill-tag voucher">SAVE 35%</span>
+        </a>
+        <a href="#tiktok-live" class="tt-cat-item" data-tab="live">
+          <span class="pulse-indicator" style="width: 7px; height: 7px; background: var(--accent-crimson); display: inline-block; border-radius: 50%;"></span>
+          <span style="color: #ffffff;">LIVE Showcase</span>
+          <span class="tt-cat-pill-tag live">18.2k</span>
+        </a>
+        <a href="#tiktok-feed" class="tt-cat-item" data-tab="reels">
+          <i data-lucide="sparkles" style="width: 14px; height: 14px; color: var(--accent-volt);"></i>
+          <span>Hoodie Products</span>
+        </a>
+        <a href="#fabric-lab" class="tt-cat-item" data-tab="fabric">
+          <i data-lucide="layers" style="width: 14px; height: 14px;"></i>
+          <span>Fabric Lab</span>
+        </a>
+        <a href="#bundle-builder" class="tt-cat-item" data-tab="capsule">
+          <i data-lucide="package" style="width: 14px; height: 14px;"></i>
+          <span>Capsule Sets</span>
+        </a>
+        <a href="#size-finder" class="tt-cat-item" data-tab="sizing">
+          <i data-lucide="ruler" style="width: 14px; height: 14px;"></i>
+          <span>Smart Sizing</span>
+        </a>
+        <a href="#reviews" class="tt-cat-item" data-tab="reviews">
+          <i data-lucide="star" style="width: 14px; height: 14px; color: var(--accent-gold);"></i>
+          <span>Verified Reviews (4.9★)</span>
+        </a>
+        <a href="#order" class="tt-cat-item" data-tab="orders">
+          <i data-lucide="truck" style="width: 14px; height: 14px;"></i>
+          <span>Track Order</span>
+        </a>
+      </div>
+    </nav>
+  </div>
 
   <!-- Mobile Drawer Menu -->
   <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
@@ -345,7 +406,386 @@
   </section>
 
   <!-- ==========================================================================
-       5. The Hoodies Collection Showcase
+       4.1 TikTok Shop Mega Voucher Center & Flash Sale Hub
+       ========================================================================== -->
+  <section class="tt-voucher-hub-section" id="tiktok-vouchers">
+    <div class="section-container">
+      <div class="tt-voucher-banner">
+        <div class="tt-voucher-header">
+          <div class="tt-voucher-title-wrap">
+            <div class="tt-voucher-main-title">
+              <span>🎟️ Mega Voucher Hub</span>
+              <span class="tt-voucher-badge">Drop 04 Exclusive</span>
+            </div>
+            <p class="tt-voucher-subtitle">Claim all vouchers now to save up to $55 on your 500 GSM heavyweight order!</p>
+          </div>
+
+          <div class="tt-flash-countdown">
+            <span class="tt-flash-label"><i data-lucide="zap" style="width: 14px; height: 14px;"></i> Flash Sale Ends</span>
+            <div class="tt-countdown-digits" id="tt-flash-timer">
+              <span class="tt-digit-box" id="tt-timer-hours">02</span>
+              <span class="tt-digit-colon">:</span>
+              <span class="tt-digit-box" id="tt-timer-minutes">44</span>
+              <span class="tt-digit-colon">:</span>
+              <span class="tt-digit-box" id="tt-timer-seconds">19</span>
+            </div>
+          </div>
+
+          <button type="button" class="tt-claim-all-btn" id="tt-claim-all-vouchers-btn">
+            <i data-lucide="gift"></i>
+            <span>Claim All Vouchers (4)</span>
+          </button>
+        </div>
+
+        <!-- 4 Perforated Voucher Cards -->
+        <div class="tt-vouchers-grid">
+          <!-- Card 1 -->
+          <div class="tt-coupon-card" data-coupon="WELCOME20">
+            <div class="tt-coupon-left">
+              <span class="tt-coupon-amount">$20</span>
+              <span class="tt-coupon-type">OFF</span>
+            </div>
+            <div class="tt-coupon-right">
+              <div>
+                <h4 class="tt-coupon-title">Batch #004 Member Gift</h4>
+                <p class="tt-coupon-terms">Min. spend $100 • Valid for all 500 GSM items</p>
+              </div>
+              <div class="tt-coupon-footer">
+                <span class="tt-coupon-expiry">Auto-Applied</span>
+                <button type="button" class="tt-coupon-btn claimed" data-code="WELCOME20">Claimed ✓</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="tt-coupon-card" data-coupon="FREESHIP">
+            <div class="tt-coupon-left">
+              <span class="tt-coupon-amount" style="font-size: 1.15rem; color: #10b981;">FREE</span>
+              <span class="tt-coupon-type" style="color: #10b981;">SHIPPING</span>
+            </div>
+            <div class="tt-coupon-right">
+              <div>
+                <h4 class="tt-coupon-title">Express Global Shipping</h4>
+                <p class="tt-coupon-terms">No min. spend • 2-3 Day DHL Express</p>
+              </div>
+              <div class="tt-coupon-footer">
+                <span class="tt-coupon-expiry">Valid Today</span>
+                <button type="button" class="tt-coupon-btn claimed" data-code="FREESHIP">Claimed ✓</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="tt-coupon-card" data-coupon="DROP25">
+            <div class="tt-coupon-left">
+              <span class="tt-coupon-amount">25%</span>
+              <span class="tt-coupon-type">OFF</span>
+            </div>
+            <div class="tt-coupon-right">
+              <div>
+                <h4 class="tt-coupon-title">Batch #004 Drop Special</h4>
+                <p class="tt-coupon-terms">Capsules & multi-piece orders • Code: PURPOSE25</p>
+              </div>
+              <div class="tt-coupon-footer">
+                <span class="tt-coupon-expiry">38 Left</span>
+                <button type="button" class="tt-coupon-btn" data-code="DROP25">Claim</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="tt-coupon-card" data-coupon="LIVE15">
+            <div class="tt-coupon-left">
+              <span class="tt-coupon-amount" style="color: var(--accent-cyan);">$15</span>
+              <span class="tt-coupon-type" style="color: var(--accent-cyan);">LIVE VIP</span>
+            </div>
+            <div class="tt-coupon-right">
+              <div>
+                <h4 class="tt-coupon-title">Creator LIVE Gift Coupon</h4>
+                <p class="tt-coupon-terms">Exclusive to Drop 04 Live Showcase • Single use</p>
+              </div>
+              <div class="tt-coupon-footer">
+                <span class="tt-coupon-expiry">Live Only</span>
+                <button type="button" class="tt-coupon-btn" data-code="LIVE15">Claim</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tt-flash-progress-bar-wrap">
+          <div class="tt-progress-track">
+            <div class="tt-progress-fill"></div>
+          </div>
+          <span class="tt-progress-text">🔥 88% Claimed • Batch #004 Selling Out Fast!</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4.2 TikTok LIVE Shopping Studio
+       ========================================================================== -->
+  <section class="tt-live-section" id="tiktok-live">
+    <div class="section-container">
+      <div class="tt-live-studio-card">
+        <div class="tt-live-grid">
+
+          <!-- Left Column: Interactive Live Stream Player -->
+          <div class="tt-live-video-player-wrap" id="tt-live-video-wrap">
+            <div class="tt-live-media-container" id="tt-live-media-container">
+              <img class="tt-live-stream-img" id="tt-live-stream-img" src="assets/hoodie_editorial.jpg" alt="500 GSM Heavyweight Hoodie Drop 04 Live Showcase" />
+              <!-- Live Camera Switcher Controls -->
+              <div class="tt-live-cam-switcher" id="tt-live-cam-switcher">
+                <button type="button" class="tt-cam-switch-btn active" data-img="assets/hoodie_editorial.jpg" title="Model Try-On Feed">
+                  <i data-lucide="video" style="width: 12px; height: 12px;"></i> Try-On
+                </button>
+                <button type="button" class="tt-cam-switch-btn" data-img="assets/hoodie_black.jpg" title="Pin #1 Product Studio Feed">
+                  <i data-lucide="shirt" style="width: 12px; height: 12px;"></i> Pin #1 Studio
+                </button>
+                <button type="button" class="tt-cam-switch-btn" data-img="assets/hoodie_fabric.jpg" title="500 GSM Loopback Close-Up">
+                  <i data-lucide="zoom-in" style="width: 12px; height: 12px;"></i> 500 GSM Weave
+                </button>
+              </div>
+            </div>
+
+            <!-- Top Live Overlay -->
+            <div class="tt-live-overlay-top">
+              <div class="tt-live-host-badge">
+                <img src="assets/creator_portrait.jpg" alt="Host Avatar" class="tt-host-avatar" />
+                <div class="tt-host-info">
+                  <span class="tt-host-name">@purpose.official <i data-lucide="check-circle" class="tt-verified-check" style="width: 13px; height: 13px;"></i></span>
+                  <span class="tt-host-viewers"><i data-lucide="users" style="width: 10px; height: 10px; display: inline;"></i> 18,249 watching</span>
+                </div>
+              </div>
+              <div class="tt-live-status-pill">
+                <span class="tt-live-pulse-dot"></span>
+                <span>LIVE SHOPPING</span>
+              </div>
+            </div>
+
+            <!-- Floating Hearts Reaction Layer -->
+            <div class="tt-flying-hearts-layer" id="tt-floating-hearts-layer"></div>
+
+            <!-- Yellow Basket Pin #1 Popup -->
+            <div class="tt-yellow-basket-pin" id="tt-yellow-basket-pin">
+              <div class="tt-basket-badge">
+                <i data-lucide="shopping-bag" style="width: 13px; height: 13px;"></i>
+                <span>#1</span>
+              </div>
+              <img src="assets/hoodie_black.jpg" alt="Featured Live Product" class="tt-basket-thumb" />
+              <div class="tt-basket-details">
+                <div class="tt-basket-title">The Archive Pullover — Vintage Washed Black (500 GSM)</div>
+                <div class="tt-basket-pricing">
+                  <span class="tt-basket-price">$145.00</span>
+                  <span class="tt-basket-compare">$180.00</span>
+                  <span class="tt-basket-voucher-pill">SAVE $35</span>
+                </div>
+              </div>
+              <div class="tt-basket-actions">
+                <button type="button" class="tt-btn-basket-buy" id="tt-live-pin-buy-btn" data-id="hoodie-black" data-title="Archive Pullover - Vintage Washed Black" data-price="145" data-img="assets/hoodie_black.jpg" data-color="Vintage Washed Black">
+                  ⚡ Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Real-Time Chat & Community Stream -->
+          <div class="tt-live-chat-panel">
+            <div class="tt-chat-header">
+              <span class="tt-chat-title">
+                <i data-lucide="message-square" style="width: 16px; height: 16px; color: var(--accent-cyan);"></i>
+                <span>Live Stream Chat</span>
+              </span>
+              <span style="font-size: 0.72rem; color: #a1a1aa;">Tap video for hearts ❤️</span>
+            </div>
+
+            <div class="tt-chat-messages-wrap" id="tt-live-chat-messages">
+              <div class="tt-chat-bubble">
+                <span class="tt-chat-user host">Host @purpose.official:</span>
+                <span class="tt-chat-text">Welcome in everyone! Tonight we are trying on all 40 colorways of the 500 GSM French Terry Drop 04! 🔥</span>
+              </div>
+              <div class="tt-chat-bubble">
+                <span class="tt-chat-user vip">@hypebeast_99:</span>
+                <span class="tt-chat-text">Yo does the hood actually stand upright without flimsy strings? 🤯</span>
+              </div>
+              <div class="tt-chat-bubble">
+                <span class="tt-chat-user host">Host @purpose.official:</span>
+                <span class="tt-chat-text">Yes! 2-ply double-layered 500 GSM construction, zero sag guaranteed! ⚡</span>
+              </div>
+              <div class="tt-chat-bubble">
+                <span class="tt-chat-user">@streetwear_tok:</span>
+                <span class="tt-chat-text">Just claimed the $20 voucher and copped the Vintage Washed Black in Large! Can't wait 📦</span>
+              </div>
+              <div class="tt-chat-bubble">
+                <span class="tt-chat-user">@marcus_fit:</span>
+                <span class="tt-chat-text">Is shipping to US and UK really free with the coupon?</span>
+              </div>
+              <div class="tt-chat-bubble">
+                <span class="tt-chat-user host">Host @purpose.official:</span>
+                <span class="tt-chat-text">100% Free Express Shipping worldwide! Tap the yellow basket #1 to order directly! 🎟️</span>
+              </div>
+            </div>
+
+            <div class="tt-chat-input-bar">
+              <input type="text" class="tt-chat-input" id="tt-live-chat-input" placeholder="Say something in live chat..." />
+              <button type="button" class="tt-btn-send-heart" id="tt-send-heart-btn" title="Send Heart">
+                ❤️
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4.3 Hoodie Products (TikTok Shop Featured Feed)
+       ========================================================================== -->
+  <section class="tt-feed-section" id="tiktok-feed">
+    <div class="section-container">
+      <div class="tt-feed-header">
+        <div class="tt-feed-title">
+          <i data-lucide="sparkles" style="width: 22px; height: 22px; color: var(--accent-volt);"></i>
+          <span>Hoodie Products • TikTok Shop Feed</span>
+        </div>
+        <span style="font-size: 0.82rem; color: #a1a1aa;">Tap yellow bag or ⚡ Buy Now to claim Drop 04 Flash Vouchers</span>
+      </div>
+
+      <div class="tt-reels-grid">
+        <!-- Hoodie Product 1: The Archive Pullover — Vintage Washed Black -->
+        <div class="tt-reel-card" data-id="hoodie-black">
+          <div class="tt-reel-badge-top">🔥 #1 BESTSELLER • 14.8K SOLD</div>
+          <div class="tt-reel-live-viewers">👁️ 2.4K browsing</div>
+          <img class="tt-reel-img" src="assets/hoodie_black.jpg" alt="The Archive Pullover — Vintage Washed Black" />
+          <div class="tt-reel-actions-rail">
+            <button class="tt-reel-action-btn" data-action="like" aria-label="Like product">
+              <div class="tt-reel-action-icon">❤️</div>
+              <span class="tt-reel-action-count">48.2K</span>
+            </button>
+            <button class="tt-reel-action-btn" data-action="comment" aria-label="View comments">
+              <div class="tt-reel-action-icon"><i data-lucide="message-circle" style="width: 18px; height: 18px;"></i></div>
+              <span class="tt-reel-action-count">1,240</span>
+            </button>
+            <button class="tt-reel-action-btn" data-action="share" aria-label="Share product">
+              <div class="tt-reel-action-icon"><i data-lucide="share-2" style="width: 18px; height: 18px;"></i></div>
+              <span class="tt-reel-action-count">3.8K</span>
+            </button>
+          </div>
+          <div class="tt-reel-info-layer">
+            <div class="tt-reel-creator">
+              @purpose.lab <i data-lucide="check-circle" class="tt-verified-check" style="width: 12px; height: 12px;"></i>
+            </div>
+            <p class="tt-reel-desc">The Archive Pullover in Vintage Washed Black. 500 GSM loopback cotton, seamless pouch & rigid standing hood.</p>
+            <div class="tt-reel-shop-widget" data-id="hoodie-black" data-title="The Archive Pullover — Vintage Washed Black" data-price="145" data-img="assets/hoodie_black.jpg">
+              <i data-lucide="shopping-bag" style="width: 14px; height: 14px;"></i>
+              <span>Archive Pullover • $145.00</span>
+              <button class="tt-reel-shop-btn">⚡ Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hoodie Product 2: The Archive Two-Way Zip — Dark Asphalt -->
+        <div class="tt-reel-card" data-id="hoodie-zip">
+          <div class="tt-reel-badge-top">⚡ TOP RATED • 9.6K SOLD</div>
+          <div class="tt-reel-live-viewers">👁️ 1.8K browsing</div>
+          <img class="tt-reel-img" src="assets/hoodie_zip_asphalt.jpg" alt="The Archive Two-Way Zip — Dark Asphalt" />
+          <div class="tt-reel-actions-rail">
+            <button class="tt-reel-action-btn" data-action="like" aria-label="Like product">
+              <div class="tt-reel-action-icon">❤️</div>
+              <span class="tt-reel-action-count">36.7K</span>
+            </button>
+            <button class="tt-reel-action-btn" data-action="comment" aria-label="View comments">
+              <div class="tt-reel-action-icon"><i data-lucide="message-circle" style="width: 18px; height: 18px;"></i></div>
+              <span class="tt-reel-action-count">892</span>
+            </button>
+            <button class="tt-reel-action-btn" data-action="share" aria-label="Share product">
+              <div class="tt-reel-action-icon"><i data-lucide="share-2" style="width: 18px; height: 18px;"></i></div>
+              <span class="tt-reel-action-count">2.1K</span>
+            </button>
+          </div>
+          <div class="tt-reel-info-layer">
+            <div class="tt-reel-creator">
+              @streetwear.lab <i data-lucide="check-circle" class="tt-verified-check" style="width: 12px; height: 12px;"></i>
+            </div>
+            <p class="tt-reel-desc">The Archive Two-Way Zip in Dark Asphalt. Heavy custom matte YKK zipper, ribbed side gussets & unwashed heavyweight drape.</p>
+            <div class="tt-reel-shop-widget" data-id="hoodie-zip" data-title="The Archive Two-Way Zip — Dark Asphalt" data-price="165" data-img="assets/hoodie_zip_asphalt.jpg">
+              <i data-lucide="shopping-bag" style="width: 14px; height: 14px;"></i>
+              <span>Two-Way Zip • $165.00</span>
+              <button class="tt-reel-shop-btn">⚡ Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hoodie Product 3: The Archive Pullover — Chalk Bone -->
+        <div class="tt-reel-card" data-id="hoodie-bone">
+          <div class="tt-reel-badge-top">✨ 100% ORGANIC • 11.2K SOLD</div>
+          <div class="tt-reel-live-viewers">👁️ 3.1K browsing</div>
+          <img class="tt-reel-img" src="assets/hoodie_bone.jpg" alt="The Archive Pullover — Chalk Bone" />
+          <div class="tt-reel-actions-rail">
+            <button class="tt-reel-action-btn" data-action="like" aria-label="Like product">
+              <div class="tt-reel-action-icon">❤️</div>
+              <span class="tt-reel-action-count">51.9K</span>
+            </button>
+            <button class="tt-reel-action-btn" data-action="comment" aria-label="View comments">
+              <div class="tt-reel-action-icon"><i data-lucide="message-circle" style="width: 18px; height: 18px;"></i></div>
+              <span class="tt-reel-action-count">1,890</span>
+            </button>
+            <button class="tt-reel-action-btn" data-action="share" aria-label="Share product">
+              <div class="tt-reel-action-icon"><i data-lucide="share-2" style="width: 18px; height: 18px;"></i></div>
+              <span class="tt-reel-action-count">4.5K</span>
+            </button>
+          </div>
+          <div class="tt-reel-info-layer">
+            <div class="tt-reel-creator">
+              @unbleached.fits <i data-lucide="check-circle" class="tt-verified-check" style="width: 12px; height: 12px;"></i>
+            </div>
+            <p class="tt-reel-desc">The Archive Pullover in Chalk Bone. Zero synthetic dyes or harsh bleaches. 100% combed organic French Terry cotton.</p>
+            <div class="tt-reel-shop-widget" data-id="hoodie-bone" data-title="The Archive Pullover — Chalk Bone" data-price="145" data-img="assets/hoodie_bone.jpg">
+              <i data-lucide="shopping-bag" style="width: 14px; height: 14px;"></i>
+              <span>Chalk Bone • $145.00</span>
+              <button class="tt-reel-shop-btn">⚡ Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hoodie Product 4: The Archive Quarter-Zip — Washed Charcoal -->
+        <div class="tt-reel-card" data-id="hoodie-charcoal">
+          <div class="tt-reel-badge-top">⭐ 512 GSM LAB TEST • 7.4K SOLD</div>
+          <div class="tt-reel-live-viewers">👁️ 1.5K browsing</div>
+          <img class="tt-reel-img" src="assets/hoodie_charcoal.jpg" alt="The Archive Quarter-Zip — Washed Charcoal" />
+          <div class="tt-reel-actions-rail">
+            <button class="tt-reel-action-btn" data-action="like" aria-label="Like product">
+              <div class="tt-reel-action-icon">❤️</div>
+              <span class="tt-reel-action-count">24.5K</span>
+            </button>
+            <button class="tt-reel-action-btn" data-action="comment" aria-label="View comments">
+              <div class="tt-reel-action-icon"><i data-lucide="message-circle" style="width: 18px; height: 18px;"></i></div>
+              <span class="tt-reel-action-count">610</span>
+            </button>
+            <button class="tt-reel-action-btn" data-action="share" aria-label="Share product">
+              <div class="tt-reel-action-icon"><i data-lucide="share-2" style="width: 18px; height: 18px;"></i></div>
+              <span class="tt-reel-action-count">1.4K</span>
+            </button>
+          </div>
+          <div class="tt-reel-info-layer">
+            <div class="tt-reel-creator">
+              @tok.streetwear <i data-lucide="check-circle" class="tt-verified-check" style="width: 12px; height: 12px;"></i>
+            </div>
+            <p class="tt-reel-desc">The Archive Quarter-Zip in Washed Charcoal. High standing funnel cowl neck, garment mineral wash with warm brushed lining.</p>
+            <div class="tt-reel-shop-widget" data-id="hoodie-charcoal" data-title="The Archive Quarter-Zip — Washed Charcoal" data-price="155" data-img="assets/hoodie_charcoal.jpg">
+              <i data-lucide="shopping-bag" style="width: 14px; height: 14px;"></i>
+              <span>Quarter-Zip • $155.00</span>
+              <button class="tt-reel-shop-btn">⚡ Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. The Hoodies Collection Showcase (TikTok Shop Catalog)
        ========================================================================== -->
   <section class="collection-section" id="collection">
     <div class="section-container">
@@ -4037,6 +4477,136 @@
       <div class="search-prompt">Type to search the Batch #004 Archive...</div>
     </div>
   </div>
+
+  <!-- ==========================================================================
+       18. TikTok Shop Signature Quick Buy Bottom Sheet Modal
+       ========================================================================== -->
+  <div class="tt-bottom-sheet-overlay" id="tt-bottom-sheet-overlay">
+    <div class="tt-bottom-sheet" id="tt-bottom-sheet">
+      <div class="tt-sheet-handle"></div>
+
+      <div class="tt-sheet-product-head">
+        <img src="assets/hoodie_black.jpg" alt="Selected Product" class="tt-sheet-thumb" id="tt-sheet-thumb" />
+        <div class="tt-sheet-info">
+          <button type="button" class="tt-sheet-close-btn" id="tt-sheet-close-btn" aria-label="Close sheet">
+            <i data-lucide="x" style="width: 16px; height: 16px;"></i>
+          </button>
+          <div class="tt-sheet-price-row">
+            <span class="tt-sheet-final-price" id="tt-sheet-final-price">$145.00</span>
+            <span class="tt-sheet-orig-price" id="tt-sheet-orig-price">$180.00</span>
+            <span class="product-save-badge">SAVE $35</span>
+          </div>
+          <h3 class="tt-sheet-title" id="tt-sheet-title">The Archive Pullover — 500 GSM French Terry</h3>
+          <span style="font-size: 0.74rem; color: #10b981; font-weight: 700;">⚡ In Stock • Batch #004 Ready for Express Dispatch</span>
+        </div>
+      </div>
+
+      <!-- TikTok Coupon Callout -->
+      <div class="tt-sheet-voucher-callout">
+        <span class="tt-sheet-voucher-text">
+          <i data-lucide="ticket" style="width: 15px; height: 15px; display: inline; vertical-align: -2px;"></i>
+          Batch #004 $20 Welcome Voucher Applied (-$20.00)
+        </span>
+        <span class="tt-sheet-voucher-badge">SAVED</span>
+      </div>
+
+      <!-- Size Selection -->
+      <div class="tt-sheet-options-title">Select Size:</div>
+      <div class="tt-sheet-size-pills" id="tt-sheet-sizes">
+        <button type="button" class="tt-sheet-size-pill" data-size="S">S</button>
+        <button type="button" class="tt-sheet-size-pill" data-size="M">M</button>
+        <button type="button" class="tt-sheet-size-pill active" data-size="L">L</button>
+        <button type="button" class="tt-sheet-size-pill" data-size="XL">XL</button>
+        <button type="button" class="tt-sheet-size-pill" data-size="XXL">XXL</button>
+      </div>
+
+      <!-- Quantity Stepper -->
+      <div class="tt-sheet-qty-row">
+        <span class="tt-sheet-options-title" style="margin-bottom: 0;">Quantity:</span>
+        <div class="tt-qty-stepper">
+          <button type="button" class="tt-qty-btn" id="tt-qty-minus">-</button>
+          <span class="tt-qty-num" id="tt-qty-val">1</span>
+          <button type="button" class="tt-qty-btn" id="tt-qty-plus">+</button>
+        </div>
+      </div>
+
+      <!-- Buyer Guarantees -->
+      <div class="tt-sheet-guarantees">
+        <div class="tt-sheet-guarantee-item">
+          <i data-lucide="shield-check" style="width: 18px; height: 18px; color: var(--accent-cyan);"></i>
+          <strong>100% Authentic</strong>
+          <span>500 GSM Lab Certified</span>
+        </div>
+        <div class="tt-sheet-guarantee-item">
+          <i data-lucide="truck" style="width: 18px; height: 18px; color: #10b981;"></i>
+          <strong>Free Shipping</strong>
+          <span>Est. 2-3 Day Delivery</span>
+        </div>
+        <div class="tt-sheet-guarantee-item">
+          <i data-lucide="rotate-ccw" style="width: 18px; height: 18px; color: var(--accent-gold);"></i>
+          <strong>30-Day Returns</strong>
+          <span>Zero Hassle Refund</span>
+        </div>
+      </div>
+
+      <!-- TikTok Red Action Button -->
+      <button type="button" class="tt-sheet-cta-btn" id="tt-sheet-checkout-btn">
+        <i data-lucide="zap"></i>
+        <span>Buy with Coupon — <span id="tt-sheet-cta-price">$145.00</span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       19. Floating TikTok LIVE Mini-PIP Player
+       ========================================================================== -->
+  <aside class="tt-live-pip-player" id="tt-live-pip-player" aria-label="Live Picture in Picture">
+    <img class="tt-pip-img" src="assets/hoodie_editorial.jpg" alt="500 GSM Drop 04 Live Try-On" />
+    <div class="tt-pip-body">
+      <div class="tt-pip-head">
+        <span class="tt-pip-badge">🔴 LIVE 18.2K</span>
+        <button class="tt-pip-close" id="tt-pip-close-btn" aria-label="Close Mini Player"><i data-lucide="x" style="width: 14px; height: 14px;"></i></button>
+      </div>
+      <div class="tt-pip-title">500 GSM Drop 04 Live Try-On</div>
+      <button class="tt-pip-buy-btn" id="tt-pip-shop-btn">🛒 Shop Pin #1 ($145)</button>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       20. TikTok Mobile Floating Bottom Dock Navigation
+       ========================================================================== -->
+  <nav class="tt-bottom-dock" id="tt-bottom-dock" aria-label="TikTok Shop Bottom Navigation">
+    <a href="#hero" class="tt-dock-item active">
+      <span class="tt-dock-icon"><i data-lucide="home" style="width: 19px; height: 19px;"></i></span>
+      <span>Shop</span>
+    </a>
+    <a href="#tiktok-vouchers" class="tt-dock-item">
+      <span class="tt-dock-icon"><i data-lucide="zap" style="width: 19px; height: 19px; color: var(--accent-gold);"></i></span>
+      <span>Deals</span>
+    </a>
+    <a href="#tiktok-live" class="tt-dock-item">
+      <span class="tt-dock-icon" style="position: relative;">
+        <i data-lucide="tv" style="width: 19px; height: 19px; color: var(--accent-volt);"></i>
+        <span class="tt-dock-badge">LIVE</span>
+      </span>
+      <span>Live</span>
+    </a>
+    <a href="#tiktok-feed" class="tt-dock-item">
+      <span class="tt-dock-icon"><i data-lucide="sparkles" style="width: 19px; height: 19px; color: var(--accent-volt);"></i></span>
+      <span>Hoodies</span>
+    </a>
+    <a href="javascript:void(0)" class="tt-dock-item" id="tt-dock-cart-btn">
+      <span class="tt-dock-icon" style="position: relative;">
+        <i data-lucide="shopping-bag" style="width: 19px; height: 19px;"></i>
+        <span class="tt-dock-badge" id="tt-dock-cart-badge">0</span>
+      </span>
+      <span>Cart</span>
+    </a>
+    <a href="#order" class="tt-dock-item">
+      <span class="tt-dock-icon"><i data-lucide="package" style="width: 19px; height: 19px;"></i></span>
+      <span>Orders</span>
+    </a>
+  </nav>
 
   <!-- Toast Notification Container -->
   <div class="toast-container" id="toast-container" aria-live="polite"></div>

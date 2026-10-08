@@ -24,7 +24,9 @@
   --border-medium: rgba(255, 255, 255, 0.16);
   --border-highlight: rgba(255, 255, 255, 0.35);
 
+  /* PURPOSE / STUDIO Signature Brand Color System */
   --accent-volt: #d4ff3f;
+  --accent-volt-hover: #bde62a;
   --accent-gold: #dfb15b;
   --accent-stone: #e5e2dc;
   --accent-crimson: #ff4757;
@@ -39,7 +41,7 @@
   --transition-smooth: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 
   --shadow-card: 0 12px 30px rgba(0, 0, 0, 0.45);
-  --shadow-glow: 0 0 25px rgba(212, 255, 63, 0.2);
+  --shadow-glow: 0 0 25px rgba(212, 255, 63, 0.25);
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 16px;
@@ -64,7 +66,7 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
 }
 
@@ -75,7 +77,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
 }
 
@@ -332,24 +334,35 @@ ul {
 }
 
 /* --------------------------------------------------------------------------
-   2. Sticky Luxury Navigation Header
+   2. Sticky Luxury Navigation Header & Category Ribbon Wrapper (Frozen On Scroll)
    -------------------------------------------------------------------------- */
-.site-header {
+.tt-sticky-nav-wrapper {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(9, 9, 11, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.tt-sticky-nav-wrapper.scrolled {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(255, 255, 255, 0.1);
+  background: rgba(9, 9, 11, 0.98);
+}
+
+.site-header {
   width: 100%;
   height: var(--header-height);
-  background: var(--bg-glass);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  background: transparent;
   border-bottom: 1px solid var(--border-subtle);
-  z-index: 999;
   transition: all var(--transition-fast);
 }
 
 .site-header.scrolled {
-  height: 70px;
-  background: rgba(9, 9, 11, 0.94);
+  height: 72px;
   border-bottom-color: var(--border-medium);
 }
 
@@ -5010,10 +5023,8 @@ ul {
 /* --- Universal Viewport Armor & Horizontal Scroll Prevention --- */
 html,
 body {
-  overflow-x: hidden !important;
+  overflow-x: clip !important;
   width: 100% !important;
-  max-width: 100vw !important;
-  position: relative !important;
   box-sizing: border-box;
 }
 
@@ -5701,5 +5712,2311 @@ svg {
     min-width: 32px !important;
     height: 34px !important;
     font-size: 0.72rem !important;
+  }
+}
+
+/* ==========================================================================
+   TIKTOK SHOP LAYOUT ENGINE & PURPOSE STUDIO BRAND STYLES
+   ========================================================================== */
+
+/* --- 1. Header Brand & Layout --- */
+.tt-header-brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.tt-mall-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(212, 255, 63, 0.12);
+  color: var(--accent-volt);
+  border: 1px solid rgba(212, 255, 63, 0.28);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+/* --- 2. Central Search Bar (TikTok Shop Layout in Brand Aesthetic) --- */
+.tt-header-search-wrap {
+  flex: 1;
+  max-width: 520px;
+  margin: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tt-search-bar {
+  display: flex;
+  align-items: center;
+  background: #15151a;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  padding: 3px 4px 3px 16px;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.tt-search-bar:focus-within {
+  border-color: var(--accent-volt);
+  box-shadow: 0 0 0 3px rgba(212, 255, 63, 0.18);
+  background: #1a1a22;
+}
+
+.tt-search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.tt-search-input::placeholder {
+  color: #787885;
+}
+
+.tt-cam-btn {
+  background: transparent;
+  border: none;
+  color: #a1a1aa;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.tt-cam-btn:hover {
+  color: var(--accent-volt);
+}
+
+.tt-search-btn {
+  background: var(--accent-volt);
+  color: #000000;
+  border: none;
+  border-radius: 9999px;
+  padding: 8px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 800;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.tt-search-btn:hover {
+  background: var(--accent-volt-hover);
+  transform: scale(1.02);
+}
+
+.tt-trending-tags-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  padding-left: 12px;
+}
+
+.tt-trending-tags-row::-webkit-scrollbar {
+  display: none;
+}
+
+.tt-trending-tag {
+  font-size: 0.72rem;
+  color: #8c8d9c;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.tt-trending-tag:hover {
+  color: var(--accent-volt);
+}
+
+.tt-trending-tag.hot {
+  color: var(--accent-volt);
+  font-weight: 700;
+}
+
+/* --- 3. Sub-Navigation Category Ribbon (TikTok Shop Layout) --- */
+.tt-category-ribbon {
+  background: rgba(17, 17, 22, 0.96);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
+  position: relative;
+  z-index: 999;
+}
+
+.tt-category-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tt-category-container::-webkit-scrollbar {
+  display: none;
+}
+
+.tt-cat-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 14px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #a1a1aa;
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.tt-cat-item:hover {
+  color: #ffffff;
+}
+
+.tt-cat-item.active {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.tt-cat-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+  right: 12px;
+  height: 2.5px;
+  background: var(--accent-volt);
+  border-radius: 9999px;
+  box-shadow: 0 -2px 8px rgba(212, 255, 63, 0.6);
+}
+
+.tt-cat-pill-tag {
+  font-size: 0.65rem;
+  padding: 1px 6px;
+  border-radius: 9999px;
+  font-weight: 800;
+}
+
+.tt-cat-pill-tag.live {
+  background: var(--accent-crimson);
+  color: #ffffff;
+  animation: ttPulseLive 1.5s infinite;
+}
+
+.tt-cat-pill-tag.voucher {
+  background: var(--accent-volt);
+  color: #000000;
+}
+
+@keyframes ttPulseLive {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.08); opacity: 0.85; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* --- 4. Header Actions --- */
+.tt-voucher-header-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(212, 255, 63, 0.12);
+  color: var(--accent-volt);
+  border: 1px solid rgba(212, 255, 63, 0.35);
+  border-radius: 9999px;
+  padding: 8px 14px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tt-voucher-header-btn:hover {
+  background: var(--accent-volt);
+  color: #000000;
+  border-color: var(--accent-volt);
+  box-shadow: 0 4px 14px rgba(212, 255, 63, 0.35);
+}
+
+.cart-trigger-btn {
+  background: #17171d !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  border-radius: 9999px !important;
+  padding: 8px 14px !important;
+}
+
+.cart-trigger-btn:hover {
+  border-color: var(--accent-volt) !important;
+}
+
+.cart-icon-wrap {
+  color: var(--accent-volt) !important;
+}
+
+.cart-count-badge {
+  background: var(--accent-volt) !important;
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+/* --- 5. Mega Voucher Center & Flash Sale Hub --- */
+.tt-voucher-hub-section {
+  padding: 40px 0 20px 0;
+  background: radial-gradient(circle at 50% 0%, rgba(212, 255, 63, 0.08) 0%, transparent 65%);
+}
+
+.tt-voucher-banner {
+  background: linear-gradient(135deg, #17171d 0%, #121216 100%);
+  border: 1px solid rgba(212, 255, 63, 0.25);
+  border-radius: 20px;
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(212, 255, 63, 0.08);
+}
+
+.tt-voucher-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.tt-voucher-title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tt-voucher-main-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.3rem, 3.2vw, 1.85rem);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tt-voucher-badge {
+  background: var(--accent-volt);
+  color: #000000;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.tt-voucher-subtitle {
+  color: #a1a1aa;
+  font-size: 0.9rem;
+}
+
+.tt-flash-countdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(212, 255, 63, 0.3);
+  padding: 8px 16px;
+  border-radius: 12px;
+}
+
+.tt-flash-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-volt);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tt-countdown-digits {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tt-digit-box {
+  background: #1e1e24;
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-width: 32px;
+  text-align: center;
+}
+
+.tt-digit-colon {
+  font-weight: 800;
+  color: var(--accent-volt);
+}
+
+.tt-claim-all-btn {
+  background: var(--accent-volt);
+  color: #000000;
+  font-weight: 800;
+  font-size: 0.88rem;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 18px rgba(212, 255, 63, 0.35);
+  transition: all 0.2s ease;
+}
+
+.tt-claim-all-btn:hover {
+  transform: translateY(-2px);
+  background: var(--accent-volt-hover);
+  box-shadow: 0 8px 24px rgba(212, 255, 63, 0.5);
+}
+
+.tt-claim-all-btn.claimed {
+  background: #1e1e24;
+  color: var(--accent-volt);
+  border: 1px solid rgba(212, 255, 63, 0.4);
+  box-shadow: none;
+}
+
+/* Voucher Cards Grid */
+.tt-vouchers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.tt-coupon-card {
+  background: #1a1a20;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.tt-coupon-card:hover {
+  border-color: rgba(212, 255, 63, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.tt-coupon-left {
+  background: linear-gradient(135deg, rgba(212, 255, 63, 0.14) 0%, rgba(212, 255, 63, 0.05) 100%);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 95px;
+  border-right: 1px dashed rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.tt-coupon-amount {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.45rem;
+  color: var(--accent-volt);
+  line-height: 1;
+}
+
+.tt-coupon-type {
+  font-size: 0.65rem;
+  color: #a1a1aa;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.tt-coupon-right {
+  padding: 14px 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tt-coupon-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.tt-coupon-terms {
+  font-size: 0.72rem;
+  color: #8c8d9c;
+  line-height: 1.3;
+}
+
+.tt-coupon-footer {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tt-coupon-expiry {
+  font-size: 0.68rem;
+  color: #a1a1aa;
+}
+
+.tt-coupon-btn {
+  background: var(--accent-volt);
+  color: #000000;
+  border: none;
+  border-radius: 9999px;
+  padding: 5px 14px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tt-coupon-btn:hover {
+  background: var(--accent-volt-hover);
+}
+
+.tt-coupon-btn.claimed {
+  background: rgba(212, 255, 63, 0.15);
+  color: var(--accent-volt);
+  border: 1px solid rgba(212, 255, 63, 0.4);
+}
+
+.tt-flash-progress-bar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 6px;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 12px 18px;
+  border-radius: 12px;
+}
+
+.tt-progress-track {
+  flex: 1;
+  height: 8px;
+  background: #222228;
+  border-radius: 9999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.tt-progress-fill {
+  height: 100%;
+  width: 86%;
+  background: linear-gradient(90deg, var(--accent-volt) 0%, #bde62a 60%, var(--accent-gold) 100%);
+  border-radius: 9999px;
+}
+
+.tt-progress-text {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* --- 6. LIVE Shopping Studio Layout --- */
+.tt-live-section {
+  padding: 40px 0;
+  position: relative;
+}
+
+.tt-live-studio-card {
+  background: #141419;
+  border: 1px solid rgba(212, 255, 63, 0.25);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(212, 255, 63, 0.08);
+}
+
+.tt-live-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  min-height: 580px;
+}
+
+@media (max-width: 960px) {
+  .tt-live-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tt-live-video-player-wrap {
+  position: relative;
+  background: #090a0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  min-height: 480px;
+}
+
+.tt-live-media-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tt-live-stream-img,
+.tt-live-video-tag {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 480px;
+  display: block;
+  animation: liveStreamPan 22s ease-in-out infinite alternate;
+  filter: brightness(0.96) contrast(1.04);
+  transition: opacity 0.25s ease, filter 0.3s ease;
+}
+
+@keyframes liveStreamPan {
+  0% { transform: scale(1.0) translate(0, 0); }
+  50% { transform: scale(1.06) translate(-1%, -0.8%); }
+  100% { transform: scale(1.03) translate(0.8%, 0.5%); }
+}
+
+.tt-live-cam-switcher {
+  position: absolute;
+  bottom: 80px;
+  left: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 12;
+}
+
+.tt-cam-switch-btn {
+  background: rgba(9, 9, 11, 0.82);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #e4e4e7;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.tt-cam-switch-btn:hover {
+  background: rgba(212, 255, 63, 0.2);
+  border-color: var(--accent-volt);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.tt-cam-switch-btn.active {
+  background: var(--accent-volt);
+  border-color: var(--accent-volt);
+  color: #000000;
+  box-shadow: 0 0 16px rgba(212, 255, 63, 0.45);
+}
+
+.tt-live-overlay-top {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.tt-live-host-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(10px);
+  padding: 6px 14px 6px 8px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  pointer-events: auto;
+}
+
+.tt-host-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-volt);
+  object-fit: cover;
+}
+
+.tt-host-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.tt-host-name {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tt-verified-check {
+  color: var(--accent-volt);
+}
+
+.tt-host-viewers {
+  font-size: 0.7rem;
+  color: #a1a1aa;
+}
+
+.tt-live-status-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-crimson);
+  color: #ffffff;
+  font-size: 0.74rem;
+  font-weight: 800;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 14px rgba(255, 71, 87, 0.4);
+  pointer-events: auto;
+}
+
+.tt-live-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+  animation: ttPulseLive 1.2s infinite;
+}
+
+/* Flying Hearts Layer */
+.tt-flying-hearts-layer {
+  position: absolute;
+  bottom: 80px;
+  right: 24px;
+  width: 80px;
+  height: 300px;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 15;
+}
+
+.tt-floating-heart {
+  position: absolute;
+  bottom: 0;
+  font-size: 1.5rem;
+  animation: ttFloatUp 2.4s ease-out forwards;
+}
+
+/* Floating Yellow Basket Pin #1 */
+.tt-yellow-basket-pin {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(18, 18, 24, 0.94);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(212, 255, 63, 0.4);
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 20;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 255, 63, 0.12);
+}
+
+.tt-basket-badge {
+  background: var(--accent-volt);
+  color: #000000;
+  font-weight: 900;
+  font-size: 0.78rem;
+  padding: 6px 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.tt-basket-thumb {
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tt-basket-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.tt-basket-title {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tt-basket-pricing {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.tt-basket-price {
+  color: var(--accent-volt);
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.tt-basket-compare {
+  color: #787885;
+  text-decoration: line-through;
+  font-size: 0.8rem;
+}
+
+.tt-basket-voucher-pill {
+  background: rgba(212, 255, 63, 0.14);
+  color: var(--accent-volt);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.tt-basket-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tt-btn-basket-buy {
+  background: var(--accent-volt);
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.tt-btn-basket-buy:hover {
+  background: var(--accent-volt-hover);
+  transform: scale(1.03);
+}
+
+/* Right Column: Live Chat & Stream */
+.tt-live-chat-panel {
+  background: #15151b;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tt-chat-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tt-chat-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tt-chat-messages-wrap {
+  flex: 1;
+  padding: 16px 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 420px;
+  scrollbar-width: thin;
+}
+
+.tt-chat-bubble {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  animation: ttFadeInChat 0.3s ease-out;
+}
+
+.tt-chat-user {
+  font-weight: 700;
+  color: var(--accent-cyan);
+  margin-right: 6px;
+}
+
+.tt-chat-user.host {
+  color: #000000;
+  background: var(--accent-volt);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.tt-chat-user.vip {
+  color: var(--accent-gold);
+}
+
+.tt-chat-text {
+  color: #e4e4e7;
+}
+
+.tt-chat-input-bar {
+  padding: 14px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tt-chat-input {
+  flex: 1;
+  background: #1f1f26;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  padding: 8px 16px;
+  color: #ffffff;
+  font-size: 0.82rem;
+  outline: none;
+}
+
+.tt-chat-input:focus {
+  border-color: var(--accent-volt);
+}
+
+.tt-btn-send-heart {
+  background: rgba(212, 255, 63, 0.15);
+  color: var(--accent-volt);
+  border: 1px solid rgba(212, 255, 63, 0.3);
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1.1rem;
+}
+
+.tt-btn-send-heart:hover {
+  transform: scale(1.15);
+  background: var(--accent-volt);
+  color: #000000;
+}
+
+/* --- 7. "Shop The Feed" (Short-Video Reels Carousel) --- */
+.tt-feed-section {
+  padding: 50px 0 20px 0;
+}
+
+.tt-feed-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.tt-feed-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.25rem, 2.8vw, 1.7rem);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tt-reels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.tt-reel-card {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #090a0f;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  cursor: pointer;
+}
+
+.tt-reel-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 255, 63, 0.45);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(212, 255, 63, 0.15);
+}
+
+.tt-reel-img,
+.tt-reel-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tt-reel-card:hover .tt-reel-img {
+  transform: scale(1.06);
+}
+
+.tt-reel-badge-top {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(9, 9, 11, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 255, 63, 0.4);
+  color: var(--accent-volt);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 5px 11px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.tt-reel-live-viewers {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(9, 9, 11, 0.82);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #e4e4e7;
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Reel Action Rail */
+.tt-reel-actions-rail {
+  position: absolute;
+  right: 12px;
+  bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  z-index: 10;
+}
+
+.tt-reel-action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.tt-reel-action-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.tt-reel-action-btn:hover .tt-reel-action-icon {
+  transform: scale(1.15);
+  background: rgba(212, 255, 63, 0.85);
+  color: #000000;
+}
+
+.tt-reel-action-btn.liked .tt-reel-action-icon {
+  background: var(--accent-volt);
+  color: #000000;
+}
+
+.tt-reel-action-count {
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* Reel Info */
+.tt-reel-info-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 14px;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.88) 100%);
+  z-index: 9;
+}
+
+.tt-reel-creator {
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.tt-reel-desc {
+  font-size: 0.78rem;
+  color: #e4e4e7;
+  line-height: 1.35;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Yellow/Volt Shop Tag */
+.tt-reel-shop-widget {
+  background: var(--accent-volt);
+  color: #000000;
+  border-radius: 8px;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.tt-reel-shop-widget:hover {
+  transform: scale(1.02);
+  background: var(--accent-volt-hover);
+}
+
+.tt-reel-shop-btn {
+  margin-left: auto;
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+/* --- 8. Product Cards (TikTok Shop Layout in Brand Theme) --- */
+.product-card {
+  border-radius: 14px !important;
+  background: #141419 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.product-card:hover {
+  border-color: rgba(212, 255, 63, 0.4) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 255, 63, 0.1) !important;
+}
+
+.product-price {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  font-size: 1.3rem !important;
+}
+
+.product-save-badge {
+  background: rgba(212, 255, 63, 0.12) !important;
+  color: var(--accent-volt) !important;
+  border: 1px solid rgba(212, 255, 63, 0.3) !important;
+  font-weight: 800 !important;
+  font-size: 0.7rem !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+}
+
+.tt-product-social-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.76rem;
+  color: #9293a0;
+  margin: 4px 0 8px 0;
+}
+
+.tt-sold-badge {
+  font-weight: 700;
+  color: #d1d1db;
+}
+
+.tt-card-voucher-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: rgba(212, 255, 63, 0.08);
+  color: var(--accent-volt);
+  border: 1px dashed rgba(212, 255, 63, 0.4);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.tt-shipping-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #10b981;
+}
+
+.tt-card-actions-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.btn-add-to-cart {
+  background: #1c1c24 !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  padding: 10px 14px !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-add-to-cart:hover {
+  background: #252530 !important;
+  border-color: var(--accent-volt) !important;
+  color: var(--accent-volt) !important;
+}
+
+.btn-tt-buy-now {
+  background: var(--accent-volt);
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 0.86rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(212, 255, 63, 0.25);
+}
+
+.btn-tt-buy-now:hover {
+  background: var(--accent-volt-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(212, 255, 63, 0.4);
+}
+
+/* --- 9. Quick Buy Bottom Sheet Modal --- */
+.tt-bottom-sheet-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.tt-bottom-sheet-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tt-bottom-sheet {
+  background: #15151b;
+  border-top: 1px solid rgba(212, 255, 63, 0.4);
+  border-radius: 24px 24px 0 0;
+  width: 100%;
+  max-width: 620px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 24px;
+  transform: translateY(100%);
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.7);
+}
+
+.tt-bottom-sheet-overlay.active .tt-bottom-sheet {
+  transform: translateY(0);
+}
+
+.tt-sheet-handle {
+  width: 44px;
+  height: 5px;
+  background: #33333d;
+  border-radius: 9999px;
+  margin: 0 auto 18px auto;
+}
+
+.tt-sheet-product-head {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.tt-sheet-thumb {
+  width: 88px;
+  height: 88px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.tt-sheet-info {
+  flex: 1;
+}
+
+.tt-sheet-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.tt-sheet-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.tt-sheet-final-price {
+  color: var(--accent-volt);
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.tt-sheet-orig-price {
+  color: #787885;
+  text-decoration: line-through;
+  font-size: 0.9rem;
+}
+
+.tt-sheet-close-btn {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #1f1f26;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.tt-sheet-voucher-callout {
+  background: rgba(212, 255, 63, 0.1);
+  border: 1px dashed var(--accent-volt);
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tt-sheet-voucher-text {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-volt);
+}
+
+.tt-sheet-voucher-badge {
+  background: var(--accent-volt);
+  color: #000000;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.tt-sheet-options-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.tt-sheet-size-pills {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.tt-sheet-size-pill {
+  background: #1c1c24;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tt-sheet-size-pill.active {
+  border-color: var(--accent-volt);
+  background: rgba(212, 255, 63, 0.15);
+  color: var(--accent-volt);
+}
+
+.tt-sheet-qty-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.tt-qty-stepper {
+  display: flex;
+  align-items: center;
+  background: #1c1c24;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+}
+
+.tt-qty-btn {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  width: 34px;
+  height: 34px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.tt-qty-num {
+  padding: 0 12px;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.tt-sheet-guarantees {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 24px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.tt-sheet-guarantee-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  font-size: 0.68rem;
+  color: #a1a1aa;
+}
+
+.tt-sheet-guarantee-item strong {
+  color: #ffffff;
+}
+
+.tt-sheet-cta-btn {
+  width: 100%;
+  background: var(--accent-volt);
+  color: #000000;
+  border: none;
+  border-radius: 12px;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(212, 255, 63, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.tt-sheet-cta-btn:hover {
+  transform: translateY(-2px);
+  background: var(--accent-volt-hover);
+  box-shadow: 0 8px 26px rgba(212, 255, 63, 0.5);
+}
+
+/* --- 10. Floating LIVE Mini-PIP Player --- */
+.tt-live-pip-player {
+  position: fixed;
+  bottom: 84px;
+  right: 20px;
+  width: 220px;
+  background: #15151b;
+  border: 1px solid var(--accent-volt);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 255, 63, 0.15);
+  z-index: 1500;
+  display: none;
+  animation: ttFadeInPip 0.3s ease-out;
+}
+
+.tt-live-pip-player.active {
+  display: block;
+}
+
+.tt-pip-img,
+.tt-pip-video {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+}
+
+.tt-pip-body {
+  padding: 10px;
+}
+
+.tt-pip-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.tt-pip-badge {
+  background: var(--accent-crimson);
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.tt-pip-close {
+  background: transparent;
+  border: none;
+  color: #a1a1aa;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.tt-pip-title {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 8px;
+}
+
+.tt-pip-buy-btn {
+  width: 100%;
+  background: var(--accent-volt);
+  color: #000000;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* --- 11. Mobile Floating Bottom Navigation Dock --- */
+.tt-bottom-dock {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .tt-bottom-dock {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(14, 14, 18, 0.97);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px 10px calc(8px + env(safe-area-inset-bottom, 0px)) 10px;
+    z-index: 1800;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.6);
+  }
+
+  body {
+    padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .tt-live-pip-player {
+    bottom: calc(72px + env(safe-area-inset-bottom, 0px)) !important;
+    right: 12px !important;
+    width: 175px !important;
+  }
+}
+
+.tt-dock-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  color: #8c8d9c;
+  text-decoration: none;
+  font-size: 0.66rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  position: relative;
+  min-width: 44px;
+}
+
+.tt-dock-item:hover,
+.tt-dock-item.active {
+  color: #ffffff;
+}
+
+.tt-dock-item.active {
+  color: var(--accent-volt);
+}
+
+.tt-dock-icon {
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tt-dock-badge {
+  position: absolute;
+  top: -2px;
+  right: -4px;
+  background: var(--accent-volt);
+  color: #000000;
+  font-size: 0.58rem;
+  font-weight: 800;
+  border-radius: 9999px;
+  padding: 1px 4px;
+  line-height: 1;
+}
+
+/* ==========================================================================
+   20. MASTER TIKTOK SHOP RESPONSIVE SUITE
+   Flawless adaptability across Mobile (320-480px), Tablet (481-1024px), & Desktop
+   ========================================================================== */
+
+/* --- Tablet Landscape / Medium Desktop (<= 1200px) --- */
+@media (max-width: 1200px) {
+  .header-container {
+    padding: 0 24px;
+    gap: 16px;
+  }
+
+  .tt-header-search-wrap {
+    max-width: 420px;
+    margin: 0 16px;
+  }
+
+  .tt-voucher-header-btn span {
+    font-size: 0.76rem;
+  }
+
+  .tt-vouchers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tt-reels-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- Tablet Portrait (<= 992px) --- */
+@media (max-width: 992px) {
+  .header-container {
+    padding: 0 16px;
+    gap: 12px;
+  }
+
+  .brand-sub {
+    display: none !important;
+  }
+
+  .tt-header-brand-wrap {
+    gap: 8px;
+  }
+
+  .tt-header-search-wrap {
+    max-width: 320px;
+    margin: 0 10px;
+  }
+
+  .tt-trending-tags-row {
+    display: none;
+  }
+
+  .btn-header-express span {
+    display: none;
+  }
+
+  .btn-header-express {
+    padding: 8px 10px;
+  }
+
+  .tt-live-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tt-live-video-player-wrap {
+    min-height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .tt-live-chat-panel {
+    height: 260px;
+  }
+}
+
+/* --- Mobile Phones & Phablets (<= 768px) --- */
+@media (max-width: 768px) {
+  .site-header {
+    height: auto !important;
+    min-height: 54px;
+    padding: 8px 0 6px 0;
+  }
+
+  .site-header.scrolled {
+    height: auto !important;
+    padding: 6px 0 4px 0;
+  }
+
+  .header-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    gap: 6px 8px;
+  }
+
+  /* Row 1: Brand on Left */
+  .tt-header-brand-wrap {
+    order: 1;
+    flex-shrink: 0;
+    gap: 8px;
+  }
+
+  .brand-mark {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.78rem !important;
+  }
+
+  .brand-main {
+    font-size: 0.94rem !important;
+  }
+
+  .tt-mall-badge {
+    font-size: 0.58rem;
+    padding: 1px 4px;
+  }
+
+  /* Row 1: Header Actions on Right */
+  .header-actions {
+    order: 2;
+    margin-left: auto !important;
+    gap: 6px !important;
+  }
+
+  .tt-voucher-header-btn {
+    padding: 5px 8px !important;
+    font-size: 0.7rem !important;
+  }
+
+  .tt-voucher-header-btn span {
+    display: none;
+  }
+
+  .action-btn {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  .cart-trigger-btn {
+    padding: 6px 8px !important;
+  }
+
+  .cart-label,
+  .cart-subtotal {
+    display: none !important;
+  }
+
+  .btn-header-express {
+    display: none !important;
+  }
+
+  .mobile-toggle-btn {
+    display: flex !important;
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  /* Row 2: Full-Width Search Input */
+  .tt-header-search-wrap {
+    order: 3;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 4px 0 2px 0 !important;
+    gap: 4px;
+  }
+
+  .tt-search-bar {
+    padding: 2px 3px 2px 12px !important;
+    border-width: 1.5px !important;
+  }
+
+  .tt-search-input {
+    font-size: 0.8rem !important;
+    padding: 5px 0 !important;
+  }
+
+  .tt-search-input::placeholder {
+    font-size: 0.78rem;
+  }
+
+  .tt-cam-btn {
+    padding: 4px 6px !important;
+  }
+
+  .tt-search-btn {
+    padding: 5px 12px !important;
+  }
+
+  .tt-trending-tags-row {
+    display: flex !important;
+    gap: 8px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding: 2px 0;
+  }
+
+  .tt-trending-tag {
+    font-size: 0.65rem !important;
+    padding: 2px 6px !important;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+  }
+
+  /* Category Ribbon (Horizontal Swipe) */
+  .tt-category-ribbon {
+    width: 100%;
+    background: rgba(14, 14, 18, 0.98);
+  }
+
+  .tt-category-container {
+    padding: 0 10px;
+    gap: 4px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tt-cat-item {
+    padding: 8px 10px;
+    font-size: 0.76rem;
+    gap: 4px;
+  }
+
+  .tt-cat-pill-tag {
+    font-size: 0.58rem;
+    padding: 1px 4px;
+  }
+
+  /* Mega Voucher Hub */
+  .tt-voucher-hub-section {
+    padding: 24px 0 16px 0;
+  }
+
+  .tt-voucher-banner {
+    padding: 16px 12px;
+    border-radius: 16px;
+  }
+
+  .tt-voucher-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .tt-voucher-main-title {
+    font-size: 1.25rem;
+  }
+
+  .tt-flash-countdown {
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .tt-countdown-box {
+    font-size: 0.85rem;
+    padding: 3px 6px;
+    min-width: 28px;
+  }
+
+  .tt-claim-all-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 18px;
+    font-size: 0.82rem;
+  }
+
+  .tt-vouchers-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .tt-coupon-card {
+    border-radius: 12px;
+  }
+
+  .tt-coupon-value-col {
+    width: 90px;
+    padding: 12px 6px;
+  }
+
+  .tt-coupon-amount {
+    font-size: 1.35rem;
+  }
+
+  .tt-coupon-info-col {
+    padding: 10px 8px;
+    gap: 2px;
+  }
+
+  .tt-coupon-name {
+    font-size: 0.8rem;
+  }
+
+  .tt-coupon-rule {
+    font-size: 0.66rem;
+  }
+
+  .tt-coupon-action-col {
+    padding: 8px 10px 8px 4px;
+  }
+
+  .tt-coupon-btn {
+    padding: 6px 12px;
+    font-size: 0.7rem;
+  }
+
+  /* LIVE Showcase Studio */
+  .tt-live-section {
+    padding: 20px 0 16px 0;
+  }
+
+  .tt-live-studio-card {
+    border-radius: 16px;
+  }
+
+  .tt-live-video-player-wrap {
+    min-height: auto;
+    aspect-ratio: 16 / 11;
+  }
+
+  .tt-live-stream-img {
+    min-height: auto;
+    height: 100%;
+  }
+
+  .tt-live-cam-switcher {
+    bottom: 74px;
+    left: 8px;
+    gap: 5px;
+  }
+
+  .tt-cam-switch-btn {
+    padding: 3px 8px;
+    font-size: 0.6rem;
+  }
+
+  .tt-yellow-basket-pin {
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    padding: 6px 8px;
+    gap: 8px;
+    border-radius: 10px;
+  }
+
+  .tt-basket-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+  }
+
+  .tt-basket-title {
+    font-size: 0.72rem;
+    line-height: 1.2;
+  }
+
+  .tt-basket-price {
+    font-size: 0.85rem;
+  }
+
+  .tt-btn-basket-buy {
+    padding: 6px 10px;
+    font-size: 0.7rem;
+  }
+
+  .tt-live-chat-panel {
+    height: 220px;
+    padding: 10px;
+  }
+
+  .tt-chat-bubble {
+    font-size: 0.72rem;
+  }
+
+  /* Hoodie Products Feed (2 Columns on Mobile) */
+  .tt-feed-section {
+    padding: 20px 0 16px 0;
+  }
+
+  .tt-feed-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    margin-bottom: 14px;
+  }
+
+  .tt-feed-title {
+    font-size: 1.15rem;
+  }
+
+  .tt-reels-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .tt-reel-card {
+    aspect-ratio: 9 / 16;
+    border-radius: 14px;
+  }
+
+  .tt-reel-badge-top {
+    top: 8px;
+    left: 8px;
+    font-size: 0.56rem;
+    padding: 3px 6px;
+  }
+
+  .tt-reel-live-viewers {
+    display: none;
+  }
+
+  .tt-reel-actions-rail {
+    right: 6px;
+    bottom: 58px;
+    gap: 8px;
+  }
+
+  .tt-reel-action-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+
+  .tt-reel-action-count {
+    font-size: 0.58rem;
+  }
+
+  .tt-reel-info-layer {
+    padding: 8px 6px;
+  }
+
+  .tt-reel-creator {
+    font-size: 0.7rem;
+    margin-bottom: 1px;
+  }
+
+  .tt-reel-desc {
+    font-size: 0.65rem;
+    line-height: 1.2;
+    margin-bottom: 4px;
+    -webkit-line-clamp: 2;
+  }
+
+  .tt-reel-shop-widget {
+    padding: 4px 6px;
+    font-size: 0.62rem;
+    gap: 3px;
+    border-radius: 6px;
+  }
+
+  .tt-reel-shop-btn {
+    padding: 2px 5px;
+    font-size: 0.6rem;
+  }
+
+  /* Catalog 40 Products Grid (2 Columns on Mobile) */
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .product-card {
+    border-radius: 12px;
+  }
+
+  .product-info {
+    padding: 10px 8px !important;
+  }
+
+  .product-name {
+    font-size: 0.8rem !important;
+    line-height: 1.25 !important;
+    min-height: 2.5em;
+  }
+
+  .product-cut {
+    display: none;
+  }
+
+  .product-gsm {
+    font-size: 0.62rem !important;
+  }
+
+  .product-pricing {
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: baseline;
+    margin-bottom: 8px !important;
+  }
+
+  .product-price {
+    font-size: 1.02rem !important;
+  }
+
+  .product-compare {
+    font-size: 0.74rem !important;
+  }
+
+  .product-save-badge {
+    font-size: 0.58rem !important;
+    padding: 1px 4px !important;
+  }
+
+  .size-selector-group {
+    margin-bottom: 8px !important;
+  }
+
+  .size-options {
+    gap: 3px !important;
+  }
+
+  .size-btn {
+    min-width: 24px !important;
+    height: 24px !important;
+    font-size: 0.62rem !important;
+    padding: 0 3px !important;
+  }
+
+  .tt-product-social-row {
+    font-size: 0.66rem;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+
+  .tt-shipping-pill {
+    display: none;
+  }
+
+  .tt-card-voucher-pill {
+    font-size: 0.62rem;
+    padding: 2px 4px;
+    margin-bottom: 8px;
+  }
+
+  .btn-add-to-cart {
+    padding: 7px 8px !important;
+    font-size: 0.72rem !important;
+    border-radius: 6px !important;
+  }
+
+  /* Quick Buy Bottom Sheet Modal */
+  .tt-bottom-sheet-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 20px 20px 0 0 !important;
+    max-height: 88vh !important;
+    padding: 18px 14px calc(24px + env(safe-area-inset-bottom, 0px)) 14px !important;
+  }
+
+  .tt-sheet-product-head {
+    gap: 10px;
+  }
+
+  .tt-sheet-thumb {
+    width: 68px;
+    height: 68px;
+  }
+
+  .tt-sheet-prod-title {
+    font-size: 0.84rem;
+  }
+
+  .tt-sheet-final-price {
+    font-size: 1.2rem;
+  }
+
+  .tt-sheet-cta-btn {
+    padding: 13px;
+    font-size: 0.92rem;
+  }
+}
+
+/* --- Small Mobile Phones (<= 480px) --- */
+@media (max-width: 480px) {
+  .header-container {
+    padding: 0 10px;
+    gap: 4px 6px;
+  }
+
+  .brand-main {
+    font-size: 0.88rem !important;
+  }
+
+  .brand-mark {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 0.72rem !important;
+  }
+
+  .tt-mall-badge {
+    display: none;
+  }
+
+  .tt-coupon-amount {
+    font-size: 1.15rem;
+  }
+
+  .tt-coupon-value-col {
+    width: 78px;
+    padding: 10px 4px;
+  }
+
+  .tt-coupon-btn {
+    padding: 5px 9px;
+    font-size: 0.66rem;
+  }
+
+  .tt-reels-grid {
+    gap: 8px !important;
+  }
+
+  .products-grid {
+    gap: 8px !important;
   }
 }

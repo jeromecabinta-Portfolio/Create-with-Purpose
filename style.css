@@ -2864,7 +2864,8 @@ ul {
   transition: opacity var(--transition-base);
 }
 
-.modal-overlay.open {
+.modal-overlay.open,
+.modal-overlay.active {
   opacity: 1;
   pointer-events: auto;
 }
@@ -3034,7 +3035,8 @@ ul {
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9);
 }
 
-.checkout-modal.open {
+.checkout-modal.open,
+.checkout-modal.active {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
   pointer-events: auto;
@@ -7220,6 +7222,82 @@ svg {
   color: #ffffff;
 }
 
+/* TikTok Bottom Sheet Payment Methods */
+.tt-sheet-pay-methods {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tt-sheet-pay-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 4px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  color: #a1a1aa;
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tt-sheet-pay-pill:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+.tt-sheet-pay-pill.active {
+  background: rgba(212, 255, 63, 0.12);
+  border-color: var(--accent-volt);
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(212, 255, 63, 0.22);
+}
+
+.tt-sheet-pay-pill.active span {
+  color: var(--accent-volt);
+  font-weight: 700;
+}
+
+/* TikTok Dual Action Buttons */
+.tt-sheet-actions-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.tt-sheet-cart-btn {
+  flex: 0 0 130px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 14px 10px;
+  transition: all 0.2s ease;
+}
+
+.tt-sheet-cart-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: #ffffff;
+}
+
+.tt-sheet-actions-row .tt-sheet-cta-btn {
+  flex: 1;
+}
+
 .tt-sheet-cta-btn {
   width: 100%;
   background: var(--accent-volt);
@@ -7227,7 +7305,7 @@ svg {
   border: none;
   border-radius: 12px;
   padding: 15px;
-  font-size: 1rem;
+  font-size: 0.96rem;
   font-weight: 800;
   cursor: pointer;
   box-shadow: 0 6px 20px rgba(212, 255, 63, 0.35);
@@ -7242,6 +7320,13 @@ svg {
   transform: translateY(-2px);
   background: var(--accent-volt-hover);
   box-shadow: 0 8px 26px rgba(212, 255, 63, 0.5);
+}
+
+.tt-sheet-cta-btn:disabled,
+.tt-sheet-cart-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
 }
 
 /* --- 10. Floating LIVE Mini-PIP Player --- */
@@ -7322,27 +7407,42 @@ svg {
   cursor: pointer;
 }
 
-/* --- 11. Mobile Floating Bottom Navigation Dock --- */
+/* --- 11. Floating TikTok Bottom Navigation Dock (Desktop & Mobile) --- */
 .tt-bottom-dock {
-  display: none;
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(14, 14, 18, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 10px 28px;
+  z-index: 1800;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.75), 0 0 25px rgba(212, 255, 63, 0.12);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @media (max-width: 900px) {
   .tt-bottom-dock {
-    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(14, 14, 18, 0.97);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    align-items: center;
+    transform: none;
+    border-radius: 0;
     justify-content: space-around;
+    gap: 0;
     padding: 8px 10px calc(8px + env(safe-area-inset-bottom, 0px)) 10px;
-    z-index: 1800;
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    background: rgba(14, 14, 18, 0.97);
   }
 
   body {
@@ -7360,23 +7460,36 @@ svg {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
+  gap: 3px;
   color: #8c8d9c;
   text-decoration: none;
-  font-size: 0.66rem;
+  font-size: 0.68rem;
   font-weight: 600;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
   position: relative;
-  min-width: 44px;
+  min-width: 48px;
+  cursor: pointer;
 }
 
-.tt-dock-item:hover,
-.tt-dock-item.active {
+.tt-dock-item:hover {
   color: #ffffff;
+  transform: translateY(-2px);
 }
 
 .tt-dock-item.active {
   color: var(--accent-volt);
+  font-weight: 700;
+}
+
+.tt-dock-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  width: 5px;
+  height: 5px;
+  background: var(--accent-volt);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent-volt);
 }
 
 .tt-dock-icon {
@@ -7384,6 +7497,11 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.tt-dock-item:hover .tt-dock-icon {
+  transform: scale(1.12);
 }
 
 .tt-dock-badge {

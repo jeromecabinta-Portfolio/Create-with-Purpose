@@ -2692,33 +2692,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let pipDismissed = false;
     if (livePipPlayer && liveSection) {
-      window.addEventListener('scroll', () => {
+      const updatePipState = () => {
         if (pipDismissed) return;
         const rect = liveSection.getBoundingClientRect();
-        if (rect.bottom < -100) {
+        // Visible when scrolled away from live try-on section and past initial header
+        const isLiveInView = (rect.top < window.innerHeight - 50 && rect.bottom > 80);
+        if (!isLiveInView && window.pageYOffset > 250) {
           livePipPlayer.classList.add('active');
         } else {
           livePipPlayer.classList.remove('active');
         }
-      }, { passive: true });
+      };
+
+      window.addEventListener('scroll', updatePipState, { passive: true });
+      updatePipState();
+
+      // Tap PIP body returns user straight to full live stream
+      livePipPlayer.addEventListener('click', (e) => {
+        if (e.target.closest('#tt-pip-close-btn') || e.target.closest('#tt-pip-shop-btn')) return;
+        const stickyNav = document.querySelector('.tt-sticky-nav-wrapper');
+        const offset = stickyNav ? stickyNav.offsetHeight : 100;
+        const top = liveSection.getBoundingClientRect().top + window.pageYOffset - (offset + 10);
+        window.scrollTo({ top, behavior: 'smooth' });
+        showToast('📹 Returned to LIVE Try-On stream', 'tv');
+      });
 
       if (livePipCloseBtn) {
         livePipCloseBtn.addEventListener('click', (e) => {
           e.stopPropagation();
           pipDismissed = true;
           livePipPlayer.classList.remove('active');
+          showToast('Mini Player closed', 'x');
         });
       }
 
       if (livePipShopBtn) {
-        livePipShopBtn.addEventListener('click', () => {
+        livePipShopBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
           openTikTokBottomSheet({
             id: 'hoodie-black',
             title: 'The Archive Pullover — Vintage Washed Black (500 GSM)',
-            price: 125,
+            price: 145,
             origPrice: 180,
             color: 'Vintage Washed Black',
-            img: 'assets/hoodie_black.jpg'
+            img: 'assets/hoodie_black.jpg',
+            size: 'L'
           });
         });
       }
@@ -2780,7 +2798,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (shopWidget) {
-        shopWidget.addEventListener('click', (e) => {
+        const handleShopOpen = (e) => {
           e.stopPropagation();
           const pId = shopWidget.getAttribute('data-id');
           const pTitle = shopWidget.getAttribute('data-title');
@@ -2794,7 +2812,10 @@ document.addEventListener('DOMContentLoaded', () => {
             color: 'Selected Silhouette',
             img: pImg
           });
-        });
+        };
+        shopWidget.addEventListener('click', handleShopOpen);
+        const shopBtn = card.querySelector('.tt-reel-shop-btn');
+        if (shopBtn) shopBtn.addEventListener('click', handleShopOpen);
       }
     });
 
@@ -2867,9 +2888,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const sheetFinalPrice = document.getElementById('tt-sheet-final-price');
     const sheetOrigPrice = document.getElementById('tt-sheet-orig-price');
     const sheetCtaPrice = document.getElementById('tt-sheet-cta-price');
+    const sheetCtaLabel = document.getElementById('tt-sheet-cta-label');
     const sheetCloseBtn = document.getElementById('tt-sheet-close-btn');
     const sheetCheckoutBtn = document.getElementById('tt-sheet-checkout-btn');
+    const sheetAddCartBtn = document.getElementById('tt-sheet-add-cart-btn');
     const sizePills = document.querySelectorAll('.tt-sheet-size-pill');
+    const payPills = document.querySelectorAll('.tt-sheet-pay-pill');
     const qtyMinus = document.getElementById('tt-qty-minus');
     const qtyPlus = document.getElementById('tt-qty-plus');
     const qtyVal = document.getElementById('tt-qty-val');
@@ -2877,6 +2901,26 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentSheetItem = null;
     let currentSheetQty = 1;
     let currentSheetSize = 'L';
+    let currentSheetPaymentMethod = 'TikTok 1-Click Pay';
+
+    function updateSheetButtonLabel() {
+      const price = (currentSheetItem?.price || 145) * currentSheetQty;
+      const priceStr = `${price.toFixed(2)}`;
+      if (sheetFinalPrice) sheetFinalPrice.textContent = priceStr;
+      if (sheetCtaPrice) sheetCtaPrice.textContent = priceStr;
+
+      if (sheetCtaLabel) {
+        if (currentSheetPaymentMethod === 'Apple Pay') {
+          sheetCtaLabel.innerHTML = `Pay with Apple Pay — <span id="tt-sheet-cta-price">${priceStr}</span>`;
+        } else if (currentSheetPaymentMethod === 'Credit / Debit Card') {
+          sheetCtaLabel.innerHTML = `Pay with Card — <span id="tt-sheet-cta-price">${priceStr}</span>`;
+        } else if (currentSheetPaymentMethod.includes('Cash on Delivery')) {
+          sheetCtaLabel.innerHTML = `Confirm COD (Cash) — <span id="tt-sheet-cta-price">${priceStr}</span>`;
+        } else {
+          sheetCtaLabel.innerHTML = `Buy with Coupon — <span id="tt-sheet-cta-price">${priceStr}</span>`;
+        }
+      }
+    }
 
     function openTikTokBottomSheet(itemData) {
       currentSheetItem = itemData;
@@ -2885,12 +2929,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (sheetThumb) sheetThumb.src = itemData.img || 'assets/hoodie_black.jpg';
       if (sheetTitle) sheetTitle.textContent = itemData.title || 'The Archive Pullover — 500 GSM';
-      const finalPrice = itemData.price || 125;
-      const origPrice = itemData.origPrice || (finalPrice + 55);
+      const finalPrice = itemData.price || 145;
+      const origPrice = itemData.origPrice || (finalPrice + 35);
 
-      if (sheetFinalPrice) sheetFinalPrice.textContent = `$${finalPrice.toFixed(2)}`;
-      if (sheetOrigPrice) sheetOrigPrice.textContent = `$${origPrice.toFixed(2)}`;
-      if (sheetCtaPrice) sheetCtaPrice.textContent = `$${finalPrice.toFixed(2)}`;
+      if (sheetFinalPrice) sheetFinalPrice.textContent = `${finalPrice.toFixed(2)}`;
+      if (sheetOrigPrice) sheetOrigPrice.textContent = `${origPrice.toFixed(2)}`;
+      if (sheetCtaPrice) sheetCtaPrice.textContent = `${finalPrice.toFixed(2)}`;
 
       if (itemData.size) {
         currentSheetSize = itemData.size;
@@ -2898,6 +2942,8 @@ document.addEventListener('DOMContentLoaded', () => {
           pill.classList.toggle('active', pill.getAttribute('data-size') === itemData.size);
         });
       }
+
+      updateSheetButtonLabel();
 
       if (bottomSheetOverlay) bottomSheetOverlay.classList.add('active');
       document.body.style.overflow = 'hidden';
@@ -2924,116 +2970,232 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    payPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        payPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        currentSheetPaymentMethod = pill.getAttribute('data-pay') || 'TikTok 1-Click Pay';
+        updateSheetButtonLabel();
+        showToast(`Payment set to ${currentSheetPaymentMethod}`, 'credit-card');
+      });
+    });
+
     if (qtyMinus && qtyPlus && qtyVal) {
       qtyMinus.addEventListener('click', () => {
         if (currentSheetQty > 1) {
           currentSheetQty--;
           qtyVal.textContent = currentSheetQty;
-          const base = (currentSheetItem?.price || 125) * currentSheetQty;
-          if (sheetFinalPrice) sheetFinalPrice.textContent = `$${base.toFixed(2)}`;
-          if (sheetCtaPrice) sheetCtaPrice.textContent = `$${base.toFixed(2)}`;
+          updateSheetButtonLabel();
         }
       });
       qtyPlus.addEventListener('click', () => {
         if (currentSheetQty < 10) {
           currentSheetQty++;
           qtyVal.textContent = currentSheetQty;
-          const base = (currentSheetItem?.price || 125) * currentSheetQty;
-          if (sheetFinalPrice) sheetFinalPrice.textContent = `$${base.toFixed(2)}`;
-          if (sheetCtaPrice) sheetCtaPrice.textContent = `$${base.toFixed(2)}`;
+          updateSheetButtonLabel();
         }
       });
     }
 
+    // Add to Bag Button in Bottom Sheet
+    if (sheetAddCartBtn) {
+      sheetAddCartBtn.addEventListener('click', () => {
+        const item = currentSheetItem || {
+          id: 'hoodie-black',
+          title: 'The Archive Pullover — 500 GSM',
+          price: 145,
+          color: 'Vintage Washed Black',
+          img: 'assets/hoodie_black.jpg'
+        };
+
+        const existing = cart.find(i => i.id === item.id && i.size === currentSheetSize);
+        if (existing) {
+          existing.quantity += currentSheetQty;
+        } else {
+          cart.push({
+            id: item.id,
+            title: item.title,
+            price: item.price || 145,
+            size: currentSheetSize,
+            color: item.color || 'Batch #004',
+            img: item.img || 'assets/hoodie_black.jpg',
+            quantity: currentSheetQty
+          });
+        }
+
+        saveCart();
+        updateCartUI();
+        updateCartSyncBar();
+        closeTikTokBottomSheet();
+        showToast(`🛍️ Added ${currentSheetQty}x ${item.title.split('—')[0].trim()} (${currentSheetSize}) to bag!`, 'shopping-bag');
+      });
+    }
+
+    // 1-Click Buy with Coupon in Bottom Sheet
     if (sheetCheckoutBtn) {
       sheetCheckoutBtn.addEventListener('click', async () => {
-        closeTikTokBottomSheet();
-        showToast('⚡ Processing 1-Click Fastlane Checkout...', 'lock');
+        const item = currentSheetItem || {
+          id: 'hoodie-black',
+          title: 'The Archive Pullover — 500 GSM',
+          price: 145,
+          color: 'Vintage Washed Black',
+          img: 'assets/hoodie_black.jpg'
+        };
+
+        sheetCheckoutBtn.disabled = true;
+        sheetCheckoutBtn.innerHTML = `<span class="pulse-dot"></span><span>Authorizing ${currentSheetPaymentMethod}...</span>`;
 
         const orderId = '#PS-' + Math.floor(100000 + Math.random() * 900000);
+        const unitPrice = item.price || 145;
+        const total = unitPrice * currentSheetQty;
+
         const orderData = {
           orderId: orderId,
-          source: 'Batch #004 Fastlane Checkout',
+          source: `TikTok Shop Bottom Sheet (${currentSheetPaymentMethod})`,
           customer: {
             fullName: 'PURPOSE STUDIO Member',
             email: 'member@purposestudio.lab',
+            phone: '+1 (555) 890-4421',
             address: '450 Mercer St, Soho, NY 10013',
             city: 'New York',
-            zip: '10013'
+            zip: '10013',
+            country: 'United States'
           },
           items: [{
-            id: currentSheetItem?.id || 'hoodie-black',
-            title: currentSheetItem?.title || 'The Archive Pullover - 500 GSM',
-            price: currentSheetItem?.price || 125,
+            id: item.id,
+            title: item.title,
+            price: unitPrice,
+            unitPrice: unitPrice,
+            totalPrice: total,
             size: currentSheetSize,
-            color: currentSheetItem?.color || 'Vintage Washed Black',
-            img: currentSheetItem?.img || 'assets/hoodie_black.jpg',
+            color: item.color || 'Batch #004 Heavyweight',
+            img: item.img || 'assets/hoodie_black.jpg',
             quantity: currentSheetQty
           }],
-          voucherApplied: 'PURPOSE_DROP04_VOUCHER',
-          total: (currentSheetItem?.price || 125) * currentSheetQty,
+          addons: [],
+          voucherApplied: 'PURPOSE_DROP04_VOUCHER (-$20.00)',
+          paymentMethod: currentSheetPaymentMethod,
+          shippingTier: 'DHL Express Worldwide (FREE)',
+          subtotal: total,
+          addonsTotal: 0,
+          discount: 20 * currentSheetQty,
+          shipping: 0,
+          grandTotal: total,
           status: 'Confirmed (Batch #004 Heavyweight Allocation)'
         };
 
         try {
-          await fetch('/api/orders', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(orderData)
-          });
+          await submitConfirmedOrder(orderData);
+          closeTikTokBottomSheet();
         } catch (err) {
-          console.warn('Local storage order fallback', err);
+          console.warn('Order sync fallback', err);
+          closeTikTokBottomSheet();
+        } finally {
+          sheetCheckoutBtn.disabled = false;
+          updateSheetButtonLabel();
         }
-
-        // Show confirmation modal
-        const checkoutModal = document.getElementById('checkout-modal');
-        const checkoutOverlay = document.getElementById('checkout-modal-overlay');
-        const stepForm = document.getElementById('checkout-step-form');
-        const stepSuccess = document.getElementById('checkout-step-success');
-        const orderRefNum = document.getElementById('order-ref-num');
-        const confItemsSummary = document.getElementById('conf-items-summary');
-
-        if (orderRefNum) orderRefNum.textContent = orderId;
-        if (confItemsSummary) {
-          confItemsSummary.innerHTML = `
-            <div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(255,255,255,0.04);border-radius:10px;border:1px solid rgba(254,44,85,0.3);">
-              <img src="${currentSheetItem?.img || 'assets/hoodie_black.jpg'}" style="width:48px;height:48px;border-radius:6px;object-fit:cover;" />
-              <div style="flex:1;">
-                <div style="font-weight:700;font-size:0.85rem;color:#fff;">${currentSheetItem?.title}</div>
-                <div style="font-size:0.75rem;color:#a1a1aa;">Size ${currentSheetSize} • Qty ${currentSheetQty} • Drop 04 Voucher Applied</div>
-              </div>
-              <div style="font-weight:800;color:var(--accent-volt);font-size:1.1rem;">$${((currentSheetItem?.price || 125) * currentSheetQty).toFixed(2)}</div>
-            </div>
-          `;
-        }
-
-        if (stepForm) stepForm.style.display = 'none';
-        if (stepSuccess) stepSuccess.style.display = 'block';
-        if (checkoutModal) checkoutModal.classList.add('active');
-        if (checkoutOverlay) checkoutOverlay.classList.add('active');
-
-        showToast(`🎉 Order Placed Successfully! Reference: ${orderId}`, 'check-circle');
       });
     }
 
-    // 11. Sync Bottom Dock Cart Badge
+    // 11. Sync Bottom Dock Navigation, Smooth Scroll & Scroll Spy
+    const bottomDock = document.getElementById('tt-bottom-dock');
+    const dockItems = document.querySelectorAll('.tt-dock-item');
     const dockCartBadge = document.getElementById('tt-dock-cart-badge');
     const dockCartBtn = document.getElementById('tt-dock-cart-btn');
+
     if (dockCartBadge && typeof cart !== 'undefined') {
-      setInterval(() => {
-        dockCartBadge.textContent = cart.length;
-      }, 500);
+      const updateDockBadge = () => {
+        const total = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+        dockCartBadge.textContent = total;
+      };
+      updateDockBadge();
+      setInterval(updateDockBadge, 400);
     }
+
     if (dockCartBtn) {
-      dockCartBtn.addEventListener('click', () => {
+      dockCartBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         openCartDrawer();
       });
     }
+
+    dockItems.forEach(item => {
+      const href = item.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+          dockItems.forEach(di => di.classList.remove('active'));
+          item.classList.add('active');
+
+          const targetId = href.replace('#', '');
+          const targetEl = document.getElementById(targetId);
+          if (targetEl) {
+            const stickyNav = document.querySelector('.tt-sticky-nav-wrapper');
+            const navHeight = stickyNav ? stickyNav.offsetHeight : 110;
+            const targetPos = targetEl.getBoundingClientRect().top + window.pageYOffset - (navHeight + 12);
+            window.scrollTo({ top: Math.max(0, targetPos), behavior: 'smooth' });
+          }
+        });
+      }
+    });
+
+    // Auto Scroll Spy for Bottom Dock Tabs
+    const dockSections = [
+      { id: 'hero', name: 'Shop' },
+      { id: 'tiktok-vouchers', name: 'Deals' },
+      { id: 'tiktok-live', name: 'Live' },
+      { id: 'tiktok-feed', name: 'Hoodies' },
+      { id: 'collection', name: 'Hoodies' },
+      { id: 'order', name: 'Orders' }
+    ];
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset + 240;
+      let matched = null;
+      for (const sec of dockSections) {
+        const el = document.getElementById(sec.id);
+        if (el) {
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (currentScroll >= top && currentScroll < top + height) {
+            matched = sec;
+          }
+        }
+      }
+      if (matched) {
+        dockItems.forEach(di => {
+          const label = di.querySelector('span:not(.tt-dock-icon):not(.tt-dock-badge)')?.textContent.trim();
+          if (label === matched.name) {
+            di.classList.add('active');
+          } else if (label !== 'Cart') {
+            di.classList.remove('active');
+          }
+        });
+      }
+    }, { passive: true });
 
     if (window.lucide) window.lucide.createIcons();
   }
 
   // Initialize TikTok Shop Features
+  
+    // Header Express Checkout button
+    const headerExpressBtn = document.getElementById('header-express-btn');
+    if (headerExpressBtn) {
+      headerExpressBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const orderSec = document.getElementById('order');
+        if (orderSec) {
+          orderSec.scrollIntoView({ behavior: 'smooth' });
+          const step1 = document.getElementById('order-block-step1');
+          if (step1) {
+            step1.style.outline = '2px solid var(--accent-volt)';
+            setTimeout(() => { step1.style.outline = 'none'; }, 1500);
+          }
+        }
+      });
+    }
+  
   initTikTokShopFeatures();
 
 });

@@ -1,5 +1,176 @@
 [
   {
+    "orderId": "#PS-924516",
+    "source": "TikTok Shop Bottom Sheet (Credit / Debit Card)",
+    "customer": {
+      "fullName": "PURPOSE STUDIO Member",
+      "email": "member@purposestudio.lab",
+      "phone": "+1 (555) 890-4421",
+      "address": "450 Mercer St, Soho, NY 10013",
+      "city": "New York",
+      "zip": "10013",
+      "country": "United States"
+    },
+    "items": [
+      {
+        "id": "hoodie-mocha",
+        "title": "Archive Pullover - Raw Mocha",
+        "price": 145,
+        "unitPrice": 145,
+        "totalPrice": 145,
+        "size": "L",
+        "color": "Raw Earth Mocha",
+        "img": "assets/hoodie_mocha.jpg",
+        "quantity": 1
+      }
+    ],
+    "addons": [],
+    "voucherApplied": "PURPOSE_DROP04_VOUCHER (-$20.00)",
+    "paymentMethod": "Credit / Debit Card",
+    "shippingTier": "DHL Express Worldwide (FREE)",
+    "subtotal": 145,
+    "addonsTotal": 0,
+    "discount": 20,
+    "shipping": 0,
+    "grandTotal": 145,
+    "status": "Confirmed (Batch #004 Allocated)",
+    "createdAt": "2026-10-08T17:23:38.936Z"
+  },
+  {
+    "orderId": "#PS-375220",
+    "source": "TikTok Shop Bottom Sheet (Credit / Debit Card)",
+    "customer": {
+      "fullName": "PURPOSE STUDIO Member",
+      "email": "member@purposestudio.lab",
+      "phone": "+1 (555) 890-4421",
+      "address": "450 Mercer St, Soho, NY 10013",
+      "city": "New York",
+      "zip": "10013",
+      "country": "United States"
+    },
+    "items": [
+      {
+        "id": "hoodie-grey",
+        "title": "Archive Pullover - Concrete Grey",
+        "price": 145,
+        "unitPrice": 145,
+        "totalPrice": 145,
+        "size": "L",
+        "color": "Concrete Heather Grey",
+        "img": "assets/hoodie_grey.jpg",
+        "quantity": 1
+      }
+    ],
+    "addons": [],
+    "voucherApplied": "PURPOSE_DROP04_VOUCHER (-$20.00)",
+    "paymentMethod": "Credit / Debit Card",
+    "shippingTier": "DHL Express Worldwide (FREE)",
+    "subtotal": 145,
+    "addonsTotal": 0,
+    "discount": 20,
+    "shipping": 0,
+    "grandTotal": 145,
+    "status": "Confirmed (Batch #004 Allocated)",
+    "createdAt": "2026-10-08T17:23:24.620Z"
+  },
+  {
+    "orderId": "#PS-116890",
+    "source": "TikTok Shop Bottom Sheet (Credit / Debit Card)",
+    "customer": {
+      "fullName": "PURPOSE STUDIO Member",
+      "email": "member@purposestudio.lab",
+      "phone": "+1 (555) 890-4421",
+      "address": "450 Mercer St, Soho, NY 10013",
+      "city": "New York",
+      "zip": "10013",
+      "country": "United States"
+    },
+    "items": [
+      {
+        "id": "hoodie-black",
+        "title": "The Archive Pullover — Vintage Washed Black (500 GSM)",
+        "price": 125,
+        "unitPrice": 125,
+        "totalPrice": 125,
+        "size": "L",
+        "color": "Vintage Washed Black",
+        "img": "assets/hoodie_black.jpg",
+        "quantity": 1
+      }
+    ],
+    "addons": [],
+    "voucherApplied": "PURPOSE_DROP04_VOUCHER (-$20.00)",
+    "paymentMethod": "Credit / Debit Card",
+    "shippingTier": "DHL Express Worldwide (FREE)",
+    "subtotal": 125,
+    "addonsTotal": 0,
+    "discount": 20,
+    "shipping": 0,
+    "grandTotal": 125,
+    "status": "Confirmed (Batch #004 Allocated)",
+    "createdAt": "2026-10-08T17:20:34.932Z"
+  },
+  {
+    "orderId": "#PS-857744",
+    "customer": {
+      "fullName": "Marcus Vance",
+      "email": "marcus@purpose.studio",
+      "phone": "+1 (555) 890-4421",
+      "address": "104 Crosby St, Soho",
+      "city": "New York",
+      "zip": "10012",
+      "country": "United States"
+    },
+    "items": [
+      {
+        "id": "hoodie-black",
+        "title": "The Archive Pullover — Vintage Washed Black",
+        "color": "Vintage Washed Black",
+        "size": "L",
+        "quantity": 1,
+        "unitPrice": 145,
+        "totalPrice": 145,
+        "img": "assets/hoodie_black.jpg"
+      }
+    ],
+    "addons": [],
+    "paymentMethod": "Apple Pay",
+    "shippingTier": "standard",
+    "subtotal": 145,
+    "addonsTotal": 0,
+    "discount": 0,
+    "shipping": 18,
+    "grandTotal": 163,
+    "createdAt": "2026-10-08T17:14:28.104Z",
+    "status": "Confirmed (Batch #004 Allocated)"
+  },
+  {
+    "orderId": "#PS-373111",
+    "source": "Batch #004 Fastlane Checkout",
+    "customer": {
+      "fullName": "PURPOSE STUDIO Member",
+      "email": "member@purposestudio.lab",
+      "address": "450 Mercer St, Soho, NY 10013",
+      "city": "New York",
+      "zip": "10013"
+    },
+    "items": [
+      {
+        "id": "hoodie-black",
+        "title": "The Archive Pullover — Vintage Washed Black (500 GSM)",
+        "price": 125,
+        "size": "XL",
+        "color": "Vintage Washed Black",
+        "img": "assets/hoodie_black.jpg",
+        "quantity": 2
+      }
+    ],
+    "voucherApplied": "PURPOSE_DROP04_VOUCHER",
+    "total": 250,
+    "status": "Confirmed (Batch #004 Allocated)",
+    "createdAt": "2026-10-08T17:11:08.877Z"
+  },
+  {
     "orderId": "#PS-895656",
     "source": "Batch #004 Fastlane Checkout",
     "customer": {

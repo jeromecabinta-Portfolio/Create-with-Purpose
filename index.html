@@ -4530,7 +4530,27 @@
         </div>
       </div>
 
-      <!-- Buyer Guarantees -->
+      <!-- TikTok Payment Method Selection -->
+      <div class="tt-sheet-options-title">Select Payment Method:</div>
+      <div class="tt-sheet-pay-methods" id="tt-sheet-pay-methods">
+        <button type="button" class="tt-sheet-pay-pill active" data-pay="TikTok 1-Click Pay">
+          <i data-lucide="zap" style="color: #fe2c55; width: 14px; height: 14px;"></i>
+          <span>TikTok 1-Click</span>
+        </button>
+        <button type="button" class="tt-sheet-pay-pill" data-pay="Apple Pay">
+          <i data-lucide="smartphone" style="color: #ffffff; width: 14px; height: 14px;"></i>
+          <span>Apple Pay</span>
+        </button>
+        <button type="button" class="tt-sheet-pay-pill" data-pay="Credit / Debit Card">
+          <i data-lucide="credit-card" style="color: var(--accent-volt); width: 14px; height: 14px;"></i>
+          <span>Card</span>
+        </button>
+        <button type="button" class="tt-sheet-pay-pill" data-pay="Cash on Delivery (COD)">
+          <i data-lucide="truck" style="color: #10b981; width: 14px; height: 14px;"></i>
+          <span>COD (Cash)</span>
+        </button>
+      </div>
+
       <div class="tt-sheet-guarantees">
         <div class="tt-sheet-guarantee-item">
           <i data-lucide="shield-check" style="width: 18px; height: 18px; color: var(--accent-cyan);"></i>
@@ -4549,11 +4569,17 @@
         </div>
       </div>
 
-      <!-- TikTok Red Action Button -->
-      <button type="button" class="tt-sheet-cta-btn" id="tt-sheet-checkout-btn">
-        <i data-lucide="zap"></i>
-        <span>Buy with Coupon — <span id="tt-sheet-cta-price">$145.00</span></span>
-      </button>
+      <!-- TikTok Action Buttons: Add to Bag + Buy with Coupon -->
+      <div class="tt-sheet-actions-row">
+        <button type="button" class="tt-sheet-cart-btn" id="tt-sheet-add-cart-btn">
+          <i data-lucide="shopping-bag" style="width: 16px; height: 16px;"></i>
+          <span>Add to Bag</span>
+        </button>
+        <button type="button" class="tt-sheet-cta-btn" id="tt-sheet-checkout-btn">
+          <i data-lucide="zap" id="tt-sheet-cta-icon" style="width: 16px; height: 16px;"></i>
+          <span id="tt-sheet-cta-label">Buy with Coupon — <span id="tt-sheet-cta-price">$145.00</span></span>
+        </button>
+      </div>
     </div>
   </div>
 
